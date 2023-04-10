@@ -20,10 +20,9 @@ class _NavigatorPageState extends State<NavigatorPage> {
         appBar: AppBar(
           actions: [
             Padding(
-              padding: const EdgeInsets.only(right: 10,top: 7,bottom: 7),
+              padding: EdgeInsets.only(right: Get.width/40,top: Get.width/60,bottom: Get.width/60),
               child: Container(
-                height: 20,
-                width: 80,
+                width: Get.width/5,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
                   gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter,
@@ -40,7 +39,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
             children: [
               Image.asset(
                 "assets/image/applogo.png",
-                height: 30,
+                height: Get.width/13,
               ),
               Text(
                 " CRICSTRIKE",
@@ -48,20 +47,19 @@ class _NavigatorPageState extends State<NavigatorPage> {
             ],
           ),
           leading: Padding(
-            padding: const EdgeInsets.only(left:10,top: 8,bottom: 8),
+            padding: EdgeInsets.only(left:Get.width/40,top: Get.width/50,bottom: Get.width/50),
             child: CircleAvatar(
               backgroundImage: NetworkImage(
                 "https://w7.pngwing.com/pngs/420/567/png-transparent-avatar-male-man-portrait-avatars-xmas-giveaway-icon.png",
               ),
-              radius: 15,
             ),
           ),
           backgroundColor: Color(0xff021852),
         ),
-
         body: Container(
           height: double.infinity,
           width: double.infinity,
+          padding: EdgeInsets.symmetric(horizontal: Get.width/20),
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
