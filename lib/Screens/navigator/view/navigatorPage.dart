@@ -18,12 +18,47 @@ class _NavigatorPageState extends State<NavigatorPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          leading: CircleAvatar(
-            backgroundImage: NetworkImage(""),
-            radius: 25,
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right: 10,top: 7,bottom: 7),
+              child: Container(
+                height: 20,
+                width: 80,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter,
+                    colors: [
+                      Color(0xfffffbae),
+                      Color(0xffefd473),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+          title: Row(
+            children: [
+              Image.asset(
+                "assets/image/applogo.png",
+                height: 30,
+              ),
+              Text(
+                " CRICSTRIKE",
+              ),
+            ],
+          ),
+          leading: Padding(
+            padding: const EdgeInsets.only(left:10,top: 8,bottom: 8),
+            child: CircleAvatar(
+              backgroundImage: NetworkImage(
+                "https://w7.pngwing.com/pngs/420/567/png-transparent-avatar-male-man-portrait-avatars-xmas-giveaway-icon.png",
+              ),
+              radius: 15,
+            ),
           ),
           backgroundColor: Color(0xff021852),
         ),
+
         body: Container(
           height: double.infinity,
           width: double.infinity,
