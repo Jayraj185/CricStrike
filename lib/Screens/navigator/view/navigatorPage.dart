@@ -59,7 +59,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
         body: Container(
           height: double.infinity,
           width: double.infinity,
-          padding: EdgeInsets.symmetric(horizontal: Get.width/20),
+          padding: EdgeInsets.symmetric(horizontal: 15),
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,

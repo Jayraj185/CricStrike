@@ -52,47 +52,63 @@ class _HomePageState extends State<HomePage> {
             borderRadius: BorderRadius.circular(15)
           ),
           padding: EdgeInsets.only(left: 12,top: 15),
-          child: Column(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "100% BONUS AND IC ON CASH",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: Get.width/60),
-                child: Text(
-                  "GET UPTO BONUS AND T20 IC ON FIRST ADD CASH",
-                  style: TextStyle(
-                    color: Color(0xFFFFE400),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 9
-                  ),
+              Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "100% BONUS AND IC ON CASH",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: Get.width/60),
+                      child: Text(
+                        "GET UPTO BONUS AND T20 IC ON FIRST ADD CASH",
+                        style: TextStyle(
+                            color: Color(0xFFFFE400),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 9
+                        ),
+                      ),
+                    ),
+                    Container(
+                      height: 30,
+                      width: 90,
+                      margin: EdgeInsets.only(top: Get.width/80),
+                      decoration: BoxDecoration(
+                          color: Color(0xFFFFE400),
+                          borderRadius: BorderRadius.circular(6)
+                      ),
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Claim Coins",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               Container(
-                height: 30,
-                width: 90,
-                margin: EdgeInsets.only(top: Get.width/80),
-                decoration: BoxDecoration(
-                  color: Color(0xFFFFE400),
-                  borderRadius: BorderRadius.circular(6)
-                ),
-                alignment: Alignment.center,
-                child: Text(
-                  "Claim Coins",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold
-                  ),
-                ),
-              ),
+                height: 35,
+                width: 35,
+                margin: EdgeInsets.only(left: 15,bottom: 15),
+                // color: Colors.red,
+                // alignment: Alignment.center,
+                child: Image.asset("assets/image/shopping_bag.png",fit: BoxFit.fill,),
+              )
             ],
           ),
         )
