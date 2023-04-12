@@ -11,11 +11,11 @@ void main() {
     DeviceOrientation.portraitUp
   ]);
   runApp(
-    Sizer(builder: (context, orientation, deviceType) => GetMaterialApp(
+    GetMaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
         '/':(context) => NavigatorPage(),
       },
-    ),)
+    ),
   );
 }
