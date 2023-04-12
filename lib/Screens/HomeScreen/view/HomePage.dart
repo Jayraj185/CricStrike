@@ -37,9 +37,9 @@ class _HomePageState extends State<HomePage> {
         //   ),
         // )
         Container(
-          margin: EdgeInsets.only(top: Get.width/40),
-          height: Get.height/9,
-          width: Get.width/1.3,
+          margin: EdgeInsets.only(top: 15),
+          height: 95,
+          width: 300,
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
             ),
             borderRadius: BorderRadius.circular(15)
           ),
-          padding: EdgeInsets.only(left: Get.width/40,top: Get.width/25),
+          padding: EdgeInsets.only(left: 12,top: 15),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
-                  fontSize: 12.sp
+                  fontSize: 16
                 ),
               ),
               Padding(
@@ -71,14 +71,13 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyle(
                     color: Color(0xFFFFE400),
                     fontWeight: FontWeight.bold,
-                    fontSize: 7.sp
+                    fontSize: 9
                   ),
                 ),
               ),
-              Container
-                (
-                height: Get.height/30,
-                width: Get.width/4.5,
+              Container(
+                height: 30,
+                width: 90,
                 margin: EdgeInsets.only(top: Get.width/80),
                 decoration: BoxDecoration(
                   color: Color(0xFFFFE400),
@@ -89,11 +88,11 @@ class _HomePageState extends State<HomePage> {
                   "Claim Coins",
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 10.sp,
+                    fontSize: 14,
                     fontWeight: FontWeight.bold
                   ),
                 ),
-              )
+              ),
             ],
           ),
         )
