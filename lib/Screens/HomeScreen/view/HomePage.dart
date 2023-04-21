@@ -201,37 +201,39 @@ class _HomePageState extends State<HomePage> {
           padding: EdgeInsets.only(top: 15),
           child: Row(
             children: [
-              Container(
-                height: 330,
-                width: 170,
-                decoration: BoxDecoration(
-                  color: Colors.red,
-                  borderRadius: BorderRadius.circular(15)
+              Expanded(
+                child: Container(
+                  height: 330,
+                  decoration: BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(15)
+                  ),
+                  alignment: Alignment.bottomCenter,
+                  child: Widgets.widgets.MyPlayButton(title: "Fantacy", player: "1.2 cr"),
                 ),
-                alignment: Alignment.bottomCenter,
-                child: Widgets.widgets.MyPlayButton(title: "Fantacy", player: "1.2 cr"),
               ),
               SizedBox(width: 15,),
-              Column(
-                children: [
-                  Container(
-                    height: 160,
-                    width: 170,
-                    decoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(15)
+              Expanded(
+                child: Column(
+                  children: [
+                    Container(
+                      height: 160,
+                      decoration: BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(15)
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 10,),
-                  Container(
-                    height: 160,
-                    width: 170,
-                    decoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(15)
+                    SizedBox(height: 10,),
+                    Container(
+                      height: 160,
+                      width: 170,
+                      decoration: BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(15)
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               )
             ],
           ),

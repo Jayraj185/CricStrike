@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "833743234723",
+    "project_id": "cricstike",
+    "storage_bucket": "cricstike.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:833743234723:android:1069937e301a0dd117c116",
+        "android_client_info": {
+          "package_name": "com.example.cricstreak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "833743234723-bs38vjbms90ivgl7b68njo0gm1eshpgn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cricstreak",
+            "certificate_hash": "f7b29c1847ac941811df8a0fadcb53823b1ebed9"
+          }
+        },
+        {
+          "client_id": "833743234723-m1q5or0jag2n2n6djvchs5ggsejc1sp8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqWUZSgoFWty1zzIA92gPLZWEO2X7hFQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "833743234723-m1q5or0jag2n2n6djvchs5ggsejc1sp8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
