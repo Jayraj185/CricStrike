@@ -222,6 +222,8 @@ class _HomePageState extends State<HomePage> {
                           color: Colors.red,
                           borderRadius: BorderRadius.circular(15)
                       ),
+                      alignment: Alignment.bottomCenter,
+                      child: Widgets.widgets.MyPlayButton(title: "Rummy", player: "4k"),
                     ),
                     SizedBox(height: 10,),
                     Container(
@@ -231,6 +233,8 @@ class _HomePageState extends State<HomePage> {
                           color: Colors.red,
                           borderRadius: BorderRadius.circular(15)
                       ),
+                      alignment: Alignment.bottomCenter,
+                      child: Widgets.widgets.MyPlayButton(title: "Football", player: "10k"),
                     ),
                   ],
                 ),

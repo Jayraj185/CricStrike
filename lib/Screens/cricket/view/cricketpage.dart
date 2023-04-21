@@ -34,68 +34,137 @@ class _CricketPageState extends State<CricketPage> {
                   itemBuilder: (context, index) {
                     return Container(
                       margin: EdgeInsets.only(top: 15, bottom: 0),
+
                       child: Column(
                         children: [
                           SizedBox(
                             height: 7,
                           ),
-                          Row(
-                            children: [
-                              Text(
-                                "   Ipl - 2023",
-                                style: TextStyle(
-                                    color: Colors.black45,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w600),
-                              ),
-                              Spacer(),
-                              Text(
-                                "Live",
-                                style: TextStyle(
-                                    color: Colors.green,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w600),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Icon(
-                                Icons.notifications_none,
-                                size: 25,
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 5,),
-                          Row(
-                            children: [
-                              Text(
-                                "   T1 name",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              Spacer(),
-                              Text(
-                                "T2 Name   ",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500),
-                              ),
-
-                            ],
-                          ),
-
-                          Spacer(),
-                          Container(height: 35,color: Colors.black12,
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 15),
                             child: Row(
                               children: [
                                 Text(
-                                  "   Rs.11 Lakh",
+                                  "Ipl - 2023",
+                                  style: TextStyle(
+                                      color: Colors.black45,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                                Spacer(),
+                                Text(
+                                  "Live",
+                                  style: TextStyle(
+                                      color: Colors.green,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Icon(
+                                  Icons.notifications_none,
+                                  size: 25,
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 5,),
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 15),
+                            child: Row(
+                              children: [
+                                Text(
+                                  "T1 name",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                Spacer(),
+                                Text(
+                                  "T2 Name",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 10,),
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 15),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Container(
+                                      height: 45,
+                                      width: 45,
+                                      child: Image.asset("assets/image/csk.png",fit: BoxFit.cover,),
+                                    ),
+                                    SizedBox(width: 5,),
+                                    Text(
+                                      "CSK",
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 30),
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        height: 20,
+                                        width: 20,
+                                        child: Image.asset("assets/image/clock.png",fit: BoxFit.cover,color: Colors.red,),
+                                      ),
+                                      Text(
+                                        "1h 54min",
+                                        style: TextStyle(
+                                          color: Colors.red,
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                //Spacer(),
+                                Row(
+                                  children: [
+                                    Text(
+                                      "RCB",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20
+                                      ),
+                                    ),
+                                    SizedBox(width: 5,),
+                                    Container(
+                                      height: 45,
+                                      width: 45,
+                                      child: Image.asset("assets/image/rcb.png",fit: BoxFit.cover,),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                          Spacer(),
+                          Container(height: 35,color: Colors.black12,
+                            padding: EdgeInsets.symmetric(horizontal: 15),
+                            child: Row(
+                              children: [
+                                Text(
+                                  "Rs.11 Lakh",
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontSize: 18,
@@ -105,9 +174,6 @@ class _CricketPageState extends State<CricketPage> {
                                 Icon(
                                   Icons.live_tv,
                                   size: 25,
-                                ),
-                                SizedBox(
-                                  width: 10,
                                 ),
                               ],
                             ),
@@ -125,9 +191,9 @@ class _CricketPageState extends State<CricketPage> {
                   itemCount: 4,
                 );
               } else if (snapshot.hasError) {
-                return Text("${snapshot.error}");
+                return Center(child: Text("${snapshot.error}"));
               }
-              return CircularProgressIndicator();
+              return const Center(child: CircularProgressIndicator());
             },
             stream: FireHelper.fireHelper.GetData(),
           )
