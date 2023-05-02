@@ -9,16 +9,16 @@ import 'package:sizer/sizer.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp
-  ]);
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    systemNavigationBarColor: Color(0xff021852), // navigation bar color
+    statusBarColor: Color(0xff021852), // status bar color
+  ));
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/':(context) => NavigatorPage(),
-
+        '/': (context) => NavigatorPage(),
       },
     ),
   );

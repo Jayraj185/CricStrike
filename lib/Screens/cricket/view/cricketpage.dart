@@ -16,6 +16,9 @@ class _CricketPageState extends State<CricketPage> {
     return SingleChildScrollView(
       physics: BouncingScrollPhysics(),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+
         children: [
           StreamBuilder(
             builder: (context, snapshot) {
@@ -29,8 +32,8 @@ class _CricketPageState extends State<CricketPage> {
                 //     Map l2 = doc.data();
                 //     l1.add(l2);
                 //   }
-                return ListView.builder(physics: BouncingScrollPhysics(),
-                  shrinkWrap: true,
+                return ListView.builder(
+                  physics: BouncingScrollPhysics(),
                   itemBuilder: (context, index) {
                     return Container(
                       margin: EdgeInsets.only(top: 15, bottom: 0),
@@ -69,7 +72,9 @@ class _CricketPageState extends State<CricketPage> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 5,),
+                          SizedBox(
+                            height: 5,
+                          ),
                           Padding(
                             padding: EdgeInsets.symmetric(horizontal: 15),
                             child: Row(
@@ -92,7 +97,9 @@ class _CricketPageState extends State<CricketPage> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 10,),
+                          SizedBox(
+                            height: 10,
+                          ),
                           Padding(
                             padding: EdgeInsets.symmetric(horizontal: 15),
                             child: Row(
@@ -103,16 +110,20 @@ class _CricketPageState extends State<CricketPage> {
                                     Container(
                                       height: 45,
                                       width: 45,
-                                      child: Image.asset("assets/image/csk.png",fit: BoxFit.cover,),
+                                      child: Image.asset(
+                                        "assets/image/csk.png",
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
-                                    SizedBox(width: 5,),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
                                     Text(
                                       "CSK",
                                       style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20
-                                      ),
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20),
                                     )
                                   ],
                                 ),
@@ -123,15 +134,18 @@ class _CricketPageState extends State<CricketPage> {
                                       Container(
                                         height: 20,
                                         width: 20,
-                                        child: Image.asset("assets/image/clock.png",fit: BoxFit.cover,color: Colors.red,),
+                                        child: Image.asset(
+                                          "assets/image/clock.png",
+                                          fit: BoxFit.cover,
+                                          color: Colors.red,
+                                        ),
                                       ),
                                       Text(
                                         "1h 54min",
                                         style: TextStyle(
-                                          color: Colors.red,
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w500
-                                        ),
+                                            color: Colors.red,
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500),
                                       )
                                     ],
                                   ),
@@ -144,14 +158,18 @@ class _CricketPageState extends State<CricketPage> {
                                       style: TextStyle(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 20
-                                      ),
+                                          fontSize: 20),
                                     ),
-                                    SizedBox(width: 5,),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
                                     Container(
                                       height: 45,
                                       width: 45,
-                                      child: Image.asset("assets/image/rcb.png",fit: BoxFit.cover,),
+                                      child: Image.asset(
+                                        "assets/image/rcb.png",
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -159,7 +177,15 @@ class _CricketPageState extends State<CricketPage> {
                             ),
                           ),
                           Spacer(),
-                          Container(height: 35,color: Colors.black12,
+                          Container(
+                            height: 35,
+                            decoration: BoxDecoration(
+                            color: Colors.black12,
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(15),
+                                bottomRight:  Radius.circular(15),
+                              ),
+                            ),
                             padding: EdgeInsets.symmetric(horizontal: 15),
                             child: Row(
                               children: [
@@ -193,7 +219,7 @@ class _CricketPageState extends State<CricketPage> {
               } else if (snapshot.hasError) {
                 return Center(child: Text("${snapshot.error}"));
               }
-              return const Center(child: CircularProgressIndicator());
+              return Center(child: CircularProgressIndicator(color: Colors.white,));
             },
             stream: FireHelper.fireHelper.GetData(),
           )

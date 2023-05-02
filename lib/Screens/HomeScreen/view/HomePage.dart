@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
         //   width: Get.width/2.4,
         //   margin: EdgeInsets.only(top: Get.width/60),
         //   decoration: BoxDecoration(
-        //     color: Colors.red,
+        //     color: Color(0xff021852),
         //     borderRadius: BorderRadius.circular(9)
         //   ),
         // )
@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
                       height: 35,
                       width: 35,
                       margin: EdgeInsets.only(left: 15, bottom: 15),
-                      // color: Colors.red,
+                      // color: Color(0xff021852),
                       // alignment: Alignment.center,
                       child: Image.asset(
                         "assets/image/shopping_bag.png",
@@ -182,7 +182,7 @@ class _HomePageState extends State<HomePage> {
                       height: 35,
                       width: 35,
                       margin: EdgeInsets.only(left: 15, bottom: 15),
-                      // color: Colors.red,
+                      // color: Color(0xff021852),
                       // alignment: Alignment.center,
                       child: Image.asset(
                         "assets/image/shopping_bag.png",
@@ -206,7 +206,7 @@ class _HomePageState extends State<HomePage> {
                 child: Container(
                   height: 330,
                   decoration: BoxDecoration(
-                    color: Colors.red,
+                    color: Color(0xff021852),
                     borderRadius: BorderRadius.circular(16),
                   ),
                   alignment: Alignment.centerRight,
@@ -244,7 +244,7 @@ class _HomePageState extends State<HomePage> {
                   Container(
                     height: 160,
                     decoration: BoxDecoration(
-                        color: Colors.red,
+                        color: Color(0xff021852),
                         borderRadius: BorderRadius.circular(16)),
                     alignment: Alignment.bottomCenter,
                     child: Stack(
@@ -278,7 +278,7 @@ class _HomePageState extends State<HomePage> {
                     height: 160,
                     width: 170,
                     decoration: BoxDecoration(
-                      color: Colors.red,
+                      color: Color(0xff021852),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     alignment: Alignment.bottomCenter,
