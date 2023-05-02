@@ -24,16 +24,16 @@ class Widgets
                 maxLines: 1,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 12,
+                  fontSize: 13,
                   overflow: TextOverflow.ellipsis,
                   fontWeight: FontWeight.bold
                 ),
               ),
-              Row(
+              Row(crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    height: 21,
-                    width: 21,
+                    height: 20,
+                    width: 20,
                     child: Image.asset("assets/image/thumb.png",color: Colors.white,fit: BoxFit.fill,),
                   ),
                   Text(
@@ -42,7 +42,7 @@ class Widgets
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 10,
+                      fontSize: 11,
                       fontWeight: FontWeight.bold
                     ),
                   )
