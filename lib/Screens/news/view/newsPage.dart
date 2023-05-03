@@ -114,7 +114,7 @@ class _NewsPageState extends State<NewsPage> {
               ),
             );
           },
-          future: ApiHelper.apiHelper.GetData(),
+          future: ApiHelper.apiHelper.GetData(Sportname: "cricket"),
         ),
       ],
     );
