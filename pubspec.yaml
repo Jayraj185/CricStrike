@@ -42,6 +42,7 @@ dependencies:
   firebase_core:
   http:
   firebase_auth: ^4.4.2
+  url_launcher: ^6.1.10
   cached_network_image:
 
 dev_dependencies:
