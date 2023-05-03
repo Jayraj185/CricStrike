@@ -41,6 +41,7 @@ dependencies:
   cloud_firestore: ^4.5.2
   firebase_core:
   http:
+  share_plus: ^6.3.4
   firebase_auth: ^4.4.2
   url_launcher: ^6.1.10
   cached_network_image:

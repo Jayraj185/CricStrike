@@ -5,6 +5,7 @@ import 'package:cricstreak/Utils/apihelper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:share_plus/share_plus.dart';
 
 class NewsPage extends StatefulWidget {
   const NewsPage({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class _NewsPageState extends State<NewsPage> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(7),
-                      color: Color(0xffe8edfa),
+                        color: Color(0xffe8edfa),
                       ),
                       margin: EdgeInsets.only(bottom: 5, top: 20),
                       child: Column(
@@ -42,12 +43,27 @@ class _NewsPageState extends State<NewsPage> {
                           Container(
                             alignment: Alignment.centerLeft,
                             padding: EdgeInsets.only(left: 10),
-                            child: Text(
-                              "${n1.articles![index].author == null ? "CRICSTRIKE" : n1.articles![index].author}",
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 17,
-                              ),
+                            child: Row(
+                              children: [
+                                Text(
+                                  "${n1.articles![index].author == null ? "CRICNEWS" : n1.articles![index].author}",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                                Spacer(),
+                                IconButton(
+                                  onPressed: () async {
+                                    await Share.share('check out my website https://example.com', subject: '${n1.articles![index].content}');
+
+                                  },
+                                  icon: Icon(
+                                    Icons.share,
+                                    size: 20,
+                                  ),
+                                ),
+                              ],
                             ),
                             height: 45,
                             decoration: BoxDecoration(
@@ -128,7 +144,7 @@ class _NewsPageState extends State<NewsPage> {
                                 right: 6, left: 6, top: 10),
                             child: Column(
                               children: [
-                                Text(
+                                SelectableText(
                                   "${n1.articles![index].title}",
                                   style: TextStyle(
                                     fontWeight: FontWeight.w500,
@@ -136,7 +152,8 @@ class _NewsPageState extends State<NewsPage> {
                                   ),
                                 ),
                                 SizedBox(height: 10),
-                                Text("${n1.articles![index].content}"),
+                                SelectableText(
+                                    "${n1.articles![index].content}"),
                               ],
                             ),
                           ),

@@ -11,7 +11,7 @@ class WalletPage extends StatefulWidget {
 class _WalletPageState extends State<WalletPage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Column(crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
           height: 15,
@@ -103,6 +103,7 @@ class _WalletPageState extends State<WalletPage> {
             ),
           ],
         ),
+
         SizedBox(
           height: 15,
         ),
@@ -132,7 +133,23 @@ class _WalletPageState extends State<WalletPage> {
               width: 120,
             ),
           ],
-        )
+        ),
+        SizedBox(
+          height: 30,
+        ),
+
+        Text(
+          "Wallet Offer",textAlign: TextAlign.start,
+          style: TextStyle(
+              color: Colors.black87,
+              fontWeight: FontWeight.w500,
+              fontSize: 16),
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        Image.asset("assets/image/add1.png",height:80,),
+
       ],
     );
   }
