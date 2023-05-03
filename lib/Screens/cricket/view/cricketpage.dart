@@ -32,7 +32,7 @@ class _CricketPageState extends State<CricketPage> {
                 //     Map l2 = doc.data();
                 //     l1.add(l2);
                 //   }
-                return ListView.builder(
+                return ListView.builder(shrinkWrap: true,
                   physics: BouncingScrollPhysics(),
                   itemBuilder: (context, index) {
                     return Container(
