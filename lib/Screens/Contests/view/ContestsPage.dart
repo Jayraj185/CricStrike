@@ -20,44 +20,47 @@ class _ContestsPageState extends State<ContestsPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                height: 50,
-                width: 175,
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white,width: 1.5),
-                  borderRadius: BorderRadius.circular(9)
-                ),
-                alignment: Alignment.center,
-                child: Text(
-                  "Enter Contest Code",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w400,
-                    fontSize: 16
+              Expanded(
+                child: Container(
+                  height: 50,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white,width: 1.5),
+                    borderRadius: BorderRadius.circular(9)
+                  ),
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Enter Contest Code",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16
+                    ),
                   ),
                 ),
               ),
-              Container(
-                height: 50,
-                width: 175,
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white,width: 1.5),
-                  borderRadius: BorderRadius.circular(9)
-                ),
-                alignment: Alignment.center,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Create Contest",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w400,
-                        fontSize: 16
+              SizedBox(width: 15,),
+              Expanded(
+                child: Container(
+                  height: 50,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white,width: 1.5),
+                    borderRadius: BorderRadius.circular(9)
+                  ),
+                  alignment: Alignment.center,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Create Contest",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16
+                        ),
                       ),
-                    ),
-                    Icon(Icons.add,color: Colors.white,)
-                  ],
+                      Icon(Icons.add,color: Colors.white,)
+                    ],
+                  ),
                 ),
               ),
             ],
@@ -136,12 +139,13 @@ class _ContestsPageState extends State<ContestsPage> {
                             )
                         ),
                       ),
-                      Container(
-                        height: 9,
-                        width: 121,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(topRight: Radius.circular(9),bottomRight: Radius.circular(9)),
-                            color: Colors.black12
+                      Expanded(
+                        child: Container(
+                          height: 9,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(topRight: Radius.circular(9),bottomRight: Radius.circular(9)),
+                              color: Colors.black12
+                          ),
                         ),
                       ),
                     ],
@@ -364,14 +368,16 @@ class _ContestsPageState extends State<ContestsPage> {
                                 )
                             ),
                           ),
-                          Container(
-                            height: 9,
-                            width: 121,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.only(topRight: Radius.circular(9),bottomRight: Radius.circular(9)),
-                                color: Colors.black12
+                          Expanded(
+                            child: Container(
+                              height: 9,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.only(topRight: Radius.circular(9),bottomRight: Radius.circular(9)),
+                                  color: Colors.black12
+                              ),
                             ),
                           ),
+
                         ],
                       ),
                       SizedBox(height: 6,),
@@ -581,7 +587,7 @@ class _ContestsPageState extends State<ContestsPage> {
                         children: [
                           Container(
                             height: 9,
-                            width: 215,
+                            width:200,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.only(topLeft: Radius.circular(9),bottomLeft: Radius.circular(9)),
                                 gradient: LinearGradient(
@@ -594,14 +600,16 @@ class _ContestsPageState extends State<ContestsPage> {
                                 )
                             ),
                           ),
-                          Container(
-                            height: 9,
-                            width: 121,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.only(topRight: Radius.circular(9),bottomRight: Radius.circular(9)),
-                                color: Colors.black12
+                          Expanded(
+                            child: Container(
+                              height: 9,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.only(topRight: Radius.circular(9),bottomRight: Radius.circular(9)),
+                                  color: Colors.black12
+                              ),
                             ),
                           ),
+
                         ],
                       ),
                       SizedBox(height: 6,),

@@ -87,12 +87,13 @@ class _MyContestsPageState extends State<MyContestsPage> {
                           )
                       ),
                     ),
-                    Container(
-                      height: 9,
-                      width: 121,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(topRight: Radius.circular(9),bottomRight: Radius.circular(9)),
-                          color: Colors.black12
+                    Expanded(
+                      child: Container(
+                        height: 9,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(topRight: Radius.circular(9),bottomRight: Radius.circular(9)),
+                            color: Colors.black12
+                        ),
                       ),
                     ),
                   ],

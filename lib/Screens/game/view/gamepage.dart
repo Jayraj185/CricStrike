@@ -45,7 +45,7 @@ class _GamePageState extends State<GamePage> {
                     height: 215,
                     width: 170,
                     child: Image.asset(
-                      "assets/image/Events_1.png",
+                      "assets/image/Events_2.png",
                       fit: BoxFit.fill,
                     ),
                   ),
