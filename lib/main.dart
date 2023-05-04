@@ -1,3 +1,4 @@
+import 'package:cricstreak/Screens/TabBar/View/TabBarScreen.dart';
 import 'package:cricstreak/Screens/navigator/view/navigatorPage.dart';
 import 'package:cricstreak/Screens/newsdetails/view/newsDetailsPage.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -21,6 +22,7 @@ void main() async {
       routes: {
         '/': (context) => NavigatorPage(),
         'ndetail': (context) => NewsDetailPage(),
+        'tabbar': (context) => TabBarScreen(),
       },
     ),
   );
