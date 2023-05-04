@@ -45,6 +45,7 @@ dependencies:
   firebase_auth: ^4.4.2
   url_launcher: ^6.1.10
   cached_network_image:
+  google_fonts:
 
 dev_dependencies:
   flutter_test:

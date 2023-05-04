@@ -2,6 +2,7 @@ import 'package:cricstreak/Screens/navigator/controller/navigatorController.dart
 import 'package:cricstreak/Utils/Widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -200,39 +201,38 @@ class _HomePageState extends State<HomePage> {
           Row(
             children: [
               Expanded(
-                child: InkWell(
-                  onTap: () {
-                    navigatorController.NavigatIndex.value=1;
-                  },
-                  child: Container(
-                    height: 330,
-                    decoration: BoxDecoration(
-                      color: Color(0xff021852),
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    alignment: Alignment.centerRight,
-                    child: Stack(
-                      fit: StackFit.expand,
-                      children: [
-                        Image.asset(
-                          "assets/image/fantacy.png",
-                          fit: BoxFit.fill,
+                child: Container(
+                  height: 330,
+                  decoration: BoxDecoration(
+                    color: Color(0xff021852),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  alignment: Alignment.centerRight,
+                  child: Stack(
+                    fit: StackFit.expand,
+                    children: [
+                      Image.asset(
+                        "assets/image/fantacy.png",
+                        fit: BoxFit.fill,
+                      ),
+                      Container(
+                        height: double.infinity,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: Colors.black12,
+                          borderRadius: BorderRadius.circular(16),
                         ),
-                        Container(
-                          height: double.infinity,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Colors.black12,
-                            borderRadius: BorderRadius.circular(16),
-                          ),
-                        ),
-                        Align(
-                          alignment: Alignment.bottomCenter,
+                      ),
+                      Align(
+                        alignment: Alignment.bottomCenter,
+                        child: InkWell( onTap: () {
+                          navigatorController.NavigatIndex.value=1;
+                        },
                           child: Widgets.widgets
                               .MyPlayButton(title: "Fantacy", player: "1.2 cr"),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -265,8 +265,13 @@ class _HomePageState extends State<HomePage> {
                           ),
                           Align(
                             alignment: Alignment.bottomCenter,
-                            child:  Widgets.widgets
-                                .MyPlayButton(title: "Rummy", player: "4k"),
+                            child:  InkWell(
+                              onTap: () {
+                                launchUrl(Uri.parse("https://poki.com/en/g/rummy"));
+                              },
+                              child: Widgets.widgets
+                                  .MyPlayButton(title: "Rummy", player: "4k"),
+                            ),
                           ),
                         ],
                       ),
@@ -300,8 +305,13 @@ class _HomePageState extends State<HomePage> {
                           ),
                           Align(
                             alignment: Alignment.bottomCenter,
-                            child: Widgets.widgets
-                                .MyPlayButton(title: "Football", player: "10k"),
+                            child: InkWell(
+                              onTap: () {
+                                launchUrl(Uri.parse("https://poki.com/en/g/football-masters"));
+                              },
+                              child: Widgets.widgets
+                                  .MyPlayButton(title: "Football", player: "10k"),
+                            ),
                           ),
                         ],
                       ),

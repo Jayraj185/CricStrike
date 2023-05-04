@@ -158,7 +158,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
                 ? Container(
                     height: double.infinity,
                     width: double.infinity,
-                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    padding: navigatorController.NavigatIndex.value==2?EdgeInsets.symmetric(horizontal: 0):EdgeInsets.symmetric(horizontal: 16),
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
