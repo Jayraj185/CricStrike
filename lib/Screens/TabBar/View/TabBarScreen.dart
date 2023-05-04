@@ -29,7 +29,7 @@ class _TabBarScreenState extends State<TabBarScreen> {
                 padding: EdgeInsets.only(right: 6,),
                 child: IconButton(
                   onPressed: (){},
-                  icon: Icon(Icons.notifications_active,color: Colors.white,size: 21,),
+                  icon: Icon(Icons.notifications,color: Colors.white,size: 21,),
                 ),
               )
             ],
