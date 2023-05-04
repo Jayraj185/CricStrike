@@ -382,6 +382,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                             height: 160,
                             width: 145,
                             padding: EdgeInsets.all(6),
+                            margin: EdgeInsets.only(top: 15),
                             alignment: Alignment.topCenter,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -411,107 +412,99 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                     ],
                                   ),
                                 ),
-                                SizedBox(height: 3,),
+                                SizedBox(height: 6,),
                                 Divider(thickness: 1.5,color: Colors.white,),
-                                SizedBox(height: 3,),
+                                SizedBox(height: 6,),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Expanded(
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "WK",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w500
-                                            ),
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          "WK",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w500
                                           ),
-                                          Text(
-                                            "2",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 2,
-                                              fontWeight: FontWeight.w500
-                                            ),
+                                        ),
+                                        Text(
+                                          "2",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w500
                                           ),
-                                        ],
-                                      ),
+                                        ),
+                                      ],
                                     ),
-                                    Expanded(
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "AR",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w500
-                                            ),
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          "AR",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w500
                                           ),
-                                          Text(
-                                            "3",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 2,
-                                              fontWeight: FontWeight.w500
-                                            ),
+                                        ),
+                                        Text(
+                                          "3",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w500
                                           ),
-                                        ],
-                                      ),
+                                        ),
+                                      ],
                                     ),
-                                    Expanded(
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "BAT",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w500
-                                            ),
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          "BAT",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w500
                                           ),
-                                          Text(
-                                            "3",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 2,
-                                              fontWeight: FontWeight.w500
-                                            ),
+                                        ),
+                                        Text(
+                                          "3",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w500
                                           ),
-                                        ],
-                                      ),
+                                        ),
+                                      ],
                                     ),
-                                    Expanded(
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "BOWL",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w500
-                                            ),
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          "BOWL",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w500
                                           ),
-                                          Text(
-                                            "3",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 2,
-                                              fontWeight: FontWeight.w500
-                                            ),
+                                        ),
+                                        Text(
+                                          "3",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w500
                                           ),
-                                        ],
-                                      ),
+                                        ),
+                                      ],
                                     ),
                                   ],
                                 )
@@ -534,11 +527,28 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                             bottomRight: Radius.circular(9))
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
-        )
+        ),
+        Spacer(),
+        Container(
+          height: 45,
+          width: 150,
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Color(0xFFFFE68B),
+                    Color(0xFFFFD700)
+                  ]
+              ),
+            borderRadius: BorderRadius.circular(9)
+          ),
+        ),
+        SizedBox(height: 30,)
       ],
     );
   }
