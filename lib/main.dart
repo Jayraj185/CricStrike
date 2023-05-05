@@ -1,4 +1,5 @@
 import 'package:cricstreak/Screens/TabBar/View/TabBarScreen.dart';
+import 'package:cricstreak/Screens/TeamPreview/view/TeamPreviewPage.dart';
 import 'package:cricstreak/Screens/navigator/view/navigatorPage.dart';
 import 'package:cricstreak/Screens/newsdetails/view/newsDetailsPage.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -22,6 +23,7 @@ void main() async {
         '/': (context) => NavigatorPage(),
         'ndetail': (context) => NewsDetailPage(),
         'tabbar': (context) => TabBarScreen(),
+        'team_Preview': (context) => TeamPreviewPage(),
       },
     ),
   );
