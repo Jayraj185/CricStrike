@@ -14,7 +14,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: Color(0xFF2B3C6A),
+          backgroundColor: Color(0xff021852),
           leading: IconButton(
             onPressed: () {},
             icon: Icon(
@@ -59,7 +59,8 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                         children: [
                           Text(
                             "Players",
-                            style: TextStyle(color: Colors.white70, fontSize: 12),
+                            style:
+                                TextStyle(color: Colors.white70, fontSize: 12),
                           ),
                           Text.rich(TextSpan(children: [
                             TextSpan(
@@ -71,8 +72,8 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                             ),
                             TextSpan(
                               text: " /11",
-                              style:
-                                  TextStyle(color: Colors.white70, fontSize: 12),
+                              style: TextStyle(
+                                  color: Colors.white70, fontSize: 12),
                             ),
                           ])),
                         ],
@@ -93,7 +94,6 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                               fontWeight: FontWeight.bold),
                         ),
                       ),
-
                       Text(
                         "6",
                         style: TextStyle(
@@ -136,7 +136,8 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                         children: [
                           Text(
                             "Credit Left",
-                            style: TextStyle(color: Colors.white70, fontSize: 14),
+                            style:
+                                TextStyle(color: Colors.white70, fontSize: 14),
                           ),
                           Text(
                             "0",
@@ -157,764 +158,757 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
             ),
           ),
         ),
-        body: Container(
-          child: Stack(
-            children: [
-              Row(
+        body: Stack(
+          alignment: Alignment.center,
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xFF007432),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xFF0B8640),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xFF007432),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xFF0B8640),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xFF007432),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xFF0B8640),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xFF007432),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(1000),
+                  border: Border.all(color: Colors.white, width: 0.5)),
+            ),
+            Container(
+              width: 100,
+              height: 280,
+              color: Color(0xFF4FA042),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Color(0xFF007432),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Padding(
+                      padding: EdgeInsets.only(top: 15),
+                      child: Text(
+                        "KEEPER",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500),
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Color(0xFF0B8640),
-                      ),
+                  Container(
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 70,
+                          width: 70,
+                          // color: Colors.red,
+                          child: Stack(
+                            children: [
+                              Align(
+                                  alignment: Alignment.topCenter,
+                                  child: Image.network(
+                                    "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/601.png",
+                                    fit: BoxFit.fill,
+                                    height: 70,
+                                    width: 70,
+                                  )),
+                              Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Container(
+                                  height: 23,
+                                  decoration: BoxDecoration(
+                                      color: Color(0xFF021852),
+                                      borderRadius: BorderRadius.circular(4)),
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 3),
+                                  alignment: Alignment.center,
+                                  child: Text(
+                                    "D. Conway",
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 12),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(top: 6),
+                          child: Text(
+                            "9 Cr",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Color(0xFF007432),
-                      ),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "BATTER",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
                     ),
                   ),
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Color(0xFF0B8640),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(top: 0),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 70,
+                              width: 70,
+                              // color: Colors.red,
+                              child: Stack(
+                                children: [
+                                  Align(
+                                      alignment: Alignment.topCenter,
+                                      child: Image.network(
+                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/102.png",
+                                        fit: BoxFit.fill,
+                                        height: 70,
+                                        width: 70,
+                                      )),
+                                  Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Container(
+                                      height: 23,
+                                      decoration: BoxDecoration(
+                                          color: Color(0xFF021852),
+                                          borderRadius:
+                                              BorderRadius.circular(4)),
+                                      alignment: Alignment.center,
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 3),
+                                      child: Text(
+                                        "R. Gaikwad",
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 6),
+                              child: Text(
+                                "8 Cr",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
+                      Container(
+                        margin: EdgeInsets.only(top: 0),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 70,
+                              width: 70,
+                              // color: Colors.red,
+                              child: Stack(
+                                children: [
+                                  Align(
+                                      alignment: Alignment.topCenter,
+                                      child: Image.network(
+                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/211.png",
+                                        fit: BoxFit.fill,
+                                        height: 70,
+                                        width: 70,
+                                      )),
+                                  Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Container(
+                                      height: 23,
+                                      decoration: BoxDecoration(
+                                          color: Color(0xFF021852),
+                                          borderRadius:
+                                              BorderRadius.circular(4)),
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 3),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        "S. Dube",
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 6),
+                              child: Text(
+                                "7 Cr",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 0),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 70,
+                              width: 70,
+                              // color: Colors.red,
+                              child: Stack(
+                                children: [
+                                  Align(
+                                      alignment: Alignment.topCenter,
+                                      child: Image.network(
+                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/94.png",
+                                        fit: BoxFit.fill,
+                                        height: 70,
+                                        width: 70,
+                                      )),
+                                  Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Container(
+                                      height: 23,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(4)),
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 3),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        "F. Plessis",
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            color: Color(0xFF021852),
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 6),
+                              child: Text(
+                                "11 Cr",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 0),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 70,
+                              width: 70,
+                              // color: Colors.red,
+                              child: Stack(
+                                children: [
+                                  Align(
+                                      alignment: Alignment.topCenter,
+                                      child: Image.network(
+                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/2.png",
+                                        fit: BoxFit.fill,
+                                        height: 70,
+                                        width: 70,
+                                      )),
+                                  Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Container(
+                                      height: 23,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(4)),
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 3),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        "V. Kohli",
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            color: Color(0xFF021852),
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 6),
+                              child: Text(
+                                "12 Cr",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "ALL ROUNDERS",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
                     ),
                   ),
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Color(0xFF007432),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(top: 0),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 70,
+                              width: 70,
+                              // color: Colors.red,
+                              child: Stack(
+                                children: [
+                                  Align(
+                                      alignment: Alignment.topCenter,
+                                      child: Image.network(
+                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/28.png",
+                                        fit: BoxFit.fill,
+                                        height: 70,
+                                        width: 70,
+                                      )),
+                                  Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Container(
+                                      height: 23,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(4)),
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 3),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        "G. Maxwell",
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            color: Color(0xFF021852),
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 6),
+                              child: Text(
+                                "11 Cr",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
+                      Container(
+                        margin: EdgeInsets.only(top: 0),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 70,
+                              width: 70,
+                              // color: Colors.red,
+                              child: Stack(
+                                children: [
+                                  Align(
+                                      alignment: Alignment.topCenter,
+                                      child: Image.network(
+                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/46.png",
+                                        fit: BoxFit.fill,
+                                        height: 70,
+                                        width: 70,
+                                      )),
+                                  Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Container(
+                                      height: 23,
+                                      decoration: BoxDecoration(
+                                          color: Color(0xFF021852),
+                                          borderRadius:
+                                              BorderRadius.circular(4)),
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 3),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        "R. Jadeja",
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 6),
+                              child: Text(
+                                "9 Cr",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "BOWLERS",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
                     ),
                   ),
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Color(0xFF0B8640),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(top: 0),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 70,
+                              width: 70,
+                              // color: Colors.red,
+                              child: Stack(
+                                children: [
+                                  Align(
+                                      alignment: Alignment.topCenter,
+                                      child: Image.network(
+                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/1014.png",
+                                        fit: BoxFit.fill,
+                                        height: 70,
+                                        width: 70,
+                                      )),
+                                  Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Container(
+                                      height: 23,
+                                      decoration: BoxDecoration(
+                                          color: Color(0xFF021852),
+                                          borderRadius:
+                                              BorderRadius.circular(4)),
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 3),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        "M. Pathiran",
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 6),
+                              child: Text(
+                                "9 Cr",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
+                      Container(
+                        margin: EdgeInsets.only(top: 0),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 70,
+                              width: 70,
+                              // color: Colors.red,
+                              child: Stack(
+                                children: [
+                                  Align(
+                                      alignment: Alignment.topCenter,
+                                      child: Image.network(
+                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/91.png",
+                                        fit: BoxFit.fill,
+                                        height: 70,
+                                        width: 70,
+                                      )),
+                                  Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Container(
+                                      height: 23,
+                                      decoration: BoxDecoration(
+                                          color: Color(0xFF021852),
+                                          borderRadius:
+                                              BorderRadius.circular(4)),
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 3),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        "D. Chahar",
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 6),
+                              child: Text(
+                                "9 Cr",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 0),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 70,
+                              width: 70,
+                              // color: Colors.red,
+                              child: Stack(
+                                children: [
+                                  Align(
+                                      alignment: Alignment.topCenter,
+                                      child: Image.network(
+                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/114.png",
+                                        fit: BoxFit.fill,
+                                        height: 70,
+                                        width: 70,
+                                      )),
+                                  Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Container(
+                                      height: 23,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(4)),
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 3),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        "H. Patel",
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            color: Color(0xFF021852),
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 6),
+                              child: Text(
+                                "6 Cr",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 0),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 70,
+                              width: 70,
+                              // color: Colors.red,
+                              child: Stack(
+                                children: [
+                                  Align(
+                                      alignment: Alignment.topCenter,
+                                      child: Image.network(
+                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/63.png",
+                                        fit: BoxFit.fill,
+                                        height: 70,
+                                        width: 70,
+                                      )),
+                                  Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Container(
+                                      height: 23,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(4)),
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 3),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        "M. Siraj",
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            color: Color(0xFF021852),
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 6),
+                              child: Text(
+                                "9 Cr",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Color(0xFF007432),
-                      ),
-                    ),
+                  SizedBox(
+                    height: 15,
                   ),
                 ],
               ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(1000),
-                    border: Border.all(color: Colors.white, width: 0.5)),
-              ),
-              Container(
-                color: Color(0xFF4FA042),
-                margin: EdgeInsets.symmetric(horizontal: 145, vertical: 221),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Align(
-                      alignment: Alignment.center,
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 15),
-                        child: Text(
-                          "KEEPER",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 15),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 70,
-                            width: 70,
-                            // color: Colors.red,
-                            child: Stack(
-                              children: [
-                                Align(
-                                    alignment: Alignment.topCenter,
-                                    child: Image.network(
-                                      "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/601.png",
-                                      fit: BoxFit.fill,
-                                      height: 70,
-                                      width: 70,
-                                    )),
-                                Align(
-                                  alignment: Alignment.bottomCenter,
-                                  child: Container(
-                                    height: 23,
-                                    decoration: BoxDecoration(
-                                        color: Color(0xFF021852),
-                                        borderRadius: BorderRadius.circular(4)),
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 3),
-                                    alignment: Alignment.center,
-                                    child: Text(
-                                      "D. Conway",
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 12),
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(top: 6),
-                            child: Text(
-                              "9 Cr",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Align(
-                      alignment: Alignment.center,
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 50),
-                        child: Text(
-                          "BATTER",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(top: 15),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 70,
-                                // color: Colors.red,
-                                child: Stack(
-                                  children: [
-                                    Align(
-                                        alignment: Alignment.topCenter,
-                                        child: Image.network(
-                                          "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/102.png",
-                                          fit: BoxFit.fill,
-                                          height: 70,
-                                          width: 70,
-                                        )),
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                        height: 23,
-                                        decoration: BoxDecoration(
-                                            color: Color(0xFF021852),
-                                            borderRadius:
-                                                BorderRadius.circular(4)),
-                                        alignment: Alignment.center,
-                                        padding:
-                                            EdgeInsets.symmetric(horizontal: 3),
-                                        child: Text(
-                                          "R. Gaikwad",
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 12),
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(top: 6),
-                                child: Text(
-                                  "8 Cr",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(top: 15),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 70,
-                                // color: Colors.red,
-                                child: Stack(
-                                  children: [
-                                    Align(
-                                        alignment: Alignment.topCenter,
-                                        child: Image.network(
-                                          "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/211.png",
-                                          fit: BoxFit.fill,
-                                          height: 70,
-                                          width: 70,
-                                        )),
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                        height: 23,
-                                        decoration: BoxDecoration(
-                                            color: Color(0xFF021852),
-                                            borderRadius:
-                                                BorderRadius.circular(4)),
-                                        padding:
-                                            EdgeInsets.symmetric(horizontal: 3),
-                                        alignment: Alignment.center,
-                                        child: Text(
-                                          "S. Dube",
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 12),
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(top: 6),
-                                child: Text(
-                                  "7 Cr",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(top: 15),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 70,
-                                // color: Colors.red,
-                                child: Stack(
-                                  children: [
-                                    Align(
-                                        alignment: Alignment.topCenter,
-                                        child: Image.network(
-                                          "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/94.png",
-                                          fit: BoxFit.fill,
-                                          height: 70,
-                                          width: 70,
-                                        )),
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                        height: 23,
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(4)),
-                                        padding:
-                                            EdgeInsets.symmetric(horizontal: 3),
-                                        alignment: Alignment.center,
-                                        child: Text(
-                                          "F. Plessis",
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(
-                                              color: Color(0xFF021852),
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 12),
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(top: 6),
-                                child: Text(
-                                  "11 Cr",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(top: 15),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 70,
-                                // color: Colors.red,
-                                child: Stack(
-                                  children: [
-                                    Align(
-                                        alignment: Alignment.topCenter,
-                                        child: Image.network(
-                                          "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/2.png",
-                                          fit: BoxFit.fill,
-                                          height: 70,
-                                          width: 70,
-                                        )),
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                        height: 23,
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(4)),
-                                        padding:
-                                            EdgeInsets.symmetric(horizontal: 3),
-                                        alignment: Alignment.center,
-                                        child: Text(
-                                          "V. Kohli",
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(
-                                              color: Color(0xFF021852),
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 12),
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(top: 6),
-                                child: Text(
-                                  "12 Cr",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    Align(
-                      alignment: Alignment.center,
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 50),
-                        child: Text(
-                          "ALL ROUNDERS",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(top: 15),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 70,
-                                // color: Colors.red,
-                                child: Stack(
-                                  children: [
-                                    Align(
-                                        alignment: Alignment.topCenter,
-                                        child: Image.network(
-                                          "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/28.png",
-                                          fit: BoxFit.fill,
-                                          height: 70,
-                                          width: 70,
-                                        )),
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                        height: 23,
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(4)),
-                                        padding:
-                                            EdgeInsets.symmetric(horizontal: 3),
-                                        alignment: Alignment.center,
-                                        child: Text(
-                                          "G. Maxwell",
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(
-                                              color: Color(0xFF021852),
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 12),
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(top: 6),
-                                child: Text(
-                                  "11 Cr",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(top: 15),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 70,
-                                // color: Colors.red,
-                                child: Stack(
-                                  children: [
-                                    Align(
-                                        alignment: Alignment.topCenter,
-                                        child: Image.network(
-                                          "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/46.png",
-                                          fit: BoxFit.fill,
-                                          height: 70,
-                                          width: 70,
-                                        )),
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                        height: 23,
-                                        decoration: BoxDecoration(
-                                            color: Color(0xFF021852),
-                                            borderRadius:
-                                                BorderRadius.circular(4)),
-                                        padding:
-                                            EdgeInsets.symmetric(horizontal: 3),
-                                        alignment: Alignment.center,
-                                        child: Text(
-                                          "R. Jadeja",
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 12),
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(top: 6),
-                                child: Text(
-                                  "9 Cr",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    Align(
-                      alignment: Alignment.center,
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 50),
-                        child: Text(
-                          "BOWLERS",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(top: 15),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 70,
-                                // color: Colors.red,
-                                child: Stack(
-                                  children: [
-                                    Align(
-                                        alignment: Alignment.topCenter,
-                                        child: Image.network(
-                                          "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/1014.png",
-                                          fit: BoxFit.fill,
-                                          height: 70,
-                                          width: 70,
-                                        )),
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                        height: 23,
-                                        decoration: BoxDecoration(
-                                            color: Color(0xFF021852),
-                                            borderRadius:
-                                                BorderRadius.circular(4)),
-                                        padding:
-                                            EdgeInsets.symmetric(horizontal: 3),
-                                        alignment: Alignment.center,
-                                        child: Text(
-                                          "M. Pathiran",
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 12),
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(top: 6),
-                                child: Text(
-                                  "9 Cr",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w400),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(top: 15),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 70,
-                                // color: Colors.red,
-                                child: Stack(
-                                  children: [
-                                    Align(
-                                        alignment: Alignment.topCenter,
-                                        child: Image.network(
-                                          "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/91.png",
-                                          fit: BoxFit.fill,
-                                          height: 70,
-                                          width: 70,
-                                        )),
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                        height: 23,
-                                        decoration: BoxDecoration(
-                                            color: Color(0xFF021852),
-                                            borderRadius:
-                                                BorderRadius.circular(4)),
-                                        padding:
-                                            EdgeInsets.symmetric(horizontal: 3),
-                                        alignment: Alignment.center,
-                                        child: Text(
-                                          "D. Chahar",
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 12),
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(top: 6),
-                                child: Text(
-                                  "9 Cr",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(top: 15),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 70,
-                                // color: Colors.red,
-                                child: Stack(
-                                  children: [
-                                    Align(
-                                        alignment: Alignment.topCenter,
-                                        child: Image.network(
-                                          "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/114.png",
-                                          fit: BoxFit.fill,
-                                          height: 70,
-                                          width: 70,
-                                        )),
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                        height: 23,
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(4)),
-                                        padding:
-                                            EdgeInsets.symmetric(horizontal: 3),
-                                        alignment: Alignment.center,
-                                        child: Text(
-                                          "H. Patel",
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(
-                                              color: Color(0xFF021852),
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 12),
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(top: 6),
-                                child: Text(
-                                  "6 Cr",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(top: 15),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 70,
-                                // color: Colors.red,
-                                child: Stack(
-                                  children: [
-                                    Align(
-                                        alignment: Alignment.topCenter,
-                                        child: Image.network(
-                                          "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/63.png",
-                                          fit: BoxFit.fill,
-                                          height: 70,
-                                          width: 70,
-                                        )),
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                        height: 23,
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(4)),
-                                        padding:
-                                            EdgeInsets.symmetric(horizontal: 3),
-                                        alignment: Alignment.center,
-                                        child: Text(
-                                          "M. Siraj",
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(
-                                              color: Color(0xFF021852),
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 12),
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(top: 6),
-                                child: Text(
-                                  "9 Cr",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
