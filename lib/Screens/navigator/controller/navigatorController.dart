@@ -4,6 +4,7 @@ import 'package:cricstreak/Screens/game/view/gamepage.dart';
 import 'package:cricstreak/Screens/news/view/newsPage.dart';
 import 'package:get/get.dart';
 
+import '../../prediction/view/predictionPage.dart';
 import '../../wallet/view/walletpage.dart';
 
 class NavigatorController extends GetxController {
@@ -12,7 +13,7 @@ class NavigatorController extends GetxController {
     HomePage(),
     CricketPage(),
     NewsPage(),
-    WalletPage(),
+    PredictionPage(),
     GamePage(),
   ].obs;
 }

@@ -35,7 +35,7 @@ class _NewsDetailPageState extends State<NewsDetailPage> {
           ),
           backgroundColor: Color(0xff021852),
         ),
-        backgroundColor: Color(0xD9E5EAF8),
+        backgroundColor: Colors.white,
         body: SingleChildScrollView(
           physics: BouncingScrollPhysics(),
           child: Column(

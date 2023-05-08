@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class TeamPreviewPage extends StatefulWidget {
   const TeamPreviewPage({Key? key}) : super(key: key);
@@ -16,7 +17,9 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
           elevation: 0,
           backgroundColor: Color(0xff021852),
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.back();
+            },
             icon: Icon(
               Icons.close,
               color: Colors.white,
@@ -215,7 +218,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
               ],
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
+              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 80),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(1000),
                   border: Border.all(color: Colors.white, width: 0.5)),
