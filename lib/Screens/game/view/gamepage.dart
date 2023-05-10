@@ -1,8 +1,12 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cricstreak/Screens/game/Controller/GameController.dart';
+import 'package:cricstreak/Screens/game/model/GameModel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../../Utils/firehelper.dart';
 
 class GamePage extends StatefulWidget {
   const GamePage({Key? key}) : super(key: key);
@@ -30,54 +34,94 @@ class _GamePageState extends State<GamePage> {
                 "Events / Announcements",
                 style: TextStyle(
                     color: Colors.white,
-                    fontWeight: FontWeight.w400,
-                    fontSize: 18),
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500
+                ),
               ),
             ),
           ),
-          Padding(
+          Padding
+            (
             padding: const EdgeInsets.only(
               top: 9,
             ),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              physics: BouncingScrollPhysics(),
-              child: Row(
-                children: [
-                  SizedBox(width: 16,),
-                  Container(
-                    height: 215,
-                    width: 170,
-                    child: Image.asset(
-                      "assets/image/Events_2.png",
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 9,
-                  ),
-                  Container(
-                    height: 215,
-                    width: 170,
-                    child: Image.asset(
-                      "assets/image/Events_2.png",
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 9,
-                  ),
-                  Container(
-                    height: 215,
-                    width: 170,
-                    child: Image.asset(
-                      "assets/image/Events_3.png",
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            child: StreamBuilder(
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  List l1 = [];
+                  dynamic docs = snapshot.data!.docs;
+                  print("=====================DATTTTT ${docs[0]['event']}");
+                  for(var doc in docs[0]['event'])
+                  {
+                    l1.add(doc);
+                  }
+                  return
+                    Container(height: 215,
+                      child: ListView.builder(shrinkWrap: true,padding: EdgeInsets.only(right: 16),
+                        scrollDirection: Axis.horizontal,
+                        physics:  BouncingScrollPhysics(),
+                        itemCount: l1.length,
+                        itemBuilder: (context, index) {
+                          return Container(
+                                      height: 215,
+                                      width: 170,margin: index == 0?EdgeInsets.only(left: 16):EdgeInsets.only(left: 10),
+                                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
+                                      child: ClipRRect(borderRadius: BorderRadius.circular(15),
+                                        child: Image.network(
+                                          "${l1[index]}",
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                    );
+                        },
+                      ),
+                    );
+                } else if (snapshot.hasError) {
+                  return Center(child: Text("${snapshot.error}"));
+                }
+                return Center(child: CircularProgressIndicator(color: Colors.white,));
+              },
+              stream: FireHelper.fireHelper.GetData(),
+            )
+            // child: SingleChildScrollView(
+            //   scrollDirection: Axis.horizontal,
+            //   physics: BouncingScrollPhysics(),
+            //   child: Row(
+            //     children: [
+            //       SizedBox(width: 16,),
+            //       Container(
+            //         height: 215,
+            //         width: 170,
+            //         child: Image.asset(
+            //           "assets/image/Events_2.png",
+            //           fit: BoxFit.fill,
+            //         ),
+            //       ),
+            //       SizedBox(
+            //         width: 9,
+            //       ),
+            //       Container(
+            //         height: 215,
+            //         width: 170,
+            //         child: Image.asset(
+            //           "assets/image/Events_2.png",
+            //           fit: BoxFit.fill,
+            //         ),
+            //       ),
+            //       SizedBox(
+            //         width: 9,
+            //       ),
+            //       Container(
+            //         height: 215,
+            //         width: 170,
+            //         child: Image.asset(
+            //           "assets/image/Events_3.png",
+            //           fit: BoxFit.fill,
+            //         ),
+            //       ),
+            //     ],
+            //   ),
+            // ),
           ),
           SizedBox(
             height: 9,
@@ -93,8 +137,11 @@ class _GamePageState extends State<GamePage> {
              padding: const EdgeInsets.symmetric(horizontal: 16),
              child: Text(
               "Games",
-              style: TextStyle(
-                  color: Colors.white, fontWeight: FontWeight.w400, fontSize: 18),
+              style:TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500
+              ),
           ),
            ),
           SizedBox(
@@ -102,95 +149,113 @@ class _GamePageState extends State<GamePage> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: GridView.builder(
-              shrinkWrap: true,
-              physics: const BouncingScrollPhysics(),
-              itemCount: gameController.GameList.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 10,
-                  mainAxisExtent: 185,
-                  mainAxisSpacing: 10),
-              itemBuilder: (context, index) {
-                return InkWell(
-                  onTap: () async {
-                    await launchUrl(
-                        Uri.parse("${gameController.GameList[index].link}"));
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Color(0xff021852),
-                        borderRadius: BorderRadius.circular(20)),
-                    child: Stack(
-                      children: [
-                        Align(
-                            alignment: Alignment.center,
-                            child: ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
-                                child: Image.network(
-                                  "${gameController.GameList[index].image}",
-                                  fit: BoxFit.fill,
-                                  height: double.infinity,
+            child:  StreamBuilder(
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  List<GameModel> l1 = [];
+                  dynamic docs = snapshot.data!.docs;
+                  print("=====================DATTTTT ${docs[0]['games']}");
+                  for(var doc in docs[0]['games'])
+                    {
+                      l1.add(GameModel().fromJson(doc));
+                    }
+                  return
+                   GridView.builder(
+                    shrinkWrap: true,
+                    physics: const BouncingScrollPhysics(),
+                    itemCount: l1.length,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        crossAxisSpacing: 10,
+                        mainAxisExtent: 185,
+                        mainAxisSpacing: 10),
+                    itemBuilder: (context, index) {
+                      return InkWell(
+                        onTap: () async {
+                          await launchUrl(
+                              Uri.parse("${l1[index].link}"));
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Color(0xff021852),
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Stack(
+                            children: [
+                              Align(
+                                  alignment: Alignment.center,
+                                  child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(20),
+                                      child: Image.network(
+                                        "${l1[index].image}",
+                                        fit: BoxFit.fill,
+                                        height: double.infinity,
+                                        width: double.infinity,
+                                      ))),
+                              Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Container(
+                                  height: 55,
                                   width: double.infinity,
-                                ))),
-                        Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Container(
-                            height: 55,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.only(
-                                    bottomLeft: Radius.circular(20),
-                                    bottomRight: Radius.circular(20)),
-                                color: Colors.black38),
-                            padding:
-                                EdgeInsets.symmetric(horizontal: 15, vertical: 9),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "${gameController.GameList[index].name}",
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 14,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.only(
+                                          bottomLeft: Radius.circular(20),
+                                          bottomRight: Radius.circular(20)),
+                                      color: Colors.black38),
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 15, vertical: 9),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "${l1[index].name}",
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 6,
+                                      ),
+                                      Row(
+                                        children: [
+                                          Container(
+                                            height: 12,
+                                            width: 12,
+                                            child: Image.asset(
+                                                "assets/image/players_logo.png"),
+                                          ),
+                                          SizedBox(
+                                            width: 6,
+                                          ),
+                                          Text(
+                                            "${l1[index].playres} players",
+                                            style: const TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 12,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
                                   ),
                                 ),
-                                SizedBox(
-                                  height: 6,
-                                ),
-                                Row(
-                                  children: [
-                                    Container(
-                                      height: 12,
-                                      width: 12,
-                                      child: Image.asset(
-                                          "assets/image/players_logo.png"),
-                                    ),
-                                    SizedBox(
-                                      width: 6,
-                                    ),
-                                    Text(
-                                      "${gameController.GameList[index].playres} players",
-                                      style: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
+                              )
+                            ],
                           ),
-                        )
-                      ],
-                    ),
-                  ),
-                );
+                        ),
+                      );
+                    },
+                  );
+                } else if (snapshot.hasError) {
+                  return Center(child: Text("${snapshot.error}"));
+                }
+                return Center(child: CircularProgressIndicator(color: Colors.white,));
               },
+              stream: FireHelper.fireHelper.GetData(),
             ),
           )
         ],

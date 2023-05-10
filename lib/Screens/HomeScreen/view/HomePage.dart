@@ -322,6 +322,15 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
           SizedBox(height: 15,),
+          Text(
+            "Games",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontWeight: FontWeight.w500
+            ),
+          ),
+          SizedBox(height: 15,),
 
         ],
       ),

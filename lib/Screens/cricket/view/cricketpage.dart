@@ -25,9 +25,9 @@ class _CricketPageState extends State<CricketPage> {
             builder: (context, snapshot) {
               if (snapshot.hasData) {
                 List l1 = [];
-                DocumentSnapshot? docs = snapshot.data;
-                var data = docs!.data();
-                print("===================== $data");
+                // DocumentSnapshot? docs = snapshot.data.docs;
+                // var data = docs!.data();
+                // print("===================== $data");
                 // for(var doc in docs.)
                 //   {
                 //     Map l2 = doc.data();
