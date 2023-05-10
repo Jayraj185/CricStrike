@@ -5,8 +5,8 @@ class FireHelper{
   static FireHelper fireHelper = FireHelper._();
   FirebaseFirestore firebaseFirestore =FirebaseFirestore.instance;
 
-  Stream<DocumentSnapshot<Map<String, dynamic>>> GetData(){
-    return firebaseFirestore.collection("matches").doc("dBsWK3GnSI4ZDWeeDMZ5").snapshots();
+  Stream<QuerySnapshot<Map<String, dynamic>>> GetData(){
+    return firebaseFirestore.collection("game").snapshots();
   }
 
 }
