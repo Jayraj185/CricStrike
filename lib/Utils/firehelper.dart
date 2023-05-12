@@ -8,5 +8,8 @@ class FireHelper{
   Stream<QuerySnapshot<Map<String, dynamic>>> GetData(){
     return firebaseFirestore.collection("game").snapshots();
   }
+  Stream<QuerySnapshot<Map<String, dynamic>>> GetPredictionData(){
+    return firebaseFirestore.collection("prediction").doc("nRWR4gqbaN50xXMqlJ6p").collection("today").snapshots();
+  }
 
 }

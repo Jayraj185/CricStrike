@@ -153,7 +153,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
     return SafeArea(
       child: Obx(
         () => DefaultTabController(
-          length: navigatorController.NavigatIndex.value == 2 ? 2 : 3,
+          length: 2,
           child: Scaffold(
             appBar: navigatorController.NavigatIndex.value == 2
                 ? AppBar(
@@ -203,18 +203,10 @@ class _NavigatorPageState extends State<NavigatorPage> {
                         bottom: TabBar(
                           labelColor: Color(0xFFFFFFFF),
                           onTap: (value) {
-                            if (newsController.gamename.value == 1) {
-                              newsController.gamename.value = 0;
-                            } else {
-                              newsController.gamename.value = 1;
-                            }
                           },
                           indicatorColor: Color(0xFFFFFFFF),
                           automaticIndicatorColorAdjustment: true,
                           tabs: [
-                            Tab(
-                              text: "Yesterday",
-                            ),
                             Tab(
                               text: "Today",
                             ),
@@ -238,7 +230,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
                               height: 30,
                             ),
                             Text(
-                              " CRICNEWS",
+                              " CRICSTRIKE",
                             ),
                           ],
                         ),
@@ -257,8 +249,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
                                   ),
                                   child: InkWell(
                                     onTap: () {
-                                      navigatorController.NavigatIndex.value =
-                                          3;
+                                    Get.toNamed('wallet');
                                     },
                                     child: Container(
                                       width: 80,
