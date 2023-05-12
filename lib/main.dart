@@ -1,3 +1,4 @@
+import 'package:cricstreak/Screens/CreateTeam/view/CreateTeamPage.dart';
 import 'package:cricstreak/Screens/TabBar/View/TabBarScreen.dart';
 import 'package:cricstreak/Screens/TeamPreview/view/TeamPreviewPage.dart';
 import 'package:cricstreak/Screens/navigator/view/navigatorPage.dart';
@@ -24,6 +25,7 @@ void main() async {
         'ndetail': (context) => NewsDetailPage(),
         'tabbar': (context) => TabBarScreen(),
         'team_Preview': (context) => TeamPreviewPage(),
+        'create_Team': (context) => CreateTeamPage(),
       },
     ),
   );

@@ -680,34 +680,39 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
           ),
         ),
         Spacer(),
-        Container(
-          height: 45,
-          width: 150,
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Color(0xFFFFE68B),
-                    Color(0xFFFFD700)
-                  ]
-              ),
-            borderRadius: BorderRadius.circular(9)
-          ),
-          alignment: Alignment.center,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Icon(Icons.groups_rounded,color: Color(0xFF021852), size: 25,),
-              Text(
-                "Create Team",
-                style: TextStyle(
-                  color: Color(0xFF021852),
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold
+        InkWell(
+          onTap: () {
+            Get.toNamed('create_Team');
+          },
+          child: Container(
+            height: 45,
+            width: 150,
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color(0xFFFFE68B),
+                      Color(0xFFFFD700)
+                    ]
                 ),
-              )
-            ],
+              borderRadius: BorderRadius.circular(9)
+            ),
+            alignment: Alignment.center,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(Icons.groups_rounded,color: Color(0xFF021852), size: 25,),
+                Text(
+                  "Create Team",
+                  style: TextStyle(
+                    color: Color(0xFF021852),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold
+                  ),
+                )
+              ],
+            ),
           ),
         ),
         SizedBox(height: 30,),
