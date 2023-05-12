@@ -65,7 +65,7 @@ class _GamePageState extends State<GamePage> {
                           return Container(
                                       height: 215,
                                       width: 170,margin: index == 0?EdgeInsets.only(left: 16):EdgeInsets.only(left: 10),
-                                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
+                                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),color: Color(0xff021852),),
                                       child: ClipRRect(borderRadius: BorderRadius.circular(15),
                                         child: Image.network(
                                           "${l1[index]}",

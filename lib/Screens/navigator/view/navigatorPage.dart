@@ -238,9 +238,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
                       )
                     : AppBar(
                         actions: [
-                          navigatorController.NavigatIndex.value == 0 ||
-                                  navigatorController.NavigatIndex.value == 1 ||
-                                  navigatorController.NavigatIndex.value == 4
+                          navigatorController.NavigatIndex.value == 0
                               ? Padding(
                                   padding: EdgeInsets.only(
                                     right: 13,
