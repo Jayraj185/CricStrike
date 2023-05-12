@@ -1,3 +1,4 @@
+import 'package:cricstreak/Screens/predictionpreviewpage/view/predictionpreviewPage.dart';
 import 'package:cricstreak/Utils/firehelper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -25,19 +26,25 @@ class _PredictionPageState extends State<PredictionPage> {
                 print(l1);
                 return ListView.builder(
                   itemBuilder: (context, index) => Padding(
-                    padding: const EdgeInsets.only(left: 16,right: 16,top: 15),
+                    padding:
+                        const EdgeInsets.only(left: 16, right: 16, top: 15),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                       index==0 ?Text(
-                          "PREDICTION",
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w500),
-                        ):Container(),
-                        index==0 ?SizedBox(
-                          height: 10,
-                        ):Container(),
+                        index == 0
+                            ? Text(
+                                "PREDICTION",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w500),
+                              )
+                            : Container(),
+                        index == 0
+                            ? SizedBox(
+                                height: 10,
+                              )
+                            : Container(),
                         Container(
                           width: double.infinity,
                           padding: EdgeInsets.all(15),
@@ -52,13 +59,16 @@ class _PredictionPageState extends State<PredictionPage> {
                                   Text(
                                     "${l1[index]['match']}",
                                     style: TextStyle(
-                                        fontWeight: FontWeight.bold, fontSize: 15),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 15),
                                   ),
                                   Spacer(),
                                   Text(
                                     "${l1[index]['time']}",
                                     style: TextStyle(
-                                        fontWeight: FontWeight.bold,color:  Color(0xff021852), fontSize: 15),
+                                        fontWeight: FontWeight.bold,
+                                        color: Color(0xff021852),
+                                        fontSize: 15),
                                   ),
                                 ],
                               ),
@@ -67,7 +77,7 @@ class _PredictionPageState extends State<PredictionPage> {
                               ),
                               InkWell(
                                 onTap: () {
-                                  Get.toNamed('team_Preview');
+                                  Get.toNamed('pp');
                                 },
                                 child: Container(
                                   height: 230,
@@ -249,7 +259,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                               .white,
                                                                       backgroundImage:
                                                                           NetworkImage(
-                                                                              "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/2.png"),
+                                                                              "${l1[index]['cricteam']['captain']['image']}"),
                                                                     ),
                                                                   ),
                                                                 ),
@@ -273,7 +283,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                         Alignment
                                                                             .center,
                                                                     child: Text(
-                                                                      "V. Kohli",
+                                                                      "${l1[index]['cricteam']['captain']['name']}",
                                                                       maxLines:
                                                                           1,
                                                                       style: TextStyle(
@@ -345,7 +355,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                               .white,
                                                                       backgroundImage:
                                                                           NetworkImage(
-                                                                              "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/94.png"),
+                                                                              "${l1[index]['cricteam']['vice_captain']['image']}"),
                                                                     ),
                                                                   ),
                                                                 ),
@@ -356,6 +366,9 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                   child:
                                                                       Container(
                                                                     height: 30,
+                                                                    padding: EdgeInsets.only(
+                                                                        left:
+                                                                            3,right: 3),
                                                                     margin: EdgeInsets.only(
                                                                         top: 21,
                                                                         left:
@@ -369,7 +382,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                         Alignment
                                                                             .center,
                                                                     child: Text(
-                                                                      "F. Plessis",
+                                                                      "${l1[index]['cricteam']['vice_captain']['name']}",
                                                                       maxLines:
                                                                           1,
                                                                       overflow:
@@ -691,7 +704,8 @@ class _PredictionPageState extends State<PredictionPage> {
                               ),
                               SizedBox(
                                 height: 15,
-                              ),Text(
+                              ),
+                              Text(
                                 "TOSS",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 15),

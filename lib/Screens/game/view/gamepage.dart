@@ -165,9 +165,8 @@ class _GamePageState extends State<GamePage> {
                     physics: const BouncingScrollPhysics(),
                     itemCount: l1.length,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
+                        crossAxisCount: 3,
                         crossAxisSpacing: 10,
-                        mainAxisExtent: 185,
                         mainAxisSpacing: 10),
                     itemBuilder: (context, index) {
                       return InkWell(
@@ -194,7 +193,7 @@ class _GamePageState extends State<GamePage> {
                               Align(
                                 alignment: Alignment.bottomCenter,
                                 child: Container(
-                                  height: 55,
+                                  height: 34,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.only(
@@ -217,29 +216,29 @@ class _GamePageState extends State<GamePage> {
                                           fontSize: 14,
                                         ),
                                       ),
-                                      SizedBox(
-                                        height: 6,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            height: 12,
-                                            width: 12,
-                                            child: Image.asset(
-                                                "assets/image/players_logo.png"),
-                                          ),
-                                          SizedBox(
-                                            width: 6,
-                                          ),
-                                          Text(
-                                            "${l1[index].playres} players",
-                                            style: const TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 12,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
+                                      // SizedBox(
+                                      //   height: 6,
+                                      // ),
+                                      // Row(
+                                      //   children: [
+                                      //     Container(
+                                      //       height: 12,
+                                      //       width: 12,
+                                      //       child: Image.asset(
+                                      //           "assets/image/players_logo.png"),
+                                      //     ),
+                                      //     SizedBox(
+                                      //       width: 6,
+                                      //     ),
+                                      //     Text(
+                                      //       "${l1[index].playres} players",
+                                      //       style: const TextStyle(
+                                      //         color: Colors.white,
+                                      //         fontSize: 12,
+                                      //       ),
+                                      //     ),
+                                      //   ],
+                                      // ),
                                     ],
                                   ),
                                 ),

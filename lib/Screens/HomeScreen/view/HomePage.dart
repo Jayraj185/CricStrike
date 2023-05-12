@@ -339,10 +339,27 @@ class _HomePageState extends State<HomePage> {
           SizedBox(
             height: 15,
           ),
-          Text(
-            "    Games",
-            style: TextStyle(
-                color: Colors.white, fontSize: 18, fontWeight: FontWeight.w500),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Row(
+              children: [
+                Text(
+                  "Games",
+                  style: TextStyle(
+                      color: Colors.white, fontSize: 18, fontWeight: FontWeight.w500),
+                ),Spacer(),
+                InkWell(
+                  onTap: () {
+                    navigatorController.NavigatIndex.value=4;
+                  },
+                  child: Text(
+                    "More",
+                    style: TextStyle(
+                        color: Colors.blue, fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
+            ),
           ),
           SizedBox(
             height: 10,
@@ -380,7 +397,7 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               Container(
                                 width: 100,
-
+                                height: 100,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(15)),
                                 child: ClipRRect(
@@ -397,7 +414,8 @@ class _HomePageState extends State<HomePage> {
                               Text(
                                 "${l1[index].name}",
                                 maxLines: 1,
-                                overflow: TextOverflow.ellipsis,style: TextStyle(color: Colors.white),
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(color: Colors.white),
                               )
                             ],
                           ),
@@ -411,7 +429,9 @@ class _HomePageState extends State<HomePage> {
                   child: Text("${snapshot.error}"),
                 );
               }
-              return Container(height: 130,);
+              return Container(
+                height: 130,
+              );
             },
             stream: FireHelper.fireHelper.GetData(),
           ),

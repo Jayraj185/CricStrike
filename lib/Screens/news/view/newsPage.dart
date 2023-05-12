@@ -313,7 +313,7 @@ class _NewsPageState extends State<NewsPage> {
                     );
                   },
                   future: ApiHelper.apiHelper.GetData(
-                      Sportname:"football"),
+                      Sportname:"01"),
                 ),
             ],
           ),
