@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cricstreak/Screens/prediction/controller/predictionController.dart';
 import 'package:cricstreak/Utils/firehelper.dart';
 import 'package:flutter/cupertino.dart';
@@ -83,7 +84,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                         alignment: Alignment.center,
                         padding: EdgeInsets.symmetric(horizontal: 8),
                         child: Text(
-                          "${predictionController.dataList[predictionController.previvewIndex.value]['cricteam']['team1'][1]}",
+                          "${predictionController.dataList[0]['cricteam']['team1']}",
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 12,
@@ -91,7 +92,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                         ),
                       ),
                       Text(
-                        "6",
+                        "${predictionController.dataList[0]['cricteam']['team1_player']}",
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -105,7 +106,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                             fontSize: 18),
                       ),
                       Text(
-                        "5",
+                        "${predictionController.dataList[0]['cricteam']['team2_player']}",
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -120,7 +121,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                         alignment: Alignment.center,
                         padding: EdgeInsets.symmetric(horizontal: 8),
                         child: Text(
-                          "CSK",
+                          "${predictionController.dataList[0]['cricteam']['team2']}",
                           style: TextStyle(
                               color: Color(0xFF021852),
                               fontSize: 12,
@@ -166,6 +167,10 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
         body: StreamBuilder(
           stream: FireHelper.fireHelper.GetPredictionData(),
           builder: (context, snapshot) {
+            if (snapshot.hasError) {
+              return Image.asset("assets/image/team_preview.png",
+                  fit: BoxFit.fill);
+            }
             if (snapshot.hasData) {
               List l1 = [];
               List docs = snapshot.data!.docs;
@@ -292,13 +297,27 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                       alignment: Alignment.center,
                                       children: [
                                         Align(
-                                            alignment: Alignment.topCenter,
-                                            child: Image.network(
-                                              "${keeper[index]['image']}",
-                                              fit: BoxFit.fill,
-                                              height: 70,
-                                              width: 70,
-                                            )),
+                                          alignment: Alignment.topCenter,
+                                          child: CachedNetworkImage(
+                                            fadeInDuration:
+                                                Duration(seconds: 0),
+                                            fit: BoxFit.fill,
+                                            imageUrl:
+                                                "${keeper[index]['image']}",
+                                            progressIndicatorBuilder: (context,
+                                                    url, downloadProgress) =>
+                                                Container(),
+                                            errorWidget:
+                                                (context, url, error) => Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Icon(Icons.error),
+                                                Text(" Image Not available")
+                                              ],
+                                            ),
+                                          ),
+                                        ),
                                         Align(
                                           alignment: Alignment.bottomCenter,
                                           child: Container(
@@ -387,12 +406,25 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                       children: [
                                         Align(
                                             alignment: Alignment.topCenter,
-                                            child: Image.network(
-                                              "${batsman[index]['image']}",
-                                              fit: BoxFit.fill,
-                                              height: 70,
-                                              width: 70,
-                                            )),
+                                      child: CachedNetworkImage(
+                                        fadeInDuration:
+                                        Duration(seconds: 0),
+                                        fit: BoxFit.fill,
+                                        imageUrl:
+                                        "${batsman[index]['image']}",
+                                        progressIndicatorBuilder: (context,
+                                            url, downloadProgress) =>
+                                            Container(),
+                                        errorWidget:
+                                            (context, url, error) => Row(
+                                          mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                          children: [
+                                            Icon(Icons.error),
+                                            Text(" Image Not available")
+                                          ],
+                                        ),
+                                      ),),
                                         Align(
                                           alignment: Alignment.bottomCenter,
                                           child: Container(
@@ -482,12 +514,26 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                       children: [
                                         Align(
                                             alignment: Alignment.topCenter,
-                                            child: Image.network(
-                                              "${allrounder[index]['image']}",
-                                              fit: BoxFit.fill,
-                                              height: 70,
-                                              width: 70,
-                                            )),
+                                          child: CachedNetworkImage(
+                                            fadeInDuration:
+                                            Duration(seconds: 0),
+                                            fit: BoxFit.fill,
+                                            imageUrl:
+                                            "${allrounder[index]['image']}",
+                                            progressIndicatorBuilder: (context,
+                                                url, downloadProgress) =>
+                                                Container(),
+                                            errorWidget:
+                                                (context, url, error) => Row(
+                                              mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                              children: [
+                                                Icon(Icons.error),
+                                                Text(" Image Not available")
+                                              ],
+                                            ),
+                                          ),
+                                        ),
                                         Align(
                                           alignment: Alignment.bottomCenter,
                                           child: Container(
@@ -577,12 +623,26 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                       children: [
                                         Align(
                                             alignment: Alignment.topCenter,
-                                            child: Image.network(
-                                              "${bowler[index]['image']}",
-                                              fit: BoxFit.fill,
-                                              height: 70,
-                                              width: 70,
-                                            )),
+                                          child: CachedNetworkImage(
+                                            fadeInDuration:
+                                            Duration(seconds: 0),
+                                            fit: BoxFit.fill,
+                                            imageUrl:
+                                            "${bowler[index]['image']}",
+                                            progressIndicatorBuilder: (context,
+                                                url, downloadProgress) =>
+                                                Container(),
+                                            errorWidget:
+                                                (context, url, error) => Row(
+                                              mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                              children: [
+                                                Icon(Icons.error),
+                                                Text(" Image Not available")
+                                              ],
+                                            ),
+                                          ),
+                                        ),
                                         Align(
                                           alignment: Alignment.bottomCenter,
                                           child: Container(

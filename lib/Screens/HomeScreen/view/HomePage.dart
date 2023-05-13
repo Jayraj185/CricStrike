@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cricstreak/Screens/navigator/controller/navigatorController.dart';
 import 'package:cricstreak/Utils/Widgets.dart';
 import 'package:flutter/material.dart';
@@ -403,9 +404,23 @@ class _HomePageState extends State<HomePage> {
                                     borderRadius: BorderRadius.circular(15)),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(15),
-                                  child: Image.network(
-                                    "${l1[index].image}",
+                                  child: CachedNetworkImage(fadeInDuration: Duration(seconds: 00),filterQuality: FilterQuality.high,
                                     fit: BoxFit.fill,
+                                    imageUrl:
+                                    "${l1[index].image}",
+                                    progressIndicatorBuilder:
+                                        (context, url, downloadProgress) =>
+                                        Container(
+
+                                        ),
+                                    errorWidget: (context, url, error) => Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.center,
+                                      children: [
+                                        Icon(Icons.error),
+                                        Text(" Image Not available")
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),

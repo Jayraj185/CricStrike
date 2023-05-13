@@ -46,6 +46,7 @@ dependencies:
   url_launcher: ^6.1.10
   cached_network_image:
   local_auth: ^2.1.6
+  pinput: any
 
   google_fonts:
 

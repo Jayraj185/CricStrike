@@ -198,44 +198,6 @@ class _NavigatorPageState extends State<NavigatorPage> {
                     ),
                     backgroundColor: Color(0xff021852),
                   )
-                : navigatorController.NavigatIndex.value == 3
-                    ? AppBar(
-                        bottom: TabBar(
-                          labelColor: Color(0xFFFFFFFF),
-                          onTap: (value) {
-                          },
-                          indicatorColor: Color(0xFFFFFFFF),
-                          automaticIndicatorColorAdjustment: true,
-                          tabs: [
-                            Tab(
-                              text: "Today",
-                            ),
-                            Tab(
-                              text: "Tomorrow",
-                            ),
-                          ],
-                        ),
-                        leading: Padding(
-                          padding: EdgeInsets.only(left: 10, top: 8, bottom: 8),
-                          child: CircleAvatar(
-                            backgroundImage: NetworkImage(
-                              "https://w7.pngwing.com/pngs/420/567/png-transparent-avatar-male-man-portrait-avatars-xmas-giveaway-icon.png",
-                            ),
-                          ),
-                        ),
-                        title: Row(
-                          children: [
-                            Image.asset(
-                              "assets/image/applogo.png",
-                              height: 30,
-                            ),
-                            Text(
-                              " CRICSTRIKE",
-                            ),
-                          ],
-                        ),
-                        backgroundColor: Color(0xff021852),
-                      )
                     : AppBar(
                         actions: [
                           navigatorController.NavigatIndex.value == 0

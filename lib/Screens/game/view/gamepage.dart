@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cricstreak/Screens/game/Controller/GameController.dart';
 import 'package:cricstreak/Screens/game/model/GameModel.dart';
@@ -67,12 +68,31 @@ class _GamePageState extends State<GamePage> {
                                       width: 170,margin: index == 0?EdgeInsets.only(left: 16):EdgeInsets.only(left: 10),
                                       decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),color: Color(0xff021852),),
                                       child: ClipRRect(borderRadius: BorderRadius.circular(15),
-                                        child: Image.network(
-                                          "${l1[index]}",
+                                        child: CachedNetworkImage(fadeInDuration: Duration(seconds: 0),
                                           fit: BoxFit.fill,
+                                          imageUrl:
+                                          "${l1[index]}",
+                                          progressIndicatorBuilder:
+                                              (context, url, downloadProgress) =>
+                                              Container(
+
+                                              ),
+                                          errorWidget: (context, url, error) => Row(
+                                            mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                            children: [
+                                              Icon(Icons.error),
+                                              Text(" Image Not available")
+                                            ],
+                                          ),
                                         ),
-                                      ),
-                                    );
+
+                                      //   Image.network(
+                                      //     "${l1[index]}",
+                                      //     fit: BoxFit.fill,
+                                      //   ),
+                                      // ),
+                                    ));
                         },
                       ),
                     );
@@ -184,12 +204,36 @@ class _GamePageState extends State<GamePage> {
                                   alignment: Alignment.center,
                                   child: ClipRRect(
                                       borderRadius: BorderRadius.circular(20),
-                                      child: Image.network(
-                                        "${l1[index].image}",
+                                      child:CachedNetworkImage(fadeInDuration: Duration(seconds: 0),filterQuality: FilterQuality.high,
                                         fit: BoxFit.fill,
-                                        height: double.infinity,
-                                        width: double.infinity,
-                                      ))),
+                                        imageUrl:
+                                        "${l1[index].image}",
+                                        progressIndicatorBuilder:
+                                            (context, url, downloadProgress) =>
+                                            Container(
+
+                                            ),
+                                        errorWidget: (context, url, error) => Row(
+                                          mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                          children: [
+                                            Icon(Icons.error),
+                                            Text(" Image Not available")
+                                          ],
+                                        ),
+                                      ),
+
+
+
+                                    // Image.network(
+                                      //   "${l1[index].image}",
+                                      //   fit: BoxFit.fill,
+                                      //   height: double.infinity,
+                                      //   width: double.infinity,
+                                      // )
+
+
+                                    ),),
                               Align(
                                 alignment: Alignment.bottomCenter,
                                 child: Container(

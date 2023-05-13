@@ -57,7 +57,7 @@ class _NewsPageState extends State<NewsPage> {
                                       children: [
                                         Expanded(
                                           child: Text(
-                                            "${n1.articles![index].author == null ? "CRICNEWS" : n1.articles![index].author}",
+                                            "${n1.articles![index].author == null ? "CRICNEWS" : n1.articles![index].author}",maxLines: 1,overflow: TextOverflow.ellipsis,
                                             style: GoogleFonts.bitter(
                                               fontWeight: FontWeight.w500,
                                               fontSize: 17,
@@ -98,7 +98,7 @@ class _NewsPageState extends State<NewsPage> {
                                   Container(
                                     alignment: Alignment.center,
                                     padding: EdgeInsets.only(left: 5, right: 5),
-                                    child: CachedNetworkImage(
+                                    child: CachedNetworkImage(fadeInDuration: Duration(seconds: 0),
                                       fit: BoxFit.fill,
                                       imageUrl:
                                           "${n1.articles![index].urlToImage}",
@@ -255,7 +255,8 @@ class _NewsPageState extends State<NewsPage> {
                                         value: downloadProgress.progress,
                                         color: Color(0xff021852),
                                       ),
-                                      errorWidget: (context, url, error) => Row(
+                                      errorWidget: (context, url, error) =>
+                                          Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
