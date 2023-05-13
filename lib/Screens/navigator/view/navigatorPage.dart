@@ -153,7 +153,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
     return SafeArea(
       child: Obx(
         () => DefaultTabController(
-          length: navigatorController.NavigatIndex.value==2?2:3,
+          length: navigatorController.NavigatIndex.value == 2 ? 2 : 3,
           child: Scaffold(
             appBar: navigatorController.NavigatIndex.value == 2
                 ? AppBar(
@@ -214,7 +214,8 @@ class _NavigatorPageState extends State<NavigatorPage> {
                           tabs: [
                             Tab(
                               text: "Yesterday",
-                            ),  Tab(
+                            ),
+                            Tab(
                               text: "Today",
                             ),
                             Tab(
@@ -341,7 +342,11 @@ class _NavigatorPageState extends State<NavigatorPage> {
             body: Container(
               height: double.infinity,
               width: double.infinity,
-              padding: navigatorController.NavigatIndex.value == 2||navigatorController.NavigatIndex.value == 3||navigatorController.NavigatIndex.value == 4                  ? EdgeInsets.symmetric(horizontal: 0)
+              padding: navigatorController.NavigatIndex.value == 2 ||
+                      navigatorController.NavigatIndex.value == 3 ||
+                      navigatorController.NavigatIndex.value == 0 ||
+                      navigatorController.NavigatIndex.value == 4
+                  ? EdgeInsets.symmetric(horizontal: 0)
                   : EdgeInsets.symmetric(horizontal: 16),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -359,7 +364,8 @@ class _NavigatorPageState extends State<NavigatorPage> {
             ),
             bottomNavigationBar: Obx(
               () => BottomNavigationBar(
-                unselectedItemColor: Colors.white60,selectedItemColor: Colors.white,
+                unselectedItemColor: Colors.white60,
+                selectedItemColor: Colors.white,
                 type: BottomNavigationBarType.fixed,
                 showSelectedLabels: true,
                 currentIndex: navigatorController.NavigatIndex.value,

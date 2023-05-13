@@ -79,7 +79,7 @@ class _GamePageState extends State<GamePage> {
                 } else if (snapshot.hasError) {
                   return Center(child: Text("${snapshot.error}"));
                 }
-                return Center(child: CircularProgressIndicator(color: Colors.white,));
+                return Container(height:215,child: Center(child: CircularProgressIndicator(color: Colors.white,)));
               },
               stream: FireHelper.fireHelper.GetData(),
             )
@@ -253,11 +253,14 @@ class _GamePageState extends State<GamePage> {
                 } else if (snapshot.hasError) {
                   return Center(child: Text("${snapshot.error}"));
                 }
-                return Center(child: CircularProgressIndicator(color: Colors.white,));
+                return Container();
               },
               stream: FireHelper.fireHelper.GetData(),
             ),
-          )
+          ),
+          SizedBox(
+            height: 15,
+          ),
         ],
       ),
     );

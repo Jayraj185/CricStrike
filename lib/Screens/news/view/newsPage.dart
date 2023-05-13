@@ -165,7 +165,7 @@ class _NewsPageState extends State<NewsPage> {
                       ),
                     );
                   },
-                  future: ApiHelper.apiHelper.GetData(Sportname: "cricket"),
+                  future: ApiHelper.apiHelper.GetData(Sportname: "ipl All"),
                 ),
             ],
           ),
