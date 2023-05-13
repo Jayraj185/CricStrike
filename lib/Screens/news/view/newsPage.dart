@@ -40,7 +40,7 @@ class _NewsPageState extends State<NewsPage> {
                             width: double.infinity,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(7),
-                              color: Color(0xffe8edfa),
+                              color: Color(0xffffffff),
                             ),
                             margin: EdgeInsets.only(bottom: 5, top: 20),
                             child: InkWell(
@@ -91,7 +91,7 @@ class _NewsPageState extends State<NewsPage> {
                                     ),
                                     height: 45,
                                     decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(7),
+                                      borderRadius: BorderRadius.only(topLeft: Radius.circular(7),topRight: Radius.circular(7)),
                                       color: Color(0xffe8edfa),
                                     ),
                                   ),
@@ -187,7 +187,7 @@ class _NewsPageState extends State<NewsPage> {
                             width: double.infinity,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(7),
-                              color: Color(0xffe8edfa),
+                              color: Color(0xffffffff),
                             ),
                             margin: EdgeInsets.only(bottom: 5, top: 20),
                             child: InkWell(
@@ -238,7 +238,7 @@ class _NewsPageState extends State<NewsPage> {
                                     ),
                                     height: 45,
                                     decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(7),
+                                      borderRadius: BorderRadius.only(topRight: Radius.circular(7),topLeft: Radius.circular(7),),
                                       color: Color(0xffe8edfa),
                                     ),
                                   ),

@@ -391,6 +391,7 @@ class _HomePageState extends State<HomePage> {
                               ? EdgeInsets.only(left: 16)
                               : EdgeInsets.only(left: 10),
                           width: 100,
+
                           height: 130,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -398,7 +399,7 @@ class _HomePageState extends State<HomePage> {
                               Container(
                                 width: 100,
                                 height: 100,
-                                decoration: BoxDecoration(
+                                decoration: BoxDecoration(color: Color(0xff021852),
                                     borderRadius: BorderRadius.circular(15)),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(15),

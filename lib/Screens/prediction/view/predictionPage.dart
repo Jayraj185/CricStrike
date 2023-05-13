@@ -1,8 +1,9 @@
-import 'package:cricstreak/Screens/predictionpreviewpage/view/predictionpreviewPage.dart';
 import 'package:cricstreak/Utils/firehelper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../controller/predictionController.dart';
 
 class PredictionPage extends StatefulWidget {
   const PredictionPage({Key? key}) : super(key: key);
@@ -12,6 +13,8 @@ class PredictionPage extends StatefulWidget {
 }
 
 class _PredictionPageState extends State<PredictionPage> {
+  PredictionController predictionController = Get.put(PredictionController());
+
   @override
   Widget build(BuildContext context) {
     return TabBarView(
@@ -23,6 +26,15 @@ class _PredictionPageState extends State<PredictionPage> {
                 List docs = snapshot.data!.docs;
 
                 l1 = docs[0]['matches'];
+                predictionController.dataList.value = l1;
+                List keeper = l1[predictionController.previvewIndex.value]
+                ['cricteam']['keeper'];
+                List  allrounder= l1[predictionController.previvewIndex.value]
+                ['cricteam']['allrounder'];
+                List batsman = l1[predictionController.previvewIndex.value]
+                ['cricteam']['batsman'];
+                List bowler = l1[predictionController.previvewIndex.value]
+                ['cricteam']['bowler'];
                 print(l1);
                 return ListView.builder(
                   itemBuilder: (context, index) => Padding(
@@ -77,6 +89,9 @@ class _PredictionPageState extends State<PredictionPage> {
                               ),
                               InkWell(
                                 onTap: () {
+                                  predictionController.previvewIndex.value =
+                                      index;
+
                                   Get.toNamed('pp');
                                 },
                                 child: Container(
@@ -290,7 +305,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                           color: Colors
                                                                               .black,
                                                                           fontSize:
-                                                                              15,
+                                                                              13,
                                                                           fontWeight:
                                                                               FontWeight.w500),
                                                                     ),
@@ -367,8 +382,9 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                       Container(
                                                                     height: 30,
                                                                     padding: EdgeInsets.only(
-                                                                        left:
-                                                                            3,right: 3),
+                                                                        left: 3,
+                                                                        right:
+                                                                            3),
                                                                     margin: EdgeInsets.only(
                                                                         top: 21,
                                                                         left:
@@ -392,7 +408,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                           color: Colors
                                                                               .white,
                                                                           fontSize:
-                                                                              15,
+                                                                              13,
                                                                           fontWeight:
                                                                               FontWeight.w500),
                                                                     ),

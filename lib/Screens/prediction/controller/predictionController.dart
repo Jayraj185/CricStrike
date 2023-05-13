@@ -1,7 +1,10 @@
 import 'package:get/get.dart';
 
 class PredictionController extends GetxController{
-  PredictionController._();
-  static PredictionController predictionController = PredictionController._();
 
+RxInt previvewIndex = 0.obs;
+  RxList  dataList = [].obs;
+  RxList<Map> allrounder = <Map>[].obs;
+  RxList<Map> batsman = <Map>[].obs;
+  RxList<Map> bowler = <Map>[].obs;
 }
