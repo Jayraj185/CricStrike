@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     Timer(Duration(seconds: 2), () {
-      Get.toNamed("nav");
+      Get.toNamed("sign_in");
     });
     return SafeArea(
       child: Scaffold(
