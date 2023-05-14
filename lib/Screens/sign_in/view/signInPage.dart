@@ -1,6 +1,8 @@
 // ignore_for_file: avoid_print
 
 import 'package:country_code_picker/country_code_picker.dart';
+import 'package:cricstreak/Utils/firehelper.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,6 +16,7 @@ class SignInPage extends StatefulWidget {
 
 class _SignInPageState extends State<SignInPage> {
   TextEditingController txtNumber = TextEditingController();
+  String code = "+91";
 
   @override
   Widget build(BuildContext context) {
@@ -70,11 +73,11 @@ class _SignInPageState extends State<SignInPage> {
                                   padding: EdgeInsets.only(right: 0, left: 0),
 
                                   onChanged: (value) {
-                                    print("================================================================================================================> ${value!.dialCode}");
-
+                                    print(
+                                        "================================================================================================================> ${value!.dialCode}");
+                                    code = value.dialCode!;
                                     print;
                                   },
-
 
                                   // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
 
@@ -148,14 +151,15 @@ class _SignInPageState extends State<SignInPage> {
                                 //     },
                                 //   ),
                                 // ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 6.0,left: 115),
-                              child: Container(
-                                width: 1.5,
-                                height: 35,
-                                color: Colors.black45,
-                              ),
-                            ),
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 6.0, left: 115),
+                                  child: Container(
+                                    width: 1.5,
+                                    height: 35,
+                                    color: Colors.black45,
+                                  ),
+                                ),
                               ],
                             ),
                           ],
@@ -169,6 +173,7 @@ class _SignInPageState extends State<SignInPage> {
                           borderSide: BorderSide(color: Colors.black),
                         ),
                       ),
+                      controller: txtNumber,
                     ),
                   ),
                   SizedBox(
@@ -176,10 +181,20 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                   Center(
                     child: ElevatedButton(
-                        onPressed: () {
-                          Get.toNamed("otp");
-                        },
-                        child: Text("Get Otp")),
+                      onPressed: () async {
+                        await FirebaseAuth.instance.verifyPhoneNumber(
+                          phoneNumber: '${code} ${txtNumber.text}',
+                          verificationCompleted:
+                              (PhoneAuthCredential credential) {},
+                          verificationFailed: (FirebaseAuthException e) {},
+                          codeSent: (String verificationId, int? resendToken) {
+                            Get.toNamed("otp");
+                          },
+                          codeAutoRetrievalTimeout: (String verificationId) {},
+                        );
+                      },
+                      child: Text("Get Otp"),
+                    ),
                   )
                 ],
               ),
