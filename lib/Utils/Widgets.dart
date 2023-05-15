@@ -12,7 +12,7 @@ class Widgets
       width: double.infinity,
       // color: Colors.blue,
       alignment: Alignment.center,
-      padding: EdgeInsets.symmetric(horizontal: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 6),
       child: Row(
         children: [
           Column(
@@ -20,9 +20,9 @@ class Widgets
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "$title",
+                title,
                 maxLines: 1,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 13,
                   overflow: TextOverflow.ellipsis,
@@ -40,7 +40,7 @@ class Widgets
                     "$player Players",
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 11,
                       fontWeight: FontWeight.bold
@@ -50,7 +50,7 @@ class Widgets
               ),
             ],
           ),
-          Spacer(),
+          const Spacer(),
           Container(
             height: 30,
             width: 55,
@@ -59,7 +59,7 @@ class Widgets
               borderRadius: BorderRadius.circular(6)
             ),
             alignment: Alignment.center,
-            child: Text(
+            child: const Text(
               "Play",
               style: TextStyle(
                 color: Colors.white,

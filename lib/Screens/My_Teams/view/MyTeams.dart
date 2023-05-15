@@ -14,28 +14,28 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 15,),
+        const SizedBox(height: 15,),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               "  Match\nstart in",
               style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w400,
                   fontSize: 14),
             ),
-            SizedBox(
+            const SizedBox(
               width: 15,
             ),
-            Text(
+            const Text(
               "03h 15m 02s",
               style: TextStyle(
                   color: Color(0xFFEFD473),
                   fontWeight: FontWeight.bold,
                   fontSize: 16),
             ),
-            SizedBox(
+            const SizedBox(
               width: 15,
             ),
             Container(
@@ -48,15 +48,15 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.notifications_active,
                     color: Colors.white,
                     size: 18,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 3,
                   ),
-                  Text(
+                  const Text(
                     "Remind Me",
                     style: TextStyle(
                         color: Colors.white,
@@ -68,11 +68,11 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
             )
           ],
         ),
-        SizedBox(height: 20,),
+        const SizedBox(height: 20,),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
+            const Text(
               "Teams (1)",
               style: TextStyle(
                   color: Colors.white,
@@ -86,11 +86,11 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                   borderRadius: BorderRadius.circular(30),
                   border: Border.all(color: Colors.white, width: 1.5)),
               alignment: Alignment.center,
-              padding: EdgeInsets.symmetric(horizontal: 6),
+              padding: const EdgeInsets.symmetric(horizontal: 6),
               child: DropdownButtonHideUnderline(
                 child: DropdownButton(
-                  dropdownColor: Color(0xff021852),
-                  style: TextStyle(
+                  dropdownColor: const Color(0xff021852),
+                  style: const TextStyle(
                       color: Colors.white,
                       fontSize: 12.5,
                       fontWeight: FontWeight.w500),
@@ -112,7 +112,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
             )
           ],
         ),
-        SizedBox(height: 20,),
+        const SizedBox(height: 20,),
         InkWell(
           onTap: (){
             Get.toNamed('team_Preview');
@@ -130,7 +130,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                   children: [
                     Expanded(
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Color(0xFF007432),
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(9),
@@ -139,56 +139,56 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                     ),
                     Expanded(
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0xFF0B8640),
                         ),
                       ),
                     ),
                     Expanded(
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0xFF007432),
                         ),
                       ),
                     ),
                     Expanded(
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0xFF0B8640),
                         ),
                       ),
                     ),
                     Expanded(
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0xFF007432),
                         ),
                       ),
                     ),
                     Expanded(
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0xFF0B8640),
                         ),
                       ),
                     ),
                     Expanded(
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0xFF007432),
                         ),
                       ),
                     ),
                     Expanded(
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0xFF0B8640),
                         ),
                       ),
                     ),
                     Expanded(
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Color(0xFF007432),
                             borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(9),
@@ -198,13 +198,13 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsets.only(right: 12,top: 10,left: 12),
+                  padding: const EdgeInsets.only(right: 12,top: 10,left: 12),
                   child: Column(
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
+                          const Text(
                             "Tiget XII(T1)",
                             style: TextStyle(
                               color: Colors.white,
@@ -222,8 +222,8 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Icon(Icons.share,color: Colors.black,size: 15,),
-                                Text(
+                                const Icon(Icons.share,color: Colors.black,size: 15,),
+                                const Text(
                                   "Share Team",
                                   style: TextStyle(
                                       color: Colors.black,
@@ -251,7 +251,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                         // color: Colors.black87,
                                         child: Stack(
                                           children: [
-                                            Padding(
+                                            const Padding(
                                               padding: EdgeInsets.only(top: 6.0),
                                               child: Align(
                                                 alignment: Alignment.topCenter,
@@ -267,13 +267,13 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                               child: Container(
                                                 height: 30,
                                                 width: 70,
-                                                margin: EdgeInsets.only(top: 21),
+                                                margin: const EdgeInsets.only(top: 21),
                                                 decoration: BoxDecoration(
                                                   color: Colors.white,
                                                   borderRadius: BorderRadius.circular(6)
                                                 ),
                                                 alignment: Alignment.center,
-                                                child: Text(
+                                                child: const Text(
                                                   "V. Kohli",
                                                   maxLines: 1,
                                                   overflow: TextOverflow.ellipsis,
@@ -290,12 +290,12 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                               child: Container(
                                                 height: 21,
                                                 width: 21,
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   color: Colors.white,
                                                   shape: BoxShape.circle
                                                 ),
                                                 alignment: Alignment.center,
-                                                child: Text(
+                                                child: const Text(
                                                   "C",
                                                   style: TextStyle(
                                                       color: Colors.black,
@@ -315,7 +315,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                         // color: Colors.green,
                                         child: Stack(
                                           children: [
-                                            Padding(
+                                            const Padding(
                                               padding: EdgeInsets.only(top: 6.0),
                                               child: Align(
                                                 alignment: Alignment.topCenter,
@@ -331,13 +331,13 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                               child: Container(
                                                 height: 30,
                                                 width: 70,
-                                                margin: EdgeInsets.only(top: 21),
+                                                margin: const EdgeInsets.only(top: 21),
                                                 decoration: BoxDecoration(
-                                                    color: Color(0xFF021852),
+                                                    color: const Color(0xFF021852),
                                                     borderRadius: BorderRadius.circular(6)
                                                 ),
                                                 alignment: Alignment.center,
-                                                child: Text(
+                                                child: const Text(
                                                   "F. Plessis",
                                                   maxLines: 1,
                                                   overflow: TextOverflow.ellipsis,
@@ -354,12 +354,12 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                               child: Container(
                                                 height: 21,
                                                 width: 21,
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                     color: Color(0xFF021852),
                                                     shape: BoxShape.circle
                                                 ),
                                                 alignment: Alignment.center,
-                                                child: Text(
+                                                child: const Text(
                                                   "VC",
                                                   style: TextStyle(
                                                       color: Colors.white,
@@ -381,8 +381,8 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                             // color: Colors.black87,
                             height: 160,
                             width: 145,
-                            padding: EdgeInsets.all(6),
-                            margin: EdgeInsets.only(top: 15),
+                            padding: const EdgeInsets.all(6),
+                            margin: const EdgeInsets.only(top: 15),
                             alignment: Alignment.topCenter,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -393,7 +393,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Text(
+                                      const Text(
                                         "RCB 6",
                                         style: TextStyle(
                                           color: Colors.white,
@@ -401,7 +401,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                           fontSize: 14
                                         ),
                                       ),
-                                      Text(
+                                      const Text(
                                         "CSK 5",
                                         style: TextStyle(
                                           color: Colors.white,
@@ -412,9 +412,9 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                     ],
                                   ),
                                 ),
-                                SizedBox(height: 6,),
-                                Divider(thickness: 1.5,color: Colors.white,),
-                                SizedBox(height: 6,),
+                                const SizedBox(height: 6,),
+                                const Divider(thickness: 1.5,color: Colors.white,),
+                                const SizedBox(height: 6,),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
@@ -422,7 +422,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       crossAxisAlignment: CrossAxisAlignment.center,
                                       children: [
-                                        Text(
+                                        const Text(
                                           "WK",
                                           style: TextStyle(
                                             color: Colors.white,
@@ -430,7 +430,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                             fontWeight: FontWeight.w500
                                           ),
                                         ),
-                                        Text(
+                                        const Text(
                                           "2",
                                           style: TextStyle(
                                             color: Colors.white,
@@ -444,7 +444,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       crossAxisAlignment: CrossAxisAlignment.center,
                                       children: [
-                                        Text(
+                                        const Text(
                                           "AR",
                                           style: TextStyle(
                                             color: Colors.white,
@@ -452,7 +452,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                             fontWeight: FontWeight.w500
                                           ),
                                         ),
-                                        Text(
+                                        const Text(
                                           "3",
                                           style: TextStyle(
                                             color: Colors.white,
@@ -466,7 +466,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       crossAxisAlignment: CrossAxisAlignment.center,
                                       children: [
-                                        Text(
+                                        const Text(
                                           "BAT",
                                           style: TextStyle(
                                             color: Colors.white,
@@ -474,7 +474,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                             fontWeight: FontWeight.w500
                                           ),
                                         ),
-                                        Text(
+                                        const Text(
                                           "3",
                                           style: TextStyle(
                                             color: Colors.white,
@@ -488,7 +488,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       crossAxisAlignment: CrossAxisAlignment.center,
                                       children: [
-                                        Text(
+                                        const Text(
                                           "BOWL",
                                           style: TextStyle(
                                             color: Colors.white,
@@ -496,7 +496,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                             fontWeight: FontWeight.w500
                                           ),
                                         ),
-                                        Text(
+                                        const Text(
                                           "3",
                                           style: TextStyle(
                                             color: Colors.white,
@@ -526,7 +526,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                             bottomLeft: Radius.circular(9),
                             bottomRight: Radius.circular(9))
                     ),
-                    padding: EdgeInsets.symmetric(horizontal: 12),
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -535,15 +535,15 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                             Container(
                               height: 30,
                               width: 30,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Color(0xFF021852),
                                 shape: BoxShape.circle
                               ),
-                              margin: EdgeInsets.only(right: 6),
+                              margin: const EdgeInsets.only(right: 6),
                               alignment: Alignment.center,
-                              child: Icon(Icons.visibility,color: Colors.white, size: 21,),
+                              child: const Icon(Icons.visibility,color: Colors.white, size: 21,),
                             ),
-                            Text(
+                            const Text(
                               "Preview",
                               style: TextStyle(
                                 color: Color(0xFF021852),
@@ -557,7 +557,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                           height: 30,
                           // width: 80,
                           decoration: BoxDecoration(
-                              gradient: LinearGradient(
+                              gradient: const LinearGradient(
                                   begin: Alignment.topCenter,
                                   end: Alignment.bottomCenter,
                                   colors: [
@@ -567,7 +567,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                               ),
                               borderRadius: BorderRadius.circular(30)
                           ),
-                          padding: EdgeInsets.symmetric(horizontal: 6),
+                          padding: const EdgeInsets.symmetric(horizontal: 6),
                           alignment: Alignment.center,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -575,15 +575,15 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                               Container(
                                 height: 21,
                                 width: 21,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                     color: Color(0xFF021852),
                                     shape: BoxShape.circle
                                 ),
-                                margin: EdgeInsets.only(right: 6),
+                                margin: const EdgeInsets.only(right: 6),
                                 alignment: Alignment.center,
-                                child: Icon(Icons.edit,color: Colors.white, size: 14,),
+                                child: const Icon(Icons.edit,color: Colors.white, size: 14,),
                               ),
-                              Text(
+                              const Text(
                                 "Edit",
                                 style: TextStyle(
                                     color: Color(0xFF021852),
@@ -604,10 +604,10 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
         ),
         Container(
           height: 130,
-          margin: EdgeInsets.only(top: 15,right: 12,left: 12),
-          padding: EdgeInsets.all(12),
+          margin: const EdgeInsets.only(top: 15,right: 12,left: 12),
+          padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
-            color: Color(0xFF021852),
+            color: const Color(0xFF021852),
             borderRadius: BorderRadius.circular(15)
           ),
           alignment: Alignment.topLeft,
@@ -617,7 +617,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     "Joined Contests",
                     style: TextStyle(
                       color: Colors.white,
@@ -627,7 +627,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                   ),
                   Row(
                     children: [
-                      Text(
+                      const Text(
                         "Click to Expand",
                         style: TextStyle(
                           color: Colors.white,
@@ -635,21 +635,21 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                           fontSize: 13
                         ),
                       ),
-                      Icon(Icons.keyboard_arrow_down,color: Colors.white, size: 18,)
+                      const Icon(Icons.keyboard_arrow_down,color: Colors.white, size: 18,)
                     ],
                   ),
                 ],
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 3),
                 child: Divider(thickness: 1.2, color: Colors.grey,),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 15),
+                padding: const EdgeInsets.only(top: 15),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       "Improve your winning total by joining\nmore contests",
                       style: TextStyle(
                         color: Colors.white,
@@ -663,8 +663,8 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                         color: Colors.green,
                         borderRadius: BorderRadius.circular(9),
                       ),
-                      padding: EdgeInsets.all(10),
-                      child: Text(
+                      padding: const EdgeInsets.all(10),
+                      child: const Text(
                         "Join Contest",
                         style: TextStyle(
                           color: Colors.white,
@@ -679,7 +679,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
             ],
           ),
         ),
-        Spacer(),
+        const Spacer(),
         InkWell(
           onTap: () {
             Get.toNamed('create_Team');
@@ -688,7 +688,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
             height: 45,
             width: 150,
             decoration: BoxDecoration(
-                gradient: LinearGradient(
+                gradient: const LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
@@ -702,8 +702,8 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Icon(Icons.groups_rounded,color: Color(0xFF021852), size: 25,),
-                Text(
+                const Icon(Icons.groups_rounded,color: Color(0xFF021852), size: 25,),
+                const Text(
                   "Create Team",
                   style: TextStyle(
                     color: Color(0xFF021852),
@@ -715,7 +715,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
             ),
           ),
         ),
-        SizedBox(height: 30,),
+        const SizedBox(height: 30,),
       ],
     );
   }

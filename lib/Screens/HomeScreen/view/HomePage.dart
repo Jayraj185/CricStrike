@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      physics: BouncingScrollPhysics(),
+      physics: const BouncingScrollPhysics(),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,18 +47,18 @@ class _HomePageState extends State<HomePage> {
           //   ),
           // )
           SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             scrollDirection: Axis.horizontal,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Row(
                 children: [
                   Container(
-                    margin: EdgeInsets.only(top: 15),
+                    margin: const EdgeInsets.only(top: 15),
                     height: 95,
                     width: 300,
                     decoration: BoxDecoration(
-                        gradient: LinearGradient(
+                        gradient: const LinearGradient(
                             begin: Alignment.topCenter,
                             end: Alignment.bottomCenter,
                             colors: [
@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                               Color(0xFF537AF3),
                             ]),
                         borderRadius: BorderRadius.circular(15)),
-                    padding: EdgeInsets.only(left: 12, top: 15),
+                    padding: const EdgeInsets.only(left: 12, top: 15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       // crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 "100% BONUS AND IC ON CASH",
                                 style: TextStyle(
                                     color: Colors.white,
@@ -85,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               Padding(
                                 padding: EdgeInsets.only(top: Get.width / 60),
-                                child: Text(
+                                child: const Text(
                                   "GET UPTO BONUS AND T20 IC ON FIRST ADD CASH",
                                   style: TextStyle(
                                       color: Color(0xFFFFE400),
@@ -98,10 +98,10 @@ class _HomePageState extends State<HomePage> {
                                 width: 90,
                                 margin: EdgeInsets.only(top: Get.width / 80),
                                 decoration: BoxDecoration(
-                                    color: Color(0xFFFFE400),
+                                    color: const Color(0xFFFFE400),
                                     borderRadius: BorderRadius.circular(6)),
                                 alignment: Alignment.center,
-                                child: Text(
+                                child: const Text(
                                   "Claim Coins",
                                   style: TextStyle(
                                       color: Colors.black,
@@ -115,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                         Container(
                           height: 35,
                           width: 35,
-                          margin: EdgeInsets.only(left: 15, bottom: 15),
+                          margin: const EdgeInsets.only(left: 15, bottom: 15),
                           // color: Color(0xff021852),
                           // alignment: Alignment.center,
                           child: Image.asset(
@@ -126,15 +126,15 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 15),
+                    margin: const EdgeInsets.only(top: 15),
                     height: 95,
                     width: 300,
                     decoration: BoxDecoration(
-                        gradient: LinearGradient(
+                        gradient: const LinearGradient(
                             begin: Alignment.topCenter,
                             end: Alignment.bottomCenter,
                             colors: [
@@ -142,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                               Color(0xFF537AF3),
                             ]),
                         borderRadius: BorderRadius.circular(15)),
-                    padding: EdgeInsets.only(left: 12, top: 15),
+                    padding: const EdgeInsets.only(left: 12, top: 15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       // crossAxisAlignment: CrossAxisAlignment.start,
@@ -152,7 +152,7 @@ class _HomePageState extends State<HomePage> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 "100% BONUS AND IC ON CASH",
                                 style: TextStyle(
                                     color: Colors.white,
@@ -161,7 +161,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               Padding(
                                 padding: EdgeInsets.only(top: Get.width / 60),
-                                child: Text(
+                                child: const Text(
                                   "GET UPTO BONUS AND T20 IC ON FIRST ADD CASH",
                                   style: TextStyle(
                                       color: Color(0xFFFFE400),
@@ -174,10 +174,10 @@ class _HomePageState extends State<HomePage> {
                                 width: 90,
                                 margin: EdgeInsets.only(top: Get.width / 80),
                                 decoration: BoxDecoration(
-                                    color: Color(0xFFFFE400),
+                                    color: const Color(0xFFFFE400),
                                     borderRadius: BorderRadius.circular(6)),
                                 alignment: Alignment.center,
-                                child: Text(
+                                child: const Text(
                                   "Claim Coins",
                                   style: TextStyle(
                                       color: Colors.black,
@@ -191,7 +191,7 @@ class _HomePageState extends State<HomePage> {
                         Container(
                           height: 35,
                           width: 35,
-                          margin: EdgeInsets.only(left: 15, bottom: 15),
+                          margin: const EdgeInsets.only(left: 15, bottom: 15),
                           // color: Color(0xff021852),
                           // alignment: Alignment.center,
                           child: Image.asset(
@@ -206,7 +206,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Padding(
@@ -217,7 +217,7 @@ class _HomePageState extends State<HomePage> {
                   child: Container(
                     height: 330,
                     decoration: BoxDecoration(
-                      color: Color(0xff021852),
+                      color: const Color(0xff021852),
                       borderRadius: BorderRadius.circular(16),
                     ),
                     alignment: Alignment.centerRight,
@@ -250,7 +250,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 13,
                 ),
                 Expanded(
@@ -259,7 +259,7 @@ class _HomePageState extends State<HomePage> {
                       Container(
                         height: 160,
                         decoration: BoxDecoration(
-                            color: Color(0xff021852),
+                            color: const Color(0xff021852),
                             borderRadius: BorderRadius.circular(16)),
                         alignment: Alignment.bottomCenter,
                         child: Stack(
@@ -291,14 +291,14 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Container(
                         height: 160,
                         width: 170,
                         decoration: BoxDecoration(
-                          color: Color(0xff021852),
+                          color: const Color(0xff021852),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         alignment: Alignment.bottomCenter,
@@ -337,23 +337,23 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Row(
               children: [
-                Text(
+                const Text(
                   "Games",
                   style: TextStyle(
                       color: Colors.white, fontSize: 18, fontWeight: FontWeight.w500),
-                ),Spacer(),
+                ),const Spacer(),
                 InkWell(
                   onTap: () {
                     navigatorController.NavigatIndex.value=4;
                   },
-                  child: Text(
+                  child: const Text(
                     "More",
                     style: TextStyle(
                         color: Colors.blue, fontSize: 18, fontWeight: FontWeight.bold),
@@ -362,7 +362,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           StreamBuilder(
@@ -378,9 +378,9 @@ class _HomePageState extends State<HomePage> {
                   height: 130,
                   child: ListView.builder(
                     shrinkWrap: true,
-                    padding: EdgeInsets.only(right: 16),
+                    padding: const EdgeInsets.only(right: 16),
                     scrollDirection: Axis.horizontal,
-                    physics: BouncingScrollPhysics(),
+                    physics: const BouncingScrollPhysics(),
                     itemCount: l1.length,
                     itemBuilder: (context, index) {
                       return InkWell(
@@ -389,8 +389,8 @@ class _HomePageState extends State<HomePage> {
                         },
                         child: Container(
                           margin: index == 0
-                              ? EdgeInsets.only(left: 16)
-                              : EdgeInsets.only(left: 10),
+                              ? const EdgeInsets.only(left: 16)
+                              : const EdgeInsets.only(left: 10),
                           width: 100,
 
                           height: 130,
@@ -400,11 +400,11 @@ class _HomePageState extends State<HomePage> {
                               Container(
                                 width: 100,
                                 height: 100,
-                                decoration: BoxDecoration(color: Color(0xff021852),
+                                decoration: BoxDecoration(color: const Color(0xff021852),
                                     borderRadius: BorderRadius.circular(15)),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(15),
-                                  child: CachedNetworkImage(fadeInDuration: Duration(seconds: 00),filterQuality: FilterQuality.high,
+                                  child: CachedNetworkImage(fadeInDuration: const Duration(seconds: 00),filterQuality: FilterQuality.high,
                                     fit: BoxFit.fill,
                                     imageUrl:
                                     "${l1[index].image}",
@@ -417,21 +417,21 @@ class _HomePageState extends State<HomePage> {
                                       mainAxisAlignment:
                                       MainAxisAlignment.center,
                                       children: [
-                                        Icon(Icons.error),
-                                        Text(" Image Not available")
+                                        const Icon(Icons.error),
+                                        const Text(" Image Not available")
                                       ],
                                     ),
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
                               Text(
                                 "${l1[index].name}",
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
-                                style: TextStyle(color: Colors.white),
+                                style: const TextStyle(color: Colors.white),
                               )
                             ],
                           ),
@@ -451,22 +451,22 @@ class _HomePageState extends State<HomePage> {
             },
             stream: FireHelper.fireHelper.GetData(),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             scrollDirection: Axis.horizontal,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Row(
                 children: [
                   Container(
-                    margin: EdgeInsets.only(top: 15),
+                    margin: const EdgeInsets.only(top: 15),
                     height: 95,
                     width: 300,
                     decoration: BoxDecoration(
-                        gradient: LinearGradient(
+                        gradient: const LinearGradient(
                             begin: Alignment.topCenter,
                             end: Alignment.bottomCenter,
                             colors: [
@@ -474,7 +474,7 @@ class _HomePageState extends State<HomePage> {
                               Color(0xFF537AF3),
                             ]),
                         borderRadius: BorderRadius.circular(15)),
-                    padding: EdgeInsets.only(left: 12, top: 15),
+                    padding: const EdgeInsets.only(left: 12, top: 15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       // crossAxisAlignment: CrossAxisAlignment.start,
@@ -484,7 +484,7 @@ class _HomePageState extends State<HomePage> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 "100% BONUS AND IC ON CASH",
                                 style: TextStyle(
                                     color: Colors.white,
@@ -493,7 +493,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               Padding(
                                 padding: EdgeInsets.only(top: Get.width / 60),
-                                child: Text(
+                                child: const Text(
                                   "GET UPTO BONUS AND T20 IC ON FIRST ADD CASH",
                                   style: TextStyle(
                                       color: Color(0xFFFFE400),
@@ -506,10 +506,10 @@ class _HomePageState extends State<HomePage> {
                                 width: 90,
                                 margin: EdgeInsets.only(top: Get.width / 80),
                                 decoration: BoxDecoration(
-                                    color: Color(0xFFFFE400),
+                                    color: const Color(0xFFFFE400),
                                     borderRadius: BorderRadius.circular(6)),
                                 alignment: Alignment.center,
-                                child: Text(
+                                child: const Text(
                                   "Claim Coins",
                                   style: TextStyle(
                                       color: Colors.black,
@@ -523,7 +523,7 @@ class _HomePageState extends State<HomePage> {
                         Container(
                           height: 35,
                           width: 35,
-                          margin: EdgeInsets.only(left: 15, bottom: 15),
+                          margin: const EdgeInsets.only(left: 15, bottom: 15),
                           // color: Color(0xff021852),
                           // alignment: Alignment.center,
                           child: Image.asset(
@@ -534,15 +534,15 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 15),
+                    margin: const EdgeInsets.only(top: 15),
                     height: 95,
                     width: 300,
                     decoration: BoxDecoration(
-                        gradient: LinearGradient(
+                        gradient: const LinearGradient(
                             begin: Alignment.topCenter,
                             end: Alignment.bottomCenter,
                             colors: [
@@ -550,7 +550,7 @@ class _HomePageState extends State<HomePage> {
                               Color(0xFF537AF3),
                             ]),
                         borderRadius: BorderRadius.circular(15)),
-                    padding: EdgeInsets.only(left: 12, top: 15),
+                    padding: const EdgeInsets.only(left: 12, top: 15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       // crossAxisAlignment: CrossAxisAlignment.start,
@@ -560,7 +560,7 @@ class _HomePageState extends State<HomePage> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 "100% BONUS AND IC ON CASH",
                                 style: TextStyle(
                                     color: Colors.white,
@@ -569,7 +569,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               Padding(
                                 padding: EdgeInsets.only(top: Get.width / 60),
-                                child: Text(
+                                child: const Text(
                                   "GET UPTO BONUS AND T20 IC ON FIRST ADD CASH",
                                   style: TextStyle(
                                       color: Color(0xFFFFE400),
@@ -582,10 +582,10 @@ class _HomePageState extends State<HomePage> {
                                 width: 90,
                                 margin: EdgeInsets.only(top: Get.width / 80),
                                 decoration: BoxDecoration(
-                                    color: Color(0xFFFFE400),
+                                    color: const Color(0xFFFFE400),
                                     borderRadius: BorderRadius.circular(6)),
                                 alignment: Alignment.center,
-                                child: Text(
+                                child: const Text(
                                   "Claim Coins",
                                   style: TextStyle(
                                       color: Colors.black,
@@ -599,7 +599,7 @@ class _HomePageState extends State<HomePage> {
                         Container(
                           height: 35,
                           width: 35,
-                          margin: EdgeInsets.only(left: 15, bottom: 15),
+                          margin: const EdgeInsets.only(left: 15, bottom: 15),
                           // color: Color(0xff021852),
                           // alignment: Alignment.center,
                           child: Image.asset(
@@ -614,7 +614,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
         ],

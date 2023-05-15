@@ -15,20 +15,20 @@ class _WalletPageState extends State<WalletPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             "Wallet",
           ),
 
-          backgroundColor: Color(0xff021852),
+          backgroundColor: const Color(0xff021852),
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 0),
           child: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Padding(
@@ -39,21 +39,21 @@ class _WalletPageState extends State<WalletPage> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             "Wallet Cash Balance",
                             style: TextStyle(
                                 color: Colors.black54,
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14),
                           ),
-                          SizedBox(height: 3),
-                          Text(
+                          const SizedBox(height: 3),
+                          const Text(
                             "₹120.00",
                             style: TextStyle(fontWeight: FontWeight.w900, fontSize: 22),
                           )
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Image.asset(
                         "assets/image/historybutton.png",
                         width: 110,
@@ -61,7 +61,7 @@ class _WalletPageState extends State<WalletPage> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Padding(
@@ -72,21 +72,21 @@ class _WalletPageState extends State<WalletPage> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             "Unplayed",
                             style: TextStyle(
                                 color: Colors.black54,
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14),
                           ),
-                          SizedBox(height: 3),
-                          Text(
+                          const SizedBox(height: 3),
+                          const Text(
                             "₹0.00",
                             style: TextStyle(fontWeight: FontWeight.w900, fontSize: 22),
                           )
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Image.asset(
                         "assets/image/addcashbutton.png",
                         width: 120,
@@ -94,7 +94,7 @@ class _WalletPageState extends State<WalletPage> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Padding(
@@ -105,21 +105,21 @@ class _WalletPageState extends State<WalletPage> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             "Withdraw",
                             style: TextStyle(
                                 color: Colors.black54,
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14),
                           ),
-                          SizedBox(height: 3),
-                          Text(
+                          const SizedBox(height: 3),
+                          const Text(
                             "₹0.00",
                             style: TextStyle(fontWeight: FontWeight.w900, fontSize: 22),
                           )
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Image.asset(
                         "assets/image/withdrawbutton.png",
                         width: 120,
@@ -127,7 +127,7 @@ class _WalletPageState extends State<WalletPage> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Padding(
@@ -138,21 +138,21 @@ class _WalletPageState extends State<WalletPage> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             "Earn Bonus",
                             style: TextStyle(
                                 color: Colors.black54,
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14),
                           ),
-                          SizedBox(height: 3),
-                          Text(
+                          const SizedBox(height: 3),
+                          const Text(
                             "₹0.00",
                             style: TextStyle(fontWeight: FontWeight.w900, fontSize: 22),
                           )
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Image.asset(
                         "assets/image/earnbonusbutton.png",
                         width: 120,
@@ -160,11 +160,11 @@ class _WalletPageState extends State<WalletPage> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
                   child: Text(
                     "Wallet Offer",
                     textAlign: TextAlign.start,
@@ -172,39 +172,39 @@ class _WalletPageState extends State<WalletPage> {
                         color: Colors.black87, fontWeight: FontWeight.w500, fontSize: 18),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
-                  physics: BouncingScrollPhysics(),
+                  physics: const BouncingScrollPhysics(),
                   child: Row(
                     children: [
-                      SizedBox(width: 16,),
+                      const SizedBox(width: 16,),
                       Image.asset(
                         "assets/image/add1.png",
                         height: 80,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 15,
                       ),
                       Image.asset(
                         "assets/image/add1.png",
                         height: 80,
                       ),
-                      SizedBox(width: 16,),
+                      const SizedBox(width: 16,),
 
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
                     children: [
-                      Text(
+                      const Text(
                         "Loan Request",
                         textAlign: TextAlign.start,
                         style: TextStyle(
@@ -215,7 +215,7 @@ class _WalletPageState extends State<WalletPage> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Padding(
@@ -225,13 +225,13 @@ class _WalletPageState extends State<WalletPage> {
                       Expanded(
                         child: Row(
                           children: [
-                            CircleAvatar(
+                            const CircleAvatar(
                               backgroundColor: Colors.red,
                               backgroundImage: AssetImage("assets/image/LR_1.png"),
                               radius: 18,
                             ),
                             Container(
-                              child: Text(
+                              child: const Text(
                                 "  ₹5 KA ₹10",
                                 style: TextStyle(
                                     color: Colors.black87,
@@ -239,7 +239,7 @@ class _WalletPageState extends State<WalletPage> {
                                     fontWeight: FontWeight.bold),
                               ),
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Container(
                               height: 25,
                               width: 50,
@@ -247,7 +247,7 @@ class _WalletPageState extends State<WalletPage> {
                                   borderRadius: BorderRadius.circular(15),
                                   border: Border.all(color: Colors.black54, width: 1.6)),
                               alignment: Alignment.center,
-                              child: Text(
+                              child: const Text(
                                 "Detail",
                                 style: TextStyle(
                                     color: Colors.black54,
@@ -258,26 +258,26 @@ class _WalletPageState extends State<WalletPage> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Expanded(
                         child: Row(
                           children: [
-                            CircleAvatar(
+                            const CircleAvatar(
                               backgroundColor: Colors.red,
                               backgroundImage: AssetImage("assets/image/LR_2.png"),
                               radius: 18,
                             ),
 
-                            Text(
+                            const Text(
                               "  ₹5 KA ₹6",
                               style: TextStyle(
                                   color: Colors.black87,
                                   fontSize: 14,
                                   fontWeight: FontWeight.bold),
                             ),
-                            Spacer(),
+                            const Spacer(),
 
                             Container(
                               height: 25,
@@ -286,7 +286,7 @@ class _WalletPageState extends State<WalletPage> {
                                   borderRadius: BorderRadius.circular(15),
                                   border: Border.all(color: Colors.black54, width: 1.6)),
                               alignment: Alignment.center,
-                              child: Text(
+                              child: const Text(
                                 "Detail",
                                 style: TextStyle(
                                     color: Colors.black54,
@@ -300,7 +300,7 @@ class _WalletPageState extends State<WalletPage> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Padding(
@@ -310,13 +310,13 @@ class _WalletPageState extends State<WalletPage> {
                       Expanded(
                         child: Row(
                           children: [
-                            CircleAvatar(
+                            const CircleAvatar(
                               backgroundColor: Colors.red,
                               backgroundImage: AssetImage("assets/image/LR_3.png"),
                               radius: 18,
                             ),
                             Container(
-                              child: Text(
+                              child: const Text(
                                 "  ₹10 KA ₹10",
                                 style: TextStyle(
                                     color: Colors.black87,
@@ -324,7 +324,7 @@ class _WalletPageState extends State<WalletPage> {
                                     fontWeight: FontWeight.bold),
                               ),
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Container(
                               height: 25,
                               width: 50,
@@ -332,7 +332,7 @@ class _WalletPageState extends State<WalletPage> {
                                   borderRadius: BorderRadius.circular(15),
                                   border: Border.all(color: Colors.black54, width: 1.6)),
                               alignment: Alignment.center,
-                              child: Text(
+                              child: const Text(
                                 "Detail",
                                 style: TextStyle(
                                     color: Colors.black54,
@@ -343,7 +343,7 @@ class _WalletPageState extends State<WalletPage> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Expanded(
@@ -353,7 +353,7 @@ class _WalletPageState extends State<WalletPage> {
                               borderRadius: BorderRadius.circular(30),
                               border: Border.all(color: Colors.black54, width: 1.6)),
                           alignment: Alignment.center,
-                          child: Text(
+                          child: const Text(
                             "VIEW ALL REQUESTS",
                             style: TextStyle(
                                 color: Colors.black54,

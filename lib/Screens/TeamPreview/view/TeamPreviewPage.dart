@@ -15,26 +15,26 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: Color(0xff021852),
+          backgroundColor: const Color(0xff021852),
           leading: IconButton(
             onPressed: () {
               Get.back();
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.close,
               color: Colors.white,
             ),
           ),
-          title: Text(
+          title: const Text(
             "Tiger XII(T1)",
             style: TextStyle(color: Colors.white),
           ),
           actions: [
             Padding(
-              padding: EdgeInsets.only(right: 6),
+              padding: const EdgeInsets.only(right: 6),
               child: IconButton(
                 onPressed: () {},
-                icon: Icon(
+                icon: const Icon(
                   Icons.edit,
                   color: Colors.white,
                 ),
@@ -42,14 +42,14 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
             ),
           ],
           bottom: PreferredSize(
-            preferredSize: Size.fromHeight(66),
+            preferredSize: const Size.fromHeight(66),
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Divider(
+                  const Divider(
                     thickness: 1.2,
                     color: Colors.grey,
                   ),
@@ -60,12 +60,12 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             "Players",
                             style:
                                 TextStyle(color: Colors.white70, fontSize: 12),
                           ),
-                          Text.rich(TextSpan(children: [
+                          const Text.rich(TextSpan(children: [
                             TextSpan(
                               text: "11",
                               style: TextStyle(
@@ -83,13 +83,13 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                       ),
                       Container(
                         height: 21,
-                        margin: EdgeInsets.only(left: 30),
+                        margin: const EdgeInsets.only(left: 30),
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(3)),
                         alignment: Alignment.center,
-                        padding: EdgeInsets.symmetric(horizontal: 8),
-                        child: Text(
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        child: const Text(
                           "RCB",
                           style: TextStyle(
                               color: Color(0xFF021852),
@@ -97,21 +97,21 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                               fontWeight: FontWeight.bold),
                         ),
                       ),
-                      Text(
+                      const Text(
                         "6",
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 18),
                       ),
-                      Text(
+                      const Text(
                         ":",
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 18),
                       ),
-                      Text(
+                      const Text(
                         "5",
                         style: TextStyle(
                             color: Colors.white,
@@ -120,13 +120,13 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                       ),
                       Container(
                         height: 21,
-                        margin: EdgeInsets.only(right: 30),
+                        margin: const EdgeInsets.only(right: 30),
                         decoration: BoxDecoration(
-                            color: Color(0xFF021852),
+                            color: const Color(0xFF021852),
                             borderRadius: BorderRadius.circular(3)),
                         alignment: Alignment.center,
-                        padding: EdgeInsets.symmetric(horizontal: 8),
-                        child: Text(
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        child: const Text(
                           "CSK",
                           style: TextStyle(
                               color: Colors.white,
@@ -137,12 +137,12 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                          Text(
+                          const Text(
                             "Credit Left",
                             style:
                                 TextStyle(color: Colors.white70, fontSize: 14),
                           ),
-                          Text(
+                          const Text(
                             "0",
                             style: TextStyle(
                                 color: Colors.white,
@@ -153,7 +153,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 6,
                   )
                 ],
@@ -168,49 +168,49 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
               children: [
                 Expanded(
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFF007432),
                     ),
                   ),
                 ),
                 Expanded(
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFF0B8640),
                     ),
                   ),
                 ),
                 Expanded(
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFF007432),
                     ),
                   ),
                 ),
                 Expanded(
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFF0B8640),
                     ),
                   ),
                 ),
                 Expanded(
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFF007432),
                     ),
                   ),
                 ),
                 Expanded(
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFF0B8640),
                     ),
                   ),
                 ),
                 Expanded(
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFF007432),
                     ),
                   ),
@@ -218,7 +218,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
               ],
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 80),
+              margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 80),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(1000),
                   border: Border.all(color: Colors.white, width: 0.5)),
@@ -226,14 +226,14 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
             Container(
               width: 100,
               height: 280,
-              color: Color(0xFF4FA042),
+              color: const Color(0xFF4FA042),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Align(
+                  const Align(
                     alignment: Alignment.center,
                     child: Padding(
                       padding: EdgeInsets.only(top: 15),
@@ -268,12 +268,12 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                 child: Container(
                                   height: 23,
                                   decoration: BoxDecoration(
-                                      color: Color(0xFF021852),
+                                      color: const Color(0xFF021852),
                                       borderRadius: BorderRadius.circular(4)),
                                   padding:
-                                      EdgeInsets.symmetric(horizontal: 3),
+                                      const EdgeInsets.symmetric(horizontal: 3),
                                   alignment: Alignment.center,
-                                  child: Text(
+                                  child: const Text(
                                     "D. Conway",
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
@@ -287,7 +287,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                             ],
                           ),
                         ),
-                        Padding(
+                        const Padding(
                           padding: EdgeInsets.only(top: 6),
                           child: Text(
                             "9 Cr",
@@ -300,7 +300,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                       ],
                     ),
                   ),
-                  Align(
+                  const Align(
                     alignment: Alignment.center,
                     child: Text(
                       "BATTER",
@@ -314,7 +314,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
-                        margin: EdgeInsets.only(top: 0),
+                        margin: const EdgeInsets.only(top: 0),
                         child: Column(
                           children: [
                             SizedBox(
@@ -336,13 +336,13 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                     child: Container(
                                       height: 23,
                                       decoration: BoxDecoration(
-                                          color: Color(0xFF021852),
+                                          color: const Color(0xFF021852),
                                           borderRadius:
                                               BorderRadius.circular(4)),
                                       alignment: Alignment.center,
                                       padding:
-                                          EdgeInsets.symmetric(horizontal: 3),
-                                      child: Text(
+                                          const EdgeInsets.symmetric(horizontal: 3),
+                                      child: const Text(
                                         "R. Gaikwad",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
@@ -356,7 +356,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                 ],
                               ),
                             ),
-                            Padding(
+                            const Padding(
                               padding: EdgeInsets.only(top: 6),
                               child: Text(
                                 "8 Cr",
@@ -370,7 +370,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 0),
+                        margin: const EdgeInsets.only(top: 0),
                         child: Column(
                           children: [
                             SizedBox(
@@ -392,13 +392,13 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                     child: Container(
                                       height: 23,
                                       decoration: BoxDecoration(
-                                          color: Color(0xFF021852),
+                                          color: const Color(0xFF021852),
                                           borderRadius:
                                               BorderRadius.circular(4)),
                                       padding:
-                                          EdgeInsets.symmetric(horizontal: 3),
+                                          const EdgeInsets.symmetric(horizontal: 3),
                                       alignment: Alignment.center,
-                                      child: Text(
+                                      child: const Text(
                                         "S. Dube",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
@@ -412,7 +412,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                 ],
                               ),
                             ),
-                            Padding(
+                            const Padding(
                               padding: EdgeInsets.only(top: 6),
                               child: Text(
                                 "7 Cr",
@@ -426,7 +426,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 0),
+                        margin: const EdgeInsets.only(top: 0),
                         child: Column(
                           children: [
                             SizedBox(
@@ -452,9 +452,9 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                           borderRadius:
                                               BorderRadius.circular(4)),
                                       padding:
-                                          EdgeInsets.symmetric(horizontal: 3),
+                                          const EdgeInsets.symmetric(horizontal: 3),
                                       alignment: Alignment.center,
-                                      child: Text(
+                                      child: const Text(
                                         "F. Plessis",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
@@ -468,7 +468,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                 ],
                               ),
                             ),
-                            Padding(
+                            const Padding(
                               padding: EdgeInsets.only(top: 6),
                               child: Text(
                                 "11 Cr",
@@ -482,7 +482,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 0),
+                        margin: const EdgeInsets.only(top: 0),
                         child: Column(
                           children: [
                             SizedBox(
@@ -508,9 +508,9 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                           borderRadius:
                                               BorderRadius.circular(4)),
                                       padding:
-                                          EdgeInsets.symmetric(horizontal: 3),
+                                          const EdgeInsets.symmetric(horizontal: 3),
                                       alignment: Alignment.center,
-                                      child: Text(
+                                      child: const Text(
                                         "V. Kohli",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
@@ -524,7 +524,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                 ],
                               ),
                             ),
-                            Padding(
+                            const Padding(
                               padding: EdgeInsets.only(top: 6),
                               child: Text(
                                 "12 Cr",
@@ -539,7 +539,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                       ),
                     ],
                   ),
-                  Align(
+                  const Align(
                     alignment: Alignment.center,
                     child: Text(
                       "ALL ROUNDERS",
@@ -553,7 +553,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
-                        margin: EdgeInsets.only(top: 0),
+                        margin: const EdgeInsets.only(top: 0),
                         child: Column(
                           children: [
                             SizedBox(
@@ -579,9 +579,9 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                           borderRadius:
                                               BorderRadius.circular(4)),
                                       padding:
-                                          EdgeInsets.symmetric(horizontal: 3),
+                                          const EdgeInsets.symmetric(horizontal: 3),
                                       alignment: Alignment.center,
-                                      child: Text(
+                                      child: const Text(
                                         "G. Maxwell",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
@@ -595,7 +595,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                 ],
                               ),
                             ),
-                            Padding(
+                            const Padding(
                               padding: EdgeInsets.only(top: 6),
                               child: Text(
                                 "11 Cr",
@@ -609,7 +609,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 0),
+                        margin: const EdgeInsets.only(top: 0),
                         child: Column(
                           children: [
                             SizedBox(
@@ -631,13 +631,13 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                     child: Container(
                                       height: 23,
                                       decoration: BoxDecoration(
-                                          color: Color(0xFF021852),
+                                          color: const Color(0xFF021852),
                                           borderRadius:
                                               BorderRadius.circular(4)),
                                       padding:
-                                          EdgeInsets.symmetric(horizontal: 3),
+                                          const EdgeInsets.symmetric(horizontal: 3),
                                       alignment: Alignment.center,
-                                      child: Text(
+                                      child: const Text(
                                         "R. Jadeja",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
@@ -651,7 +651,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                 ],
                               ),
                             ),
-                            Padding(
+                            const Padding(
                               padding: EdgeInsets.only(top: 6),
                               child: Text(
                                 "9 Cr",
@@ -666,7 +666,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                       ),
                     ],
                   ),
-                  Align(
+                  const Align(
                     alignment: Alignment.center,
                     child: Text(
                       "BOWLERS",
@@ -680,7 +680,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
-                        margin: EdgeInsets.only(top: 0),
+                        margin: const EdgeInsets.only(top: 0),
                         child: Column(
                           children: [
                             SizedBox(
@@ -702,13 +702,13 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                     child: Container(
                                       height: 23,
                                       decoration: BoxDecoration(
-                                          color: Color(0xFF021852),
+                                          color: const Color(0xFF021852),
                                           borderRadius:
                                               BorderRadius.circular(4)),
                                       padding:
-                                          EdgeInsets.symmetric(horizontal: 3),
+                                          const EdgeInsets.symmetric(horizontal: 3),
                                       alignment: Alignment.center,
-                                      child: Text(
+                                      child: const Text(
                                         "M. Pathiran",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
@@ -722,7 +722,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                 ],
                               ),
                             ),
-                            Padding(
+                            const Padding(
                               padding: EdgeInsets.only(top: 6),
                               child: Text(
                                 "9 Cr",
@@ -736,7 +736,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 0),
+                        margin: const EdgeInsets.only(top: 0),
                         child: Column(
                           children: [
                             SizedBox(
@@ -758,13 +758,13 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                     child: Container(
                                       height: 23,
                                       decoration: BoxDecoration(
-                                          color: Color(0xFF021852),
+                                          color: const Color(0xFF021852),
                                           borderRadius:
                                               BorderRadius.circular(4)),
                                       padding:
-                                          EdgeInsets.symmetric(horizontal: 3),
+                                          const EdgeInsets.symmetric(horizontal: 3),
                                       alignment: Alignment.center,
-                                      child: Text(
+                                      child: const Text(
                                         "D. Chahar",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
@@ -778,7 +778,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                 ],
                               ),
                             ),
-                            Padding(
+                            const Padding(
                               padding: EdgeInsets.only(top: 6),
                               child: Text(
                                 "9 Cr",
@@ -792,7 +792,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 0),
+                        margin: const EdgeInsets.only(top: 0),
                         child: Column(
                           children: [
                             SizedBox(
@@ -818,9 +818,9 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                           borderRadius:
                                               BorderRadius.circular(4)),
                                       padding:
-                                          EdgeInsets.symmetric(horizontal: 3),
+                                          const EdgeInsets.symmetric(horizontal: 3),
                                       alignment: Alignment.center,
-                                      child: Text(
+                                      child: const Text(
                                         "H. Patel",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
@@ -834,7 +834,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                 ],
                               ),
                             ),
-                            Padding(
+                            const Padding(
                               padding: EdgeInsets.only(top: 6),
                               child: Text(
                                 "6 Cr",
@@ -848,7 +848,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 0),
+                        margin: const EdgeInsets.only(top: 0),
                         child: Column(
                           children: [
                             SizedBox(
@@ -874,9 +874,9 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                           borderRadius:
                                               BorderRadius.circular(4)),
                                       padding:
-                                          EdgeInsets.symmetric(horizontal: 3),
+                                          const EdgeInsets.symmetric(horizontal: 3),
                                       alignment: Alignment.center,
-                                      child: Text(
+                                      child: const Text(
                                         "M. Siraj",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
@@ -890,7 +890,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                 ],
                               ),
                             ),
-                            Padding(
+                            const Padding(
                               padding: EdgeInsets.only(top: 6),
                               child: Text(
                                 "9 Cr",
@@ -905,7 +905,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                 ],

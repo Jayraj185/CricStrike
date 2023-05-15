@@ -16,13 +16,13 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          backgroundColor: Color(0xFF021852),
+          backgroundColor: const Color(0xFF021852),
           elevation: 0,
           title: Row(
             children: [
               Column(
                 children: [
-                  Text(
+                  const Text(
                     "Players",
                     style: TextStyle(
                       color: Colors.grey,
@@ -30,8 +30,8 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                       fontSize: 16
                     ),
                   ),
-                  SizedBox(height: 3,),
-                  Text.rich(
+                  const SizedBox(height: 3,),
+                  const Text.rich(
                     TextSpan(
                       children: [
                         TextSpan(text: "0",style: TextStyle(
@@ -51,7 +51,7 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
               ),
               Transform.rotate(
                 angle: pi/2,
-                child: Text(
+                child: const Text(
                   "-------",
                   style: TextStyle(
                       color: Colors.grey,

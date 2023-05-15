@@ -22,7 +22,7 @@ class _GamePageState extends State<GamePage> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      physics: BouncingScrollPhysics(),
+      physics: const BouncingScrollPhysics(),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,18 +57,18 @@ class _GamePageState extends State<GamePage> {
                     l1.add(doc);
                   }
                   return
-                    Container(height: 215,
-                      child: ListView.builder(shrinkWrap: true,padding: EdgeInsets.only(right: 16),
+                    SizedBox(height: 215,
+                      child: ListView.builder(shrinkWrap: true,padding: const EdgeInsets.only(right: 16),
                         scrollDirection: Axis.horizontal,
-                        physics:  BouncingScrollPhysics(),
+                        physics:  const BouncingScrollPhysics(),
                         itemCount: l1.length,
                         itemBuilder: (context, index) {
                           return Container(
                                       height: 215,
-                                      width: 170,margin: index == 0?EdgeInsets.only(left: 16):EdgeInsets.only(left: 10),
-                                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),color: Color(0xff021852),),
+                                      width: 170,margin: index == 0?const EdgeInsets.only(left: 16):const EdgeInsets.only(left: 10),
+                                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),color: const Color(0xff021852),),
                                       child: ClipRRect(borderRadius: BorderRadius.circular(15),
-                                        child: CachedNetworkImage(fadeInDuration: Duration(seconds: 0),
+                                        child: CachedNetworkImage(fadeInDuration: const Duration(seconds: 0),
                                           fit: BoxFit.fill,
                                           imageUrl:
                                           "${l1[index]}",
@@ -81,8 +81,8 @@ class _GamePageState extends State<GamePage> {
                                             mainAxisAlignment:
                                             MainAxisAlignment.center,
                                             children: [
-                                              Icon(Icons.error),
-                                              Text(" Image Not available")
+                                              const Icon(Icons.error),
+                                              const Text(" Image Not available")
                                             ],
                                           ),
                                         ),
@@ -99,7 +99,7 @@ class _GamePageState extends State<GamePage> {
                 } else if (snapshot.hasError) {
                   return Center(child: Text("${snapshot.error}"));
                 }
-                return Container(height:215,child: Center(child: CircularProgressIndicator(color: Colors.white,)));
+                return const SizedBox(height:215,child: Center(child: CircularProgressIndicator(color: Colors.white,)));
               },
               stream: FireHelper.fireHelper.GetData(),
             )
@@ -143,18 +143,18 @@ class _GamePageState extends State<GamePage> {
             //   ),
             // ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 9,
           ),
-          Divider(
+          const Divider(
             thickness: 1,
             color: Colors.grey,
           ),
-          SizedBox(
+          const SizedBox(
             height: 9,
           ),
-           Padding(
-             padding: const EdgeInsets.symmetric(horizontal: 16),
+           const Padding(
+             padding: EdgeInsets.symmetric(horizontal: 16),
              child: Text(
               "Games",
               style:TextStyle(
@@ -164,7 +164,7 @@ class _GamePageState extends State<GamePage> {
               ),
           ),
            ),
-          SizedBox(
+          const SizedBox(
             height: 9,
           ),
           Padding(
@@ -184,7 +184,7 @@ class _GamePageState extends State<GamePage> {
                     shrinkWrap: true,
                     physics: const BouncingScrollPhysics(),
                     itemCount: l1.length,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3,
                         crossAxisSpacing: 10,
                         mainAxisSpacing: 10),
@@ -196,7 +196,7 @@ class _GamePageState extends State<GamePage> {
                         },
                         child: Container(
                           decoration: BoxDecoration(
-                              color: Color(0xff021852),
+                              color: const Color(0xff021852),
                               borderRadius: BorderRadius.circular(20)),
                           child: Stack(
                             children: [
@@ -204,7 +204,7 @@ class _GamePageState extends State<GamePage> {
                                   alignment: Alignment.center,
                                   child: ClipRRect(
                                       borderRadius: BorderRadius.circular(20),
-                                      child:CachedNetworkImage(fadeInDuration: Duration(seconds: 0),filterQuality: FilterQuality.high,
+                                      child:CachedNetworkImage(fadeInDuration: const Duration(seconds: 0),filterQuality: FilterQuality.high,
                                         fit: BoxFit.fill,
                                         imageUrl:
                                         "${l1[index].image}",
@@ -217,8 +217,8 @@ class _GamePageState extends State<GamePage> {
                                           mainAxisAlignment:
                                           MainAxisAlignment.center,
                                           children: [
-                                            Icon(Icons.error),
-                                            Text(" Image Not available")
+                                            const Icon(Icons.error),
+                                            const Text(" Image Not available")
                                           ],
                                         ),
                                       ),
@@ -239,13 +239,13 @@ class _GamePageState extends State<GamePage> {
                                 child: Container(
                                   height: 34,
                                   width: double.infinity,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(20),
                                           bottomRight: Radius.circular(20)),
                                       color: Colors.black38),
                                   padding:
-                                      EdgeInsets.symmetric(horizontal: 15, vertical: 9),
+                                      const EdgeInsets.symmetric(horizontal: 15, vertical: 9),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -301,7 +301,7 @@ class _GamePageState extends State<GamePage> {
               stream: FireHelper.fireHelper.GetData(),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
         ],

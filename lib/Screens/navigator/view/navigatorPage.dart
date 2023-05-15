@@ -158,7 +158,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
             appBar: navigatorController.NavigatIndex.value == 2
                 ? AppBar(
                     bottom: TabBar(
-                      labelColor: Color(0xFFFFFFFF),
+                      labelColor: const Color(0xFFFFFFFF),
                       onTap: (value) {
                         if (newsController.gamename.value == 1) {
                           newsController.gamename.value = 0;
@@ -166,18 +166,18 @@ class _NavigatorPageState extends State<NavigatorPage> {
                           newsController.gamename.value = 1;
                         }
                       },
-                      indicatorColor: Color(0xFFFFFFFF),
+                      indicatorColor: const Color(0xFFFFFFFF),
                       automaticIndicatorColorAdjustment: true,
                       tabs: [
-                        Tab(
+                        const Tab(
                           text: "Cricket",
                         ),
-                        Tab(
+                        const Tab(
                           text: "Football",
                         ),
                       ],
                     ),
-                    leading: Padding(
+                    leading: const Padding(
                       padding: EdgeInsets.only(left: 10, top: 8, bottom: 8),
                       child: CircleAvatar(
                         backgroundImage: NetworkImage(
@@ -191,18 +191,18 @@ class _NavigatorPageState extends State<NavigatorPage> {
                           "assets/image/applogo.png",
                           height: 30,
                         ),
-                        Text(
+                        const Text(
                           " CRICNEWS",
                         ),
                       ],
                     ),
-                    backgroundColor: Color(0xff021852),
+                    backgroundColor: const Color(0xff021852),
                   )
                     : AppBar(
                         actions: [
                           navigatorController.NavigatIndex.value == 0
                               ? Padding(
-                                  padding: EdgeInsets.only(
+                                  padding: const EdgeInsets.only(
                                     right: 13,
                                     top: 6,
                                     bottom: 6,
@@ -215,7 +215,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
                                       width: 80,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(8),
-                                        gradient: LinearGradient(
+                                        gradient: const LinearGradient(
                                           begin: Alignment.topCenter,
                                           end: Alignment.bottomCenter,
                                           colors: [
@@ -236,7 +236,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.end,
                                               children: [
-                                                Text(
+                                                const Text(
                                                   "Add Cash",
                                                   style: TextStyle(
                                                       color: Colors.black,
@@ -244,8 +244,8 @@ class _NavigatorPageState extends State<NavigatorPage> {
                                                           FontWeight.bold,
                                                       fontSize: 12),
                                                 ),
-                                                Spacer(),
-                                                Text(
+                                                const Spacer(),
+                                                const Text(
                                                   "₹0",
                                                   textAlign: TextAlign.right,
                                                   style: TextStyle(
@@ -256,7 +256,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
                                                 ),
                                               ],
                                             ),
-                                            Spacer(),
+                                            const Spacer(),
                                             Image.asset(
                                               "assets/image/plus.png",
                                               height: 18,
@@ -275,12 +275,12 @@ class _NavigatorPageState extends State<NavigatorPage> {
                               "assets/image/applogo.png",
                               height: 30,
                             ),
-                            Text(
+                            const Text(
                               " CRICSTRIKE",
                             ),
                           ],
                         ),
-                        leading: Padding(
+                        leading: const Padding(
                           padding: EdgeInsets.only(left: 10, top: 8, bottom: 8),
                           child: CircleAvatar(
                             backgroundImage: NetworkImage(
@@ -288,7 +288,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
                             ),
                           ),
                         ),
-                        backgroundColor: Color(0xff021852),
+                        backgroundColor: const Color(0xff021852),
                       ),
             body: Container(
               height: double.infinity,
@@ -297,9 +297,9 @@ class _NavigatorPageState extends State<NavigatorPage> {
                       navigatorController.NavigatIndex.value == 3 ||
                       navigatorController.NavigatIndex.value == 0 ||
                       navigatorController.NavigatIndex.value == 4
-                  ? EdgeInsets.symmetric(horizontal: 0)
-                  : EdgeInsets.symmetric(horizontal: 16),
-              decoration: BoxDecoration(
+                  ? const EdgeInsets.symmetric(horizontal: 0)
+                  : const EdgeInsets.symmetric(horizontal: 16),
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
@@ -324,35 +324,35 @@ class _NavigatorPageState extends State<NavigatorPage> {
                 onTap: (value) {
                   navigatorController.NavigatIndex.value = value;
                 },
-                backgroundColor: Color(0xff021852),
+                backgroundColor: const Color(0xff021852),
                 items: [
                   BottomNavigationBarItem(
                     activeIcon:
                         Image.asset("assets/image/activehome.png", height: 25),
-                    backgroundColor: Color(0xff021852),
+                    backgroundColor: const Color(0xff021852),
                     icon: Image.asset("assets/image/home.png", height: 25),
                     label: "Home",
                   ),
                   BottomNavigationBarItem(
-                      backgroundColor: Color(0xff021852),
+                      backgroundColor: const Color(0xff021852),
                       activeIcon: Image.asset("assets/image/activecricket.png",
                           height: 25),
                       icon: Image.asset("assets/image/cricket.png", height: 25),
                       label: "Cricket"),
                   BottomNavigationBarItem(
-                      backgroundColor: Color(0xff021852),
+                      backgroundColor: const Color(0xff021852),
                       activeIcon: Image.asset("assets/image/activenews.png",
                           height: 26),
                       icon: Image.asset("assets/image/news.png", height: 22),
                       label: "News"),
                   BottomNavigationBarItem(
-                      backgroundColor: Color(0xff021852),
+                      backgroundColor: const Color(0xff021852),
                       activeIcon:
                           Image.asset("assets/image/activepre.png", height: 27),
                       icon: Image.asset("assets/image/pre.png", height: 24),
                       label: "Predicition"),
                   BottomNavigationBarItem(
-                      backgroundColor: Color(0xff021852),
+                      backgroundColor: const Color(0xff021852),
                       activeIcon: Image.asset("assets/image/activegames.png",
                           height: 25),
                       icon: Image.asset("assets/image/game.png", height: 25),

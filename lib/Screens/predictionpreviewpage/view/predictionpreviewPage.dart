@@ -21,29 +21,29 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: Color(0xff021852),
+          backgroundColor: const Color(0xff021852),
           leading: IconButton(
             onPressed: () {
               Get.back();
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.close,
               color: Colors.white,
             ),
           ),
-          title: Text(
+          title: const Text(
             "CRICSTRIKE XII",
             style: TextStyle(color: Colors.white),
           ),
           bottom: PreferredSize(
-            preferredSize: Size.fromHeight(66),
+            preferredSize: const Size.fromHeight(66),
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Divider(
+                  const Divider(
                     thickness: 1.2,
                     color: Colors.grey,
                   ),
@@ -54,12 +54,12 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             "Players",
                             style:
                                 TextStyle(color: Colors.white70, fontSize: 12),
                           ),
-                          Text.rich(TextSpan(children: [
+                          const Text.rich(TextSpan(children: [
                             TextSpan(
                               text: "11",
                               style: TextStyle(
@@ -77,15 +77,15 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                       ),
                       Container(
                         height: 21,
-                        margin: EdgeInsets.only(left: 30),
+                        margin: const EdgeInsets.only(left: 30),
                         decoration: BoxDecoration(
-                            color: Color(0xFF021852),
+                            color: const Color(0xFF021852),
                             borderRadius: BorderRadius.circular(3)),
                         alignment: Alignment.center,
-                        padding: EdgeInsets.symmetric(horizontal: 8),
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
                         child: Text(
                           "${predictionController.dataList[0]['cricteam']['team1']}",
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.white,
                               fontSize: 12,
                               fontWeight: FontWeight.bold),
@@ -93,12 +93,12 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                       ),
                       Text(
                         "${predictionController.dataList[0]['cricteam']['team1_player']}",
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 18),
                       ),
-                      Text(
+                      const Text(
                         ":",
                         style: TextStyle(
                             color: Colors.white,
@@ -107,22 +107,22 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                       ),
                       Text(
                         "${predictionController.dataList[0]['cricteam']['team2_player']}",
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 18),
                       ),
                       Container(
                         height: 21,
-                        margin: EdgeInsets.only(right: 30),
+                        margin: const EdgeInsets.only(right: 30),
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(3)),
                         alignment: Alignment.center,
-                        padding: EdgeInsets.symmetric(horizontal: 8),
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
                         child: Text(
                           "${predictionController.dataList[0]['cricteam']['team2']}",
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Color(0xFF021852),
                               fontSize: 12,
                               fontWeight: FontWeight.bold),
@@ -131,7 +131,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                       Container(
                         alignment: Alignment.centerRight,
                         width: 40,
-                        child: Icon(
+                        child: const Icon(
                           Icons.info_outline,
                           color: Colors.white,
                         ),
@@ -155,7 +155,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                       // ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 6,
                   )
                 ],
@@ -163,7 +163,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
             ),
           ),
         ),
-        backgroundColor: Color(0xff07853D),
+        backgroundColor: const Color(0xff07853D),
         body: StreamBuilder(
           stream: FireHelper.fireHelper.GetPredictionData(),
           builder: (context, snapshot) {
@@ -192,49 +192,49 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                     children: [
                       Expanded(
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Color(0xFF007432),
                           ),
                         ),
                       ),
                       Expanded(
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Color(0xFF0B8640),
                           ),
                         ),
                       ),
                       Expanded(
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Color(0xFF007432),
                           ),
                         ),
                       ),
                       Expanded(
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Color(0xFF0B8640),
                           ),
                         ),
                       ),
                       Expanded(
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Color(0xFF007432),
                           ),
                         ),
                       ),
                       Expanded(
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Color(0xFF0B8640),
                           ),
                         ),
                       ),
                       Expanded(
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Color(0xFF007432),
                           ),
                         ),
@@ -242,7 +242,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                     ],
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 40, vertical: 80),
+                    margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 80),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(1000),
                         border: Border.all(color: Colors.white, width: 0.5)),
@@ -250,14 +250,14 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                   Container(
                     width: 100,
                     height: 280,
-                    color: Color(0xFF4FA042),
+                    color: const Color(0xFF4FA042),
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    padding: const EdgeInsets.symmetric(horizontal: 5),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Align(
+                        const Align(
                           alignment: Alignment.center,
                           child: Padding(
                             padding: EdgeInsets.only(top: 15),
@@ -273,7 +273,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                         Container(
                           height: 100,
                           child: ListView.builder(
-                            physics: NeverScrollableScrollPhysics(),
+                            physics: const NeverScrollableScrollPhysics(),
                             itemBuilder: (context, index) => Container(
                               margin: EdgeInsets.symmetric(
                                   horizontal: Get.width /
@@ -300,7 +300,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                           alignment: Alignment.topCenter,
                                           child: CachedNetworkImage(
                                             fadeInDuration:
-                                                Duration(seconds: 0),
+                                                const Duration(seconds: 0),
                                             fit: BoxFit.fill,
                                             imageUrl:
                                                 "${keeper[index]['image']}",
@@ -312,8 +312,8 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                               mainAxisAlignment:
                                                   MainAxisAlignment.center,
                                               children: [
-                                                Icon(Icons.error),
-                                                Text(" Image Not available")
+                                                const Icon(Icons.error),
+                                                const Text(" Image Not available")
                                               ],
                                             ),
                                           ),
@@ -325,11 +325,11 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                             decoration: BoxDecoration(
                                                 color: keeper[index]['color'] ==
                                                         "0xffffffff"
-                                                    ? Color(0xffffffff)
-                                                    : Color(0xff021852),
+                                                    ? const Color(0xffffffff)
+                                                    : const Color(0xff021852),
                                                 borderRadius:
                                                     BorderRadius.circular(4)),
-                                            padding: EdgeInsets.symmetric(
+                                            padding: const EdgeInsets.symmetric(
                                                 horizontal: 10),
                                             alignment: Alignment.center,
                                             child: Text(
@@ -340,8 +340,8 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                                   color: keeper[index]
                                                               ['color'] !=
                                                           "0xffffffff"
-                                                      ? Color(0xffffffff)
-                                                      : Color(0xff021852),
+                                                      ? const Color(0xffffffff)
+                                                      : const Color(0xff021852),
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 12),
                                             ),
@@ -351,10 +351,10 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsets.only(top: 6),
+                                    padding: const EdgeInsets.only(top: 6),
                                     child: Text(
                                       "${keeper[index]['value']}",
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           color: Colors.white,
                                           fontSize: 14,
                                           fontWeight: FontWeight.w500),
@@ -368,7 +368,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                             scrollDirection: Axis.horizontal,
                           ),
                         ),
-                        Align(
+                        const Align(
                           alignment: Alignment.center,
                           child: Text(
                             "BATTER",
@@ -381,7 +381,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                         Container(
                           height: 100,
                           child: ListView.builder(
-                            physics: NeverScrollableScrollPhysics(),
+                            physics: const NeverScrollableScrollPhysics(),
                             itemBuilder: (context, index) => Container(
                               margin: EdgeInsets.symmetric(
                                   horizontal: Get.width /
@@ -408,7 +408,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                             alignment: Alignment.topCenter,
                                       child: CachedNetworkImage(
                                         fadeInDuration:
-                                        Duration(seconds: 0),
+                                        const Duration(seconds: 0),
                                         fit: BoxFit.fill,
                                         imageUrl:
                                         "${batsman[index]['image']}",
@@ -420,8 +420,8 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                           mainAxisAlignment:
                                           MainAxisAlignment.center,
                                           children: [
-                                            Icon(Icons.error),
-                                            Text(" Image Not available")
+                                            const Icon(Icons.error),
+                                            const Text(" Image Not available")
                                           ],
                                         ),
                                       ),),
@@ -433,11 +433,11 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                                 color: batsman[index]
                                                             ['color'] ==
                                                         "0xffffffff"
-                                                    ? Color(0xffffffff)
-                                                    : Color(0xff021852),
+                                                    ? const Color(0xffffffff)
+                                                    : const Color(0xff021852),
                                                 borderRadius:
                                                     BorderRadius.circular(4)),
-                                            padding: EdgeInsets.symmetric(
+                                            padding: const EdgeInsets.symmetric(
                                                 horizontal: 10),
                                             alignment: Alignment.center,
                                             child: Text(
@@ -448,8 +448,8 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                                   color: batsman[index]
                                                               ['color'] !=
                                                           "0xffffffff"
-                                                      ? Color(0xffffffff)
-                                                      : Color(0xff021852),
+                                                      ? const Color(0xffffffff)
+                                                      : const Color(0xff021852),
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 12),
                                             ),
@@ -459,10 +459,10 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsets.only(top: 6),
+                                    padding: const EdgeInsets.only(top: 6),
                                     child: Text(
                                       "${batsman[index]['value']}",
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           color: Colors.white,
                                           fontSize: 14,
                                           fontWeight: FontWeight.w500),
@@ -476,7 +476,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                             scrollDirection: Axis.horizontal,
                           ),
                         ),
-                        Align(
+                        const Align(
                           alignment: Alignment.center,
                           child: Text(
                             "ALL ROUNDERS",
@@ -489,7 +489,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                         Container(
                           height: 100,
                           child: ListView.builder(
-                            physics: NeverScrollableScrollPhysics(),
+                            physics: const NeverScrollableScrollPhysics(),
                             itemBuilder: (context, index) => Container(
                               margin: EdgeInsets.symmetric(
                                   horizontal: Get.width /
@@ -516,7 +516,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                             alignment: Alignment.topCenter,
                                           child: CachedNetworkImage(
                                             fadeInDuration:
-                                            Duration(seconds: 0),
+                                            const Duration(seconds: 0),
                                             fit: BoxFit.fill,
                                             imageUrl:
                                             "${allrounder[index]['image']}",
@@ -528,8 +528,8 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                               mainAxisAlignment:
                                               MainAxisAlignment.center,
                                               children: [
-                                                Icon(Icons.error),
-                                                Text(" Image Not available")
+                                                const Icon(Icons.error),
+                                                const Text(" Image Not available")
                                               ],
                                             ),
                                           ),
@@ -542,11 +542,11 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                                 color: allrounder[index]
                                                             ['color'] ==
                                                         "0xffffffff"
-                                                    ? Color(0xffffffff)
-                                                    : Color(0xff021852),
+                                                    ? const Color(0xffffffff)
+                                                    : const Color(0xff021852),
                                                 borderRadius:
                                                     BorderRadius.circular(4)),
-                                            padding: EdgeInsets.symmetric(
+                                            padding: const EdgeInsets.symmetric(
                                                 horizontal: 10),
                                             alignment: Alignment.center,
                                             child: Text(
@@ -557,8 +557,8 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                                   color: allrounder[index]
                                                               ['color'] !=
                                                           "0xffffffff"
-                                                      ? Color(0xffffffff)
-                                                      : Color(0xff021852),
+                                                      ? const Color(0xffffffff)
+                                                      : const Color(0xff021852),
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 12),
                                             ),
@@ -568,10 +568,10 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsets.only(top: 6),
+                                    padding: const EdgeInsets.only(top: 6),
                                     child: Text(
                                       "${allrounder[index]['value']}",
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           color: Colors.white,
                                           fontSize: 14,
                                           fontWeight: FontWeight.w500),
@@ -585,7 +585,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                             scrollDirection: Axis.horizontal,
                           ),
                         ),
-                        Align(
+                        const Align(
                           alignment: Alignment.center,
                           child: Text(
                             "BOWLERS",
@@ -598,7 +598,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                         Container(
                           height: 100,
                           child: ListView.builder(
-                            physics: NeverScrollableScrollPhysics(),
+                            physics: const NeverScrollableScrollPhysics(),
                             itemBuilder: (context, index) => Container(
                               margin: EdgeInsets.symmetric(
                                   horizontal: Get.width /
@@ -625,7 +625,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                             alignment: Alignment.topCenter,
                                           child: CachedNetworkImage(
                                             fadeInDuration:
-                                            Duration(seconds: 0),
+                                            const Duration(seconds: 0),
                                             fit: BoxFit.fill,
                                             imageUrl:
                                             "${bowler[index]['image']}",
@@ -637,8 +637,8 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                               mainAxisAlignment:
                                               MainAxisAlignment.center,
                                               children: [
-                                                Icon(Icons.error),
-                                                Text(" Image Not available")
+                                                const Icon(Icons.error),
+                                                const Text(" Image Not available")
                                               ],
                                             ),
                                           ),
@@ -650,11 +650,11 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                             decoration: BoxDecoration(
                                                 color: bowler[index]['color'] ==
                                                         "0xffffffff"
-                                                    ? Color(0xffffffff)
-                                                    : Color(0xff021852),
+                                                    ? const Color(0xffffffff)
+                                                    : const Color(0xff021852),
                                                 borderRadius:
                                                     BorderRadius.circular(4)),
-                                            padding: EdgeInsets.symmetric(
+                                            padding: const EdgeInsets.symmetric(
                                                 horizontal: 10),
                                             alignment: Alignment.center,
                                             child: Text(
@@ -663,8 +663,8 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                                   color: bowler[index]
                                                               ['color'] !=
                                                           "0xffffffff"
-                                                      ? Color(0xffffffff)
-                                                      : Color(0xff021852),
+                                                      ? const Color(0xffffffff)
+                                                      : const Color(0xff021852),
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 12),
                                             ),
@@ -674,10 +674,10 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsets.only(top: 6),
+                                    padding: const EdgeInsets.only(top: 6),
                                     child: Text(
                                       "${bowler[index]['value']}",
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           color: Colors.white,
                                           fontSize: 14,
                                           fontWeight: FontWeight.w500),
@@ -691,7 +691,7 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                             scrollDirection: Axis.horizontal,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 15,
                         ),
                       ],

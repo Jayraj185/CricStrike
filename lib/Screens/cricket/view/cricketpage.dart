@@ -15,7 +15,7 @@ class _CricketPageState extends State<CricketPage> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      physics: BouncingScrollPhysics(),
+      physics: const BouncingScrollPhysics(),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -34,64 +34,64 @@ class _CricketPageState extends State<CricketPage> {
                 //     l1.add(l2);
                 //   }
                 return ListView.builder(shrinkWrap: true,
-                  physics: BouncingScrollPhysics(),
+                  physics: const BouncingScrollPhysics(),
                   itemBuilder: (context, index) {
                     return InkWell(
                       onTap: (){
                         Get.toNamed('tabbar');
                       },
                       child: Container(
-                        margin: EdgeInsets.only(top: 15, bottom: 0),
+                        margin: const EdgeInsets.only(top: 15, bottom: 0),
                         child: Column(
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 7,
                             ),
                             Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 15),
+                              padding: const EdgeInsets.symmetric(horizontal: 15),
                               child: Row(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "Ipl - 2023",
                                     style: TextStyle(
                                         color: Colors.black45,
                                         fontSize: 18,
                                         fontWeight: FontWeight.w600),
                                   ),
-                                  Spacer(),
-                                  Text(
+                                  const Spacer(),
+                                  const Text(
                                     "Live",
                                     style: TextStyle(
                                         color: Colors.green,
                                         fontSize: 18,
                                         fontWeight: FontWeight.w600),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 10,
                                   ),
-                                  Icon(
+                                  const Icon(
                                     Icons.notifications_none,
                                     size: 25,
                                   ),
                                 ],
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 5,
                             ),
                             Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 15),
+                              padding: const EdgeInsets.symmetric(horizontal: 15),
                               child: Row(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "T1 name",
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 16,
                                         fontWeight: FontWeight.w500),
                                   ),
-                                  Spacer(),
-                                  Text(
+                                  const Spacer(),
+                                  const Text(
                                     "T2 Name",
                                     style: TextStyle(
                                         color: Colors.black,
@@ -101,11 +101,11 @@ class _CricketPageState extends State<CricketPage> {
                                 ],
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 15),
+                              padding: const EdgeInsets.symmetric(horizontal: 15),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
@@ -119,10 +119,10 @@ class _CricketPageState extends State<CricketPage> {
                                           fit: BoxFit.cover,
                                         ),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 5,
                                       ),
-                                      Text(
+                                      const Text(
                                         "CSK",
                                         style: TextStyle(
                                             color: Colors.black,
@@ -144,7 +144,7 @@ class _CricketPageState extends State<CricketPage> {
                                             color: Colors.red,
                                           ),
                                         ),
-                                        Text(
+                                        const Text(
                                           "1h 54min",
                                           style: TextStyle(
                                               color: Colors.red,
@@ -157,14 +157,14 @@ class _CricketPageState extends State<CricketPage> {
                                   //Spacer(),
                                   Row(
                                     children: [
-                                      Text(
+                                      const Text(
                                         "RCB",
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontWeight: FontWeight.bold,
                                             fontSize: 20),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 5,
                                       ),
                                       Container(
@@ -180,28 +180,28 @@ class _CricketPageState extends State<CricketPage> {
                                 ],
                               ),
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Container(
                               height: 35,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                               color: Colors.black12,
                                 borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(15),
                                   bottomRight:  Radius.circular(15),
                                 ),
                               ),
-                              padding: EdgeInsets.symmetric(horizontal: 15),
+                              padding: const EdgeInsets.symmetric(horizontal: 15),
                               child: Row(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "Rs.11 Lakh",
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 18,
                                         fontWeight: FontWeight.w600),
                                   ),
-                                  Spacer(),
-                                  Icon(
+                                  const Spacer(),
+                                  const Icon(
                                     Icons.live_tv,
                                     size: 25,
                                   ),
@@ -224,7 +224,7 @@ class _CricketPageState extends State<CricketPage> {
               } else if (snapshot.hasError) {
                 return Center(child: Text("${snapshot.error}"));
               }
-              return Center(child: CircularProgressIndicator(color: Colors.white,));
+              return const Center(child: CircularProgressIndicator(color: Colors.white,));
             },
             stream: FireHelper.fireHelper.GetData(),
           )

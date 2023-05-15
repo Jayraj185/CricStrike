@@ -17,7 +17,7 @@ import 'package:get/get.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     systemNavigationBarColor: Color(0xff021852), // navigation bar color
     statusBarColor: Color(0xff021852), // status bar color
   ));
@@ -26,16 +26,16 @@ void main() async {
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => SplashScreen(),
-        'sign_in': (context) => SignInPage(),
-        'otp': (context) => OTPScreen(),
-        'nav': (context) => NavigatorPage(),
-        'ndetail': (context) => NewsDetailPage(),
-        'wallet': (context) => WalletPage(),
-        'tabbar': (context) => TabBarScreen(),
-        'team_Preview': (context) => TeamPreviewPage(),
-        'create_Team': (context) => CreateTeamPage(),
-        'pp': (context) => PredictionPreviewPage(),
+        '/': (context) => const SplashScreen(),
+        'sign_in': (context) => const SignInPage(),
+        'otp': (context) => const OTPScreen(),
+        'nav': (context) => const NavigatorPage(),
+        'ndetail': (context) => const NewsDetailPage(),
+        'wallet': (context) => const WalletPage(),
+        'tabbar': (context) => const TabBarScreen(),
+        'team_Preview': (context) => const TeamPreviewPage(),
+        'create_Team': (context) => const CreateTeamPage(),
+        'pp': (context) => const PredictionPreviewPage(),
       },
     ),
   );

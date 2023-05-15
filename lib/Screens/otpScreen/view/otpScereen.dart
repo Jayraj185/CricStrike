@@ -18,7 +18,7 @@ class _OTPScreenState extends State<OTPScreen> {
         body: Container(
           height: double.infinity,
           width: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
@@ -32,11 +32,11 @@ class _OTPScreenState extends State<OTPScreen> {
           child: Padding(
             padding: const EdgeInsets.all(16.0),
             child: SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "OTP Verify",
                     style: TextStyle(
                       color: Colors.white,
@@ -44,14 +44,14 @@ class _OTPScreenState extends State<OTPScreen> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 80,
                   ),
                   Pinput(textInputAction: TextInputAction.next,
                    defaultPinTheme : PinTheme(
                     width: 56,
                     height: 56,
-                    textStyle: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w600),
+                    textStyle: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w600),
                     decoration: BoxDecoration(color: Colors.white,
                       border: Border.all(color: Colors.black),
                       borderRadius: BorderRadius.circular(20),
@@ -60,14 +60,14 @@ class _OTPScreenState extends State<OTPScreen> {
                     length: 6,
                     toolbarEnabled: false,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   Center(
                     child: ElevatedButton(
                         onPressed: () {
                           Get.offAllNamed("nav");
-                        }, child: Text("VeriFy")),
+                        }, child: const Text("VeriFy")),
                   )
                 ],
               ),

@@ -16,6 +16,7 @@ class ApiHelper {
       var json = jsonDecode(response.body);
       return Newsmodel.fromJson(json);
     }
+    return null;
   }
 
 }

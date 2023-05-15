@@ -35,14 +35,14 @@ class _NewsPageState extends State<NewsPage> {
                       Newsmodel? n1 = snapshot.data;
                       return Expanded(
                         child: ListView.builder(
-                          physics: BouncingScrollPhysics(),
+                          physics: const BouncingScrollPhysics(),
                           itemBuilder: (context, index) => Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(7),
-                              color: Color(0xffffffff),
+                              color: const Color(0xffffffff),
                             ),
-                            margin: EdgeInsets.only(bottom: 5, top: 20),
+                            margin: const EdgeInsets.only(bottom: 5, top: 20),
                             child: InkWell(
                               onTap: () {
                                 newsController.n1.value = n1.articles![index];
@@ -52,7 +52,7 @@ class _NewsPageState extends State<NewsPage> {
                                 children: [
                                   Container(
                                     alignment: Alignment.centerLeft,
-                                    padding: EdgeInsets.only(left: 10),
+                                    padding: const EdgeInsets.only(left: 10),
                                     child: Row(
                                       children: [
                                         Expanded(
@@ -70,7 +70,7 @@ class _NewsPageState extends State<NewsPage> {
                                                 text:
                                                     "${n1.articles![index].url}"));
                                           },
-                                          icon: Icon(
+                                          icon: const Icon(
                                             Icons.copy,
                                             size: 20,
                                           ),
@@ -82,7 +82,7 @@ class _NewsPageState extends State<NewsPage> {
                                                 subject:
                                                     '${n1.articles![index].content}');
                                           },
-                                          icon: Icon(
+                                          icon: const Icon(
                                             Icons.share,
                                             size: 20,
                                           ),
@@ -90,15 +90,15 @@ class _NewsPageState extends State<NewsPage> {
                                       ],
                                     ),
                                     height: 45,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       borderRadius: BorderRadius.only(topLeft: Radius.circular(7),topRight: Radius.circular(7)),
                                       color: Color(0xffe8edfa),
                                     ),
                                   ),
                                   Container(
                                     alignment: Alignment.center,
-                                    padding: EdgeInsets.only(left: 5, right: 5),
-                                    child: CachedNetworkImage(fadeInDuration: Duration(seconds: 0),
+                                    padding: const EdgeInsets.only(left: 5, right: 5),
+                                    child: CachedNetworkImage(fadeInDuration: const Duration(seconds: 0),
                                       fit: BoxFit.fill,
                                       imageUrl:
                                           "${n1.articles![index].urlToImage}",
@@ -106,14 +106,14 @@ class _NewsPageState extends State<NewsPage> {
                                           (context, url, downloadProgress) =>
                                               CircularProgressIndicator(
                                         value: downloadProgress.progress,
-                                        color: Color(0xff021852),
+                                        color: const Color(0xff021852),
                                       ),
                                       errorWidget: (context, url, error) => Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Icon(Icons.error),
-                                          Text(" Image Not available")
+                                          const Icon(Icons.error),
+                                          const Text(" Image Not available")
                                         ],
                                       ),
                                     ),
@@ -137,7 +137,7 @@ class _NewsPageState extends State<NewsPage> {
                                             fontSize: 18.5,
                                           ),
                                         ),
-                                        SizedBox(height: 10),
+                                        const SizedBox(height: 10),
                                         Text(
                                           "${n1.articles![index].content}",
                                           style: GoogleFonts.bitter(),
@@ -145,7 +145,7 @@ class _NewsPageState extends State<NewsPage> {
                                       ],
                                     ),
                                   ),
-                                  SizedBox(height: 20),
+                                  const SizedBox(height: 20),
                                 ],
                               ),
                             ),
@@ -159,7 +159,7 @@ class _NewsPageState extends State<NewsPage> {
                         child: Text("${snapshot.error}"),
                       );
                     }
-                    return Center(
+                    return const Center(
                       child: CircularProgressIndicator(
                         color: Colors.white,
                       ),
@@ -182,14 +182,14 @@ class _NewsPageState extends State<NewsPage> {
                       Newsmodel? n1 = snapshot.data;
                       return Expanded(
                         child: ListView.builder(
-                          physics: BouncingScrollPhysics(),
+                          physics: const BouncingScrollPhysics(),
                           itemBuilder: (context, index) => Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(7),
-                              color: Color(0xffffffff),
+                              color: const Color(0xffffffff),
                             ),
-                            margin: EdgeInsets.only(bottom: 5, top: 20),
+                            margin: const EdgeInsets.only(bottom: 5, top: 20),
                             child: InkWell(
                               onTap: () {
                                 newsController.n1.value = n1.articles![index];
@@ -199,7 +199,7 @@ class _NewsPageState extends State<NewsPage> {
                                 children: [
                                   Container(
                                     alignment: Alignment.centerLeft,
-                                    padding: EdgeInsets.only(left: 10),
+                                    padding: const EdgeInsets.only(left: 10),
                                     child: Row(
                                       children: [
                                         Expanded(
@@ -217,7 +217,7 @@ class _NewsPageState extends State<NewsPage> {
                                                 text:
                                                     "${n1.articles![index].url}"));
                                           },
-                                          icon: Icon(
+                                          icon: const Icon(
                                             Icons.copy,
                                             size: 20,
                                           ),
@@ -229,7 +229,7 @@ class _NewsPageState extends State<NewsPage> {
                                                 subject:
                                                     '${n1.articles![index].content}');
                                           },
-                                          icon: Icon(
+                                          icon: const Icon(
                                             Icons.share,
                                             size: 20,
                                           ),
@@ -237,14 +237,14 @@ class _NewsPageState extends State<NewsPage> {
                                       ],
                                     ),
                                     height: 45,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       borderRadius: BorderRadius.only(topRight: Radius.circular(7),topLeft: Radius.circular(7),),
                                       color: Color(0xffe8edfa),
                                     ),
                                   ),
                                   Container(
                                     alignment: Alignment.center,
-                                    padding: EdgeInsets.only(left: 5, right: 5),
+                                    padding: const EdgeInsets.only(left: 5, right: 5),
                                     child: CachedNetworkImage(
                                       fit: BoxFit.fill,
                                       imageUrl:
@@ -253,15 +253,15 @@ class _NewsPageState extends State<NewsPage> {
                                           (context, url, downloadProgress) =>
                                               CircularProgressIndicator(
                                         value: downloadProgress.progress,
-                                        color: Color(0xff021852),
+                                        color: const Color(0xff021852),
                                       ),
                                       errorWidget: (context, url, error) =>
                                           Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Icon(Icons.error),
-                                          Text(" Image Not available")
+                                          const Icon(Icons.error),
+                                          const Text(" Image Not available")
                                         ],
                                       ),
                                     ),
@@ -285,7 +285,7 @@ class _NewsPageState extends State<NewsPage> {
                                             fontSize: 18.5,
                                           ),
                                         ),
-                                        SizedBox(height: 10),
+                                        const SizedBox(height: 10),
                                         Text(
                                           "${n1.articles![index].content}",
                                           style: GoogleFonts.bitter(),
@@ -293,7 +293,7 @@ class _NewsPageState extends State<NewsPage> {
                                       ],
                                     ),
                                   ),
-                                  SizedBox(height: 20),
+                                  const SizedBox(height: 20),
                                 ],
                               ),
                             ),
@@ -307,7 +307,7 @@ class _NewsPageState extends State<NewsPage> {
                         child: Text("${snapshot.error}"),
                       );
                     }
-                    return Center(
+                    return const Center(
                       child: CircularProgressIndicator(
                         color: Colors.white,
                       ),

@@ -25,7 +25,7 @@ class _SignInPageState extends State<SignInPage> {
         body: Container(
           height: double.infinity,
           width: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
@@ -39,11 +39,11 @@ class _SignInPageState extends State<SignInPage> {
           child: Padding(
             padding: const EdgeInsets.all(16.0),
             child: SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "SIGN IN",
                     style: TextStyle(
                       color: Colors.white,
@@ -51,7 +51,7 @@ class _SignInPageState extends State<SignInPage> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 80,
                   ),
                   Container(
@@ -70,7 +70,7 @@ class _SignInPageState extends State<SignInPage> {
                                 CountryCodePicker(
                                   showDropDownButton: true,
                                   showFlagMain: true,
-                                  padding: EdgeInsets.only(right: 0, left: 0),
+                                  padding: const EdgeInsets.only(right: 0, left: 0),
 
                                   onChanged: (value) {
                                     print(
@@ -94,7 +94,7 @@ class _SignInPageState extends State<SignInPage> {
                                       BoxDecoration(
                                           borderRadius:
                                               BorderRadius.circular(4)),
-                                      BoxDecoration(),
+                                      const BoxDecoration(),
                                       0),
                                   showFlag: true,
 
@@ -107,7 +107,7 @@ class _SignInPageState extends State<SignInPage> {
                                   alignLeft: false,
 
                                   boxDecoration:
-                                      BoxDecoration(color: Colors.white),
+                                      const BoxDecoration(color: Colors.white),
                                 ),
                                 // Padding(
                                 //   padding:
@@ -164,19 +164,19 @@ class _SignInPageState extends State<SignInPage> {
                             ),
                           ],
                         ),
-                        border: OutlineInputBorder(
+                        border: const OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black),
                         ),
-                        labelStyle: TextStyle(color: Colors.black),
+                        labelStyle: const TextStyle(color: Colors.black),
                         hintText: "Enter Mobile Number",
-                        focusedBorder: OutlineInputBorder(
+                        focusedBorder: const OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black),
                         ),
                       ),
                       controller: txtNumber,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   Center(
@@ -193,7 +193,7 @@ class _SignInPageState extends State<SignInPage> {
                           codeAutoRetrievalTimeout: (String verificationId) {},
                         );
                       },
-                      child: Text("Get Otp"),
+                      child: const Text("Get Otp"),
                     ),
                   )
                 ],

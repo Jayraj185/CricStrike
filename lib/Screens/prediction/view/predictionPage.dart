@@ -44,7 +44,7 @@ class _PredictionPageState extends State<PredictionPage> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           index == 0
-                              ? Text(
+                              ? const Text(
                                   "PREDICTION",
                                   style: TextStyle(
                                       color: Colors.white,
@@ -52,16 +52,16 @@ class _PredictionPageState extends State<PredictionPage> {
                                 )
                               : Container(),
                           index == 0
-                              ? SizedBox(
+                              ? const SizedBox(
                                   height: 10,
                                 )
                               : Container(),
                           Container(
                             width: double.infinity,
-                            padding: EdgeInsets.all(15),
+                            padding: const EdgeInsets.all(15),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: Color(0xffefefef)),
+                                color: const Color(0xffefefef)),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -69,21 +69,21 @@ class _PredictionPageState extends State<PredictionPage> {
                                   children: [
                                     Text(
                                       "${l1[index]['match']}",
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 15),
                                     ),
-                                    Spacer(),
+                                    const Spacer(),
                                     Text(
                                       "${l1[index]['time']}",
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontWeight: FontWeight.bold,
                                           color: Color(0xff021852),
                                           fontSize: 15),
                                     ),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 15,
                                 ),
                                 InkWell(
@@ -106,7 +106,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                           children: [
                                             Expanded(
                                               child: Container(
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                     color: Color(0xFF007432),
                                                     borderRadius:
                                                         BorderRadius.only(
@@ -119,56 +119,56 @@ class _PredictionPageState extends State<PredictionPage> {
                                             ),
                                             Expanded(
                                               child: Container(
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   color: Color(0xFF0B8640),
                                                 ),
                                               ),
                                             ),
                                             Expanded(
                                               child: Container(
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   color: Color(0xFF007432),
                                                 ),
                                               ),
                                             ),
                                             Expanded(
                                               child: Container(
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   color: Color(0xFF0B8640),
                                                 ),
                                               ),
                                             ),
                                             Expanded(
                                               child: Container(
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   color: Color(0xFF007432),
                                                 ),
                                               ),
                                             ),
                                             Expanded(
                                               child: Container(
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   color: Color(0xFF0B8640),
                                                 ),
                                               ),
                                             ),
                                             Expanded(
                                               child: Container(
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   color: Color(0xFF007432),
                                                 ),
                                               ),
                                             ),
                                             Expanded(
                                               child: Container(
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   color: Color(0xFF0B8640),
                                                 ),
                                               ),
                                             ),
                                             Expanded(
                                               child: Container(
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                     color: Color(0xFF007432),
                                                     borderRadius:
                                                         BorderRadius.only(
@@ -182,7 +182,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                           ],
                                         ),
                                         Padding(
-                                          padding: EdgeInsets.only(
+                                          padding: const EdgeInsets.only(
                                               right: 12, top: 10, left: 12),
                                           child: Column(
                                             children: [
@@ -191,7 +191,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                     MainAxisAlignment
                                                         .spaceBetween,
                                                 children: [
-                                                  Text(
+                                                  const Text(
                                                     "CRICSTRIKE XI",
                                                     style: TextStyle(
                                                         color: Colors.white,
@@ -212,12 +212,12 @@ class _PredictionPageState extends State<PredictionPage> {
                                                           MainAxisAlignment
                                                               .spaceEvenly,
                                                       children: [
-                                                        Icon(
+                                                        const Icon(
                                                           Icons.share,
                                                           color: Colors.black,
                                                           size: 15,
                                                         ),
-                                                        Text(
+                                                        const Text(
                                                           "Share Team",
                                                           style: TextStyle(
                                                               color:
@@ -241,20 +241,20 @@ class _PredictionPageState extends State<PredictionPage> {
                                               Row(
                                                 children: [
                                                   Expanded(
-                                                    child: Container(
+                                                    child: SizedBox(
                                                       // color: Colors.red,
                                                       height: 160,
                                                       child: Row(
                                                         children: [
                                                           Expanded(
-                                                            child: Container(
+                                                            child: SizedBox(
                                                               height: double
                                                                   .infinity,
                                                               // color: Colors.black87,
                                                               child: Stack(
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsets.only(
+                                                                    padding: const EdgeInsets.only(
                                                                         top:
                                                                             6.0,
                                                                         right:
@@ -273,7 +273,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                         child:
                                                                             CachedNetworkImage(
                                                                           fadeInDuration:
-                                                                              Duration(seconds: 0),
+                                                                              const Duration(seconds: 0),
                                                                           filterQuality:
                                                                               FilterQuality.low,
                                                                           fit: BoxFit
@@ -286,7 +286,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                               Row(
                                                                             mainAxisAlignment:
                                                                                 MainAxisAlignment.center,
-                                                                            children: [
+                                                                            children: const [
                                                                               Icon(Icons.error),
                                                                               Text(" Image Not available")
                                                                             ],
@@ -305,7 +305,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                         Container(
                                                                       height:
                                                                           30,
-                                                                      margin: EdgeInsets.only(
+                                                                      margin: const EdgeInsets.only(
                                                                           top:
                                                                               21,
                                                                           right:
@@ -323,7 +323,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                         "${l1[index]['cricteam']['captain']['name']}",
                                                                         maxLines:
                                                                             1,
-                                                                        style: TextStyle(
+                                                                        style: const TextStyle(
                                                                             color: Colors
                                                                                 .black,
                                                                             fontSize:
@@ -342,7 +342,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                       height:
                                                                           21,
                                                                       width: 21,
-                                                                      decoration: BoxDecoration(
+                                                                      decoration: const BoxDecoration(
                                                                           color: Colors
                                                                               .white,
                                                                           shape:
@@ -351,7 +351,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                           Alignment
                                                                               .center,
                                                                       child:
-                                                                          Text(
+                                                                          const Text(
                                                                         "C",
                                                                         style: TextStyle(
                                                                             color:
@@ -366,14 +366,14 @@ class _PredictionPageState extends State<PredictionPage> {
                                                             ),
                                                           ),
                                                           Expanded(
-                                                            child: Container(
+                                                            child: SizedBox(
                                                               height: double
                                                                   .infinity,
                                                               // color: Colors.green,
                                                               child: Stack(
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsets.only(
+                                                                    padding: const EdgeInsets.only(
                                                                         top:
                                                                             6.0,
                                                                         left:
@@ -392,7 +392,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                         child:
                                                                             CachedNetworkImage(
                                                                           fadeInDuration:
-                                                                              Duration(seconds: 0),
+                                                                              const Duration(seconds: 0),
                                                                           filterQuality:
                                                                               FilterQuality.none,
                                                                           fit: BoxFit
@@ -405,7 +405,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                               Row(
                                                                             mainAxisAlignment:
                                                                                 MainAxisAlignment.center,
-                                                                            children: [
+                                                                            children: const [
                                                                               Icon(Icons.error),
                                                                               Text(" Image Not available")
                                                                             ],
@@ -422,18 +422,18 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                         Container(
                                                                       height:
                                                                           30,
-                                                                      padding: EdgeInsets.only(
+                                                                      padding: const EdgeInsets.only(
                                                                           left:
                                                                               3,
                                                                           right:
                                                                               3),
-                                                                      margin: EdgeInsets.only(
+                                                                      margin: const EdgeInsets.only(
                                                                           top:
                                                                               21,
                                                                           left:
                                                                               3),
                                                                       decoration: BoxDecoration(
-                                                                          color: Color(
+                                                                          color: const Color(
                                                                               0xFF021852),
                                                                           borderRadius:
                                                                               BorderRadius.circular(6)),
@@ -447,7 +447,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                             1,
                                                                         overflow:
                                                                             TextOverflow.ellipsis,
-                                                                        style: TextStyle(
+                                                                        style: const TextStyle(
                                                                             color: Colors
                                                                                 .white,
                                                                             fontSize:
@@ -466,7 +466,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                       height:
                                                                           21,
                                                                       width: 21,
-                                                                      decoration: BoxDecoration(
+                                                                      decoration: const BoxDecoration(
                                                                           color: Color(
                                                                               0xFF021852),
                                                                           shape:
@@ -475,7 +475,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                           Alignment
                                                                               .center,
                                                                       child:
-                                                                          Text(
+                                                                          const Text(
                                                                         "VC",
                                                                         style: TextStyle(
                                                                             color:
@@ -497,8 +497,8 @@ class _PredictionPageState extends State<PredictionPage> {
                                                     // color: Colors.black87,
                                                     height: 160,
                                                     width: 145,
-                                                    padding: EdgeInsets.all(6),
-                                                    margin: EdgeInsets.only(
+                                                    padding: const EdgeInsets.all(6),
+                                                    margin: const EdgeInsets.only(
                                                         top: 15),
                                                     alignment:
                                                         Alignment.topCenter,
@@ -520,7 +520,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                             children: [
                                                               Text(
                                                                 "${l1[index]['cricteam']['team1']} ${l1[index]['cricteam']['team1_player']}",
-                                                                style: TextStyle(
+                                                                style: const TextStyle(
                                                                     color: Colors
                                                                         .white,
                                                                     fontWeight:
@@ -531,7 +531,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                               ),
                                                               Text(
                                                                 "${l1[index]['cricteam']['team2']} ${l1[index]['cricteam']['team2_player']}",
-                                                                style: TextStyle(
+                                                                style: const TextStyle(
                                                                     color: Colors
                                                                         .white,
                                                                     fontWeight:
@@ -543,14 +543,14 @@ class _PredictionPageState extends State<PredictionPage> {
                                                             ],
                                                           ),
                                                         ),
-                                                        SizedBox(
+                                                        const SizedBox(
                                                           height: 6,
                                                         ),
-                                                        Divider(
+                                                        const Divider(
                                                           thickness: 1.5,
                                                           color: Colors.white,
                                                         ),
-                                                        SizedBox(
+                                                        const SizedBox(
                                                           height: 6,
                                                         ),
                                                         Row(
@@ -566,7 +566,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                   CrossAxisAlignment
                                                                       .center,
                                                               children: [
-                                                                Text(
+                                                                const Text(
                                                                   "WK",
                                                                   style: TextStyle(
                                                                       color: Colors
@@ -579,7 +579,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                 ),
                                                                 Text(
                                                                   "${l1[index]['cricteam']['wk']}",
-                                                                  style: TextStyle(
+                                                                  style: const TextStyle(
                                                                       color: Colors
                                                                           .white,
                                                                       fontSize:
@@ -598,7 +598,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                   CrossAxisAlignment
                                                                       .center,
                                                               children: [
-                                                                Text(
+                                                                const Text(
                                                                   "AR",
                                                                   style: TextStyle(
                                                                       color: Colors
@@ -611,7 +611,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                 ),
                                                                 Text(
                                                                   "${l1[index]['cricteam']['ar']}",
-                                                                  style: TextStyle(
+                                                                  style: const TextStyle(
                                                                       color: Colors
                                                                           .white,
                                                                       fontSize:
@@ -630,7 +630,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                   CrossAxisAlignment
                                                                       .center,
                                                               children: [
-                                                                Text(
+                                                                const Text(
                                                                   "BAT",
                                                                   style: TextStyle(
                                                                       color: Colors
@@ -643,7 +643,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                 ),
                                                                 Text(
                                                                   "${l1[index]['cricteam']['bat']}",
-                                                                  style: TextStyle(
+                                                                  style: const TextStyle(
                                                                       color: Colors
                                                                           .white,
                                                                       fontSize:
@@ -662,7 +662,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                   CrossAxisAlignment
                                                                       .center,
                                                               children: [
-                                                                Text(
+                                                                const Text(
                                                                   "BOWL",
                                                                   style: TextStyle(
                                                                       color: Colors
@@ -675,7 +675,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                                 ),
                                                                 Text(
                                                                   "${l1[index]['cricteam']['bowl']}",
-                                                                  style: TextStyle(
+                                                                  style: const TextStyle(
                                                                       color: Colors
                                                                           .white,
                                                                       fontSize:
@@ -707,7 +707,7 @@ class _PredictionPageState extends State<PredictionPage> {
                                                         Radius.circular(9),
                                                     bottomRight:
                                                         Radius.circular(9))),
-                                            padding: EdgeInsets.symmetric(
+                                            padding: const EdgeInsets.symmetric(
                                                 horizontal: 12),
                                             child: Row(
                                               mainAxisAlignment:
@@ -719,22 +719,22 @@ class _PredictionPageState extends State<PredictionPage> {
                                                     Container(
                                                       height: 30,
                                                       width: 30,
-                                                      decoration: BoxDecoration(
+                                                      decoration: const BoxDecoration(
                                                           color:
                                                               Color(0xFF021852),
                                                           shape:
                                                               BoxShape.circle),
-                                                      margin: EdgeInsets.only(
+                                                      margin: const EdgeInsets.only(
                                                           right: 6),
                                                       alignment:
                                                           Alignment.center,
-                                                      child: Icon(
+                                                      child: const Icon(
                                                         Icons.visibility,
                                                         color: Colors.white,
                                                         size: 21,
                                                       ),
                                                     ),
-                                                    Text(
+                                                    const Text(
                                                       "Preview",
                                                       style: TextStyle(
                                                           color:
@@ -753,52 +753,52 @@ class _PredictionPageState extends State<PredictionPage> {
                                     ),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
-                                Text(
+                                const Text(
                                   "PITCH REPORT",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 15),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 Text(
                                   "${l1[index]['pitch_report']}",
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 15,
                                 ),
-                                Text(
+                                const Text(
                                   "TOSS",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 15),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 Text(
                                   "${l1[index]['toss']}",
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 15,
                                 ),
-                                Text(
+                                const Text(
                                   "PLAYING XI",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 15),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 Text(
                                   "${l1[index]['team1_11']}",
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 7,
                                 ),
                                 Text(
@@ -807,14 +807,14 @@ class _PredictionPageState extends State<PredictionPage> {
                               ],
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                         ],
                       )
                     : Container(),
               ),
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               itemCount: l1.length,
             );
           }

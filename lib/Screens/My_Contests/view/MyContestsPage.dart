@@ -13,12 +13,12 @@ class _MyContestsPageState extends State<MyContestsPage> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 20,),
+        const SizedBox(height: 20,),
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
+            const Text(
               "Mega Event",
               style: TextStyle(
                   color: Colors.white,
@@ -26,7 +26,7 @@ class _MyContestsPageState extends State<MyContestsPage> {
                   fontWeight: FontWeight.w500
               ),
             ),
-            Text(
+            const Text(
               "Get Ready for Mega Winnigs",
               style: TextStyle(
                 color: Colors.white,
@@ -36,7 +36,7 @@ class _MyContestsPageState extends State<MyContestsPage> {
           ],
         ),
         Padding(
-          padding: EdgeInsets.only(top: 20),
+          padding: const EdgeInsets.only(top: 20),
           child: Container(
             height: 200,
             width: double.infinity,
@@ -44,15 +44,15 @@ class _MyContestsPageState extends State<MyContestsPage> {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(15)
             ),
-            padding: EdgeInsets.symmetric(horizontal: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Column(
               children: [
-                SizedBox(height: 12,),
+                const SizedBox(height: 12,),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       "₹3,000,000",
                       style: TextStyle(
                           color: Colors.black,
@@ -60,7 +60,7 @@ class _MyContestsPageState extends State<MyContestsPage> {
                           fontWeight: FontWeight.w500
                       ),
                     ),
-                    Text(
+                    const Text(
                       "Guaranted\nPrize",
                       style: TextStyle(
                         color: Colors.black,
@@ -69,13 +69,13 @@ class _MyContestsPageState extends State<MyContestsPage> {
                     ),
                   ],
                 ),
-                SizedBox(height: 6,),
+                const SizedBox(height: 6,),
                 Row(
                   children: [
                     Container(
                       height: 9,
                       width: 215,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           borderRadius: BorderRadius.only(topLeft: Radius.circular(9),bottomLeft: Radius.circular(9)),
                           gradient: LinearGradient(
                               begin: Alignment.topCenter,
@@ -90,7 +90,7 @@ class _MyContestsPageState extends State<MyContestsPage> {
                     Expanded(
                       child: Container(
                         height: 9,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             borderRadius: BorderRadius.only(topRight: Radius.circular(9),bottomRight: Radius.circular(9)),
                             color: Colors.black12
                         ),
@@ -98,11 +98,11 @@ class _MyContestsPageState extends State<MyContestsPage> {
                     ),
                   ],
                 ),
-                SizedBox(height: 6,),
+                const SizedBox(height: 6,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       "15,00,000 tickets left",
                       style: TextStyle(
                           color: Colors.red,
@@ -110,7 +110,7 @@ class _MyContestsPageState extends State<MyContestsPage> {
                           fontSize: 12
                       ),
                     ),
-                    Text(
+                    const Text(
                       "Upto 500 Entries",
                       style: TextStyle(
                           color: Colors.black87,
@@ -118,7 +118,7 @@ class _MyContestsPageState extends State<MyContestsPage> {
                           fontSize: 11
                       ),
                     ),
-                    Text(
+                    const Text(
                       "18,000 Total Tickets",
                       style: TextStyle(
                           color: Colors.black,
@@ -128,7 +128,7 @@ class _MyContestsPageState extends State<MyContestsPage> {
                     ),
                   ],
                 ),
-                SizedBox(height: 21,),
+                const SizedBox(height: 21,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -142,7 +142,7 @@ class _MyContestsPageState extends State<MyContestsPage> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text(
+                              const Text(
                                 "1",
                                 style: TextStyle(
                                     color: Colors.black,
@@ -150,7 +150,7 @@ class _MyContestsPageState extends State<MyContestsPage> {
                                     fontWeight: FontWeight.w500
                                 ),
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsets.only(bottom: 6),
                                 child: Text(
                                   "st",
@@ -164,8 +164,8 @@ class _MyContestsPageState extends State<MyContestsPage> {
                             ],
                           ),
                         ),
-                        SizedBox(width: 6,),
-                        Text(
+                        const SizedBox(width: 6,),
+                        const Text(
                           "First Prize\n₹2,15,000",
                           style: TextStyle(
                               color: Colors.black54,
@@ -180,10 +180,10 @@ class _MyContestsPageState extends State<MyContestsPage> {
                       width: 95,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(9),
-                          border: Border.all(width: 1.5,color: Color(0xFF00A3FF))
+                          border: Border.all(width: 1.5,color: const Color(0xFF00A3FF))
                       ),
                       alignment: Alignment.center,
-                      child: Text(
+                      child: const Text(
                         "PRIZE LIST",
                         style: TextStyle(
                             color: Color(0xFF00A3FF),
@@ -200,7 +200,7 @@ class _MyContestsPageState extends State<MyContestsPage> {
                         borderRadius: BorderRadius.circular(9),
                       ),
                       alignment: Alignment.center,
-                      child: Text(
+                      child: const Text(
                         "₹39",
                         style: TextStyle(
                             color: Colors.white,
@@ -211,8 +211,8 @@ class _MyContestsPageState extends State<MyContestsPage> {
                     ),
                   ],
                 ),
-                SizedBox(height: 6,),
-                Align(
+                const SizedBox(height: 6,),
+                const Align(
                   alignment: Alignment.topRight,
                   child: Text(
                     "Use ₹3.1 Bonus",
@@ -222,8 +222,8 @@ class _MyContestsPageState extends State<MyContestsPage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 15,),
-                Align(
+                const SizedBox(height: 15,),
+                const Align(
                   alignment: Alignment.center,
                   child: Text(
                     "Mega Event IPL - 2023",

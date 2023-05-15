@@ -28,48 +28,48 @@ class _NewsDetailPageState extends State<NewsDetailPage> {
                 "assets/image/applogo.png",
                 height: 30,
               ),
-              Text(
+              const Text(
                 " CRICNEWS",
               ),
             ],
           ),
-          backgroundColor: Color(0xff021852),
+          backgroundColor: const Color(0xff021852),
         ),
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text(
                 "   ${newsController.n1.value.author == null ? "CRICNEWS" : newsController.n1.value.author}",
                 style:  GoogleFonts.bitter(fontWeight: FontWeight.w700, fontSize: 20),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Container(
-                  height: .5, width: double.infinity, color: Color(0xff021852)),
-              SizedBox(
+                  height: .5, width: double.infinity, color: const Color(0xff021852)),
+              const SizedBox(
                 height: 50,
               ),
               Container(
                 alignment: Alignment.center,
-                padding: EdgeInsets.only(left: 16, right: 16),
+                padding: const EdgeInsets.only(left: 16, right: 16),
                 child: CachedNetworkImage(
                   fit: BoxFit.fill,
                   imageUrl: "${newsController.n1.value.urlToImage}",
                   progressIndicatorBuilder: (context, url, downloadProgress) =>
                       CircularProgressIndicator(
                     value: downloadProgress.progress,
-                    color: Color(0xff021852),
+                    color: const Color(0xff021852),
                   ),
                   errorWidget: (context, url, error) => Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [Icon(Icons.error), Text(" Image Not available")],
+                    children: [const Icon(Icons.error), const Text(" Image Not available")],
                   ),
                 ),
 
@@ -80,13 +80,13 @@ class _NewsDetailPageState extends State<NewsDetailPage> {
                 width: double.infinity,
                 height: 200,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Container(
-                  height: .5, width: double.infinity, color: Color(0xff021852)),
+                  height: .5, width: double.infinity, color: const Color(0xff021852)),
 
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Padding(
@@ -98,14 +98,14 @@ class _NewsDetailPageState extends State<NewsDetailPage> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text(
                 "    Date",
-                style: GoogleFonts.bitter(fontWeight: FontWeight.w700, fontSize: 20,color: Color(0xff021852)),
+                style: GoogleFonts.bitter(fontWeight: FontWeight.w700, fontSize: 20,color: const Color(0xff021852)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Padding(
@@ -117,14 +117,14 @@ class _NewsDetailPageState extends State<NewsDetailPage> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text(
                 "    Content",
-                style: GoogleFonts.bitter(fontWeight: FontWeight.w700, fontSize: 20,color: Color(0xff021852)),
+                style: GoogleFonts.bitter(fontWeight: FontWeight.w700, fontSize: 20,color: const Color(0xff021852)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Padding(
@@ -136,7 +136,7 @@ class _NewsDetailPageState extends State<NewsDetailPage> {
                   ),
                 ),
               ),
-SizedBox(height: 2,),
+const SizedBox(height: 2,),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),                child: InkWell(onTap: () async {
                 await launchUrl(
@@ -144,11 +144,11 @@ SizedBox(height: 2,),
                 },
                   child: Text(
                     "Read More",
-                    style: GoogleFonts.bitter(fontWeight: FontWeight.w700, fontSize: 16,color: Color(0xff021852),decoration: TextDecoration.underline),
+                    style: GoogleFonts.bitter(fontWeight: FontWeight.w700, fontSize: 16,color: const Color(0xff021852),decoration: TextDecoration.underline),
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
 
