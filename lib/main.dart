@@ -25,6 +25,7 @@ void main() async {
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      initialRoute: 'create_Team',
       routes: {
         '/': (context) => const SplashScreen(),
         'sign_in': (context) => const SignInPage(),

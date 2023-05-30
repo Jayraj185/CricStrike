@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pinput/pinput.dart';
+// import 'package:pinput/pinput.dart';
 
 class OTPScreen extends StatefulWidget {
   const OTPScreen({Key? key}) : super(key: key);
@@ -47,18 +47,27 @@ class _OTPScreenState extends State<OTPScreen> {
                   const SizedBox(
                     height: 80,
                   ),
-                  Pinput(textInputAction: TextInputAction.next,
-                   defaultPinTheme : PinTheme(
+                  // Pinput(textInputAction: TextInputAction.next,
+                  //  defaultPinTheme : Container(
+                  //   width: 56,
+                  //   height: 56,
+                  //   textStyle: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w600),
+                  //   decoration: BoxDecoration(color: Colors.white,
+                  //     border: Border.all(color: Colors.black),
+                  //     borderRadius: BorderRadius.circular(20),
+                  //   ),
+                  // ),
+                  //   length: 6,
+                  //   toolbarEnabled: false,
+                  // ),
+                  Container(
                     width: 56,
                     height: 56,
-                    textStyle: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w600),
+                    // textStyle: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w600),
                     decoration: BoxDecoration(color: Colors.white,
                       border: Border.all(color: Colors.black),
                       borderRadius: BorderRadius.circular(20),
                     ),
-                  ),
-                    length: 6,
-                    toolbarEnabled: false,
                   ),
                   const SizedBox(
                     height: 15,
