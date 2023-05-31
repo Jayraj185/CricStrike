@@ -18,7 +18,7 @@ class CreateTeamController extends GetxController
     PlayerDetailModel(name: "Dinesh Kartik",teamName: "RCB",selected: false,avgPts: 90,selBy: 74,credit: 8.5,imageUrl: "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/13.png"),
     PlayerDetailModel(name: "Anuj Rawat",teamName: "RCB",selected: false,avgPts: 76,selBy: 15,credit: 6.5,imageUrl: "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/534.png"),
     PlayerDetailModel(name: "Finn Allen",teamName: "RCB",selected: false,avgPts: 70,selBy: 10,credit: 5.5,imageUrl: "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/595.png"),
-    PlayerDetailModel(name: "MS Dhoni",teamName: "CSK",selected: false,avgPts: 130,selBy: 40,credit: 9,imageUrl: "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/57.png"),
+    PlayerDetailModel(name: "MS Dhoni",teamName: "CSK",selected: false,avgPts: 130,selBy: 40,credit: 9.5,imageUrl: "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/57.png"),
     PlayerDetailModel(name: "Devon Conway",teamName: "CSK",selected: false,avgPts: 290,selBy: 93,credit: 9.5,imageUrl: "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/601.png"),
   ].obs;
   RxList<PlayerDetailModel> BatList = <PlayerDetailModel>[

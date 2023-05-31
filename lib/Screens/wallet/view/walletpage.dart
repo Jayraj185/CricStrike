@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+// import 'package:razorpay_flutter/razorpay_flutter.dart';
 
 class WalletPage extends StatefulWidget {
   const WalletPage({Key? key}) : super(key: key);
@@ -10,6 +11,43 @@ class WalletPage extends StatefulWidget {
 }
 
 class _WalletPageState extends State<WalletPage> {
+  // Razorpay razorpay = Razorpay();
+  // @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   super.initState();
+  // razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS,_handlePaymentSuccecs);
+  // razorpay.on(Razorpay.EVENT_PAYMENT_ERROR,_handlePaymentError);
+  // }
+  // void _handlePaymentSuccecs(){
+  //   print("Print Success");
+  // }
+  // void _handlePaymentError(){
+  //   print("Print Error");
+  //
+  // }
+  //
+  // void opencheckOut(){
+  //   var option = {
+  //     'key':'rzp_test_eMMRU6umwCu50c',
+  //     'amount':'',
+  //     'name':'demo',
+  //     'description':'',
+  //     'prefill':{
+  //       'mobile':'7984511007',
+  //       'email':'tradadiya111@gmail.com',
+  //     },
+  //     'external':{
+  //       'wallet':['paytm'],
+  //     }
+  //   };
+  //
+  // try{
+  //   razorpay.open(option);
+  // }catch(e){
+  //   debugPrint('error');
+  // }
+  // }
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -38,16 +76,16 @@ class _WalletPageState extends State<WalletPage> {
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             "Wallet Cash Balance",
                             style: TextStyle(
                                 color: Colors.black54,
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14),
                           ),
-                          const SizedBox(height: 3),
-                          const Text(
+                          SizedBox(height: 3),
+                          Text(
                             "₹120.00",
                             style: TextStyle(fontWeight: FontWeight.w900, fontSize: 22),
                           )
@@ -71,16 +109,16 @@ class _WalletPageState extends State<WalletPage> {
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             "Unplayed",
                             style: TextStyle(
                                 color: Colors.black54,
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14),
                           ),
-                          const SizedBox(height: 3),
-                          const Text(
+                          SizedBox(height: 3),
+                          Text(
                             "₹0.00",
                             style: TextStyle(fontWeight: FontWeight.w900, fontSize: 22),
                           )
@@ -104,16 +142,16 @@ class _WalletPageState extends State<WalletPage> {
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             "Withdraw",
                             style: TextStyle(
                                 color: Colors.black54,
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14),
                           ),
-                          const SizedBox(height: 3),
-                          const Text(
+                          SizedBox(height: 3),
+                          Text(
                             "₹0.00",
                             style: TextStyle(fontWeight: FontWeight.w900, fontSize: 22),
                           )
@@ -137,16 +175,16 @@ class _WalletPageState extends State<WalletPage> {
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             "Earn Bonus",
                             style: TextStyle(
                                 color: Colors.black54,
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14),
                           ),
-                          const SizedBox(height: 3),
-                          const Text(
+                          SizedBox(height: 3),
+                          Text(
                             "₹0.00",
                             style: TextStyle(fontWeight: FontWeight.w900, fontSize: 22),
                           )
@@ -203,8 +241,8 @@ class _WalletPageState extends State<WalletPage> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
-                    children: [
-                      const Text(
+                    children: const [
+                      Text(
                         "Loan Request",
                         textAlign: TextAlign.start,
                         style: TextStyle(

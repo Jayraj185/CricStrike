@@ -17,7 +17,7 @@ class Shape
             alignment: Alignment.center,
             child: Text(
               selected ? "" : text,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.w900,
                 fontSize: 10

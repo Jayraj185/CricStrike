@@ -80,9 +80,9 @@ class _GamePageState extends State<GamePage> {
                                           errorWidget: (context, url, error) => Row(
                                             mainAxisAlignment:
                                             MainAxisAlignment.center,
-                                            children: [
-                                              const Icon(Icons.error),
-                                              const Text(" Image Not available")
+                                            children: const [
+                                              Icon(Icons.error),
+                                              Text(" Image Not available")
                                             ],
                                           ),
                                         ),
@@ -216,9 +216,9 @@ class _GamePageState extends State<GamePage> {
                                         errorWidget: (context, url, error) => Row(
                                           mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                          children: [
-                                            const Icon(Icons.error),
-                                            const Text(" Image Not available")
+                                          children: const [
+                                            Icon(Icons.error),
+                                            Text(" Image Not available")
                                           ],
                                         ),
                                       ),

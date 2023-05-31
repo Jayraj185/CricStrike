@@ -27,7 +27,7 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
             backgroundColor: const Color(0xFF021852),
             elevation: 0,
             title: Padding(
-              padding: const EdgeInsets.only(left: 16,right: 16,top: 10),
+              padding:  EdgeInsets.only(left: Get.width/25,right: Get.width/25,top: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -71,7 +71,7 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                     ),
                   ),
                   Column(
-                    children: [
+                    children: const [
                       Text(
                         "RCB",
                         style: TextStyle(
@@ -90,7 +90,7 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                     ],
                   ),
                   Column(
-                    children: [
+                    children: const [
                       Text(
                         "CSK",
                         style: TextStyle(
@@ -120,7 +120,7 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                     ),
                   ),
                   Column(
-                    children: [
+                    children: const [
                       Text(
                         "Credit Left",
                         style: TextStyle(
@@ -142,7 +142,7 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
               ),
             ),
             bottom: PreferredSize(
-              preferredSize: Size.fromHeight(120),
+              preferredSize: const Size.fromHeight(120),
               child: Column(
                 children: [
                   Padding(
@@ -150,8 +150,8 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                     child: Row(
                       children: [
                         Shape.shape.KajuKatriShape(selected: true,text: ""),
-                        Shape.shape.KajuKatriShape(selected: false,text: "2"),
-                        Shape.shape.KajuKatriShape(selected: false,text: ""),
+                        Shape.shape.KajuKatriShape(selected: true,text: "2"),
+                        Shape.shape.KajuKatriShape(selected: false,text: "3"),
                         Shape.shape.KajuKatriShape(selected: false,text: ""),
                         Shape.shape.KajuKatriShape(selected: false,text: ""),
                         Shape.shape.KajuKatriShape(selected: false,text: ""),
@@ -167,7 +167,7 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                   TabBar(
                     isScrollable: true,
                     indicatorWeight: 5,
-                    indicatorColor: Color(0xFFFFD809),
+                    indicatorColor: const Color(0xFFFFD809),
                     labelStyle: const TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold
@@ -190,7 +190,7 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                                 child: Container(
                                   height: 50,
                                   width: 50,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       color: Colors.white,
                                       shape: BoxShape.circle
                                   ),
@@ -203,13 +203,13 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                                 child: Container(
                                   height: 18,
                                   width: 18,
-                                  margin: EdgeInsets.only(top: 5,),
-                                  decoration: BoxDecoration(
+                                  margin: const EdgeInsets.only(top: 5,),
+                                  decoration: const BoxDecoration(
                                     color: Color(0xFFFFD809),
                                     shape: BoxShape.circle
                                   ),
                                   alignment: Alignment.center,
-                                  child: Text(
+                                  child: const Text(
                                     "1",
                                     style: TextStyle(
                                       color: Colors.black,
@@ -236,7 +236,7 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                                 child: Container(
                                   height: 50,
                                   width: 50,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       color: Colors.white,
                                       shape: BoxShape.circle
                                   ),
@@ -249,13 +249,13 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                                 child: Container(
                                   height: 18,
                                   width: 18,
-                                  margin: EdgeInsets.only(top: 5,),
-                                  decoration: BoxDecoration(
+                                  margin: const EdgeInsets.only(top: 5,),
+                                  decoration: const BoxDecoration(
                                       color: Color(0xFFFFD809),
                                       shape: BoxShape.circle
                                   ),
                                   alignment: Alignment.center,
-                                  child: Text(
+                                  child: const Text(
                                     "1",
                                     style: TextStyle(
                                         color: Colors.black,
@@ -282,7 +282,7 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                                 child: Container(
                                   height: 50,
                                   width: 50,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       color: Colors.white,
                                       shape: BoxShape.circle
                                   ),
@@ -295,13 +295,13 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                                 child: Container(
                                   height: 18,
                                   width: 18,
-                                  margin: EdgeInsets.only(top: 5,),
-                                  decoration: BoxDecoration(
+                                  margin: const EdgeInsets.only(top: 5,),
+                                  decoration: const BoxDecoration(
                                       color: Color(0xFFFFD809),
                                       shape: BoxShape.circle
                                   ),
                                   alignment: Alignment.center,
-                                  child: Text(
+                                  child: const Text(
                                     "1",
                                     style: TextStyle(
                                         color: Colors.black,
@@ -328,7 +328,7 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                                 child: Container(
                                   height: 50,
                                   width: 50,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       color: Colors.white,
                                       shape: BoxShape.circle
                                   ),
@@ -341,13 +341,13 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                                 child: Container(
                                   height: 18,
                                   width: 18,
-                                  margin: EdgeInsets.only(top: 5,),
-                                  decoration: BoxDecoration(
+                                  margin: const EdgeInsets.only(top: 5,),
+                                  decoration: const BoxDecoration(
                                       color: Color(0xFFFFD809),
                                       shape: BoxShape.circle
                                   ),
                                   alignment: Alignment.center,
-                                  child: Text(
+                                  child: const Text(
                                     "1",
                                     style: TextStyle(
                                         color: Colors.black,
@@ -367,66 +367,61 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
             ),
           ),
           body: TabBarView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             children: createTeamController.Screens
           ),
           bottomNavigationBar: Container(
             height: 70,
             color: Colors.white,
             alignment: Alignment.center,
-            padding: EdgeInsets.symmetric(horizontal: 15),
+            padding:  EdgeInsets.symmetric(horizontal:  Get.width/30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(
-                  child: Container(
-                    height: 45,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: Colors.green,width: 1.5),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.shade400,
-                          blurRadius: 3,
-                          offset: Offset(-2,2)
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(9)
-                    ),
-                    alignment: Alignment.center,
-                    child: Text(
-                      "PREVIEW TEAM",
-                      style: TextStyle(
-                        color: Colors.green,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold
+                  child: Card(color: Colors.green,
+                    elevation: 3,
+                    child: Container(
+                      height: 45,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(color: Colors.green,width: 1.5),
+                        borderRadius: BorderRadius.circular(5)
+                      ),
+                      alignment: Alignment.center,
+                      child: const Text(
+                        "PREVIEW TEAM",
+                        style: TextStyle(
+                          color: Colors.green,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600
+                        ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(width: 15,),
+                 SizedBox(width: Get.width/30,),
                 Expanded(
-                  child: Container(
-                    height: 45,
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade300,
-                      borderRadius: BorderRadius.circular(9),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey.shade400,
-                            blurRadius: 3,
-                            offset: Offset(-2,2)
-                        )
-                      ],
-                    ),
-                    alignment: Alignment.center,
-                    child: Text(
-                      "CONTINUE",
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500
+                  child: Card(
+                    color: Colors.grey.shade300,
+
+                    elevation: 3,
+                    child: Container(
+                      height: 45,
+                      decoration: BoxDecoration(
+                        color: Colors.grey.shade300,
+                        borderRadius: BorderRadius.circular(5),
+
+                      ),
+                      alignment: Alignment.center,
+                      child: const Text(
+                        "CONTINUE",
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600
+                        ),
                       ),
                     ),
                   ),
