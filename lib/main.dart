@@ -26,7 +26,7 @@ void main() async {
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: 'nav',
+      initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreen(),
         'sign_in': (context) => const SignInPage(),
