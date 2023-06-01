@@ -1,4 +1,5 @@
 import 'package:cricstreak/Screens/CreateTeam/view/CreateTeamPage.dart';
+import 'package:cricstreak/Screens/LinupScreen/View/LineUpPage.dart';
 import 'package:cricstreak/Screens/TabBar/View/TabBarScreen.dart';
 import 'package:cricstreak/Screens/TeamPreview/view/TeamPreviewPage.dart';
 import 'package:cricstreak/Screens/navigator/view/navigatorPage.dart';
@@ -37,6 +38,7 @@ void main() async {
         'team_Preview': (context) => const TeamPreviewPage(),
         'create_Team': (context) => const CreateTeamPage(),
         'pp': (context) => const PredictionPreviewPage(),
+        'linup': (context) => const LineUpPage(),
       },
     ),
   );

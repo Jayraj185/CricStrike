@@ -84,10 +84,17 @@ class CreateTeamController extends GetxController
     "BOWL" : [],
   }.obs;
   RxMap<String,int> count = {
-    "WK" : 1,
-    "BAT" : 1,
-    "AR" : 1,
-    "BOWL" : 1,
+    "WK" : 0,
+    "BAT" : 0,
+    "AR" : 0,
+    "BOWL" : 0,
   }.obs;
   RxInt PlayerCount = 0.obs;
+  RxInt WKPCount = 0.obs;
+  RxInt BATPCount = 0.obs;
+  RxInt ARPCount = 0.obs;
+  RxInt BOWLPCount = 0.obs;
+  RxInt RCBPCount = 0.obs;
+  RxInt CSKPCount = 0.obs;
+  RxDouble CreditLeftCount = 100.0.obs;
 }

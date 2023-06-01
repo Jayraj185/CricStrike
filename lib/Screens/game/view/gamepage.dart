@@ -68,18 +68,14 @@ class _GamePageState extends State<GamePage> {
                                       width: 170,margin: index == 0?const EdgeInsets.only(left: 16):const EdgeInsets.only(left: 10),
                                       decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),color: const Color(0xff021852),),
                                       child: ClipRRect(borderRadius: BorderRadius.circular(15),
-                                        child: CachedNetworkImage(fadeInDuration: const Duration(seconds: 0),
+                                        child: CachedNetworkImage(
+                                          fadeInDuration: const Duration(seconds: 0),
                                           fit: BoxFit.fill,
                                           imageUrl:
                                           "${l1[index]}",
-                                          progressIndicatorBuilder:
-                                              (context, url, downloadProgress) =>
-                                              Container(
-
-                                              ),
+                                          progressIndicatorBuilder: (context, url, downloadProgress) => Container(),
                                           errorWidget: (context, url, error) => Row(
-                                            mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                            mainAxisAlignment: MainAxisAlignment.center,
                                             children: const [
                                               Icon(Icons.error),
                                               Text(" Image Not available")

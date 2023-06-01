@@ -6,8 +6,9 @@ class Shape
   Shape._();
   static Shape shape = Shape._();
 
-  Widget KajuKatriShape({required bool selected,required String text})
+  Widget KajuKatriShape({required bool selected,required int text,required bool show})
   {
+    print("====== $selected $text ${text < 11} ${text == 11}");
     return Expanded(
         child: ClipPath(
           clipper: TriangleClipper(),
@@ -16,9 +17,10 @@ class Shape
             height: 10,
             alignment: Alignment.center,
             child: Text(
-              selected ? "" : text,
-              style: const TextStyle(
-                color: Colors.black,
+              text == 11 ? "${text}" : show ? "$text" : "",
+              style: TextStyle(
+                // color: Colors.black,
+                color: selected ? Colors.white : Colors.black,
                 fontWeight: FontWeight.w900,
                 fontSize: 10
               ),

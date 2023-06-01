@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cricstreak/Screens/CreateTeam/controller/CreateTeamController.dart';
 import 'package:cricstreak/Screens/CreateTeam/model/PlayerDetailModel.dart';
 import 'package:flutter/material.dart';
@@ -30,10 +31,10 @@ class _WKPageState extends State<WKPage> {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          const SizedBox(
-            height: 15,
-          ),
-          const Text.rich(TextSpan(children: [
+          const SizedBox(height: 15,),
+          const Text.rich(
+            TextSpan(
+              children: [
             TextSpan(
                 text: "Wicket Keepers",
                 style: TextStyle(
@@ -43,13 +44,15 @@ class _WKPageState extends State<WKPage> {
             TextSpan(
                 text: " (Select min 1, max 4)",
                 style: TextStyle(color: Colors.grey, fontSize: 16)),
-          ])),
+          ]
+            ),
+          ),
           Padding(
             padding:  EdgeInsets.only(left: Get.width/30, right: Get.width/25, top: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Player",
                   style: TextStyle(
                       color: Colors.grey,
@@ -93,80 +96,332 @@ class _WKPageState extends State<WKPage> {
                 itemCount: createTeamController.WKList.length,
                 itemBuilder: (context, index) {
                   return Container(
+                    //F5F3F6
                     color: createTeamController.WKList[index].selected!
                         ? const Color(0xFFFFF3DC)
                         : Colors.white,
-                    padding:
-                         EdgeInsets.only(left: Get.width/40, right:  Get.width/40, top: 15),
+                    padding: EdgeInsets.only(left: Get.width/40, right:  Get.width/40, top: 15),
                     child: Column(
                       children: [
                         InkWell(
                           onTap: () {
-                            // if(createTeamController.count['WK']! < 5)
-                            //   {
-                            print(
-                                "====== ${createTeamController.WKList[index].selected! ? false : true}");
-                            createTeamController.WKList[index] =
-                                PlayerDetailModel(
-                              credit: createTeamController.WKList[index].credit,
-                              selBy: createTeamController.WKList[index].selBy,
-                              avgPts: createTeamController.WKList[index].avgPts,
-                              imageUrl:
-                                  createTeamController.WKList[index].imageUrl,
-                              selected:
-                                  createTeamController.WKList[index].selected!
-                                      ? false
-                                      : true,
-                              teamName:
-                                  createTeamController.WKList[index].teamName,
-                              name: createTeamController.WKList[index].name,
-                            );
-                            createTeamController.PlayerCount.value = 0;
-                            for (PlayerDetailModel player
-                                in createTeamController.WKList) {
-                              if (player.selected!) {
-                                createTeamController.PlayerCount.value++;
+                            if(createTeamController.PlayerCount.value < 11)
+                            {
+                              print("========CCCC ${createTeamController.CreditLeftCount.value % 2} ${(createTeamController.CreditLeftCount.value % 2 == 0 || createTeamController.CreditLeftCount.value % 2 == 1) ? createTeamController.CreditLeftCount.value.round() : createTeamController.CreditLeftCount.value.toStringAsFixed(1)}");
+                                if(createTeamController.count['WK']! < 4)
+                                {
+                                  print(
+                                      "====== ${createTeamController.WKList[index].selected! ? false : true}");
+                                  createTeamController.WKList[index] =
+                                      PlayerDetailModel(
+                                        credit: createTeamController.WKList[index].credit,
+                                        selBy: createTeamController.WKList[index].selBy,
+                                        avgPts: createTeamController.WKList[index].avgPts,
+                                        imageUrl:
+                                        createTeamController.WKList[index].imageUrl,
+                                        selected:
+                                        createTeamController.WKList[index].selected!
+                                            ? false
+                                            : true,
+                                        teamName:
+                                        createTeamController.WKList[index].teamName,
+                                        name: createTeamController.WKList[index].name,
+                                      );
+                                  createTeamController.PlayerCount.value = 0;
+                                  createTeamController.WKPCount.value = 0;
+                                  createTeamController.RCBPCount.value = 0;
+                                  createTeamController.CSKPCount.value = 0;
+                                  createTeamController.CreditLeftCount.value = 100;
+                                  for (PlayerDetailModel player in createTeamController.WKList) {
+                                    if (player.selected!) {
+                                      createTeamController.PlayerCount.value++;
+                                      createTeamController.WKPCount.value++;
+                                      createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
+                                      if(player.teamName! == "RCB")
+                                        {
+                                          createTeamController.RCBPCount.value++;
+                                        }
+                                      else if(player.teamName! == "CSK")
+                                        {
+                                          createTeamController.CSKPCount.value++;
+                                        }
+                                    }
+                                  }
+                                  for (PlayerDetailModel player
+                                  in createTeamController.BatList) {
+                                    if (player.selected!) {
+                                      createTeamController.PlayerCount.value++;
+                                      createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
+                                      if(player.teamName! == "RCB")
+                                      {
+                                        createTeamController.RCBPCount.value++;
+                                      }
+                                      else if(player.teamName! == "CSK")
+                                      {
+                                        createTeamController.CSKPCount.value++;
+                                      }
+                                    }
+                                  }
+                                  for (PlayerDetailModel player
+                                  in createTeamController.ARList) {
+                                    if (player.selected!) {
+                                      createTeamController.PlayerCount.value++;
+                                      createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
+                                      if(player.teamName! == "RCB")
+                                      {
+                                        createTeamController.RCBPCount.value++;
+                                      }
+                                      else if(player.teamName! == "CSK")
+                                      {
+                                        createTeamController.CSKPCount.value++;
+                                      }
+                                    }
+                                  }
+                                  for (PlayerDetailModel player
+                                  in createTeamController.BowlList) {
+                                    if (player.selected!) {
+                                      createTeamController.PlayerCount.value++;
+                                      createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
+                                      if(player.teamName! == "RCB")
+                                      {
+                                        createTeamController.RCBPCount.value++;
+                                      }
+                                      else if(player.teamName! == "CSK")
+                                      {
+                                        createTeamController.CSKPCount.value++;
+                                      }
+                                    }
+                                  }
+                                  for(int i=0; i<createTeamController.WKList.length; i++)
+                                  {
+                                    if(i==index)
+                                    {
+                                      print(""
+                                          "+++===== ${createTeamController.WKList[index].selected!}");
+                                      if(createTeamController.WKList[i].selected!)
+                                      {
+                                        createTeamController.count['WK'] = createTeamController.count['WK']! + 1;
+                                      }
+                                      else
+                                      {
+                                        createTeamController.count['WK'] = createTeamController.count['WK']! - 1;
+                                      }
+                                    }
+                                  }
+                                  print("=====${createTeamController.count['WK']} playerrrrr ${createTeamController.PlayerCount.value}");
+                                }
+                                else
+                                {
+                                  print("----======${createTeamController.WKList[index].selected!} ${createTeamController.WKList[index].selected! ? false : true}");
+                                  for(int i=0; i<createTeamController.WKList.length; i++)
+                                  {
+                                    if(i==index)
+                                    {
+                                      print(""
+                                          "+++===== ${createTeamController.WKList[index].selected!}");
+                                      if(createTeamController.WKList[i].selected!)
+                                      {
+                                        createTeamController.count['WK'] = createTeamController.count['WK']! - 1;
+                                      }
+                                    }
+                                  }
+                                  createTeamController.WKList[index] =
+                                      PlayerDetailModel(
+                                        credit: createTeamController.WKList[index].credit,
+                                        selBy: createTeamController.WKList[index].selBy,
+                                        avgPts: createTeamController.WKList[index].avgPts,
+                                        imageUrl:
+                                        createTeamController.WKList[index].imageUrl,
+                                        selected: false,
+                                        teamName:
+                                        createTeamController.WKList[index].teamName,
+                                        name: createTeamController.WKList[index].name,
+                                      );
+                                  createTeamController.PlayerCount.value = 0;
+                                  createTeamController.WKPCount.value = 0;
+                                  createTeamController.RCBPCount.value = 0;
+                                  createTeamController.CSKPCount.value = 0;
+                                  createTeamController.CreditLeftCount.value = 100;
+                                  for (PlayerDetailModel player in createTeamController.WKList) {
+                                    if (player.selected!) {
+                                      createTeamController.PlayerCount.value++;
+                                      createTeamController.WKPCount.value ++;
+                                      createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
+                                      if(player.teamName! == "RCB")
+                                      {
+                                        createTeamController.RCBPCount.value++;
+                                      }
+                                      else if(player.teamName! == "CSK")
+                                      {
+                                        createTeamController.CSKPCount.value++;
+                                      }
+                                    }
+                                  }
+                                  for (PlayerDetailModel player in createTeamController.BatList) {
+                                    if (player.selected!) {
+                                      createTeamController.PlayerCount.value++;
+                                      createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
+                                      if(player.teamName! == "RCB")
+                                      {
+                                        createTeamController.RCBPCount.value++;
+                                      }
+                                      else if(player.teamName! == "CSK")
+                                      {
+                                        createTeamController.CSKPCount.value++;
+                                      }
+                                    }
+                                  }
+                                  for (PlayerDetailModel player in createTeamController.ARList) {
+                                    if (player.selected!) {
+                                      createTeamController.PlayerCount.value++;
+                                      createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
+                                      if(player.teamName! == "RCB")
+                                      {
+                                        createTeamController.RCBPCount.value++;
+                                      }
+                                      else if(player.teamName! == "CSK")
+                                      {
+                                        createTeamController.CSKPCount.value++;
+                                      }
+                                    }
+                                  }
+                                  for (PlayerDetailModel player in createTeamController.BowlList) {
+                                    if (player.selected!) {
+                                      createTeamController.PlayerCount.value++;
+                                      createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
+                                      if(player.teamName! == "RCB")
+                                      {
+                                        createTeamController.RCBPCount.value++;
+                                      }
+                                      else if(player.teamName! == "CSK")
+                                      {
+                                        createTeamController.CSKPCount.value++;
+                                      }
+                                    }
+                                  }
+                                  print("=====${createTeamController.count['WK']} playerrrrr ${createTeamController.PlayerCount.value}");
+                                }
                               }
-                            }
-                            for (PlayerDetailModel player
-                                in createTeamController.BatList) {
-                              if (player.selected!) {
-                                createTeamController.PlayerCount.value++;
+                            else
+                            {
+                              print("EEE----======${createTeamController.PlayerCount} ${createTeamController.WKList[index].selected!} ${createTeamController.WKList[index].selected! ? false : true}");
+                              for(int i=0; i<createTeamController.WKList.length; i++)
+                              {
+                                if(i==index)
+                                {
+                                  print(""
+                                      "EEE+++===== ${createTeamController.WKList[index].selected!}");
+                                  if(createTeamController.WKList[i].selected!)
+                                  {
+                                    createTeamController.count['WK'] = createTeamController.count['WK']! - 1;
+                                  }
+                                }
                               }
-                            }
-                            for (PlayerDetailModel player
-                                in createTeamController.ARList) {
-                              if (player.selected!) {
-                                createTeamController.PlayerCount.value++;
+                              createTeamController.WKList[index] =
+                                  PlayerDetailModel(
+                                    credit: createTeamController.WKList[index].credit,
+                                    selBy: createTeamController.WKList[index].selBy,
+                                    avgPts: createTeamController.WKList[index].avgPts,
+                                    imageUrl:
+                                    createTeamController.WKList[index].imageUrl,
+                                    selected: false,
+                                    teamName:
+                                    createTeamController.WKList[index].teamName,
+                                    name: createTeamController.WKList[index].name,
+                                  );
+                              createTeamController.PlayerCount.value = 0;
+                              createTeamController.WKPCount.value = 0;
+                              createTeamController.RCBPCount.value = 0;
+                              createTeamController.CSKPCount.value = 0;
+                              createTeamController.CreditLeftCount.value = 100;
+                              for (PlayerDetailModel player in createTeamController.WKList) {
+                                if (player.selected!) {
+                                  createTeamController.PlayerCount.value++;
+                                  createTeamController.WKPCount.value ++;
+                                  createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
+                                  if(player.teamName! == "RCB")
+                                  {
+                                    createTeamController.RCBPCount.value++;
+                                  }
+                                  else if(player.teamName! == "CSK")
+                                  {
+                                    createTeamController.CSKPCount.value++;
+                                  }
+                                }
                               }
-                            }
-                            for (PlayerDetailModel player
-                                in createTeamController.BowlList) {
-                              if (player.selected!) {
-                                createTeamController.PlayerCount.value++;
+                              for (PlayerDetailModel player in createTeamController.BatList) {
+                                if (player.selected!) {
+                                  createTeamController.PlayerCount.value++;
+                                  createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
+                                  if(player.teamName! == "RCB")
+                                  {
+                                    createTeamController.RCBPCount.value++;
+                                  }
+                                  else if(player.teamName! == "CSK")
+                                  {
+                                    createTeamController.CSKPCount.value++;
+                                  }
+                                }
                               }
+                              for (PlayerDetailModel player in createTeamController.ARList) {
+                                if (player.selected!) {
+                                  createTeamController.PlayerCount.value++;
+                                  createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
+                                  if(player.teamName! == "RCB")
+                                  {
+                                    createTeamController.RCBPCount.value++;
+                                  }
+                                  else if(player.teamName! == "CSK")
+                                  {
+                                    createTeamController.CSKPCount.value++;
+                                  }
+                                }
+                              }
+                              for (PlayerDetailModel player in createTeamController.BowlList) {
+                                if (player.selected!) {
+                                  createTeamController.PlayerCount.value++;
+                                  createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
+                                  if(player.teamName! == "RCB")
+                                  {
+                                    createTeamController.RCBPCount.value++;
+                                  }
+                                  else if(player.teamName! == "CSK")
+                                  {
+                                    createTeamController.CSKPCount.value++;
+                                  }
+                                }
+                              }
+                              print("=====${createTeamController.count['WK']} playerrrrr ${createTeamController.PlayerCount.value}");
                             }
-                            //   createTeamController.count['WK'] = createTeamController.count['WK']! + 1;
-                            //   print("=====${createTeamController.count['WK']} playerrrrr ${createTeamController.PlayerCount.value}");
-                            // }
                           },
                           child: Row(
                             children: [
                               Container(
+                                height: Get.width / 8,
+                                width: Get.width / 8,
                                 decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     border: Border.all(
                                         color: Colors.grey, width: 1)),
-                                child: CircleAvatar(
-                                  radius: Get.width / 17,
-                                  backgroundImage: NetworkImage(
-                                      '${(createTeamController.WKList[index].imageUrl != null && createTeamController.WKList[index].imageUrl!.isNotEmpty) ? createTeamController.WKList[index].imageUrl : "https://www.iplt20.com/assets/images/default-headshot.png"}'),
-                                  backgroundColor: Colors.white,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(1000),
+                                  child: CachedNetworkImage(
+                                    fadeInDuration: const Duration(seconds: 0),
+                                    fit: BoxFit.fill,
+                                    imageUrl:
+                                    "${(createTeamController.WKList[index].imageUrl != null && createTeamController.WKList[index].imageUrl!.isNotEmpty) ? createTeamController.WKList[index].imageUrl : "https://st4.depositphotos.com/9998432/23359/v/600/depositphotos_233595744-stock-illustration-person-gray-photo-placeholder-man.jpg"}",
+                                    progressIndicatorBuilder: (context, url, downloadProgress) => Container(),
+                                    errorWidget: (context, url, error) => const Icon(Icons.error),
+                                  ),
                                 ),
+                                // child: CircleAvatar(
+                                //   radius: Get.width / 17,
+                                //   backgroundImage: NetworkImage(
+                                //       '${(createTeamController.WKList[index].imageUrl != null && createTeamController.WKList[index].imageUrl!.isNotEmpty) ? createTeamController.WKList[index].imageUrl : "https://www.iplt20.com/assets/images/default-headshot.png"}'),
+                                //   backgroundColor: Colors.white,
+                                // ),
                               ),
-                              SizedBox(
-                                width: Get.width / 50,
-                              ),
+                              SizedBox(width: Get.width / 50,),
                               Expanded(
                                 flex: 3,
                                 child: Column(
@@ -195,9 +450,7 @@ class _WKPageState extends State<WKPage> {
                                   ],
                                 ),
                               ),
-                              SizedBox(
-                                width: Get.width / 50,
-                              ),
+                              SizedBox(width: Get.width / 50,),
                               Expanded(
                                 child: Text(
                                   "${createTeamController.WKList[index].avgPts}",

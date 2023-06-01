@@ -32,30 +32,32 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
-                    children: const [
-                      Text(
+                    children: [
+                      const Text(
                         "Players",
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 16
                         ),
                       ),
-                      SizedBox(height: 3,),
-                      Text.rich(
-                        TextSpan(
-                          children: [
-                            TextSpan(text: "0",style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18
-                            )),
-                            TextSpan(text: "/11",style: TextStyle(
-                                color: Colors.white60,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 14
-                            ))
-                          ]
-                        )
+                      const SizedBox(height: 3,),
+                      Obx(
+                        () => Text.rich(
+                          TextSpan(
+                            children: [
+                              TextSpan(text: "${createTeamController.PlayerCount.value}",style: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18
+                              )),
+                              const TextSpan(text: "/11",style: TextStyle(
+                                  color: Colors.white60,
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 14
+                              ))
+                            ]
+                          )
+                        ),
                       ),
                     ],
                   ),
@@ -71,40 +73,44 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                     ),
                   ),
                   Column(
-                    children: const [
-                      Text(
+                    children: [
+                      const Text(
                         "RCB",
                         style: TextStyle(
                             color: Colors.grey,
                             fontSize: 16
                         ),
                       ),
-                      Text(
-                          "0",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18
-                          )
+                      Obx(
+                        () => Text(
+                            "${createTeamController.RCBPCount.value}",
+                            style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18
+                            )
+                        ),
                       ),
                     ],
                   ),
                   Column(
-                    children: const [
-                      Text(
+                    children: [
+                      const Text(
                         "CSK",
                         style: TextStyle(
                             color: Colors.grey,
                             fontSize: 16
                         ),
                       ),
-                      Text(
-                          "0",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18
-                          )
+                      Obx(
+                        () => Text(
+                            "${createTeamController.CSKPCount.value}",
+                            style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18
+                            )
+                        ),
                       ),
                     ],
                   ),
@@ -120,21 +126,23 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                     ),
                   ),
                   Column(
-                    children: const [
-                      Text(
+                    children: [
+                      const Text(
                         "Credit Left",
                         style: TextStyle(
                             color: Colors.grey,
                             fontSize: 16
                         ),
                       ),
-                      Text(
-                          "0",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18
-                          )
+                      Obx(
+                        () => Text(
+                            "${(createTeamController.CreditLeftCount.value % 2 == 0 || createTeamController.CreditLeftCount.value % 2 == 1) ? createTeamController.CreditLeftCount.value.round() : createTeamController.CreditLeftCount.value.toStringAsFixed(1)}",
+                            style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18
+                            )
+                        ),
                       ),
                     ],
                   ),
@@ -147,21 +155,22 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 16,right: 16,bottom: 6),
-                    child: Row(
-                      children: [
-                        Shape.shape.KajuKatriShape(selected: true,text: ""),
-                        Shape.shape.KajuKatriShape(selected: true,text: "2"),
-                        Shape.shape.KajuKatriShape(selected: false,text: "3"),
-                        Shape.shape.KajuKatriShape(selected: false,text: ""),
-                        Shape.shape.KajuKatriShape(selected: false,text: ""),
-                        Shape.shape.KajuKatriShape(selected: false,text: ""),
-                        Shape.shape.KajuKatriShape(selected: false,text: ""),
-                        Shape.shape.KajuKatriShape(selected: false,text: ""),
-                        Shape.shape.KajuKatriShape(selected: false,text: ""),
-                        Shape.shape.KajuKatriShape(selected: false,text: ""),
-                        Shape.shape.KajuKatriShape(selected: false,text: "11"),
-
-                      ],
+                    child: Obx(
+                      () => Row(
+                        children: [
+                          Shape.shape.KajuKatriShape(selected: createTeamController.PlayerCount.value >= 1 ? true : false,text: 1,show: createTeamController.PlayerCount.value == 1 ? true : false),
+                          Shape.shape.KajuKatriShape(selected: createTeamController.PlayerCount.value >= 2 ? true : false,text: 2,show: createTeamController.PlayerCount.value == 2 ? true : false),
+                          Shape.shape.KajuKatriShape(selected: createTeamController.PlayerCount.value >= 3 ? true : false,text: 3,show: createTeamController.PlayerCount.value == 3 ? true : false),
+                          Shape.shape.KajuKatriShape(selected: createTeamController.PlayerCount.value >= 4 ? true : false,text: 4,show: createTeamController.PlayerCount.value == 4 ? true : false),
+                          Shape.shape.KajuKatriShape(selected: createTeamController.PlayerCount.value >= 5 ? true : false,text: 5,show: createTeamController.PlayerCount.value == 5 ? true : false),
+                          Shape.shape.KajuKatriShape(selected: createTeamController.PlayerCount.value >= 6 ? true : false,text: 6,show: createTeamController.PlayerCount.value == 6 ? true : false),
+                          Shape.shape.KajuKatriShape(selected: createTeamController.PlayerCount.value >= 7 ? true : false,text: 7,show: createTeamController.PlayerCount.value == 7 ? true : false),
+                          Shape.shape.KajuKatriShape(selected: createTeamController.PlayerCount.value >= 8 ? true : false,text: 8,show: createTeamController.PlayerCount.value == 8 ? true : false),
+                          Shape.shape.KajuKatriShape(selected: createTeamController.PlayerCount.value >= 9 ? true : false,text: 9,show: createTeamController.PlayerCount.value == 9 ? true : false),
+                          Shape.shape.KajuKatriShape(selected: createTeamController.PlayerCount.value >= 10 ? true : false,text: 10,show: createTeamController.PlayerCount.value == 10 ? true : false),
+                          Shape.shape.KajuKatriShape(selected: createTeamController.PlayerCount.value == 11 ? true : false,text: 11,show: createTeamController.PlayerCount.value == 11 ? true : false),
+                        ],
+                      ),
                     )
                   ),
                   TabBar(
@@ -209,11 +218,13 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                                     shape: BoxShape.circle
                                   ),
                                   alignment: Alignment.center,
-                                  child: const Text(
-                                    "1",
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold
+                                  child: Obx(
+                                    () => Text(
+                                      "${createTeamController.WKPCount.value}",
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -255,11 +266,13 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                                       shape: BoxShape.circle
                                   ),
                                   alignment: Alignment.center,
-                                  child: const Text(
-                                    "1",
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold
+                                  child: Obx(
+                                    () => Text(
+                                      "${createTeamController.BATPCount.value}",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -301,11 +314,13 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                                       shape: BoxShape.circle
                                   ),
                                   alignment: Alignment.center,
-                                  child: const Text(
-                                    "1",
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold
+                                  child: Obx(
+                                    () => Text(
+                                      "${createTeamController.ARPCount.value}",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -347,11 +362,13 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                                       shape: BoxShape.circle
                                   ),
                                   alignment: Alignment.center,
-                                  child: const Text(
-                                    "1",
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold
+                                  child: Obx(
+                                    () => Text(
+                                      "${createTeamController.BOWLPCount.value}",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -380,22 +397,28 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(
-                  child: Card(color: Colors.green,
-                    elevation: 3,
-                    child: Container(
-                      height: 45,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        border: Border.all(color: Colors.green,width: 1.5),
-                        borderRadius: BorderRadius.circular(5)
-                      ),
-                      alignment: Alignment.center,
-                      child: const Text(
-                        "PREVIEW TEAM",
-                        style: TextStyle(
-                          color: Colors.green,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600
+                  child: InkWell(
+                    onTap: () {
+                      Get.toNamed('team_Preview');
+                    },
+                    child: Card(
+                      color: Colors.green,
+                      elevation: 3,
+                      child: Container(
+                        height: 45,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          border: Border.all(color: Colors.green,width: 1.5),
+                          borderRadius: BorderRadius.circular(5)
+                        ),
+                        alignment: Alignment.center,
+                        child: const Text(
+                          "PREVIEW TEAM",
+                          style: TextStyle(
+                            color: Colors.green,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600
+                          ),
                         ),
                       ),
                     ),
@@ -403,24 +426,32 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                 ),
                  SizedBox(width: Get.width/30,),
                 Expanded(
-                  child: Card(
-                    color: Colors.grey.shade300,
-
-                    elevation: 3,
-                    child: Container(
-                      height: 45,
-                      decoration: BoxDecoration(
-                        color: Colors.grey.shade300,
-                        borderRadius: BorderRadius.circular(5),
-
-                      ),
-                      alignment: Alignment.center,
-                      child: const Text(
-                        "CONTINUE",
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600
+                  child: Obx(
+                    () => InkWell(
+                      onTap: () {
+                        if(createTeamController.PlayerCount.value == 11)
+                          {
+                            Get.toNamed('linup');
+                          }
+                      },
+                      child: Card(
+                        color: createTeamController.PlayerCount.value == 11 ? Colors.green : Colors.grey.shade300,
+                        elevation: 3,
+                        child: Container(
+                          height: 45,
+                          decoration: BoxDecoration(
+                            color: createTeamController.PlayerCount.value == 11 ? Colors.green : Colors.grey.shade300,
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          alignment: Alignment.center,
+                          child: Text(
+                            "CONTINUE",
+                            style: TextStyle(
+                              color: createTeamController.PlayerCount.value == 11 ? Colors.white : Colors.grey,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600
+                            ),
+                          ),
                         ),
                       ),
                     ),
