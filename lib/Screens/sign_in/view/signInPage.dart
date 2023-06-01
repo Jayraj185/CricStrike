@@ -199,7 +199,7 @@ class _SignInPageState extends State<SignInPage> {
                           onPressed: () async {
                             edgeAlert(context, title: 'Title', description: 'Description', gravity: Gravity.top);
                             await FirebaseAuth.instance.verifyPhoneNumber(
-                              phoneNumber: '${code} ${txtNumber.text}',
+                              phoneNumber: '$code ${txtNumber.text}',
                               verificationCompleted:
                                   (PhoneAuthCredential credential) {},
                               verificationFailed: (FirebaseAuthException e) {},
