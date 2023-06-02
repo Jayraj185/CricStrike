@@ -1,5 +1,10 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../Utils/firehelper.dart';
+import '../../CreateTeam/controller/CreateTeamController.dart';
+import '../../prediction/controller/predictionController.dart';
 
 class TeamPreviewPage extends StatefulWidget {
   const TeamPreviewPage({Key? key}) : super(key: key);
@@ -9,6 +14,8 @@ class TeamPreviewPage extends StatefulWidget {
 }
 
 class _TeamPreviewPageState extends State<TeamPreviewPage> {
+  CreateTeamController createTeamController = Get.put(CreateTeamController());
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -26,21 +33,9 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
             ),
           ),
           title: const Text(
-            "Tiger XII(T1)",
+            "CRICSTRIKE XII",
             style: TextStyle(color: Colors.white),
           ),
-          actions: [
-            Padding(
-              padding: const EdgeInsets.only(right: 6),
-              child: IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.edit,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ],
           bottom: PreferredSize(
             preferredSize: const Size.fromHeight(66),
             child: Padding(
@@ -59,13 +54,13 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             "Players",
                             style:
-                                TextStyle(color: Colors.white70, fontSize: 12),
+                            TextStyle(color: Colors.white70, fontSize: 12),
                           ),
-                          const Text.rich(TextSpan(children: [
+                          Text.rich(TextSpan(children: [
                             TextSpan(
                               text: "11",
                               style: TextStyle(
@@ -81,76 +76,84 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                           ])),
                         ],
                       ),
+                      // Container(
+                      //   height: 21,
+                      //   margin: const EdgeInsets.only(left: 30),
+                      //   decoration: BoxDecoration(
+                      //       color: const Color(0xFF021852),
+                      //       borderRadius: BorderRadius.circular(3)),
+                      //   alignment: Alignment.center,
+                      //   padding: const EdgeInsets.symmetric(horizontal: 8),
+                      //   child: Text(
+                      //     "${predictionController.dataList[0]['cricteam']['team1']}",
+                      //     style: const TextStyle(
+                      //         color: Colors.white,
+                      //         fontSize: 12,
+                      //         fontWeight: FontWeight.bold),
+                      //   ),
+                      // ),
+                      // Text(
+                      //   "${predictionController.dataList[0]['cricteam']['team1_player']}",
+                      //   style: const TextStyle(
+                      //       color: Colors.white,
+                      //       fontWeight: FontWeight.bold,
+                      //       fontSize: 18),
+                      // ),
+                      // const Text(
+                      //   ":",
+                      //   style: TextStyle(
+                      //       color: Colors.white,
+                      //       fontWeight: FontWeight.bold,
+                      //       fontSize: 18),
+                      // ),
+                      // Text(
+                      //   "${predictionController.dataList[0]['cricteam']['team2_player']}",
+                      //   style: const TextStyle(
+                      //       color: Colors.white,
+                      //       fontWeight: FontWeight.bold,
+                      //       fontSize: 18),
+                      // ),
+                      // Container(
+                      //   height: 21,
+                      //   margin: const EdgeInsets.only(right: 30),
+                      //   decoration: BoxDecoration(
+                      //       color: Colors.white,
+                      //       borderRadius: BorderRadius.circular(3)),
+                      //   alignment: Alignment.center,
+                      //   padding: const EdgeInsets.symmetric(horizontal: 8),
+                      //   child: Text(
+                      //     "${predictionController.dataList[0]['cricteam']['team2']}",
+                      //     style: const TextStyle(
+                      //         color: Color(0xFF021852),
+                      //         fontSize: 12,
+                      //         fontWeight: FontWeight.bold),
+                      //   ),
+                      // ),
                       Container(
-                        height: 21,
-                        margin: const EdgeInsets.only(left: 30),
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(3)),
-                        alignment: Alignment.center,
-                        padding: const EdgeInsets.symmetric(horizontal: 8),
-                        child: const Text(
-                          "RCB",
-                          style: TextStyle(
-                              color: Color(0xFF021852),
-                              fontSize: 12,
-                              fontWeight: FontWeight.bold),
+                        alignment: Alignment.centerRight,
+                        width: 40,
+                        child: const Icon(
+                          Icons.info_outline,
+                          color: Colors.white,
                         ),
                       ),
-                      const Text(
-                        "6",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18),
-                      ),
-                      const Text(
-                        ":",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18),
-                      ),
-                      const Text(
-                        "5",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18),
-                      ),
-                      Container(
-                        height: 21,
-                        margin: const EdgeInsets.only(right: 30),
-                        decoration: BoxDecoration(
-                            color: const Color(0xFF021852),
-                            borderRadius: BorderRadius.circular(3)),
-                        alignment: Alignment.center,
-                        padding: const EdgeInsets.symmetric(horizontal: 8),
-                        child: const Text(
-                          "CSK",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          const Text(
-                            "Credit Left",
-                            style:
-                                TextStyle(color: Colors.white70, fontSize: 14),
-                          ),
-                          const Text(
-                            "0",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 15),
-                          ),
-                        ],
-                      ),
+                      // Column(
+                      //   crossAxisAlignment: CrossAxisAlignment.end,
+                      //   children: [
+                      //     // Text(
+                      //     //   "Credit Left",
+                      //     //   style:
+                      //     //       TextStyle(color: Colors.white70, fontSize: 14),
+                      //     // ),
+                      //     // Text(
+                      //     //   "0",
+                      //     //   style: TextStyle(
+                      //     //       color: Colors.white,
+                      //     //       fontWeight: FontWeight.bold,
+                      //     //       fontSize: 15),
+                      //     // ),
+                      //   ],
+                      // ),
                     ],
                   ),
                   const SizedBox(
@@ -161,6 +164,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
             ),
           ),
         ),
+        backgroundColor: const Color(0xff07853D),
         body: Stack(
           alignment: Alignment.center,
           children: [
@@ -229,442 +233,323 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
               color: const Color(0xFF4FA042),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 5),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Align(
-                    alignment: Alignment.center,
-                    child: Padding(
-                      padding: EdgeInsets.only(top: 15),
-                      child: Text(
-                        "KEEPER",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500),
-                      ),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Text(
+                      "KEEPER",textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500),
                     ),
                   ),
-                  Container(
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: 70,
-                          width: 70,
-                          // color: Colors.red,
-                          child: Stack(
-                            children: [
-                              Align(
-                                  alignment: Alignment.topCenter,
-                                  child: Image.network(
-                                    "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/601.png",
-                                    fit: BoxFit.fill,
-                                    height: 70,
-                                    width: 70,
-                                  )),
-                              Align(
-                                alignment: Alignment.bottomCenter,
-                                child: Container(
-                                  height: 23,
-                                  decoration: BoxDecoration(
-                                      color: const Color(0xFF021852),
-                                      borderRadius: BorderRadius.circular(4)),
-                                  padding:
-                                      const EdgeInsets.symmetric(horizontal: 3),
-                                  alignment: Alignment.center,
-                                  child: const Text(
-                                    "D. Conway",
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 12),
+                  SizedBox(
+                    height: Get.height/8,
+                    child: ListView.builder(
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemBuilder: (context, index) => Container(
+                        margin: EdgeInsets.symmetric(
+                            horizontal: Get.width /
+                                createTeamController.finalTeam['WK']!.length /
+                                (createTeamController.finalTeam['WK']!.length == 2
+                                    ? 4
+                                    : createTeamController.finalTeam['WK']!.length == 3
+                                    ? 6
+                                    : createTeamController.finalTeam['WK']!.length == 4
+                                    ? 12
+                                    : createTeamController.finalTeam['WK']!.length == 5
+                                    ? 50
+                                    : 4)),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: Get.height/12,
+                              // color: Colors.red,
+                              child: Stack(
+                                alignment: Alignment.center,
+                                children: [
+                                  Align(
+                                    alignment: Alignment.topCenter,
+                                    child: CachedNetworkImage(
+                                      fadeInDuration:
+                                      const Duration(seconds: 0),
+                                      fit: BoxFit.fill,
+                                      imageUrl:
+                                      "${createTeamController.finalTeam['WK']![index].imageUrl}",
+                                      progressIndicatorBuilder: (context,
+                                          url, downloadProgress) =>
+                                          Container(),
+                                      errorWidget:
+                                          (context, url, error) => Row(
+                                        mainAxisAlignment:
+                                        MainAxisAlignment.center,
+                                        children: const [
+                                          Icon(Icons.error),
+                                          Text(" Image Not available")
+                                        ],
+                                      ),
+                                    ),
                                   ),
-                                ),
-                              )
-                            ],
-                          ),
+                                  Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Container(
+                                      height: 23,
+                                      decoration: BoxDecoration(
+                                          color: createTeamController.finalTeam['WK']![index].name!=
+                                              "CSK"
+                                              ? const Color(0xffffffff)
+                                              : const Color(0xff021852),
+                                          borderRadius:
+                                          BorderRadius.circular(4)),
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 10),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        "${createTeamController.finalTeam['WK']![index].name}",
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            color: createTeamController.finalTeam['WK']![index].name!=
+                                                "RCB"
+                                                ? const Color(0xffffffff)
+                                                : const Color(0xff021852),
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 6),
+                              child: Text(
+                                "${createTeamController.finalTeam['WK']![index].credit}",
+                                style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ),
+                          ],
                         ),
-                        const Padding(
-                          padding: EdgeInsets.only(top: 6),
-                          child: Text(
-                            "9 Cr",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ),
-                      ],
+                      ),
+                      shrinkWrap: true,
+                      itemCount: createTeamController.finalTeam['WK']!.length,
+                      scrollDirection: Axis.horizontal,
                     ),
                   ),
-                  const Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      "BATTER",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500),
+                  const Text(
+                    "BATTER",textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500),
+                  ),
+                  SizedBox(
+                    height: Get.height/8,
+
+                    child: ListView.builder(
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemBuilder: (context, index) => Container(
+                        margin: EdgeInsets.symmetric(
+                            horizontal: Get.width /
+                                createTeamController.finalTeam['BAT']!.length /
+                                (createTeamController.finalTeam['BAT']!.length == 2
+                                    ? 4
+                                    : createTeamController.finalTeam['BAT']!.length == 3
+                                    ? 6
+                                    : createTeamController.finalTeam['BAT']!.length == 4
+                                    ? 12
+                                    : createTeamController.finalTeam['BAT']!.length == 5
+                                    ? 50
+                                    : 4)),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: Get.height/12,
+
+                              // color: Colors.red,
+                              child: Stack(
+                                alignment: Alignment.center,
+                                children: [
+                                  Align(
+                                    alignment: Alignment.topCenter,
+                                    child: CachedNetworkImage(
+                                      fadeInDuration:
+                                      const Duration(seconds: 0),
+                                      fit: BoxFit.fill,
+                                      imageUrl:
+                                      "${createTeamController.finalTeam['BAT']![index]!.imageUrl}",
+                                      progressIndicatorBuilder: (context,
+                                          url, downloadProgress) =>
+                                          Container(),
+                                      errorWidget:
+                                          (context, url, error) => Row(
+                                        mainAxisAlignment:
+                                        MainAxisAlignment.center,
+                                        children: const [
+                                          Icon(Icons.error),
+                                          Text(" Image Not available")
+                                        ],
+                                      ),
+                                    ),),
+                                  Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Container(
+                                      height: 23,
+                                      decoration: BoxDecoration(
+                                          color: createTeamController.finalTeam['WK']![index].name!=
+                                              "CSK"
+                                              ? const Color(0xffffffff)
+                                              : const Color(0xff021852),
+                                          borderRadius:
+                                          BorderRadius.circular(4)),
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 10),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        "${createTeamController.finalTeam['BAT']![index]!.name}",
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            color: createTeamController.finalTeam['WK']![index].name!=
+                                                "RCB"
+                                                ? const Color(0xffffffff)
+                                                : const Color(0xff021852),
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 6),
+                              child: Text(
+                                "${createTeamController.finalTeam['BAT']![index]!.credit}",
+                                style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      shrinkWrap: true,
+                      itemCount: createTeamController.finalTeam['BAT']!.length,
+                      scrollDirection: Axis.horizontal,
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Container(
-                        margin: const EdgeInsets.only(top: 0),
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 70,
-                              width: 70,
-                              // color: Colors.red,
-                              child: Stack(
-                                children: [
-                                  Align(
-                                      alignment: Alignment.topCenter,
-                                      child: Image.network(
-                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/102.png",
-                                        fit: BoxFit.fill,
-                                        height: 70,
-                                        width: 70,
-                                      )),
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Container(
-                                      height: 23,
-                                      decoration: BoxDecoration(
-                                          color: const Color(0xFF021852),
-                                          borderRadius:
-                                              BorderRadius.circular(4)),
-                                      alignment: Alignment.center,
-                                      padding:
-                                          const EdgeInsets.symmetric(horizontal: 3),
-                                      child: const Text(
-                                        "R. Gaikwad",
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 12),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(top: 6),
-                              child: Text(
-                                "8 Cr",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(top: 0),
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 70,
-                              width: 70,
-                              // color: Colors.red,
-                              child: Stack(
-                                children: [
-                                  Align(
-                                      alignment: Alignment.topCenter,
-                                      child: Image.network(
-                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/211.png",
-                                        fit: BoxFit.fill,
-                                        height: 70,
-                                        width: 70,
-                                      )),
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Container(
-                                      height: 23,
-                                      decoration: BoxDecoration(
-                                          color: const Color(0xFF021852),
-                                          borderRadius:
-                                              BorderRadius.circular(4)),
-                                      padding:
-                                          const EdgeInsets.symmetric(horizontal: 3),
-                                      alignment: Alignment.center,
-                                      child: const Text(
-                                        "S. Dube",
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 12),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(top: 6),
-                              child: Text(
-                                "7 Cr",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(top: 0),
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 70,
-                              width: 70,
-                              // color: Colors.red,
-                              child: Stack(
-                                children: [
-                                  Align(
-                                      alignment: Alignment.topCenter,
-                                      child: Image.network(
-                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/94.png",
-                                        fit: BoxFit.fill,
-                                        height: 70,
-                                        width: 70,
-                                      )),
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Container(
-                                      height: 23,
-                                      decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(4)),
-                                      padding:
-                                          const EdgeInsets.symmetric(horizontal: 3),
-                                      alignment: Alignment.center,
-                                      child: const Text(
-                                        "F. Plessis",
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                            color: Color(0xFF021852),
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 12),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(top: 6),
-                              child: Text(
-                                "11 Cr",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(top: 0),
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 70,
-                              width: 70,
-                              // color: Colors.red,
-                              child: Stack(
-                                children: [
-                                  Align(
-                                      alignment: Alignment.topCenter,
-                                      child: Image.network(
-                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/2.png",
-                                        fit: BoxFit.fill,
-                                        height: 70,
-                                        width: 70,
-                                      )),
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Container(
-                                      height: 23,
-                                      decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(4)),
-                                      padding:
-                                          const EdgeInsets.symmetric(horizontal: 3),
-                                      alignment: Alignment.center,
-                                      child: const Text(
-                                        "V. Kohli",
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                            color: Color(0xFF021852),
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 12),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(top: 6),
-                              child: Text(
-                                "12 Cr",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+                  const Text(
+                    "ALL ROUNDERS",textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500),
                   ),
-                  const Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      "ALL ROUNDERS",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500),
+                  SizedBox(
+                    height: Get.height/8,
+                    child: ListView.builder(
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemBuilder: (context, index) => Container(
+                        margin: EdgeInsets.symmetric(
+                            horizontal: Get.width /
+                                createTeamController.finalTeam['AR']!.length /
+                                (createTeamController.finalTeam['AR']!.length == 2
+                                    ? 4
+                                    : createTeamController.finalTeam['AR']!.length == 3
+                                    ? 6
+                                    : createTeamController.finalTeam['AR']!.length == 4
+                                    ? 12
+                                    : createTeamController.finalTeam['AR']!.length== 5
+                                    ? 50
+                                    : 4)),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: Get.height/12,
+
+                              // color: Colors.red,
+                              child: Stack(
+                                alignment: Alignment.center,
+                                children: [
+                                  Align(
+                                    alignment: Alignment.topCenter,
+                                    child: CachedNetworkImage(
+                                      fadeInDuration:
+                                      const Duration(seconds: 0),
+                                      fit: BoxFit.fill,
+                                      imageUrl:
+                                      "${createTeamController.finalTeam['AR']![index].imageUrl}",
+                                      progressIndicatorBuilder: (context,
+                                          url, downloadProgress) =>
+                                          Container(),
+                                      errorWidget:
+                                          (context, url, error) => Row(
+                                        mainAxisAlignment:
+                                        MainAxisAlignment.center,
+                                        children: const [
+                                          Icon(Icons.error),
+                                          Text(" Image Not available")
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Container(
+                                      height: 23,
+                                      decoration: BoxDecoration(
+                                          color:createTeamController.finalTeam['WK']![index].name!=
+                                              "CSK"
+                                              ? const Color(0xffffffff)
+                                              : const Color(0xff021852),
+                                          borderRadius:
+                                          BorderRadius.circular(4)),
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 10),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        "${createTeamController.finalTeam['AR']![index].name}",
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            color: createTeamController.finalTeam['WK']![index].name!=
+                                                "RCB"
+                                                ? const Color(0xffffffff)
+                                                : const Color(0xff021852),
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 6),
+                              child: Text(
+                                "${createTeamController.finalTeam['AR']![index].credit}",
+                                style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      shrinkWrap: true,
+                      itemCount: createTeamController.finalTeam['AR']!.length??0,
+                      scrollDirection: Axis.horizontal,
                     ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Container(
-                        margin: const EdgeInsets.only(top: 0),
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 70,
-                              width: 70,
-                              // color: Colors.red,
-                              child: Stack(
-                                children: [
-                                  Align(
-                                      alignment: Alignment.topCenter,
-                                      child: Image.network(
-                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/28.png",
-                                        fit: BoxFit.fill,
-                                        height: 70,
-                                        width: 70,
-                                      )),
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Container(
-                                      height: 23,
-                                      decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(4)),
-                                      padding:
-                                          const EdgeInsets.symmetric(horizontal: 3),
-                                      alignment: Alignment.center,
-                                      child: const Text(
-                                        "G. Maxwell",
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                            color: Color(0xFF021852),
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 12),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(top: 6),
-                              child: Text(
-                                "11 Cr",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(top: 0),
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 70,
-                              width: 70,
-                              // color: Colors.red,
-                              child: Stack(
-                                children: [
-                                  Align(
-                                      alignment: Alignment.topCenter,
-                                      child: Image.network(
-                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/46.png",
-                                        fit: BoxFit.fill,
-                                        height: 70,
-                                        width: 70,
-                                      )),
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Container(
-                                      height: 23,
-                                      decoration: BoxDecoration(
-                                          color: const Color(0xFF021852),
-                                          borderRadius:
-                                              BorderRadius.circular(4)),
-                                      padding:
-                                          const EdgeInsets.symmetric(horizontal: 3),
-                                      alignment: Alignment.center,
-                                      child: const Text(
-                                        "R. Jadeja",
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 12),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(top: 6),
-                              child: Text(
-                                "9 Cr",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
                   ),
                   const Align(
                     alignment: Alignment.center,
@@ -672,48 +557,78 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                       "BOWLERS",
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 16,
+                          fontSize: 14,
                           fontWeight: FontWeight.w500),
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Container(
-                        margin: const EdgeInsets.only(top: 0),
+                  SizedBox(
+                    height: Get.height/8,
+                    child: ListView.builder(
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemBuilder: (context, index) => Container(
+                        margin: EdgeInsets.symmetric(
+                            horizontal: Get.width /
+    createTeamController.finalTeam['BOWL']!.length/
+                                ( createTeamController.finalTeam['AR']!.length == 2
+                                    ? 4
+                                    :   createTeamController.finalTeam['BOWL']!.length == 3
+                                    ? 6
+                                    :   createTeamController.finalTeam['BOWL']!.length == 4
+                                    ? 12
+                                    :   createTeamController.finalTeam['BOWL']!.length == 5
+                                    ? 50
+                                    : 4)),
                         child: Column(
                           children: [
-                            SizedBox(
-                              height: 70,
-                              width: 70,
+                            Container(
+                              height: Get.height/12,
+                              alignment: Alignment.center,
                               // color: Colors.red,
                               child: Stack(
+                                alignment: Alignment.center,
                                 children: [
                                   Align(
-                                      alignment: Alignment.topCenter,
-                                      child: Image.network(
-                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/1014.png",
-                                        fit: BoxFit.fill,
-                                        height: 70,
-                                        width: 70,
-                                      )),
+                                    alignment: Alignment.topCenter,
+                                    child: CachedNetworkImage(
+                                      fadeInDuration:
+                                      const Duration(seconds: 0),
+                                      fit: BoxFit.fill,
+                                      imageUrl:
+                                      "${createTeamController.finalTeam['BOWL']![index].imageUrl}",
+                                      progressIndicatorBuilder: (context,
+                                          url, downloadProgress) =>
+                                          Container(),
+                                      errorWidget:
+                                          (context, url, error) => Row(
+                                        mainAxisAlignment:
+                                        MainAxisAlignment.center,
+                                        children: const [
+                                          Icon(Icons.error),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
                                   Align(
                                     alignment: Alignment.bottomCenter,
                                     child: Container(
                                       height: 23,
                                       decoration: BoxDecoration(
-                                          color: const Color(0xFF021852),
+                                          color: createTeamController.finalTeam['WK']![index].name!=
+                                              "CSK"
+                                              ? const Color(0xffffffff)
+                                              : const Color(0xff021852),
                                           borderRadius:
-                                              BorderRadius.circular(4)),
-                                      padding:
-                                          const EdgeInsets.symmetric(horizontal: 3),
+                                          BorderRadius.circular(4)),
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 10),
                                       alignment: Alignment.center,
-                                      child: const Text(
-                                        "M. Pathiran",
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
+                                      child: Text(
+                                        "${createTeamController.finalTeam['BOWL']![index].name}",
                                         style: TextStyle(
-                                            color: Colors.white,
+                                            color:createTeamController.finalTeam['WK']![index].name!=
+                                                "RCB"
+                                                ? const Color(0xffffffff)
+                                                : const Color(0xff021852),
                                             fontWeight: FontWeight.bold,
                                             fontSize: 12),
                                       ),
@@ -722,67 +637,11 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                 ],
                               ),
                             ),
-                            const Padding(
-                              padding: EdgeInsets.only(top: 6),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 6),
                               child: Text(
-                                "9 Cr",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(top: 0),
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 70,
-                              width: 70,
-                              // color: Colors.red,
-                              child: Stack(
-                                children: [
-                                  Align(
-                                      alignment: Alignment.topCenter,
-                                      child: Image.network(
-                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/91.png",
-                                        fit: BoxFit.fill,
-                                        height: 70,
-                                        width: 70,
-                                      )),
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Container(
-                                      height: 23,
-                                      decoration: BoxDecoration(
-                                          color: const Color(0xFF021852),
-                                          borderRadius:
-                                              BorderRadius.circular(4)),
-                                      padding:
-                                          const EdgeInsets.symmetric(horizontal: 3),
-                                      alignment: Alignment.center,
-                                      child: const Text(
-                                        "D. Chahar",
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 12),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(top: 6),
-                              child: Text(
-                                "9 Cr",
-                                style: TextStyle(
+                                "${createTeamController.finalTeam['BOWL']![index].credit}",
+                                style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 14,
                                     fontWeight: FontWeight.w500),
@@ -791,119 +650,10 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                           ],
                         ),
                       ),
-                      Container(
-                        margin: const EdgeInsets.only(top: 0),
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 70,
-                              width: 70,
-                              // color: Colors.red,
-                              child: Stack(
-                                children: [
-                                  Align(
-                                      alignment: Alignment.topCenter,
-                                      child: Image.network(
-                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/114.png",
-                                        fit: BoxFit.fill,
-                                        height: 70,
-                                        width: 70,
-                                      )),
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Container(
-                                      height: 23,
-                                      decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(4)),
-                                      padding:
-                                          const EdgeInsets.symmetric(horizontal: 3),
-                                      alignment: Alignment.center,
-                                      child: const Text(
-                                        "H. Patel",
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                            color: Color(0xFF021852),
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 12),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(top: 6),
-                              child: Text(
-                                "6 Cr",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(top: 0),
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 70,
-                              width: 70,
-                              // color: Colors.red,
-                              child: Stack(
-                                children: [
-                                  Align(
-                                      alignment: Alignment.topCenter,
-                                      child: Image.network(
-                                        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/63.png",
-                                        fit: BoxFit.fill,
-                                        height: 70,
-                                        width: 70,
-                                      )),
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Container(
-                                      height: 23,
-                                      decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(4)),
-                                      padding:
-                                          const EdgeInsets.symmetric(horizontal: 3),
-                                      alignment: Alignment.center,
-                                      child: const Text(
-                                        "M. Siraj",
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                            color: Color(0xFF021852),
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 12),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(top: 6),
-                              child: Text(
-                                "9 Cr",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+                      shrinkWrap: true,
+                      itemCount: createTeamController.finalTeam['BOWL']!.length,
+                      scrollDirection: Axis.horizontal,
+                    ),
                   ),
                   const SizedBox(
                     height: 15,

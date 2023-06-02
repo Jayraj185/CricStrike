@@ -19,7 +19,7 @@ class _BatPageState extends State<BatPage> {
   void initState() {
     super.initState();
 
-    createTeamController.BatList.sort((a, b) {
+    createTeamController.batList.sort((a, b) {
       return b.credit!.compareTo(a.credit!);
     },);
   }
@@ -98,10 +98,10 @@ class _BatPageState extends State<BatPage> {
           Expanded(
             child: Obx(
               () => ListView.builder(
-                itemCount: createTeamController.BatList.length,
+                itemCount: createTeamController.batList.length,
                 itemBuilder: (context, index) {
                   return Container(
-                    color: createTeamController.BatList[index].selected! ? const Color(0xFFFFF3DC) : Colors.white,
+                    color: createTeamController.batList[index].selected! ? const Color(0xFFFFF3DC) : Colors.white,
                     padding: EdgeInsets.only(left: Get.width/40, right:  Get.width/40, top: 15),
                     child: Column(
                       children: [
@@ -111,22 +111,22 @@ class _BatPageState extends State<BatPage> {
                               {
                                 if(createTeamController.count['BAT']! < 4)
                                 {
-                                  print("====== ${createTeamController.BatList[index].selected! ? false : true}");
-                                  createTeamController.BatList[index] = PlayerDetailModel(
-                                    credit: createTeamController.BatList[index].credit,
-                                    selBy: createTeamController.BatList[index].selBy,
-                                    avgPts: createTeamController.BatList[index].avgPts,
-                                    imageUrl: createTeamController.BatList[index].imageUrl,
-                                    selected: createTeamController.BatList[index].selected! ? false : true,
-                                    teamName: createTeamController.BatList[index].teamName,
-                                    name: createTeamController.BatList[index].name,
+                                  print("====== ${createTeamController.batList[index].selected! ? false : true}");
+                                  createTeamController.batList[index] = PlayerDetailModel(
+                                    credit: createTeamController.batList[index].credit,
+                                    selBy: createTeamController.batList[index].selBy,
+                                    avgPts: createTeamController.batList[index].avgPts,
+                                    imageUrl: createTeamController.batList[index].imageUrl,
+                                    selected: createTeamController.batList[index].selected! ? false : true,
+                                    teamName: createTeamController.batList[index].teamName,
+                                    name: createTeamController.batList[index].name,
                                   );
                                   createTeamController.PlayerCount.value=0;
                                   createTeamController.BATPCount.value = 0;
                                   createTeamController.RCBPCount.value = 0;
                                   createTeamController.CSKPCount.value = 0;
                                   createTeamController.CreditLeftCount.value = 100;
-                                  for(PlayerDetailModel player in createTeamController.WKList)
+                                  for(PlayerDetailModel player in createTeamController.wkList)
                                   {
                                     if(player.selected!)
                                     {
@@ -142,7 +142,7 @@ class _BatPageState extends State<BatPage> {
                                       }
                                     }
                                   }
-                                  for(PlayerDetailModel player in createTeamController.BatList)
+                                  for(PlayerDetailModel player in createTeamController.batList)
                                   {
                                     if(player.selected!)
                                     {
@@ -159,7 +159,7 @@ class _BatPageState extends State<BatPage> {
                                       }
                                     }
                                   }
-                                  for(PlayerDetailModel player in createTeamController.ARList)
+                                  for(PlayerDetailModel player in createTeamController.arList)
                                   {
                                     if(player.selected!)
                                     {
@@ -175,7 +175,7 @@ class _BatPageState extends State<BatPage> {
                                       }
                                     }
                                   }
-                                  for(PlayerDetailModel player in createTeamController.BowlList)
+                                  for(PlayerDetailModel player in createTeamController.bowlList)
                                   {
                                     if(player.selected!)
                                     {
@@ -191,11 +191,11 @@ class _BatPageState extends State<BatPage> {
                                       }
                                     }
                                   }
-                                  for(int i=0; i<createTeamController.BatList.length; i++)
+                                  for(int i=0; i<createTeamController.batList.length; i++)
                                   {
                                     if(i==index)
                                     {
-                                      if(createTeamController.BatList[i].selected!)
+                                      if(createTeamController.batList[i].selected!)
                                       {
                                         createTeamController.count['BAT'] = createTeamController.count['BAT']! + 1;
                                       }
@@ -209,32 +209,32 @@ class _BatPageState extends State<BatPage> {
                                 }
                                 else
                                 {
-                                  print("====== ${createTeamController.BatList[index].selected! ? false : true}");
-                                  for(int i=0; i<createTeamController.BatList.length; i++)
+                                  print("====== ${createTeamController.batList[index].selected! ? false : true}");
+                                  for(int i=0; i<createTeamController.batList.length; i++)
                                   {
                                     if(i==index)
                                     {
-                                      if(createTeamController.BatList[i].selected!)
+                                      if(createTeamController.batList[i].selected!)
                                       {
                                         createTeamController.count['BAT'] = createTeamController.count['BAT']! - 1;
                                       }
                                     }
                                   }
-                                  createTeamController.BatList[index] = PlayerDetailModel(
-                                    credit: createTeamController.BatList[index].credit,
-                                    selBy: createTeamController.BatList[index].selBy,
-                                    avgPts: createTeamController.BatList[index].avgPts,
-                                    imageUrl: createTeamController.BatList[index].imageUrl,
+                                  createTeamController.batList[index] = PlayerDetailModel(
+                                    credit: createTeamController.batList[index].credit,
+                                    selBy: createTeamController.batList[index].selBy,
+                                    avgPts: createTeamController.batList[index].avgPts,
+                                    imageUrl: createTeamController.batList[index].imageUrl,
                                     selected: false,
-                                    teamName: createTeamController.BatList[index].teamName,
-                                    name: createTeamController.BatList[index].name,
+                                    teamName: createTeamController.batList[index].teamName,
+                                    name: createTeamController.batList[index].name,
                                   );
                                   createTeamController.PlayerCount.value=0;
                                   createTeamController.BATPCount.value = 0;
                                   createTeamController.RCBPCount.value = 0;
                                   createTeamController.CSKPCount.value = 0;
                                   createTeamController.CreditLeftCount.value = 100;
-                                  for(PlayerDetailModel player in createTeamController.WKList)
+                                  for(PlayerDetailModel player in createTeamController.wkList)
                                   {
                                     if(player.selected!)
                                     {
@@ -250,7 +250,7 @@ class _BatPageState extends State<BatPage> {
                                       }
                                     }
                                   }
-                                  for(PlayerDetailModel player in createTeamController.BatList)
+                                  for(PlayerDetailModel player in createTeamController.batList)
                                   {
                                     if(player.selected!)
                                     {
@@ -267,7 +267,7 @@ class _BatPageState extends State<BatPage> {
                                       }
                                     }
                                   }
-                                  for(PlayerDetailModel player in createTeamController.ARList)
+                                  for(PlayerDetailModel player in createTeamController.arList)
                                   {
                                     if(player.selected!)
                                     {
@@ -283,7 +283,7 @@ class _BatPageState extends State<BatPage> {
                                       }
                                     }
                                   }
-                                  for(PlayerDetailModel player in createTeamController.BowlList)
+                                  for(PlayerDetailModel player in createTeamController.bowlList)
                                   {
                                     if(player.selected!)
                                     {
@@ -305,32 +305,32 @@ class _BatPageState extends State<BatPage> {
                               }
                             else
                             {
-                              print("====== ${createTeamController.BatList[index].selected! ? false : true}");
-                              for(int i=0; i<createTeamController.BatList.length; i++)
+                              print("====== ${createTeamController.batList[index].selected! ? false : true}");
+                              for(int i=0; i<createTeamController.batList.length; i++)
                               {
                                 if(i==index)
                                 {
-                                  if(createTeamController.BatList[i].selected!)
+                                  if(createTeamController.batList[i].selected!)
                                   {
                                     createTeamController.count['BAT'] = createTeamController.count['BAT']! - 1;
                                   }
                                 }
                               }
-                              createTeamController.BatList[index] = PlayerDetailModel(
-                                credit: createTeamController.BatList[index].credit,
-                                selBy: createTeamController.BatList[index].selBy,
-                                avgPts: createTeamController.BatList[index].avgPts,
-                                imageUrl: createTeamController.BatList[index].imageUrl,
+                              createTeamController.batList[index] = PlayerDetailModel(
+                                credit: createTeamController.batList[index].credit,
+                                selBy: createTeamController.batList[index].selBy,
+                                avgPts: createTeamController.batList[index].avgPts,
+                                imageUrl: createTeamController.batList[index].imageUrl,
                                 selected: false,
-                                teamName: createTeamController.BatList[index].teamName,
-                                name: createTeamController.BatList[index].name,
+                                teamName: createTeamController.batList[index].teamName,
+                                name: createTeamController.batList[index].name,
                               );
                               createTeamController.PlayerCount.value=0;
                               createTeamController.BATPCount.value = 0;
                               createTeamController.RCBPCount.value = 0;
                               createTeamController.CSKPCount.value = 0;
                               createTeamController.CreditLeftCount.value = 100;
-                              for(PlayerDetailModel player in createTeamController.WKList)
+                              for(PlayerDetailModel player in createTeamController.wkList)
                               {
                                 if(player.selected!)
                                 {
@@ -346,7 +346,7 @@ class _BatPageState extends State<BatPage> {
                                   }
                                 }
                               }
-                              for(PlayerDetailModel player in createTeamController.BatList)
+                              for(PlayerDetailModel player in createTeamController.batList)
                               {
                                 if(player.selected!)
                                 {
@@ -363,7 +363,7 @@ class _BatPageState extends State<BatPage> {
                                   }
                                 }
                               }
-                              for(PlayerDetailModel player in createTeamController.ARList)
+                              for(PlayerDetailModel player in createTeamController.arList)
                               {
                                 if(player.selected!)
                                 {
@@ -379,7 +379,7 @@ class _BatPageState extends State<BatPage> {
                                   }
                                 }
                               }
-                              for(PlayerDetailModel player in createTeamController.BowlList)
+                              for(PlayerDetailModel player in createTeamController.bowlList)
                               {
                                 if(player.selected!)
                                 {
@@ -415,7 +415,7 @@ class _BatPageState extends State<BatPage> {
                                     fadeInDuration: const Duration(seconds: 0),
                                     fit: BoxFit.fill,
                                     imageUrl:
-                                    "${(createTeamController.BatList[index].imageUrl != null && createTeamController.BatList[index].imageUrl!.isNotEmpty) ? createTeamController.BatList[index].imageUrl : "https://st4.depositphotos.com/9998432/23359/v/600/depositphotos_233595744-stock-illustration-person-gray-photo-placeholder-man.jpg"}",
+                                    "${(createTeamController.batList[index].imageUrl != null && createTeamController.batList[index].imageUrl!.isNotEmpty) ? createTeamController.batList[index].imageUrl : "https://st4.depositphotos.com/9998432/23359/v/600/depositphotos_233595744-stock-illustration-person-gray-photo-placeholder-man.jpg"}",
                                     progressIndicatorBuilder: (context, url, downloadProgress) => Container(),
                                     errorWidget: (context, url, error) => const Icon(Icons.error),
                                   ),
@@ -437,7 +437,7 @@ class _BatPageState extends State<BatPage> {
                                     SizedBox(
                                       width: Get.width / 3.9,
                                       child: Text(
-                                        "${createTeamController.BatList[index]
+                                        "${createTeamController.batList[index]
                                             .name}",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
@@ -449,7 +449,7 @@ class _BatPageState extends State<BatPage> {
                                       ),
                                     ),
                                     Text(
-                                      "${createTeamController.BatList[index]
+                                      "${createTeamController.batList[index]
                                           .teamName}",
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
@@ -464,7 +464,7 @@ class _BatPageState extends State<BatPage> {
                               SizedBox(width: Get.width / 50,),
                               Expanded(
                                 child: Text(
-                                  "${createTeamController.BatList[index]
+                                  "${createTeamController.batList[index]
                                       .avgPts}",
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
@@ -478,7 +478,7 @@ class _BatPageState extends State<BatPage> {
                               Expanded(
                                 flex: 1,
                                 child: Text(
-                                  "${createTeamController.BatList[index]
+                                  "${createTeamController.batList[index]
                                       .selBy}",
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
@@ -492,7 +492,7 @@ class _BatPageState extends State<BatPage> {
                               Row(
                                 children: [
                                   Text(
-                                    "${createTeamController.BatList[index]
+                                    "${createTeamController.batList[index]
                                         .credit}",
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
@@ -508,11 +508,11 @@ class _BatPageState extends State<BatPage> {
                                     width: Get.width / 18,
                                     decoration: BoxDecoration(
                                         shape: BoxShape.circle,
-                                        color: createTeamController.BatList[index].selected! ? Colors.red : Colors.green
+                                        color: createTeamController.batList[index].selected! ? Colors.red : Colors.green
                                     ),
                                     alignment: Alignment.center,
                                     child: Icon(
-                                      createTeamController.BatList[index].selected! ? Icons.remove : Icons.add, color: Colors.white,
+                                      createTeamController.batList[index].selected! ? Icons.remove : Icons.add, color: Colors.white,
                                       size: Get.width / 20,),
                                   )
                                 ],

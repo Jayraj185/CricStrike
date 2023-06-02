@@ -19,7 +19,7 @@ class _ARPageState extends State<ARPage> {
   void initState() {
     super.initState();
 
-    createTeamController.ARList.sort((a, b) {
+    createTeamController.arList.sort((a, b) {
       return b.credit!.compareTo(a.credit!);
     },);
   }
@@ -98,10 +98,10 @@ class _ARPageState extends State<ARPage> {
           Expanded(
             child: Obx(
               () => ListView.builder(
-                itemCount: createTeamController.ARList.length,
+                itemCount: createTeamController.arList.length,
                 itemBuilder: (context, index) {
                   return Container(
-                    color: createTeamController.ARList[index].selected! ? Color(0xFFFFF3DC) : Colors.white,
+                    color: createTeamController.arList[index].selected! ? Color(0xFFFFF3DC) : Colors.white,
                     padding: EdgeInsets.only(left: Get.width/40, right:  Get.width/40, top: 15),
                     child: Column(
                       children: [
@@ -111,22 +111,22 @@ class _ARPageState extends State<ARPage> {
                               {
                                 if(createTeamController.count['AR']! < 4)
                                 {
-                                  print("====== ${createTeamController.ARList[index].selected! ? false : true}");
-                                  createTeamController.ARList[index] = PlayerDetailModel(
-                                    credit: createTeamController.ARList[index].credit,
-                                    selBy: createTeamController.ARList[index].selBy,
-                                    avgPts: createTeamController.ARList[index].avgPts,
-                                    imageUrl: createTeamController.ARList[index].imageUrl,
-                                    selected: createTeamController.ARList[index].selected! ? false : true,
-                                    teamName: createTeamController.ARList[index].teamName,
-                                    name: createTeamController.ARList[index].name,
+                                  print("====== ${createTeamController.arList[index].selected! ? false : true}");
+                                  createTeamController.arList[index] = PlayerDetailModel(
+                                    credit: createTeamController.arList[index].credit,
+                                    selBy: createTeamController.arList[index].selBy,
+                                    avgPts: createTeamController.arList[index].avgPts,
+                                    imageUrl: createTeamController.arList[index].imageUrl,
+                                    selected: createTeamController.arList[index].selected! ? false : true,
+                                    teamName: createTeamController.arList[index].teamName,
+                                    name: createTeamController.arList[index].name,
                                   );
                                   createTeamController.PlayerCount.value=0;
                                   createTeamController.ARPCount.value = 0;
                                   createTeamController.RCBPCount.value = 0;
                                   createTeamController.CSKPCount.value = 0;
                                   createTeamController.CreditLeftCount.value = 100;
-                                  for(PlayerDetailModel player in createTeamController.WKList)
+                                  for(PlayerDetailModel player in createTeamController.wkList)
                                   {
                                     if(player.selected!)
                                     {
@@ -142,7 +142,7 @@ class _ARPageState extends State<ARPage> {
                                       }
                                     }
                                   }
-                                  for(PlayerDetailModel player in createTeamController.BatList)
+                                  for(PlayerDetailModel player in createTeamController.batList)
                                   {
                                     if(player.selected!)
                                     {
@@ -158,7 +158,7 @@ class _ARPageState extends State<ARPage> {
                                       }
                                     }
                                   }
-                                  for(PlayerDetailModel player in createTeamController.ARList)
+                                  for(PlayerDetailModel player in createTeamController.arList)
                                   {
                                     if(player.selected!)
                                     {
@@ -175,7 +175,7 @@ class _ARPageState extends State<ARPage> {
                                       }
                                     }
                                   }
-                                  for(PlayerDetailModel player in createTeamController.BowlList)
+                                  for(PlayerDetailModel player in createTeamController.bowlList)
                                   {
                                     if(player.selected!)
                                     {
@@ -191,11 +191,11 @@ class _ARPageState extends State<ARPage> {
                                       }
                                     }
                                   }
-                                  for(int i=0; i<createTeamController.ARList.length; i++)
+                                  for(int i=0; i<createTeamController.arList.length; i++)
                                   {
                                     if(i==index)
                                     {
-                                      if(createTeamController.ARList[i].selected!)
+                                      if(createTeamController.arList[i].selected!)
                                       {
                                         createTeamController.count['AR'] = createTeamController.count['AR']! + 1;
                                       }
@@ -209,32 +209,32 @@ class _ARPageState extends State<ARPage> {
                                 }
                                 else
                                 {
-                                  print("====== ${createTeamController.ARList[index].selected! ? false : true}");
-                                  for(int i=0; i<createTeamController.ARList.length; i++)
+                                  print("====== ${createTeamController.arList[index].selected! ? false : true}");
+                                  for(int i=0; i<createTeamController.arList.length; i++)
                                   {
                                     if(i==index)
                                     {
-                                      if(createTeamController.ARList[i].selected!)
+                                      if(createTeamController.arList[i].selected!)
                                       {
                                         createTeamController.count['AR'] = createTeamController.count['AR']! - 1;
                                       }
                                     }
                                   }
-                                  createTeamController.ARList[index] = PlayerDetailModel(
-                                    credit: createTeamController.ARList[index].credit,
-                                    selBy: createTeamController.ARList[index].selBy,
-                                    avgPts: createTeamController.ARList[index].avgPts,
-                                    imageUrl: createTeamController.ARList[index].imageUrl,
+                                  createTeamController.arList[index] = PlayerDetailModel(
+                                    credit: createTeamController.arList[index].credit,
+                                    selBy: createTeamController.arList[index].selBy,
+                                    avgPts: createTeamController.arList[index].avgPts,
+                                    imageUrl: createTeamController.arList[index].imageUrl,
                                     selected: false,
-                                    teamName: createTeamController.ARList[index].teamName,
-                                    name: createTeamController.ARList[index].name,
+                                    teamName: createTeamController.arList[index].teamName,
+                                    name: createTeamController.arList[index].name,
                                   );
                                   createTeamController.PlayerCount.value=0;
                                   createTeamController.ARPCount.value = 0;
                                   createTeamController.RCBPCount.value = 0;
                                   createTeamController.CSKPCount.value = 0;
                                   createTeamController.CreditLeftCount.value = 100;
-                                  for(PlayerDetailModel player in createTeamController.WKList)
+                                  for(PlayerDetailModel player in createTeamController.wkList)
                                   {
                                     if(player.selected!)
                                     {
@@ -250,7 +250,7 @@ class _ARPageState extends State<ARPage> {
                                       }
                                     }
                                   }
-                                  for(PlayerDetailModel player in createTeamController.BatList)
+                                  for(PlayerDetailModel player in createTeamController.batList)
                                   {
                                     if(player.selected!)
                                     {
@@ -266,7 +266,7 @@ class _ARPageState extends State<ARPage> {
                                       }
                                     }
                                   }
-                                  for(PlayerDetailModel player in createTeamController.ARList)
+                                  for(PlayerDetailModel player in createTeamController.arList)
                                   {
                                     if(player.selected!)
                                     {
@@ -283,7 +283,7 @@ class _ARPageState extends State<ARPage> {
                                       }
                                     }
                                   }
-                                  for(PlayerDetailModel player in createTeamController.BowlList)
+                                  for(PlayerDetailModel player in createTeamController.bowlList)
                                   {
                                     if(player.selected!)
                                     {
@@ -304,32 +304,32 @@ class _ARPageState extends State<ARPage> {
                               }
                             else
                             {
-                              print("====== ${createTeamController.ARList[index].selected! ? false : true}");
-                              for(int i=0; i<createTeamController.ARList.length; i++)
+                              print("====== ${createTeamController.arList[index].selected! ? false : true}");
+                              for(int i=0; i<createTeamController.arList.length; i++)
                               {
                                 if(i==index)
                                 {
-                                  if(createTeamController.ARList[i].selected!)
+                                  if(createTeamController.arList[i].selected!)
                                   {
                                     createTeamController.count['AR'] = createTeamController.count['AR']! - 1;
                                   }
                                 }
                               }
-                              createTeamController.ARList[index] = PlayerDetailModel(
-                                credit: createTeamController.ARList[index].credit,
-                                selBy: createTeamController.ARList[index].selBy,
-                                avgPts: createTeamController.ARList[index].avgPts,
-                                imageUrl: createTeamController.ARList[index].imageUrl,
+                              createTeamController.arList[index] = PlayerDetailModel(
+                                credit: createTeamController.arList[index].credit,
+                                selBy: createTeamController.arList[index].selBy,
+                                avgPts: createTeamController.arList[index].avgPts,
+                                imageUrl: createTeamController.arList[index].imageUrl,
                                 selected: false,
-                                teamName: createTeamController.ARList[index].teamName,
-                                name: createTeamController.ARList[index].name,
+                                teamName: createTeamController.arList[index].teamName,
+                                name: createTeamController.arList[index].name,
                               );
                               createTeamController.PlayerCount.value=0;
                               createTeamController.ARPCount.value = 0;
                               createTeamController.RCBPCount.value = 0;
                               createTeamController.CSKPCount.value = 0;
                               createTeamController.CreditLeftCount.value = 100;
-                              for(PlayerDetailModel player in createTeamController.WKList)
+                              for(PlayerDetailModel player in createTeamController.wkList)
                               {
                                 if(player.selected!)
                                 {
@@ -345,7 +345,7 @@ class _ARPageState extends State<ARPage> {
                                   }
                                 }
                               }
-                              for(PlayerDetailModel player in createTeamController.BatList)
+                              for(PlayerDetailModel player in createTeamController.batList)
                               {
                                 if(player.selected!)
                                 {
@@ -361,7 +361,7 @@ class _ARPageState extends State<ARPage> {
                                   }
                                 }
                               }
-                              for(PlayerDetailModel player in createTeamController.ARList)
+                              for(PlayerDetailModel player in createTeamController.arList)
                               {
                                 if(player.selected!)
                                 {
@@ -378,7 +378,7 @@ class _ARPageState extends State<ARPage> {
                                   }
                                 }
                               }
-                              for(PlayerDetailModel player in createTeamController.BowlList)
+                              for(PlayerDetailModel player in createTeamController.bowlList)
                               {
                                 if(player.selected!)
                                 {
@@ -412,7 +412,7 @@ class _ARPageState extends State<ARPage> {
                                     fadeInDuration: const Duration(seconds: 0),
                                     fit: BoxFit.fill,
                                     imageUrl:
-                                    "${(createTeamController.ARList[index].imageUrl != null && createTeamController.ARList[index].imageUrl!.isNotEmpty) ? createTeamController.ARList[index].imageUrl : "https://st4.depositphotos.com/9998432/23359/v/600/depositphotos_233595744-stock-illustration-person-gray-photo-placeholder-man.jpg"}",
+                                    "${(createTeamController.arList[index].imageUrl != null && createTeamController.arList[index].imageUrl!.isNotEmpty) ? createTeamController.arList[index].imageUrl : "https://st4.depositphotos.com/9998432/23359/v/600/depositphotos_233595744-stock-illustration-person-gray-photo-placeholder-man.jpg"}",
                                     progressIndicatorBuilder: (context, url, downloadProgress) => Container(),
                                     errorWidget: (context, url, error) => const Icon(Icons.error),
                                   ),
@@ -433,7 +433,7 @@ class _ARPageState extends State<ARPage> {
                                     SizedBox(
                                       width: Get.width / 3.9,
                                       child: Text(
-                                        "${createTeamController.ARList[index].name}",
+                                        "${createTeamController.arList[index].name}",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                         style: const TextStyle(
@@ -444,7 +444,7 @@ class _ARPageState extends State<ARPage> {
                                       ),
                                     ),
                                     Text(
-                                      "${createTeamController.ARList[index].teamName}",
+                                      "${createTeamController.arList[index].teamName}",
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
                                       style: const TextStyle(
@@ -458,7 +458,7 @@ class _ARPageState extends State<ARPage> {
                               SizedBox(width: Get.width / 50,),
                               Expanded(
                                 child: Text(
-                                  "${createTeamController.ARList[index].avgPts}",
+                                  "${createTeamController.arList[index].avgPts}",
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: const TextStyle(
@@ -471,7 +471,7 @@ class _ARPageState extends State<ARPage> {
                               Expanded(
                                 flex: 1,
                                 child: Text(
-                                  "${createTeamController.ARList[index].selBy}",
+                                  "${createTeamController.arList[index].selBy}",
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
@@ -484,7 +484,7 @@ class _ARPageState extends State<ARPage> {
                               Row(
                                 children: [
                                   Text(
-                                    "${createTeamController.ARList[index].credit}",
+                                    "${createTeamController.arList[index].credit}",
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: const TextStyle(
@@ -499,10 +499,10 @@ class _ARPageState extends State<ARPage> {
                                     width: Get.width / 18,
                                     decoration: BoxDecoration(
                                         shape: BoxShape.circle,
-                                        color: createTeamController.ARList[index].selected! ? Colors.red : Colors.green
+                                        color: createTeamController.arList[index].selected! ? Colors.red : Colors.green
                                     ),
                                     alignment: Alignment.center,
-                                    child: Icon(createTeamController.ARList[index].selected! ? Icons.remove : Icons.add,color: Colors.white,size: Get.width / 20,),
+                                    child: Icon(createTeamController.arList[index].selected! ? Icons.remove : Icons.add,color: Colors.white,size: Get.width / 20,),
                                   )
                                 ],
                               )

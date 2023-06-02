@@ -18,7 +18,7 @@ class _WKPageState extends State<WKPage> {
   void initState() {
     super.initState();
 
-    createTeamController.WKList.sort(
+    createTeamController.wkList.sort(
       (a, b) {
         return b.credit!.compareTo(a.credit!);
       },
@@ -93,11 +93,11 @@ class _WKPageState extends State<WKPage> {
           Expanded(
             child: Obx(
               () => ListView.builder(
-                itemCount: createTeamController.WKList.length,
+                itemCount: createTeamController.wkList.length,
                 itemBuilder: (context, index) {
                   return Container(
                     //F5F3F6
-                    color: createTeamController.WKList[index].selected!
+                    color: createTeamController.wkList[index].selected!
                         ? const Color(0xFFFFF3DC)
                         : Colors.white,
                     padding: EdgeInsets.only(left: Get.width/40, right:  Get.width/40, top: 15),
@@ -111,28 +111,28 @@ class _WKPageState extends State<WKPage> {
                                 if(createTeamController.count['WK']! < 4)
                                 {
                                   print(
-                                      "====== ${createTeamController.WKList[index].selected! ? false : true}");
-                                  createTeamController.WKList[index] =
+                                      "====== ${createTeamController.wkList[index].selected! ? false : true}");
+                                  createTeamController.wkList[index] =
                                       PlayerDetailModel(
-                                        credit: createTeamController.WKList[index].credit,
-                                        selBy: createTeamController.WKList[index].selBy,
-                                        avgPts: createTeamController.WKList[index].avgPts,
+                                        credit: createTeamController.wkList[index].credit,
+                                        selBy: createTeamController.wkList[index].selBy,
+                                        avgPts: createTeamController.wkList[index].avgPts,
                                         imageUrl:
-                                        createTeamController.WKList[index].imageUrl,
+                                        createTeamController.wkList[index].imageUrl,
                                         selected:
-                                        createTeamController.WKList[index].selected!
+                                        createTeamController.wkList[index].selected!
                                             ? false
                                             : true,
                                         teamName:
-                                        createTeamController.WKList[index].teamName,
-                                        name: createTeamController.WKList[index].name,
+                                        createTeamController.wkList[index].teamName,
+                                        name: createTeamController.wkList[index].name,
                                       );
                                   createTeamController.PlayerCount.value = 0;
                                   createTeamController.WKPCount.value = 0;
                                   createTeamController.RCBPCount.value = 0;
                                   createTeamController.CSKPCount.value = 0;
                                   createTeamController.CreditLeftCount.value = 100;
-                                  for (PlayerDetailModel player in createTeamController.WKList) {
+                                  for (PlayerDetailModel player in createTeamController.wkList) {
                                     if (player.selected!) {
                                       createTeamController.PlayerCount.value++;
                                       createTeamController.WKPCount.value++;
@@ -148,7 +148,7 @@ class _WKPageState extends State<WKPage> {
                                     }
                                   }
                                   for (PlayerDetailModel player
-                                  in createTeamController.BatList) {
+                                  in createTeamController.batList) {
                                     if (player.selected!) {
                                       createTeamController.PlayerCount.value++;
                                       createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
@@ -163,7 +163,7 @@ class _WKPageState extends State<WKPage> {
                                     }
                                   }
                                   for (PlayerDetailModel player
-                                  in createTeamController.ARList) {
+                                  in createTeamController.arList) {
                                     if (player.selected!) {
                                       createTeamController.PlayerCount.value++;
                                       createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
@@ -178,7 +178,7 @@ class _WKPageState extends State<WKPage> {
                                     }
                                   }
                                   for (PlayerDetailModel player
-                                  in createTeamController.BowlList) {
+                                  in createTeamController.bowlList) {
                                     if (player.selected!) {
                                       createTeamController.PlayerCount.value++;
                                       createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
@@ -192,13 +192,13 @@ class _WKPageState extends State<WKPage> {
                                       }
                                     }
                                   }
-                                  for(int i=0; i<createTeamController.WKList.length; i++)
+                                  for(int i=0; i<createTeamController.wkList.length; i++)
                                   {
                                     if(i==index)
                                     {
                                       print(""
-                                          "+++===== ${createTeamController.WKList[index].selected!}");
-                                      if(createTeamController.WKList[i].selected!)
+                                          "+++===== ${createTeamController.wkList[index].selected!}");
+                                      if(createTeamController.wkList[i].selected!)
                                       {
                                         createTeamController.count['WK'] = createTeamController.count['WK']! + 1;
                                       }
@@ -212,37 +212,37 @@ class _WKPageState extends State<WKPage> {
                                 }
                                 else
                                 {
-                                  print("----======${createTeamController.WKList[index].selected!} ${createTeamController.WKList[index].selected! ? false : true}");
-                                  for(int i=0; i<createTeamController.WKList.length; i++)
+                                  print("----======${createTeamController.wkList[index].selected!} ${createTeamController.wkList[index].selected! ? false : true}");
+                                  for(int i=0; i<createTeamController.wkList.length; i++)
                                   {
                                     if(i==index)
                                     {
                                       print(""
-                                          "+++===== ${createTeamController.WKList[index].selected!}");
-                                      if(createTeamController.WKList[i].selected!)
+                                          "+++===== ${createTeamController.wkList[index].selected!}");
+                                      if(createTeamController.wkList[i].selected!)
                                       {
                                         createTeamController.count['WK'] = createTeamController.count['WK']! - 1;
                                       }
                                     }
                                   }
-                                  createTeamController.WKList[index] =
+                                  createTeamController.wkList[index] =
                                       PlayerDetailModel(
-                                        credit: createTeamController.WKList[index].credit,
-                                        selBy: createTeamController.WKList[index].selBy,
-                                        avgPts: createTeamController.WKList[index].avgPts,
+                                        credit: createTeamController.wkList[index].credit,
+                                        selBy: createTeamController.wkList[index].selBy,
+                                        avgPts: createTeamController.wkList[index].avgPts,
                                         imageUrl:
-                                        createTeamController.WKList[index].imageUrl,
+                                        createTeamController.wkList[index].imageUrl,
                                         selected: false,
                                         teamName:
-                                        createTeamController.WKList[index].teamName,
-                                        name: createTeamController.WKList[index].name,
+                                        createTeamController.wkList[index].teamName,
+                                        name: createTeamController.wkList[index].name,
                                       );
                                   createTeamController.PlayerCount.value = 0;
                                   createTeamController.WKPCount.value = 0;
                                   createTeamController.RCBPCount.value = 0;
                                   createTeamController.CSKPCount.value = 0;
                                   createTeamController.CreditLeftCount.value = 100;
-                                  for (PlayerDetailModel player in createTeamController.WKList) {
+                                  for (PlayerDetailModel player in createTeamController.wkList) {
                                     if (player.selected!) {
                                       createTeamController.PlayerCount.value++;
                                       createTeamController.WKPCount.value ++;
@@ -257,7 +257,7 @@ class _WKPageState extends State<WKPage> {
                                       }
                                     }
                                   }
-                                  for (PlayerDetailModel player in createTeamController.BatList) {
+                                  for (PlayerDetailModel player in createTeamController.batList) {
                                     if (player.selected!) {
                                       createTeamController.PlayerCount.value++;
                                       createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
@@ -271,7 +271,7 @@ class _WKPageState extends State<WKPage> {
                                       }
                                     }
                                   }
-                                  for (PlayerDetailModel player in createTeamController.ARList) {
+                                  for (PlayerDetailModel player in createTeamController.arList) {
                                     if (player.selected!) {
                                       createTeamController.PlayerCount.value++;
                                       createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
@@ -285,7 +285,7 @@ class _WKPageState extends State<WKPage> {
                                       }
                                     }
                                   }
-                                  for (PlayerDetailModel player in createTeamController.BowlList) {
+                                  for (PlayerDetailModel player in createTeamController.bowlList) {
                                     if (player.selected!) {
                                       createTeamController.PlayerCount.value++;
                                       createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
@@ -304,37 +304,37 @@ class _WKPageState extends State<WKPage> {
                               }
                             else
                             {
-                              print("EEE----======${createTeamController.PlayerCount} ${createTeamController.WKList[index].selected!} ${createTeamController.WKList[index].selected! ? false : true}");
-                              for(int i=0; i<createTeamController.WKList.length; i++)
+                              print("EEE----======${createTeamController.PlayerCount} ${createTeamController.wkList[index].selected!} ${createTeamController.wkList[index].selected! ? false : true}");
+                              for(int i=0; i<createTeamController.wkList.length; i++)
                               {
                                 if(i==index)
                                 {
                                   print(""
-                                      "EEE+++===== ${createTeamController.WKList[index].selected!}");
-                                  if(createTeamController.WKList[i].selected!)
+                                      "EEE+++===== ${createTeamController.wkList[index].selected!}");
+                                  if(createTeamController.wkList[i].selected!)
                                   {
                                     createTeamController.count['WK'] = createTeamController.count['WK']! - 1;
                                   }
                                 }
                               }
-                              createTeamController.WKList[index] =
+                              createTeamController.wkList[index] =
                                   PlayerDetailModel(
-                                    credit: createTeamController.WKList[index].credit,
-                                    selBy: createTeamController.WKList[index].selBy,
-                                    avgPts: createTeamController.WKList[index].avgPts,
+                                    credit: createTeamController.wkList[index].credit,
+                                    selBy: createTeamController.wkList[index].selBy,
+                                    avgPts: createTeamController.wkList[index].avgPts,
                                     imageUrl:
-                                    createTeamController.WKList[index].imageUrl,
+                                    createTeamController.wkList[index].imageUrl,
                                     selected: false,
                                     teamName:
-                                    createTeamController.WKList[index].teamName,
-                                    name: createTeamController.WKList[index].name,
+                                    createTeamController.wkList[index].teamName,
+                                    name: createTeamController.wkList[index].name,
                                   );
                               createTeamController.PlayerCount.value = 0;
                               createTeamController.WKPCount.value = 0;
                               createTeamController.RCBPCount.value = 0;
                               createTeamController.CSKPCount.value = 0;
                               createTeamController.CreditLeftCount.value = 100;
-                              for (PlayerDetailModel player in createTeamController.WKList) {
+                              for (PlayerDetailModel player in createTeamController.wkList) {
                                 if (player.selected!) {
                                   createTeamController.PlayerCount.value++;
                                   createTeamController.WKPCount.value ++;
@@ -349,7 +349,7 @@ class _WKPageState extends State<WKPage> {
                                   }
                                 }
                               }
-                              for (PlayerDetailModel player in createTeamController.BatList) {
+                              for (PlayerDetailModel player in createTeamController.batList) {
                                 if (player.selected!) {
                                   createTeamController.PlayerCount.value++;
                                   createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
@@ -363,7 +363,7 @@ class _WKPageState extends State<WKPage> {
                                   }
                                 }
                               }
-                              for (PlayerDetailModel player in createTeamController.ARList) {
+                              for (PlayerDetailModel player in createTeamController.arList) {
                                 if (player.selected!) {
                                   createTeamController.PlayerCount.value++;
                                   createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
@@ -377,7 +377,7 @@ class _WKPageState extends State<WKPage> {
                                   }
                                 }
                               }
-                              for (PlayerDetailModel player in createTeamController.BowlList) {
+                              for (PlayerDetailModel player in createTeamController.bowlList) {
                                 if (player.selected!) {
                                   createTeamController.PlayerCount.value++;
                                   createTeamController.CreditLeftCount.value = createTeamController.CreditLeftCount.value - player.credit!;
@@ -409,7 +409,7 @@ class _WKPageState extends State<WKPage> {
                                     fadeInDuration: const Duration(seconds: 0),
                                     fit: BoxFit.fill,
                                     imageUrl:
-                                    "${(createTeamController.WKList[index].imageUrl != null && createTeamController.WKList[index].imageUrl!.isNotEmpty) ? createTeamController.WKList[index].imageUrl : "https://st4.depositphotos.com/9998432/23359/v/600/depositphotos_233595744-stock-illustration-person-gray-photo-placeholder-man.jpg"}",
+                                    "${(createTeamController.wkList[index].imageUrl != null && createTeamController.wkList[index].imageUrl!.isNotEmpty) ? createTeamController.wkList[index].imageUrl : "https://st4.depositphotos.com/9998432/23359/v/600/depositphotos_233595744-stock-illustration-person-gray-photo-placeholder-man.jpg"}",
                                     progressIndicatorBuilder: (context, url, downloadProgress) => Container(),
                                     errorWidget: (context, url, error) => const Icon(Icons.error),
                                   ),
@@ -431,7 +431,7 @@ class _WKPageState extends State<WKPage> {
                                     SizedBox(
                                       width: Get.width / 3.9,
                                       child: Text(
-                                        "${createTeamController.WKList[index].name}",
+                                        "${createTeamController.wkList[index].name}",
                                         maxLines: 1,
                                         style: const TextStyle(
                                             overflow: TextOverflow.ellipsis,
@@ -441,7 +441,7 @@ class _WKPageState extends State<WKPage> {
                                       ),
                                     ),
                                     Text(
-                                      "${createTeamController.WKList[index].teamName}",
+                                      "${createTeamController.wkList[index].teamName}",
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
                                       style: const TextStyle(
@@ -453,7 +453,7 @@ class _WKPageState extends State<WKPage> {
                               SizedBox(width: Get.width / 50,),
                               Expanded(
                                 child: Text(
-                                  "${createTeamController.WKList[index].avgPts}",
+                                  "${createTeamController.wkList[index].avgPts}",
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: const TextStyle(
@@ -465,7 +465,7 @@ class _WKPageState extends State<WKPage> {
                               Expanded(
                                 flex: 1,
                                 child: Text(
-                                  "${createTeamController.WKList[index].selBy}",
+                                  "${createTeamController.wkList[index].selBy}",
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
@@ -477,7 +477,7 @@ class _WKPageState extends State<WKPage> {
                               Row(
                                 children: [
                                   Text(
-                                    "${createTeamController.WKList[index].credit}",
+                                    "${createTeamController.wkList[index].credit}",
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: const TextStyle(
@@ -492,13 +492,13 @@ class _WKPageState extends State<WKPage> {
                                     decoration: BoxDecoration(
                                         shape: BoxShape.circle,
                                         color: createTeamController
-                                                .WKList[index].selected!
+                                                .wkList[index].selected!
                                             ? Colors.red
                                             : Colors.green),
                                     alignment: Alignment.center,
                                     child: Icon(
                                       createTeamController
-                                              .WKList[index].selected!
+                                              .wkList[index].selected!
                                           ? Icons.remove
                                           : Icons.add,
                                       color: Colors.white,

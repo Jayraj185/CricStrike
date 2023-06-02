@@ -19,7 +19,7 @@ class _BowlPageState extends State<BowlPage> {
   void initState() {
     super.initState();
 
-    createTeamController.BowlList.sort((a, b) {
+    createTeamController.bowlList.sort((a, b) {
       return b.credit!.compareTo(a.credit!);
     },);
   }
@@ -98,10 +98,10 @@ class _BowlPageState extends State<BowlPage> {
           Expanded(
             child: Obx(
               () => ListView.builder(
-                itemCount: createTeamController.BowlList.length,
+                itemCount: createTeamController.bowlList.length,
                 itemBuilder: (context, index) {
                   return Container(
-                    color: createTeamController.BowlList[index].selected! ? const Color(0xFFFFF3DC) : Colors.white,
+                    color: createTeamController.bowlList[index].selected! ? const Color(0xFFFFF3DC) : Colors.white,
                     padding: EdgeInsets.only(left: Get.width/40, right:  Get.width/40, top: 15),
                     child: Column(
                       children: [
@@ -111,22 +111,22 @@ class _BowlPageState extends State<BowlPage> {
                               {
                                 if(createTeamController.count['BOWL']! < 4)
                                 {
-                                  print("====== ${createTeamController.BowlList[index].selected! ? false : true}");
-                                  createTeamController.BowlList[index] = PlayerDetailModel(
-                                    credit: createTeamController.BowlList[index].credit,
-                                    selBy: createTeamController.BowlList[index].selBy,
-                                    avgPts: createTeamController.BowlList[index].avgPts,
-                                    imageUrl: createTeamController.BowlList[index].imageUrl,
-                                    selected: createTeamController.BowlList[index].selected! ? false : true,
-                                    teamName: createTeamController.BowlList[index].teamName,
-                                    name: createTeamController.BowlList[index].name,
+                                  print("====== ${createTeamController.bowlList[index].selected! ? false : true}");
+                                  createTeamController.bowlList[index] = PlayerDetailModel(
+                                    credit: createTeamController.bowlList[index].credit,
+                                    selBy: createTeamController.bowlList[index].selBy,
+                                    avgPts: createTeamController.bowlList[index].avgPts,
+                                    imageUrl: createTeamController.bowlList[index].imageUrl,
+                                    selected: createTeamController.bowlList[index].selected! ? false : true,
+                                    teamName: createTeamController.bowlList[index].teamName,
+                                    name: createTeamController.bowlList[index].name,
                                   );
                                   createTeamController.PlayerCount.value=0;
                                   createTeamController.BOWLPCount.value = 0;
                                   createTeamController.RCBPCount.value = 0;
                                   createTeamController.CSKPCount.value = 0;
                                   createTeamController.CreditLeftCount.value = 100;
-                                  for(PlayerDetailModel player in createTeamController.WKList)
+                                  for(PlayerDetailModel player in createTeamController.wkList)
                                   {
                                     if(player.selected!)
                                     {
@@ -142,7 +142,7 @@ class _BowlPageState extends State<BowlPage> {
                                       }
                                     }
                                   }
-                                  for(PlayerDetailModel player in createTeamController.BatList)
+                                  for(PlayerDetailModel player in createTeamController.batList)
                                   {
                                     if(player.selected!)
                                     {
@@ -158,7 +158,7 @@ class _BowlPageState extends State<BowlPage> {
                                       }
                                     }
                                   }
-                                  for(PlayerDetailModel player in createTeamController.ARList)
+                                  for(PlayerDetailModel player in createTeamController.arList)
                                   {
                                     if(player.selected!)
                                     {
@@ -174,7 +174,7 @@ class _BowlPageState extends State<BowlPage> {
                                       }
                                     }
                                   }
-                                  for(PlayerDetailModel player in createTeamController.BowlList)
+                                  for(PlayerDetailModel player in createTeamController.bowlList)
                                   {
                                     if(player.selected!)
                                     {
@@ -191,11 +191,11 @@ class _BowlPageState extends State<BowlPage> {
                                       }
                                     }
                                   }
-                                  for(int i=0; i<createTeamController.BowlList.length; i++)
+                                  for(int i=0; i<createTeamController.bowlList.length; i++)
                                   {
                                     if(i==index)
                                     {
-                                      if(createTeamController.BowlList[i].selected!)
+                                      if(createTeamController.bowlList[i].selected!)
                                       {
                                         createTeamController.count['BOWL'] = createTeamController.count['BOWL']! + 1;
                                       }
@@ -209,32 +209,32 @@ class _BowlPageState extends State<BowlPage> {
                                 }
                                 else
                                 {
-                                  print("====== ${createTeamController.BowlList[index].selected! ? false : true}");
-                                  for(int i=0; i<createTeamController.BowlList.length; i++)
+                                  print("====== ${createTeamController.bowlList[index].selected! ? false : true}");
+                                  for(int i=0; i<createTeamController.bowlList.length; i++)
                                   {
                                     if(i==index)
                                     {
-                                      if(createTeamController.BowlList[i].selected!)
+                                      if(createTeamController.bowlList[i].selected!)
                                       {
                                         createTeamController.count['BOWL'] = createTeamController.count['BOWL']! - 1;
                                       }
                                     }
                                   }
-                                  createTeamController.BowlList[index] = PlayerDetailModel(
-                                    credit: createTeamController.BowlList[index].credit,
-                                    selBy: createTeamController.BowlList[index].selBy,
-                                    avgPts: createTeamController.BowlList[index].avgPts,
-                                    imageUrl: createTeamController.BowlList[index].imageUrl,
+                                  createTeamController.bowlList[index] = PlayerDetailModel(
+                                    credit: createTeamController.bowlList[index].credit,
+                                    selBy: createTeamController.bowlList[index].selBy,
+                                    avgPts: createTeamController.bowlList[index].avgPts,
+                                    imageUrl: createTeamController.bowlList[index].imageUrl,
                                     selected: false,
-                                    teamName: createTeamController.BowlList[index].teamName,
-                                    name: createTeamController.BowlList[index].name,
+                                    teamName: createTeamController.bowlList[index].teamName,
+                                    name: createTeamController.bowlList[index].name,
                                   );
                                   createTeamController.PlayerCount.value=0;
                                   createTeamController.BOWLPCount.value = 0;
                                   createTeamController.RCBPCount.value = 0;
                                   createTeamController.CSKPCount.value = 0;
                                   createTeamController.CreditLeftCount.value = 100;
-                                  for(PlayerDetailModel player in createTeamController.WKList)
+                                  for(PlayerDetailModel player in createTeamController.wkList)
                                   {
                                     if(player.selected!)
                                     {
@@ -250,7 +250,7 @@ class _BowlPageState extends State<BowlPage> {
                                       }
                                     }
                                   }
-                                  for(PlayerDetailModel player in createTeamController.BatList)
+                                  for(PlayerDetailModel player in createTeamController.batList)
                                   {
                                     if(player.selected!)
                                     {
@@ -266,7 +266,7 @@ class _BowlPageState extends State<BowlPage> {
                                       }
                                     }
                                   }
-                                  for(PlayerDetailModel player in createTeamController.ARList)
+                                  for(PlayerDetailModel player in createTeamController.arList)
                                   {
                                     if(player.selected!)
                                     {
@@ -282,7 +282,7 @@ class _BowlPageState extends State<BowlPage> {
                                       }
                                     }
                                   }
-                                  for(PlayerDetailModel player in createTeamController.BowlList)
+                                  for(PlayerDetailModel player in createTeamController.bowlList)
                                   {
                                     if(player.selected!)
                                     {
@@ -304,32 +304,32 @@ class _BowlPageState extends State<BowlPage> {
                               }
                             else
                             {
-                              print("====== ${createTeamController.BowlList[index].selected! ? false : true}");
-                              for(int i=0; i<createTeamController.BowlList.length; i++)
+                              print("====== ${createTeamController.bowlList[index].selected! ? false : true}");
+                              for(int i=0; i<createTeamController.bowlList.length; i++)
                               {
                                 if(i==index)
                                 {
-                                  if(createTeamController.BowlList[i].selected!)
+                                  if(createTeamController.bowlList[i].selected!)
                                   {
                                     createTeamController.count['BOWL'] = createTeamController.count['BOWL']! - 1;
                                   }
                                 }
                               }
-                              createTeamController.BowlList[index] = PlayerDetailModel(
-                                credit: createTeamController.BowlList[index].credit,
-                                selBy: createTeamController.BowlList[index].selBy,
-                                avgPts: createTeamController.BowlList[index].avgPts,
-                                imageUrl: createTeamController.BowlList[index].imageUrl,
+                              createTeamController.bowlList[index] = PlayerDetailModel(
+                                credit: createTeamController.bowlList[index].credit,
+                                selBy: createTeamController.bowlList[index].selBy,
+                                avgPts: createTeamController.bowlList[index].avgPts,
+                                imageUrl: createTeamController.bowlList[index].imageUrl,
                                 selected: false,
-                                teamName: createTeamController.BowlList[index].teamName,
-                                name: createTeamController.BowlList[index].name,
+                                teamName: createTeamController.bowlList[index].teamName,
+                                name: createTeamController.bowlList[index].name,
                               );
                               createTeamController.PlayerCount.value=0;
                               createTeamController.BOWLPCount.value = 0;
                               createTeamController.RCBPCount.value = 0;
                               createTeamController.CSKPCount.value = 0;
                               createTeamController.CreditLeftCount.value = 100;
-                              for(PlayerDetailModel player in createTeamController.WKList)
+                              for(PlayerDetailModel player in createTeamController.wkList)
                               {
                                 if(player.selected!)
                                 {
@@ -345,7 +345,7 @@ class _BowlPageState extends State<BowlPage> {
                                   }
                                 }
                               }
-                              for(PlayerDetailModel player in createTeamController.BatList)
+                              for(PlayerDetailModel player in createTeamController.batList)
                               {
                                 if(player.selected!)
                                 {
@@ -361,7 +361,7 @@ class _BowlPageState extends State<BowlPage> {
                                   }
                                 }
                               }
-                              for(PlayerDetailModel player in createTeamController.ARList)
+                              for(PlayerDetailModel player in createTeamController.arList)
                               {
                                 if(player.selected!)
                                 {
@@ -377,7 +377,7 @@ class _BowlPageState extends State<BowlPage> {
                                   }
                                 }
                               }
-                              for(PlayerDetailModel player in createTeamController.BowlList)
+                              for(PlayerDetailModel player in createTeamController.bowlList)
                               {
                                 if(player.selected!)
                                 {
@@ -413,7 +413,7 @@ class _BowlPageState extends State<BowlPage> {
                                     fadeInDuration: const Duration(seconds: 0),
                                     fit: BoxFit.fill,
                                     imageUrl:
-                                    "${(createTeamController.BowlList[index].imageUrl != null && createTeamController.BowlList[index].imageUrl!.isNotEmpty) ? createTeamController.BowlList[index].imageUrl : "https://st4.depositphotos.com/9998432/23359/v/600/depositphotos_233595744-stock-illustration-person-gray-photo-placeholder-man.jpg"}",
+                                    "${(createTeamController.bowlList[index].imageUrl != null && createTeamController.bowlList[index].imageUrl!.isNotEmpty) ? createTeamController.bowlList[index].imageUrl : "https://st4.depositphotos.com/9998432/23359/v/600/depositphotos_233595744-stock-illustration-person-gray-photo-placeholder-man.jpg"}",
                                     progressIndicatorBuilder: (context, url, downloadProgress) => Container(),
                                     errorWidget: (context, url, error) => const Icon(Icons.error),
                                   ),
@@ -434,7 +434,7 @@ class _BowlPageState extends State<BowlPage> {
                                     SizedBox(
                                       width: Get.width / 3.9,
                                       child: Text(
-                                        "${createTeamController.BowlList[index].name}",
+                                        "${createTeamController.bowlList[index].name}",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                         style: const TextStyle(
@@ -445,7 +445,7 @@ class _BowlPageState extends State<BowlPage> {
                                       ),
                                     ),
                                     Text(
-                                      "${createTeamController.BowlList[index].teamName}",
+                                      "${createTeamController.bowlList[index].teamName}",
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
                                       style: const TextStyle(
@@ -459,7 +459,7 @@ class _BowlPageState extends State<BowlPage> {
                               SizedBox(width: Get.width / 50,),
                               Expanded(
                                 child: Text(
-                                  "${createTeamController.BowlList[index].avgPts}",
+                                  "${createTeamController.bowlList[index].avgPts}",
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: const TextStyle(
@@ -472,7 +472,7 @@ class _BowlPageState extends State<BowlPage> {
                               Expanded(
                                 flex: 1,
                                 child: Text(
-                                  "${createTeamController.BowlList[index].selBy}",
+                                  "${createTeamController.bowlList[index].selBy}",
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
@@ -485,7 +485,7 @@ class _BowlPageState extends State<BowlPage> {
                               Row(
                                 children: [
                                   Text(
-                                    "${createTeamController.BowlList[index].credit}",
+                                    "${createTeamController.bowlList[index].credit}",
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: const TextStyle(
@@ -500,10 +500,10 @@ class _BowlPageState extends State<BowlPage> {
                                     width: Get.width / 18,
                                     decoration: BoxDecoration(
                                         shape: BoxShape.circle,
-                                        color: createTeamController.BowlList[index].selected! ? Colors.red : Colors.green
+                                        color: createTeamController.bowlList[index].selected! ? Colors.red : Colors.green
                                     ),
                                     alignment: Alignment.center,
-                                    child: Icon(createTeamController.BowlList[index].selected! ? Icons.remove : Icons.add,color: Colors.white,size: Get.width / 20,),
+                                    child: Icon(createTeamController.bowlList[index].selected! ? Icons.remove : Icons.add,color: Colors.white,size: Get.width / 20,),
                                   )
                                 ],
                               )

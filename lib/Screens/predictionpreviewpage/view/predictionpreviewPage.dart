@@ -53,13 +53,13 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             "Players",
                             style:
                                 TextStyle(color: Colors.white70, fontSize: 12),
                           ),
-                          const Text.rich(TextSpan(children: [
+                          Text.rich(TextSpan(children: [
                             TextSpan(
                               text: "11",
                               style: TextStyle(
@@ -257,21 +257,18 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Align(
-                          alignment: Alignment.center,
-                          child: Padding(
-                            padding: EdgeInsets.only(top: 15),
-                            child: Text(
-                              "KEEPER",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w500),
-                            ),
+                        const Padding(
+                          padding: EdgeInsets.only(top: 15),
+                          child: Text(
+                            "KEEPER",textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w500),
                           ),
                         ),
-                        Container(
-                          height: 100,
+                        SizedBox(
+                          height: Get.height/8,
                           child: ListView.builder(
                             physics: const NeverScrollableScrollPhysics(),
                             itemBuilder: (context, index) => Container(
@@ -281,17 +278,16 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                       (keeper.length == 2
                                           ? 4
                                           : keeper.length == 3
-                                              ? 6
-                                              : keeper.length == 4
-                                                  ? 11
-                                                  : keeper.length == 5
-                                                      ? 22
-                                                      : 4)),
+                                          ? 6
+                                          : keeper.length == 4
+                                          ? 12
+                                          : keeper.length == 5
+                                          ? 50
+                                          : 4)),
                               child: Column(
                                 children: [
                                   SizedBox(
-                                    height: 70,
-
+                                    height: Get.height/12,
                                     // color: Colors.red,
                                     child: Stack(
                                       alignment: Alignment.center,
@@ -311,9 +307,9 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                                 (context, url, error) => Row(
                                               mainAxisAlignment:
                                                   MainAxisAlignment.center,
-                                              children: [
-                                                const Icon(Icons.error),
-                                                const Text(" Image Not available")
+                                              children: const [
+                                                Icon(Icons.error),
+                                                Text(" Image Not available")
                                               ],
                                             ),
                                           ),
@@ -368,18 +364,16 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                             scrollDirection: Axis.horizontal,
                           ),
                         ),
-                        const Align(
-                          alignment: Alignment.center,
-                          child: Text(
-                            "BATTER",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500),
-                          ),
+                        const Text(
+                          "BATTER",textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500),
                         ),
-                        Container(
-                          height: 100,
+                        SizedBox(
+                        height: Get.height/8,
+
                           child: ListView.builder(
                             physics: const NeverScrollableScrollPhysics(),
                             itemBuilder: (context, index) => Container(
@@ -393,12 +387,12 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                               : batsman.length == 4
                                                   ? 12
                                                   : batsman.length == 5
-                                                      ? 22
+                                                      ? 50
                                                       : 4)),
                               child: Column(
                                 children: [
                                   SizedBox(
-                                    height: 70,
+                                    height: Get.height/12,
 
                                     // color: Colors.red,
                                     child: Stack(
@@ -419,9 +413,9 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                             (context, url, error) => Row(
                                           mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                          children: [
-                                            const Icon(Icons.error),
-                                            const Text(" Image Not available")
+                                          children: const [
+                                            Icon(Icons.error),
+                                            Text(" Image Not available")
                                           ],
                                         ),
                                       ),),
@@ -476,18 +470,15 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                             scrollDirection: Axis.horizontal,
                           ),
                         ),
-                        const Align(
-                          alignment: Alignment.center,
-                          child: Text(
-                            "ALL ROUNDERS",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500),
-                          ),
+                        const Text(
+                          "ALL ROUNDERS",textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500),
                         ),
-                        Container(
-                          height: 100,
+                        SizedBox(
+                          height: Get.height/8,
                           child: ListView.builder(
                             physics: const NeverScrollableScrollPhysics(),
                             itemBuilder: (context, index) => Container(
@@ -501,12 +492,12 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                               : allrounder.length == 4
                                                   ? 12
                                                   : allrounder.length == 5
-                                                      ? 22
+                                                      ? 50
                                                       : 4)),
                               child: Column(
                                 children: [
                                   SizedBox(
-                                    height: 70,
+                                    height: Get.height/12,
 
                                     // color: Colors.red,
                                     child: Stack(
@@ -527,9 +518,9 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                                 (context, url, error) => Row(
                                               mainAxisAlignment:
                                               MainAxisAlignment.center,
-                                              children: [
-                                                const Icon(Icons.error),
-                                                const Text(" Image Not available")
+                                              children: const [
+                                                Icon(Icons.error),
+                                                Text(" Image Not available")
                                               ],
                                             ),
                                           ),
@@ -595,8 +586,8 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                 fontWeight: FontWeight.w500),
                           ),
                         ),
-                        Container(
-                          height: 100,
+                        SizedBox(
+                          height: Get.height/8,
                           child: ListView.builder(
                             physics: const NeverScrollableScrollPhysics(),
                             itemBuilder: (context, index) => Container(
@@ -610,12 +601,12 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                               : bowler.length == 4
                                                   ? 12
                                                   : bowler.length == 5
-                                                      ? 22
+                                                      ? 50
                                                       : 4)),
                               child: Column(
                                 children: [
                                   Container(
-                                    height: 70,
+                                    height: Get.height/12,
                                     alignment: Alignment.center,
                                     // color: Colors.red,
                                     child: Stack(
@@ -636,9 +627,8 @@ class _PredictionPreviewPageState extends State<PredictionPreviewPage> {
                                                 (context, url, error) => Row(
                                               mainAxisAlignment:
                                               MainAxisAlignment.center,
-                                              children: [
-                                                const Icon(Icons.error),
-                                                const Text(" Image Not available")
+                                              children: const [
+                                                Icon(Icons.error),
                                               ],
                                             ),
                                           ),

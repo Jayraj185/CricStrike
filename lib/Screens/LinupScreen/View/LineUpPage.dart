@@ -17,7 +17,7 @@ class _LineUpPageState extends State<LineUpPage> {
           title: Text.rich(
             TextSpan(
               children: [
-                TextSpan(
+                const TextSpan(
                   text: "Create team 1\n",
                   style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 16),
                 ),
@@ -29,7 +29,7 @@ class _LineUpPageState extends State<LineUpPage> {
             )
           ),
           actions: [
-            IconButton(onPressed: (){}, icon: Icon(Icons.info_outline))
+            IconButton(onPressed: (){}, icon: const Icon(Icons.info_outline))
           ],
         ),
       ),
