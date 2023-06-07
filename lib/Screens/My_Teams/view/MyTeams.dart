@@ -1,3 +1,5 @@
+import 'package:cricstreak/Screens/CreateTeam/controller/CreateTeamController.dart';
+import 'package:cricstreak/Screens/CreateTeam/model/PlayerDetailModel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,20 +12,25 @@ class MyTeamsPage extends StatefulWidget {
 }
 
 class _MyTeamsPageState extends State<MyTeamsPage> {
+  CreateTeamController createTeamController = Get.put(CreateTeamController());
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(height: 15,),
+        const SizedBox(
+          height: 15,
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
               "  Match\nstart in",
               style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 14),
+                color: Colors.white,
+                fontWeight: FontWeight.w400,
+                fontSize: 14,
+              ),
             ),
             const SizedBox(
               width: 15,
@@ -68,7 +75,9 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
             )
           ],
         ),
-        const SizedBox(height: 20,),
+        const SizedBox(
+          height: 20,
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -112,16 +121,18 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
             )
           ],
         ),
-        const SizedBox(height: 20,),
+        const SizedBox(
+          height: 20,
+        ),
         InkWell(
-          onTap: (){
+          onTap: () {
             Get.toNamed('team_Preview');
           },
           child: Container(
             height: 230,
             decoration: BoxDecoration(
-                // color: Colors.red,
-                borderRadius: BorderRadius.circular(9),
+              // color: Colors.red,
+              borderRadius: BorderRadius.circular(9),
             ),
             // alignment: Alignment.topLeft,
             child: Stack(
@@ -198,7 +209,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(right: 12,top: 10,left: 12),
+                  padding: const EdgeInsets.only(right: 12, top: 10, left: 12),
                   child: Column(
                     children: [
                       Row(
@@ -207,31 +218,37 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                           const Text(
                             "Tiget XII(T1)",
                             style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 15
-                            ),
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 15),
                           ),
                           Container(
                             height: 30,
                             width: 100,
                             decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(6)
-                            ),
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(6)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                const Icon(Icons.share,color: Colors.black,size: 15,),
+                                const Icon(
+                                  Icons.share,
+                                  color: Colors.black,
+                                  size: 15,
+                                ),
                                 const Text(
                                   "Share Team",
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 10
-                                  ),
+                                      fontSize: 10),
                                 ),
-                                Image.asset("assets/image/cryptocurrency.png",height: 15,width: 15,fit: BoxFit.fill,)
+                                Image.asset(
+                                  "assets/image/cryptocurrency.png",
+                                  height: 15,
+                                  width: 15,
+                                  fit: BoxFit.fill,
+                                )
                               ],
                             ),
                           )
@@ -240,142 +257,143 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                       Row(
                         children: [
                           Expanded(
-                              child: Container(
-                                // color: Colors.red,
-                                height: 160,
-                                child: Row(
-                                  children: [
-                                    Expanded(
-                                      child: Container(
-                                        height: double.infinity,
-                                        // color: Colors.black87,
-                                        child: Stack(
-                                          children: [
-                                            const Padding(
-                                              padding: EdgeInsets.only(top: 6.0),
-                                              child: Align(
-                                                alignment: Alignment.topCenter,
-                                                child: CircleAvatar(
-                                                  radius: 40,
-                                                  backgroundColor: Colors.white,
-                                                  backgroundImage: NetworkImage("https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/2.png"),
-                                                ),
+                            child: Container(
+                              // color: Colors.red,
+                              height: 160,
+                              child: Row(
+                                children: [
+                                  Expanded(
+                                    child: Container(
+                                      height: double.infinity,
+                                      // color: Colors.black87,
+                                      child: Stack(
+                                        children: [
+                                          const Padding(
+                                            padding: EdgeInsets.only(top: 6.0),
+                                            child: Align(
+                                              alignment: Alignment.topCenter,
+                                              child: CircleAvatar(
+                                                radius: 40,
+                                                backgroundColor: Colors.white,
+                                                backgroundImage: NetworkImage(
+                                                    "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/2.png"),
                                               ),
                                             ),
-                                            Align(
-                                              alignment: Alignment.center,
-                                              child: Container(
-                                                height: 30,
-                                                width: 70,
-                                                margin: const EdgeInsets.only(top: 21),
-                                                decoration: BoxDecoration(
+                                          ),
+                                          Align(
+                                            alignment: Alignment.center,
+                                            child: Container(
+                                              height: 30,
+                                              width: 70,
+                                              margin: const EdgeInsets.only(
+                                                  top: 21),
+                                              decoration: BoxDecoration(
                                                   color: Colors.white,
-                                                  borderRadius: BorderRadius.circular(6)
-                                                ),
-                                                alignment: Alignment.center,
-                                                child: const Text(
-                                                  "V. Kohli",
-                                                  maxLines: 1,
-                                                  overflow: TextOverflow.ellipsis,
-                                                  style: TextStyle(
+                                                  borderRadius:
+                                                      BorderRadius.circular(6)),
+                                              alignment: Alignment.center,
+                                              child: const Text(
+                                                "V. Kohli",
+                                                maxLines: 1,
+                                                overflow: TextOverflow.ellipsis,
+                                                style: TextStyle(
                                                     color: Colors.black,
                                                     fontSize: 15,
-                                                    fontWeight: FontWeight.w500
-                                                  ),
-                                                ),
+                                                    fontWeight:
+                                                        FontWeight.w500),
                                               ),
                                             ),
-                                            Align(
-                                              alignment: Alignment.topRight,
-                                              child: Container(
-                                                height: 21,
-                                                width: 21,
-                                                decoration: const BoxDecoration(
+                                          ),
+                                          Align(
+                                            alignment: Alignment.topRight,
+                                            child: Container(
+                                              height: 21,
+                                              width: 21,
+                                              decoration: const BoxDecoration(
                                                   color: Colors.white,
-                                                  shape: BoxShape.circle
-                                                ),
-                                                alignment: Alignment.center,
-                                                child: const Text(
-                                                  "C",
-                                                  style: TextStyle(
-                                                      color: Colors.black,
-                                                      fontWeight: FontWeight.bold,
-                                                      fontSize: 12
-                                                  ),
-                                                ),
+                                                  shape: BoxShape.circle),
+                                              alignment: Alignment.center,
+                                              child: const Text(
+                                                "C",
+                                                style: TextStyle(
+                                                    color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 12),
                                               ),
-                                            )
-                                          ],
-                                        ),
+                                            ),
+                                          )
+                                        ],
                                       ),
                                     ),
-                                    Expanded(
-                                      child: Container(
-                                        height: double.infinity,
-                                        // color: Colors.green,
-                                        child: Stack(
-                                          children: [
-                                            const Padding(
-                                              padding: EdgeInsets.only(top: 6.0),
-                                              child: Align(
-                                                alignment: Alignment.topCenter,
-                                                child: CircleAvatar(
-                                                  radius: 40,
-                                                  backgroundColor: Colors.white,
-                                                  backgroundImage: NetworkImage("https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/94.png"),
-                                                ),
+                                  ),
+                                  Expanded(
+                                    child: Container(
+                                      height: double.infinity,
+                                      // color: Colors.green,
+                                      child: Stack(
+                                        children: [
+                                          const Padding(
+                                            padding: EdgeInsets.only(top: 6.0),
+                                            child: Align(
+                                              alignment: Alignment.topCenter,
+                                              child: CircleAvatar(
+                                                radius: 40,
+                                                backgroundColor: Colors.white,
+                                                backgroundImage: NetworkImage(
+                                                    "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/94.png"),
                                               ),
                                             ),
-                                            Align(
+                                          ),
+                                          Align(
+                                            alignment: Alignment.center,
+                                            child: Container(
+                                              height: 30,
+                                              width: 70,
+                                              margin: const EdgeInsets.only(
+                                                  top: 21),
+                                              decoration: BoxDecoration(
+                                                  color:
+                                                      const Color(0xFF021852),
+                                                  borderRadius:
+                                                      BorderRadius.circular(6)),
                                               alignment: Alignment.center,
-                                              child: Container(
-                                                height: 30,
-                                                width: 70,
-                                                margin: const EdgeInsets.only(top: 21),
-                                                decoration: BoxDecoration(
-                                                    color: const Color(0xFF021852),
-                                                    borderRadius: BorderRadius.circular(6)
-                                                ),
-                                                alignment: Alignment.center,
-                                                child: const Text(
-                                                  "F. Plessis",
-                                                  maxLines: 1,
-                                                  overflow: TextOverflow.ellipsis,
-                                                  style: TextStyle(
-                                                      color: Colors.white,
-                                                      fontSize: 15,
-                                                      fontWeight: FontWeight.w500
-                                                  ),
-                                                ),
+                                              child: const Text(
+                                                "F. Plessis",
+                                                maxLines: 1,
+                                                overflow: TextOverflow.ellipsis,
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 15,
+                                                    fontWeight:
+                                                        FontWeight.w500),
                                               ),
                                             ),
-                                            Align(
-                                              alignment: Alignment.topRight,
-                                              child: Container(
-                                                height: 21,
-                                                width: 21,
-                                                decoration: const BoxDecoration(
-                                                    color: Color(0xFF021852),
-                                                    shape: BoxShape.circle
-                                                ),
-                                                alignment: Alignment.center,
-                                                child: const Text(
-                                                  "VC",
-                                                  style: TextStyle(
-                                                      color: Colors.white,
-                                                      fontWeight: FontWeight.bold,
-                                                      fontSize: 12
-                                                  ),
-                                                ),
+                                          ),
+                                          Align(
+                                            alignment: Alignment.topRight,
+                                            child: Container(
+                                              height: 21,
+                                              width: 21,
+                                              decoration: const BoxDecoration(
+                                                  color: Color(0xFF021852),
+                                                  shape: BoxShape.circle),
+                                              alignment: Alignment.center,
+                                              child: const Text(
+                                                "VC",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 12),
                                               ),
-                                            )
-                                          ],
-                                        ),
+                                            ),
+                                          )
+                                        ],
                                       ),
-                                    )
-                                  ],
-                                ),
+                                    ),
+                                  )
+                                ],
                               ),
+                            ),
                           ),
                           Container(
                             // color: Colors.black87,
@@ -391,118 +409,125 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                 Align(
                                   alignment: Alignment.center,
                                   child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
                                     children: [
                                       const Text(
                                         "RCB 6",
                                         style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 14
-                                        ),
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 14),
                                       ),
                                       const Text(
                                         "CSK 5",
                                         style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 14
-                                        ),
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 14),
                                       ),
                                     ],
                                   ),
                                 ),
-                                const SizedBox(height: 6,),
-                                const Divider(thickness: 1.5,color: Colors.white,),
-                                const SizedBox(height: 6,),
+                                const SizedBox(
+                                  height: 6,
+                                ),
+                                const Divider(
+                                  thickness: 1.5,
+                                  color: Colors.white,
+                                ),
+                                const SizedBox(
+                                  height: 6,
+                                ),
                                 Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
                                         const Text(
                                           "WK",
                                           style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w500
-                                          ),
+                                              color: Colors.white,
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500),
                                         ),
                                         const Text(
                                           "2",
                                           style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w500
-                                          ),
+                                              color: Colors.white,
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500),
                                         ),
                                       ],
                                     ),
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
                                         const Text(
                                           "AR",
                                           style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w500
-                                          ),
+                                              color: Colors.white,
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500),
                                         ),
                                         const Text(
                                           "3",
                                           style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w500
-                                          ),
+                                              color: Colors.white,
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500),
                                         ),
                                       ],
                                     ),
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
                                         const Text(
                                           "BAT",
                                           style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w500
-                                          ),
+                                              color: Colors.white,
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500),
                                         ),
                                         const Text(
                                           "3",
                                           style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w500
-                                          ),
+                                              color: Colors.white,
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500),
                                         ),
                                       ],
                                     ),
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
                                         const Text(
                                           "BOWL",
                                           style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w500
-                                          ),
+                                              color: Colors.white,
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500),
                                         ),
                                         const Text(
                                           "3",
                                           style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w500
-                                          ),
+                                              color: Colors.white,
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500),
                                         ),
                                       ],
                                     ),
@@ -521,11 +546,10 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                   child: Container(
                     height: 50,
                     decoration: const BoxDecoration(
-                      color: Colors.white,
+                        color: Colors.white,
                         borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(9),
-                            bottomRight: Radius.circular(9))
-                    ),
+                            bottomRight: Radius.circular(9))),
                     padding: const EdgeInsets.symmetric(horizontal: 12),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -536,20 +560,22 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                               height: 30,
                               width: 30,
                               decoration: const BoxDecoration(
-                                color: Color(0xFF021852),
-                                shape: BoxShape.circle
-                              ),
+                                  color: Color(0xFF021852),
+                                  shape: BoxShape.circle),
                               margin: const EdgeInsets.only(right: 6),
                               alignment: Alignment.center,
-                              child: const Icon(Icons.visibility,color: Colors.white, size: 21,),
+                              child: const Icon(
+                                Icons.visibility,
+                                color: Colors.white,
+                                size: 21,
+                              ),
                             ),
                             const Text(
                               "Preview",
                               style: TextStyle(
-                                color: Color(0xFF021852),
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold
-                              ),
+                                  color: Color(0xFF021852),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold),
                             )
                           ],
                         ),
@@ -563,10 +589,8 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                   colors: [
                                     Color(0xFFFFE68B),
                                     Color(0xFFFFD700)
-                                  ]
-                              ),
-                              borderRadius: BorderRadius.circular(30)
-                          ),
+                                  ]),
+                              borderRadius: BorderRadius.circular(30)),
                           padding: const EdgeInsets.symmetric(horizontal: 6),
                           alignment: Alignment.center,
                           child: Row(
@@ -577,19 +601,21 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                                 width: 21,
                                 decoration: const BoxDecoration(
                                     color: Color(0xFF021852),
-                                    shape: BoxShape.circle
-                                ),
+                                    shape: BoxShape.circle),
                                 margin: const EdgeInsets.only(right: 6),
                                 alignment: Alignment.center,
-                                child: const Icon(Icons.edit,color: Colors.white, size: 14,),
+                                child: const Icon(
+                                  Icons.edit,
+                                  color: Colors.white,
+                                  size: 14,
+                                ),
                               ),
                               const Text(
                                 "Edit",
                                 style: TextStyle(
                                     color: Color(0xFF021852),
                                     fontSize: 14,
-                                    fontWeight: FontWeight.bold
-                                ),
+                                    fontWeight: FontWeight.bold),
                               )
                             ],
                           ),
@@ -604,12 +630,11 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
         ),
         Container(
           height: 130,
-          margin: const EdgeInsets.only(top: 15,right: 12,left: 12),
+          margin: const EdgeInsets.only(top: 15, right: 12, left: 12),
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
-            color: const Color(0xFF021852),
-            borderRadius: BorderRadius.circular(15)
-          ),
+              color: const Color(0xFF021852),
+              borderRadius: BorderRadius.circular(15)),
           alignment: Alignment.topLeft,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -620,29 +645,34 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                   const Text(
                     "Joined Contests",
                     style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 16
-                    ),
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 16),
                   ),
                   Row(
                     children: [
                       const Text(
                         "Click to Expand",
                         style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 13
-                        ),
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 13),
                       ),
-                      const Icon(Icons.keyboard_arrow_down,color: Colors.white, size: 18,)
+                      const Icon(
+                        Icons.keyboard_arrow_down,
+                        color: Colors.white,
+                        size: 18,
+                      )
                     ],
                   ),
                 ],
               ),
               const Padding(
                 padding: EdgeInsets.only(top: 3),
-                child: Divider(thickness: 1.2, color: Colors.grey,),
+                child: Divider(
+                  thickness: 1.2,
+                  color: Colors.grey,
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 15),
@@ -652,10 +682,9 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                     const Text(
                       "Improve your winning total by joining\nmore contests",
                       style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 10,
-                        fontWeight: FontWeight.w400
-                      ),
+                          color: Colors.white,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w400),
                     ),
                     Container(
                       height: 40,
@@ -667,10 +696,9 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                       child: const Text(
                         "Join Contest",
                         style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 16
-                        ),
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16),
                       ),
                     )
                   ],
@@ -682,6 +710,86 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
         const Spacer(),
         InkWell(
           onTap: () {
+            createTeamController.PlayerCount.value = 0;
+            createTeamController.WKPCount.value = 0;
+            createTeamController.BATPCount.value = 0;
+            createTeamController.ARPCount.value = 0;
+            createTeamController.BOWLPCount.value = 0;
+            createTeamController.RCBPCount.value = 0;
+            createTeamController.CSKPCount.value = 0;
+            createTeamController.CreditLeftCount.value = 100;
+            for (int i = 0; i < createTeamController.wkList.length; i++) {
+              createTeamController.wkList[i] = PlayerDetailModel(
+                firstName: createTeamController.wkList[i].firstName,
+                lastName: createTeamController.wkList[i].lastName,
+                selected: false,
+                selBy: createTeamController.wkList[i].selBy,
+                color: createTeamController.wkList[i].color,
+                point: createTeamController.wkList[i].point,
+                teamName: createTeamController.wkList[i].teamName,
+                imageUrl: createTeamController.wkList[i].imageUrl,
+                credit: createTeamController.wkList[i].credit,
+                avgPts: createTeamController.wkList[i].avgPts,
+                capSelby: createTeamController.wkList[i].capSelby,
+                vicecapSelby: createTeamController.wkList[i].vicecapSelby,
+                captain: false,
+                visecaptain: false,
+              );
+            }
+            for (int i = 0; i < createTeamController.batList.length; i++) {
+              createTeamController.batList[i] = PlayerDetailModel(
+                firstName: createTeamController.batList[i].firstName,
+                lastName: createTeamController.batList[i].lastName,
+                selected: false,
+                selBy: createTeamController.batList[i].selBy,
+                color: createTeamController.batList[i].color,
+                point: createTeamController.batList[i].point,
+                teamName: createTeamController.batList[i].teamName,
+                imageUrl: createTeamController.batList[i].imageUrl,
+                credit: createTeamController.batList[i].credit,
+                avgPts: createTeamController.batList[i].avgPts,
+                capSelby: createTeamController.batList[i].capSelby,
+                vicecapSelby: createTeamController.batList[i].vicecapSelby,
+                captain: false,
+                visecaptain: false,
+              );
+            }
+            for (int i = 0; i < createTeamController.arList.length; i++) {
+              createTeamController.arList[i] = PlayerDetailModel(
+                firstName: createTeamController.arList[i].firstName,
+                lastName: createTeamController.arList[i].lastName,
+                selected: false,
+                selBy: createTeamController.arList[i].selBy,
+                color: createTeamController.arList[i].color,
+                point: createTeamController.arList[i].point,
+                teamName: createTeamController.arList[i].teamName,
+                imageUrl: createTeamController.arList[i].imageUrl,
+                credit: createTeamController.arList[i].credit,
+                avgPts: createTeamController.arList[i].avgPts,
+                capSelby: createTeamController.arList[i].capSelby,
+                vicecapSelby: createTeamController.arList[i].vicecapSelby,
+                captain: false,
+                visecaptain: false,
+              );
+            }
+            for (int i = 0; i < createTeamController.bowlList.length; i++) {
+              createTeamController.bowlList[i] = PlayerDetailModel(
+                firstName: createTeamController.bowlList[i].firstName,
+                lastName: createTeamController.bowlList[i].lastName,
+                selected: false,
+                selBy: createTeamController.bowlList[i].selBy,
+                color: createTeamController.bowlList[i].color,
+                point: createTeamController.bowlList[i].point,
+                teamName: createTeamController.bowlList[i].teamName,
+                imageUrl: createTeamController.bowlList[i].imageUrl,
+                credit: createTeamController.bowlList[i].credit,
+                avgPts: createTeamController.bowlList[i].avgPts,
+                capSelby: createTeamController.bowlList[i].capSelby,
+                vicecapSelby: createTeamController.bowlList[i].vicecapSelby,
+                captain: false,
+                visecaptain: false,
+              );
+            }
             Get.toNamed('create_Team');
           },
           child: Container(
@@ -691,31 +799,31 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                 gradient: const LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
-                    colors: [
-                      Color(0xFFFFE68B),
-                      Color(0xFFFFD700)
-                    ]
-                ),
-              borderRadius: BorderRadius.circular(9)
-            ),
+                    colors: [Color(0xFFFFE68B), Color(0xFFFFD700)]),
+                borderRadius: BorderRadius.circular(9)),
             alignment: Alignment.center,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                const Icon(Icons.groups_rounded,color: Color(0xFF021852), size: 25,),
+                const Icon(
+                  Icons.groups_rounded,
+                  color: Color(0xFF021852),
+                  size: 25,
+                ),
                 const Text(
                   "Create Team",
                   style: TextStyle(
-                    color: Color(0xFF021852),
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold
-                  ),
+                      color: Color(0xFF021852),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold),
                 )
               ],
             ),
           ),
         ),
-        const SizedBox(height: 30,),
+        const SizedBox(
+          height: 30,
+        ),
       ],
     );
   }

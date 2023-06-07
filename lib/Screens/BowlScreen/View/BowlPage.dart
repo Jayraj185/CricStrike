@@ -119,7 +119,14 @@ class _BowlPageState extends State<BowlPage> {
                                     imageUrl: createTeamController.bowlList[index].imageUrl,
                                     selected: createTeamController.bowlList[index].selected! ? false : true,
                                     teamName: createTeamController.bowlList[index].teamName,
-                                    name: createTeamController.bowlList[index].name,
+                                    firstName: createTeamController.bowlList[index].firstName,
+                                    lastName: createTeamController.bowlList[index].lastName,
+                                    point: createTeamController.bowlList[index].point,
+                                    color: createTeamController.bowlList[index].color,
+                                    captain: createTeamController.bowlList[index].captain,
+                                    visecaptain: createTeamController.bowlList[index].visecaptain,
+                                    capSelby: createTeamController.bowlList[index].capSelby,
+                                    vicecapSelby: createTeamController.bowlList[index].vicecapSelby,
                                   );
                                   createTeamController.PlayerCount.value=0;
                                   createTeamController.BOWLPCount.value = 0;
@@ -227,7 +234,14 @@ class _BowlPageState extends State<BowlPage> {
                                     imageUrl: createTeamController.bowlList[index].imageUrl,
                                     selected: false,
                                     teamName: createTeamController.bowlList[index].teamName,
-                                    name: createTeamController.bowlList[index].name,
+                                    firstName: createTeamController.bowlList[index].firstName,
+                                    lastName: createTeamController.bowlList[index].lastName,
+                                    point: createTeamController.bowlList[index].point,
+                                    color: createTeamController.bowlList[index].color,
+                                    captain: createTeamController.bowlList[index].captain,
+                                    visecaptain: createTeamController.bowlList[index].visecaptain,
+                                    capSelby: createTeamController.bowlList[index].capSelby,
+                                    vicecapSelby: createTeamController.bowlList[index].vicecapSelby,
                                   );
                                   createTeamController.PlayerCount.value=0;
                                   createTeamController.BOWLPCount.value = 0;
@@ -322,7 +336,14 @@ class _BowlPageState extends State<BowlPage> {
                                 imageUrl: createTeamController.bowlList[index].imageUrl,
                                 selected: false,
                                 teamName: createTeamController.bowlList[index].teamName,
-                                name: createTeamController.bowlList[index].name,
+                                firstName: createTeamController.bowlList[index].firstName,
+                                lastName: createTeamController.bowlList[index].lastName,
+                                point: createTeamController.bowlList[index].point,
+                                color: createTeamController.bowlList[index].color,
+                                captain: createTeamController.bowlList[index].captain,
+                                visecaptain: createTeamController.bowlList[index].visecaptain,
+                                capSelby: createTeamController.bowlList[index].capSelby,
+                                vicecapSelby: createTeamController.bowlList[index].vicecapSelby,
                               );
                               createTeamController.PlayerCount.value=0;
                               createTeamController.BOWLPCount.value = 0;
@@ -434,7 +455,7 @@ class _BowlPageState extends State<BowlPage> {
                                     SizedBox(
                                       width: Get.width / 3.9,
                                       child: Text(
-                                        "${createTeamController.bowlList[index].name}",
+                                        "${createTeamController.bowlList[index].firstName} ${createTeamController.bowlList[index].lastName}",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                         style: const TextStyle(

@@ -119,7 +119,14 @@ class _BatPageState extends State<BatPage> {
                                     imageUrl: createTeamController.batList[index].imageUrl,
                                     selected: createTeamController.batList[index].selected! ? false : true,
                                     teamName: createTeamController.batList[index].teamName,
-                                    name: createTeamController.batList[index].name,
+                                    firstName: createTeamController.batList[index].firstName,
+                                    lastName: createTeamController.batList[index].lastName,
+                                    point: createTeamController.batList[index].point,
+                                    color: createTeamController.batList[index].color,
+                                    captain: createTeamController.batList[index].captain,
+                                    visecaptain: createTeamController.batList[index].visecaptain,
+                                    capSelby: createTeamController.batList[index].capSelby,
+                                    vicecapSelby: createTeamController.batList[index].vicecapSelby,
                                   );
                                   createTeamController.PlayerCount.value=0;
                                   createTeamController.BATPCount.value = 0;
@@ -227,7 +234,14 @@ class _BatPageState extends State<BatPage> {
                                     imageUrl: createTeamController.batList[index].imageUrl,
                                     selected: false,
                                     teamName: createTeamController.batList[index].teamName,
-                                    name: createTeamController.batList[index].name,
+                                    firstName: createTeamController.batList[index].firstName,
+                                    lastName: createTeamController.batList[index].lastName,
+                                    point: createTeamController.batList[index].point,
+                                    color: createTeamController.batList[index].color,
+                                    captain: createTeamController.batList[index].captain,
+                                    visecaptain: createTeamController.batList[index].visecaptain,
+                                    capSelby: createTeamController.batList[index].capSelby,
+                                    vicecapSelby: createTeamController.batList[index].vicecapSelby,
                                   );
                                   createTeamController.PlayerCount.value=0;
                                   createTeamController.BATPCount.value = 0;
@@ -323,7 +337,14 @@ class _BatPageState extends State<BatPage> {
                                 imageUrl: createTeamController.batList[index].imageUrl,
                                 selected: false,
                                 teamName: createTeamController.batList[index].teamName,
-                                name: createTeamController.batList[index].name,
+                                firstName: createTeamController.batList[index].firstName,
+                                lastName: createTeamController.batList[index].lastName,
+                                point: createTeamController.batList[index].point,
+                                color: createTeamController.batList[index].color,
+                                captain: createTeamController.batList[index].captain,
+                                visecaptain: createTeamController.batList[index].visecaptain,
+                                capSelby: createTeamController.batList[index].capSelby,
+                                vicecapSelby: createTeamController.batList[index].vicecapSelby,
                               );
                               createTeamController.PlayerCount.value=0;
                               createTeamController.BATPCount.value = 0;
@@ -437,8 +458,7 @@ class _BatPageState extends State<BatPage> {
                                     SizedBox(
                                       width: Get.width / 3.9,
                                       child: Text(
-                                        "${createTeamController.batList[index]
-                                            .name}",
+                                        "${createTeamController.batList[index].firstName} ${createTeamController.batList[index].lastName}",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                         style: const TextStyle(

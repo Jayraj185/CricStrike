@@ -1,77 +1,140 @@
-/// Name : "Virat Kohli"
-/// Team_Name : "RCB"
-/// Image_Url : "fgvbhjn"
-/// Selected : false
-/// Avg_Pts : 90
-/// Sel_By : 90
-/// Credit : 90
+/// firstName : "Virat"
+/// lastName : "Kohli"
+/// teamName : "RCB"
+/// selected : false
+/// avgPts : 0.0
+/// selBy : 0.0
+/// credit : 9.5
+/// point : 0.0
+/// color : "0xff"
+/// captain : false
+/// visecaptain : false
+/// capSelby : 0.0
+/// vicecapSelby : 0.0
+/// imageUrl : "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/2.png"
 
 class PlayerDetailModel {
   PlayerDetailModel({
-      String? name, 
-      String? teamName, 
-      String? imageUrl, 
-      bool? selected, 
-      num? avgPts, 
-      num? selBy, 
-      num? credit,}){
-    _name = name;
+    String? firstName,
+    String? lastName,
+    String? teamName,
+    bool? selected,
+    num? avgPts,
+    num? selBy,
+    num? credit,
+    num? point,
+    String? color,
+    bool? captain,
+    bool? visecaptain,
+    num? capSelby,
+    num? vicecapSelby,
+    String? imageUrl,}){
+    _firstName = firstName;
+    _lastName = lastName;
     _teamName = teamName;
-    _imageUrl = imageUrl;
     _selected = selected;
     _avgPts = avgPts;
     _selBy = selBy;
     _credit = credit;
-}
+    _point = point;
+    _color = color;
+    _captain = captain;
+    _visecaptain = visecaptain;
+    _capSelby = capSelby;
+    _vicecapSelby = vicecapSelby;
+    _imageUrl = imageUrl;
+  }
 
   PlayerDetailModel.fromJson(dynamic json) {
-    _name = json['Name'];
-    _teamName = json['Team_Name'];
-    _imageUrl = json['Image_Url'];
-    _selected = json['Selected'];
-    _avgPts = json['Avg_Pts'];
-    _selBy = json['Sel_By'];
-    _credit = json['Credit'];
+    _firstName = json['firstName'];
+    _lastName = json['lastName'];
+    _teamName = json['teamName'];
+    _selected = json['selected'];
+    _avgPts = json['avgPts'];
+    _selBy = json['selBy'];
+    _credit = json['credit'];
+    _point = json['point'];
+    _color = json['color'];
+    _captain = json['captain'];
+    _visecaptain = json['visecaptain'];
+    _capSelby = json['capSelby'];
+    _vicecapSelby = json['vicecapSelby'];
+    _imageUrl = json['imageUrl'];
   }
-  String? _name;
+  String? _firstName;
+  String? _lastName;
   String? _teamName;
-  String? _imageUrl;
   bool? _selected;
   num? _avgPts;
   num? _selBy;
   num? _credit;
-PlayerDetailModel copyWith({  String? name,
-  String? teamName,
-  String? imageUrl,
-  bool? selected,
-  num? avgPts,
-  num? selBy,
-  num? credit,
-}) => PlayerDetailModel(  name: name ?? _name,
-  teamName: teamName ?? _teamName,
-  imageUrl: imageUrl ?? _imageUrl,
-  selected: selected ?? _selected,
-  avgPts: avgPts ?? _avgPts,
-  selBy: selBy ?? _selBy,
-  credit: credit ?? _credit,
-);
-  String? get name => _name;
+  num? _point;
+  String? _color;
+  bool? _captain;
+  bool? _visecaptain;
+  num? _capSelby;
+  num? _vicecapSelby;
+  String? _imageUrl;
+  PlayerDetailModel copyWith({  String? firstName,
+    String? lastName,
+    String? teamName,
+    bool? selected,
+    num? avgPts,
+    num? selBy,
+    num? credit,
+    num? point,
+    String? color,
+    bool? captain,
+    bool? visecaptain,
+    num? capSelby,
+    num? vicecapSelby,
+    String? imageUrl,
+  }) => PlayerDetailModel(  firstName: firstName ?? _firstName,
+    lastName: lastName ?? _lastName,
+    teamName: teamName ?? _teamName,
+    selected: selected ?? _selected,
+    avgPts: avgPts ?? _avgPts,
+    selBy: selBy ?? _selBy,
+    credit: credit ?? _credit,
+    point: point ?? _point,
+    color: color ?? _color,
+    captain: captain ?? _captain,
+    visecaptain: visecaptain ?? _visecaptain,
+    capSelby: capSelby ?? _capSelby,
+    vicecapSelby: vicecapSelby ?? _vicecapSelby,
+    imageUrl: imageUrl ?? _imageUrl,
+  );
+  String? get firstName => _firstName;
+  String? get lastName => _lastName;
   String? get teamName => _teamName;
-  String? get imageUrl => _imageUrl;
   bool? get selected => _selected;
   num? get avgPts => _avgPts;
   num? get selBy => _selBy;
   num? get credit => _credit;
+  num? get point => _point;
+  String? get color => _color;
+  bool? get captain => _captain;
+  bool? get visecaptain => _visecaptain;
+  num? get capSelby => _capSelby;
+  num? get vicecapSelby => _vicecapSelby;
+  String? get imageUrl => _imageUrl;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['Name'] = _name;
-    map['Team_Name'] = _teamName;
-    map['Image_Url'] = _imageUrl;
-    map['Selected'] = _selected;
-    map['Avg_Pts'] = _avgPts;
-    map['Sel_By'] = _selBy;
-    map['Credit'] = _credit;
+    map['firstName'] = _firstName;
+    map['lastName'] = _lastName;
+    map['teamName'] = _teamName;
+    map['selected'] = _selected;
+    map['avgPts'] = _avgPts;
+    map['selBy'] = _selBy;
+    map['credit'] = _credit;
+    map['point'] = _point;
+    map['color'] = _color;
+    map['captain'] = _captain;
+    map['visecaptain'] = _visecaptain;
+    map['capSelby'] = _capSelby;
+    map['vicecapSelby'] = _vicecapSelby;
+    map['imageUrl'] = _imageUrl;
     return map;
   }
 

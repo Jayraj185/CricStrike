@@ -33,9 +33,12 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
             ),
           ),
           title: const Text(
-            "CRICSTRIKE XII",
+            "LIGER XI",
             style: TextStyle(color: Colors.white),
           ),
+          actions: [
+            IconButton(onPressed: (){}, icon: const Icon(Icons.edit,color: Colors.white,),)
+          ],
           bottom: PreferredSize(
             preferredSize: const Size.fromHeight(66),
             child: Padding(
@@ -48,113 +51,115 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                     thickness: 1.2,
                     color: Colors.grey,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text(
-                            "Players",
-                            style:
-                            TextStyle(color: Colors.white70, fontSize: 12),
+                  Obx(
+                    () => Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              "Players",
+                              style:
+                              TextStyle(color: Colors.white70, fontSize: 12),
+                            ),
+                            Text.rich(TextSpan(children: [
+                              TextSpan(
+                                text: "${createTeamController.PlayerCount.value}",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15),
+                              ),
+                              const TextSpan(
+                                text: " /11",
+                                style: TextStyle(
+                                    color: Colors.white70, fontSize: 12),
+                              ),
+                            ])),
+                          ],
+                        ),
+                        Container(
+                          height: 21,
+                          margin: const EdgeInsets.only(left: 30),
+                          decoration: BoxDecoration(
+                              color: const Color(0xFF021882),
+                              borderRadius: BorderRadius.circular(3)),
+                          alignment: Alignment.center,
+                          padding: const EdgeInsets.symmetric(horizontal: 8),
+                          child: const Text(
+                            "RCB",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold),
                           ),
-                          Text.rich(TextSpan(children: [
-                            TextSpan(
-                              text: "11",
+                        ),
+                        Text(
+                          "${createTeamController.RCBPCount.value}",
+                          style: const TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                        ),
+                        const Text(
+                          ":",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                        ),
+                        Text(
+                          "${createTeamController.CSKPCount.value}",
+                          style: const TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                        ),
+                        Container(
+                          height: 21,
+                          margin: const EdgeInsets.only(right: 30),
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(3)),
+                          alignment: Alignment.center,
+                          padding: const EdgeInsets.symmetric(horizontal: 8),
+                          child: const Text(
+                            "CSK",
+                            style: TextStyle(
+                                color: Color(0xFF021852),
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        // Container(
+                        //   alignment: Alignment.centerRight,
+                        //   width: 40,
+                        //   child: const Icon(
+                        //     Icons.info_outline,
+                        //     color: Colors.white,
+                        //   ),
+                        // ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            const Text(
+                              "Credit Left",
+                              style:
+                                  TextStyle(color: Colors.white70, fontSize: 14),
+                            ),
+                            Text(
+                              "${createTeamController.CreditLeftCount.value}",
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 15),
                             ),
-                            TextSpan(
-                              text: " /11",
-                              style: TextStyle(
-                                  color: Colors.white70, fontSize: 12),
-                            ),
-                          ])),
-                        ],
-                      ),
-                      // Container(
-                      //   height: 21,
-                      //   margin: const EdgeInsets.only(left: 30),
-                      //   decoration: BoxDecoration(
-                      //       color: const Color(0xFF021852),
-                      //       borderRadius: BorderRadius.circular(3)),
-                      //   alignment: Alignment.center,
-                      //   padding: const EdgeInsets.symmetric(horizontal: 8),
-                      //   child: Text(
-                      //     "${predictionController.dataList[0]['cricteam']['team1']}",
-                      //     style: const TextStyle(
-                      //         color: Colors.white,
-                      //         fontSize: 12,
-                      //         fontWeight: FontWeight.bold),
-                      //   ),
-                      // ),
-                      // Text(
-                      //   "${predictionController.dataList[0]['cricteam']['team1_player']}",
-                      //   style: const TextStyle(
-                      //       color: Colors.white,
-                      //       fontWeight: FontWeight.bold,
-                      //       fontSize: 18),
-                      // ),
-                      // const Text(
-                      //   ":",
-                      //   style: TextStyle(
-                      //       color: Colors.white,
-                      //       fontWeight: FontWeight.bold,
-                      //       fontSize: 18),
-                      // ),
-                      // Text(
-                      //   "${predictionController.dataList[0]['cricteam']['team2_player']}",
-                      //   style: const TextStyle(
-                      //       color: Colors.white,
-                      //       fontWeight: FontWeight.bold,
-                      //       fontSize: 18),
-                      // ),
-                      // Container(
-                      //   height: 21,
-                      //   margin: const EdgeInsets.only(right: 30),
-                      //   decoration: BoxDecoration(
-                      //       color: Colors.white,
-                      //       borderRadius: BorderRadius.circular(3)),
-                      //   alignment: Alignment.center,
-                      //   padding: const EdgeInsets.symmetric(horizontal: 8),
-                      //   child: Text(
-                      //     "${predictionController.dataList[0]['cricteam']['team2']}",
-                      //     style: const TextStyle(
-                      //         color: Color(0xFF021852),
-                      //         fontSize: 12,
-                      //         fontWeight: FontWeight.bold),
-                      //   ),
-                      // ),
-                      Container(
-                        alignment: Alignment.centerRight,
-                        width: 40,
-                        child: const Icon(
-                          Icons.info_outline,
-                          color: Colors.white,
+                          ],
                         ),
-                      ),
-                      // Column(
-                      //   crossAxisAlignment: CrossAxisAlignment.end,
-                      //   children: [
-                      //     // Text(
-                      //     //   "Credit Left",
-                      //     //   style:
-                      //     //       TextStyle(color: Colors.white70, fontSize: 14),
-                      //     // ),
-                      //     // Text(
-                      //     //   "0",
-                      //     //   style: TextStyle(
-                      //     //       color: Colors.white,
-                      //     //       fontWeight: FontWeight.bold,
-                      //     //       fontSize: 15),
-                      //     // ),
-                      //   ],
-                      // ),
-                    ],
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 6,
@@ -165,7 +170,8 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
           ),
         ),
         backgroundColor: const Color(0xff07853D),
-        body: Stack(
+        body: createTeamController.FinalTeam.value.WK!.isNotEmpty ||  createTeamController.FinalTeam.value.Bat!.isNotEmpty || createTeamController.FinalTeam.value.AR!.isNotEmpty || createTeamController.FinalTeam.value.Bowl!.isNotEmpty
+            ? Stack(
           alignment: Alignment.center,
           children: [
             Row(
@@ -254,14 +260,14 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                       itemBuilder: (context, index) => Container(
                         margin: EdgeInsets.symmetric(
                             horizontal: Get.width /
-                                createTeamController.finalTeam['WK']!.length /
-                                (createTeamController.finalTeam['WK']!.length == 2
+                                createTeamController.FinalTeam.value.WK!.length /
+                                (createTeamController.FinalTeam.value.WK!.length == 2
                                     ? 4
-                                    : createTeamController.finalTeam['WK']!.length == 3
+                                    : createTeamController.FinalTeam.value.WK!.length == 3
                                     ? 6
-                                    : createTeamController.finalTeam['WK']!.length == 4
+                                    : createTeamController.FinalTeam.value.WK!.length == 4
                                     ? 12
-                                    : createTeamController.finalTeam['WK']!.length == 5
+                                    : createTeamController.FinalTeam.value.WK!.length == 5
                                     ? 50
                                     : 4)),
                         child: Column(
@@ -275,23 +281,16 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                   Align(
                                     alignment: Alignment.topCenter,
                                     child: CachedNetworkImage(
-                                      fadeInDuration:
-                                      const Duration(seconds: 0),
-                                      fit: BoxFit.fill,
-                                      imageUrl:
-                                      "${createTeamController.finalTeam['WK']![index].imageUrl}",
-                                      progressIndicatorBuilder: (context,
-                                          url, downloadProgress) =>
-                                          Container(),
-                                      errorWidget:
-                                          (context, url, error) => Row(
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.center,
-                                        children: const [
-                                          Icon(Icons.error),
-                                          Text(" Image Not available")
-                                        ],
-                                      ),
+                                        fadeInDuration:
+                                        const Duration(seconds: 0),
+                                        fit: BoxFit.fill,
+                                        imageUrl:
+                                        "${createTeamController.FinalTeam.value.WK![index].imageUrl}",
+                                        progressIndicatorBuilder: (context,
+                                            url, downloadProgress) =>
+                                            Container(),
+                                        errorWidget:
+                                            (context, url, error) => Padding(padding: EdgeInsets.only(bottom: Get.width/18),child: Image.asset("assets/image/person.png"),)
                                     ),
                                   ),
                                   Align(
@@ -299,8 +298,8 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                     child: Container(
                                       height: 23,
                                       decoration: BoxDecoration(
-                                          color: createTeamController.finalTeam['WK']![index].name!=
-                                              "CSK"
+                                          color: createTeamController.FinalTeam.value.WK![index].color!.toLowerCase() !=
+                                              "0xffffffff".toLowerCase()
                                               ? const Color(0xffffffff)
                                               : const Color(0xff021852),
                                           borderRadius:
@@ -309,14 +308,14 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                           horizontal: 10),
                                       alignment: Alignment.center,
                                       child: Text(
-                                        "${createTeamController.finalTeam['WK']![index].name}",
+                                        "${createTeamController.FinalTeam.value.WK![index].firstName![0].toUpperCase()}. ${createTeamController.FinalTeam.value.WK![index].lastName}",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
-                                            color: createTeamController.finalTeam['WK']![index].name!=
-                                                "RCB"
-                                                ? const Color(0xffffffff)
-                                                : const Color(0xff021852),
+                                            color: createTeamController.FinalTeam.value.WK![index].color!.toLowerCase() !=
+                                                "0xffffffff".toLowerCase()
+                                                ? const Color(0xff021852)
+                                                : const Color(0xffffffff),
                                             fontWeight: FontWeight.bold,
                                             fontSize: 12),
                                       ),
@@ -328,7 +327,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                             Padding(
                               padding: const EdgeInsets.only(top: 6),
                               child: Text(
-                                "${createTeamController.finalTeam['WK']![index].credit}",
+                                "${createTeamController.FinalTeam.value.WK![index].credit}${createTeamController.FinalTeam.value.WK![index].point == 0 ? " Cr" : ""}",
                                 style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 14,
@@ -339,7 +338,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                         ),
                       ),
                       shrinkWrap: true,
-                      itemCount: createTeamController.finalTeam['WK']!.length,
+                      itemCount: createTeamController.FinalTeam.value.WK!.length,
                       scrollDirection: Axis.horizontal,
                     ),
                   ),
@@ -358,14 +357,14 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                       itemBuilder: (context, index) => Container(
                         margin: EdgeInsets.symmetric(
                             horizontal: Get.width /
-                                createTeamController.finalTeam['BAT']!.length /
-                                (createTeamController.finalTeam['BAT']!.length == 2
+                                createTeamController.FinalTeam.value.Bat!.length /
+                                (createTeamController.FinalTeam.value.Bat!.length == 2
                                     ? 4
-                                    : createTeamController.finalTeam['BAT']!.length == 3
+                                    : createTeamController.FinalTeam.value.Bat!.length == 3
                                     ? 6
-                                    : createTeamController.finalTeam['BAT']!.length == 4
+                                    : createTeamController.FinalTeam.value.Bat!.length == 4
                                     ? 12
-                                    : createTeamController.finalTeam['BAT']!.length == 5
+                                    : createTeamController.FinalTeam.value.Bat!.length == 5
                                     ? 50
                                     : 4)),
                         child: Column(
@@ -380,31 +379,24 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                   Align(
                                     alignment: Alignment.topCenter,
                                     child: CachedNetworkImage(
-                                      fadeInDuration:
-                                      const Duration(seconds: 0),
-                                      fit: BoxFit.fill,
-                                      imageUrl:
-                                      "${createTeamController.finalTeam['BAT']![index]!.imageUrl}",
-                                      progressIndicatorBuilder: (context,
-                                          url, downloadProgress) =>
-                                          Container(),
-                                      errorWidget:
-                                          (context, url, error) => Row(
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.center,
-                                        children: const [
-                                          Icon(Icons.error),
-                                          Text(" Image Not available")
-                                        ],
-                                      ),
+                                        fadeInDuration:
+                                        const Duration(seconds: 0),
+                                        fit: BoxFit.fill,
+                                        imageUrl:
+                                        "${createTeamController.FinalTeam.value.Bat![index].imageUrl}",
+                                        progressIndicatorBuilder: (context,
+                                            url, downloadProgress) =>
+                                            Container(),
+                                        errorWidget:
+                                            (context, url, error) => Padding(padding: EdgeInsets.only(bottom: Get.width/18),child: Image.asset("assets/image/person.png"),)
                                     ),),
                                   Align(
                                     alignment: Alignment.bottomCenter,
                                     child: Container(
                                       height: 23,
                                       decoration: BoxDecoration(
-                                          color: createTeamController.finalTeam['WK']![index].name!=
-                                              "CSK"
+                                          color: createTeamController.FinalTeam.value.Bat![index].color!.toLowerCase() !=
+                                              "0xffffffff".toLowerCase()
                                               ? const Color(0xffffffff)
                                               : const Color(0xff021852),
                                           borderRadius:
@@ -413,14 +405,14 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                           horizontal: 10),
                                       alignment: Alignment.center,
                                       child: Text(
-                                        "${createTeamController.finalTeam['BAT']![index]!.name}",
+                                        "${createTeamController.FinalTeam.value.Bat![index].firstName![0].toUpperCase()}. ${createTeamController.FinalTeam.value.Bat![index].lastName}",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
-                                            color: createTeamController.finalTeam['WK']![index].name!=
-                                                "RCB"
-                                                ? const Color(0xffffffff)
-                                                : const Color(0xff021852),
+                                            color: createTeamController.FinalTeam.value.Bat![index].color!.toLowerCase() !=
+                                                "0xffffffff".toLowerCase()
+                                                ? const Color(0xff021852)
+                                                : const Color(0xffffffff),
                                             fontWeight: FontWeight.bold,
                                             fontSize: 12),
                                       ),
@@ -432,7 +424,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                             Padding(
                               padding: const EdgeInsets.only(top: 6),
                               child: Text(
-                                "${createTeamController.finalTeam['BAT']![index]!.credit}",
+                                "${createTeamController.FinalTeam.value.Bat![index].credit}${createTeamController.FinalTeam.value.Bat![index].point == 0 ? " Cr" : ""}",
                                 style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 14,
@@ -443,7 +435,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                         ),
                       ),
                       shrinkWrap: true,
-                      itemCount: createTeamController.finalTeam['BAT']!.length,
+                      itemCount: createTeamController.FinalTeam.value.Bat!.length,
                       scrollDirection: Axis.horizontal,
                     ),
                   ),
@@ -461,14 +453,14 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                       itemBuilder: (context, index) => Container(
                         margin: EdgeInsets.symmetric(
                             horizontal: Get.width /
-                                createTeamController.finalTeam['AR']!.length /
-                                (createTeamController.finalTeam['AR']!.length == 2
+                                createTeamController.FinalTeam.value.AR!.length /
+                                (createTeamController.FinalTeam.value.AR!.length == 2
                                     ? 4
-                                    : createTeamController.finalTeam['AR']!.length == 3
+                                    : createTeamController.FinalTeam.value.AR!.length == 3
                                     ? 6
-                                    : createTeamController.finalTeam['AR']!.length == 4
+                                    : createTeamController.FinalTeam.value.AR!.length == 4
                                     ? 12
-                                    : createTeamController.finalTeam['AR']!.length== 5
+                                    : createTeamController.FinalTeam.value.AR!.length== 5
                                     ? 50
                                     : 4)),
                         child: Column(
@@ -483,23 +475,16 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                   Align(
                                     alignment: Alignment.topCenter,
                                     child: CachedNetworkImage(
-                                      fadeInDuration:
-                                      const Duration(seconds: 0),
-                                      fit: BoxFit.fill,
-                                      imageUrl:
-                                      "${createTeamController.finalTeam['AR']![index].imageUrl}",
-                                      progressIndicatorBuilder: (context,
-                                          url, downloadProgress) =>
-                                          Container(),
-                                      errorWidget:
-                                          (context, url, error) => Row(
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.center,
-                                        children: const [
-                                          Icon(Icons.error),
-                                          Text(" Image Not available")
-                                        ],
-                                      ),
+                                        fadeInDuration:
+                                        const Duration(seconds: 0),
+                                        fit: BoxFit.fill,
+                                        imageUrl:
+                                        "${createTeamController.FinalTeam.value.AR![index].imageUrl}",
+                                        progressIndicatorBuilder: (context,
+                                            url, downloadProgress) =>
+                                            Container(),
+                                        errorWidget:
+                                            (context, url, error) => Padding(padding: EdgeInsets.only(bottom: Get.width/18),child: Image.asset("assets/image/person.png"),)
                                     ),
                                   ),
                                   Align(
@@ -507,8 +492,8 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                     child: Container(
                                       height: 23,
                                       decoration: BoxDecoration(
-                                          color:createTeamController.finalTeam['WK']![index].name!=
-                                              "CSK"
+                                          color:createTeamController.FinalTeam.value.AR![index].color!.toLowerCase() !=
+                                              "0xffffffff".toLowerCase()
                                               ? const Color(0xffffffff)
                                               : const Color(0xff021852),
                                           borderRadius:
@@ -517,14 +502,14 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                           horizontal: 10),
                                       alignment: Alignment.center,
                                       child: Text(
-                                        "${createTeamController.finalTeam['AR']![index].name}",
+                                        "${createTeamController.FinalTeam.value.AR![index].firstName![0].toUpperCase()}. ${createTeamController.FinalTeam.value.AR![index].lastName}",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
-                                            color: createTeamController.finalTeam['WK']![index].name!=
-                                                "RCB"
-                                                ? const Color(0xffffffff)
-                                                : const Color(0xff021852),
+                                            color: createTeamController.FinalTeam.value.AR![index].color!.toLowerCase() !=
+                                                "0xffffffff".toLowerCase()
+                                                ? const Color(0xff021852)
+                                                : const Color(0xffffffff),
                                             fontWeight: FontWeight.bold,
                                             fontSize: 12),
                                       ),
@@ -536,7 +521,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                             Padding(
                               padding: const EdgeInsets.only(top: 6),
                               child: Text(
-                                "${createTeamController.finalTeam['AR']![index].credit}",
+                                "${createTeamController.FinalTeam.value.AR![index].credit}${createTeamController.FinalTeam.value.AR![index].point == 0 ? " Cr" : ""}",
                                 style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 14,
@@ -547,7 +532,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                         ),
                       ),
                       shrinkWrap: true,
-                      itemCount: createTeamController.finalTeam['AR']!.length??0,
+                      itemCount: createTeamController.FinalTeam.value.AR!.length,
                       scrollDirection: Axis.horizontal,
                     ),
                   ),
@@ -567,15 +552,14 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                       physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (context, index) => Container(
                         margin: EdgeInsets.symmetric(
-                            horizontal: Get.width /
-    createTeamController.finalTeam['BOWL']!.length/
-                                ( createTeamController.finalTeam['AR']!.length == 2
+                            horizontal: Get.width / createTeamController.FinalTeam.value.Bowl!.length/
+                                ( createTeamController.FinalTeam.value.Bowl!.length == 2
                                     ? 4
-                                    :   createTeamController.finalTeam['BOWL']!.length == 3
+                                    :   createTeamController.FinalTeam.value.Bowl!.length == 3
                                     ? 6
-                                    :   createTeamController.finalTeam['BOWL']!.length == 4
+                                    :   createTeamController.FinalTeam.value.Bowl!.length == 4
                                     ? 12
-                                    :   createTeamController.finalTeam['BOWL']!.length == 5
+                                    :   createTeamController.FinalTeam.value.Bowl!.length == 5
                                     ? 50
                                     : 4)),
                         child: Column(
@@ -590,22 +574,16 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                   Align(
                                     alignment: Alignment.topCenter,
                                     child: CachedNetworkImage(
-                                      fadeInDuration:
-                                      const Duration(seconds: 0),
-                                      fit: BoxFit.fill,
-                                      imageUrl:
-                                      "${createTeamController.finalTeam['BOWL']![index].imageUrl}",
-                                      progressIndicatorBuilder: (context,
-                                          url, downloadProgress) =>
-                                          Container(),
-                                      errorWidget:
-                                          (context, url, error) => Row(
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.center,
-                                        children: const [
-                                          Icon(Icons.error),
-                                        ],
-                                      ),
+                                        fadeInDuration:
+                                        const Duration(seconds: 0),
+                                        fit: BoxFit.fill,
+                                        imageUrl:
+                                        "${createTeamController.FinalTeam.value.Bowl![index].imageUrl}",
+                                        progressIndicatorBuilder: (context,
+                                            url, downloadProgress) =>
+                                            Container(),
+                                        errorWidget:
+                                            (context, url, error) => Padding(padding: EdgeInsets.only(bottom: Get.width/18),child: Image.asset("assets/image/person.png"),)
                                     ),
                                   ),
                                   Align(
@@ -613,8 +591,8 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                     child: Container(
                                       height: 23,
                                       decoration: BoxDecoration(
-                                          color: createTeamController.finalTeam['WK']![index].name!=
-                                              "CSK"
+                                          color: createTeamController.FinalTeam.value.Bowl![index].color!.toLowerCase() !=
+                                              "0xffffffff".toLowerCase()
                                               ? const Color(0xffffffff)
                                               : const Color(0xff021852),
                                           borderRadius:
@@ -623,12 +601,12 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                           horizontal: 10),
                                       alignment: Alignment.center,
                                       child: Text(
-                                        "${createTeamController.finalTeam['BOWL']![index].name}",
+                                        "${createTeamController.FinalTeam.value.Bowl![index].firstName![0].toUpperCase()}. ${createTeamController.FinalTeam.value.Bowl![index].lastName}",
                                         style: TextStyle(
-                                            color:createTeamController.finalTeam['WK']![index].name!=
-                                                "RCB"
-                                                ? const Color(0xffffffff)
-                                                : const Color(0xff021852),
+                                            color:createTeamController.FinalTeam.value.Bowl![index].color!.toLowerCase() !=
+                                                "0xffffffff".toLowerCase()
+                                                ? const Color(0xff021852)
+                                                : const Color(0xffffffff),
                                             fontWeight: FontWeight.bold,
                                             fontSize: 12),
                                       ),
@@ -640,7 +618,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                             Padding(
                               padding: const EdgeInsets.only(top: 6),
                               child: Text(
-                                "${createTeamController.finalTeam['BOWL']![index].credit}",
+                                "${createTeamController.FinalTeam.value.Bowl![index].credit}${createTeamController.FinalTeam.value.Bowl![index].point == 0 ? " Cr" : ""}",
                                 style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 14,
@@ -651,7 +629,7 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                         ),
                       ),
                       shrinkWrap: true,
-                      itemCount: createTeamController.finalTeam['BOWL']!.length,
+                      itemCount: createTeamController.FinalTeam.value.Bowl!.length,
                       scrollDirection: Axis.horizontal,
                     ),
                   ),
@@ -662,7 +640,8 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
               ),
             ),
           ],
-        ),
+        )
+            : Center(child: Image.asset("assets/image/team_preview.png"),),
       ),
     );
   }

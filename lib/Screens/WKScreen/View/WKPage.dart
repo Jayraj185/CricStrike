@@ -123,9 +123,15 @@ class _WKPageState extends State<WKPage> {
                                         createTeamController.wkList[index].selected!
                                             ? false
                                             : true,
-                                        teamName:
-                                        createTeamController.wkList[index].teamName,
-                                        name: createTeamController.wkList[index].name,
+                                        teamName: createTeamController.wkList[index].teamName,
+                                        firstName: createTeamController.wkList[index].firstName,
+                                        lastName: createTeamController.wkList[index].lastName,
+                                        point: createTeamController.wkList[index].point,
+                                        color: createTeamController.wkList[index].color,
+                                        captain: createTeamController.wkList[index].captain,
+                                        visecaptain: createTeamController.wkList[index].visecaptain,
+                                        capSelby: createTeamController.wkList[index].capSelby,
+                                        vicecapSelby: createTeamController.wkList[index].vicecapSelby,
                                       );
                                   createTeamController.PlayerCount.value = 0;
                                   createTeamController.WKPCount.value = 0;
@@ -235,7 +241,14 @@ class _WKPageState extends State<WKPage> {
                                         selected: false,
                                         teamName:
                                         createTeamController.wkList[index].teamName,
-                                        name: createTeamController.wkList[index].name,
+                                        firstName: createTeamController.wkList[index].firstName,
+                                        lastName: createTeamController.wkList[index].lastName,
+                                        point: createTeamController.wkList[index].point,
+                                        color: createTeamController.wkList[index].color,
+                                        captain: createTeamController.wkList[index].captain,
+                                        visecaptain: createTeamController.wkList[index].visecaptain,
+                                        capSelby: createTeamController.wkList[index].capSelby,
+                                        vicecapSelby: createTeamController.wkList[index].vicecapSelby,
                                       );
                                   createTeamController.PlayerCount.value = 0;
                                   createTeamController.WKPCount.value = 0;
@@ -327,7 +340,14 @@ class _WKPageState extends State<WKPage> {
                                     selected: false,
                                     teamName:
                                     createTeamController.wkList[index].teamName,
-                                    name: createTeamController.wkList[index].name,
+                                    firstName: createTeamController.wkList[index].firstName,
+                                    lastName: createTeamController.wkList[index].lastName,
+                                    point: createTeamController.wkList[index].point,
+                                    color: createTeamController.wkList[index].color,
+                                    captain: createTeamController.wkList[index].captain,
+                                    visecaptain: createTeamController.wkList[index].visecaptain,
+                                    capSelby: createTeamController.wkList[index].capSelby,
+                                    vicecapSelby: createTeamController.wkList[index].vicecapSelby,
                                   );
                               createTeamController.PlayerCount.value = 0;
                               createTeamController.WKPCount.value = 0;
@@ -431,7 +451,7 @@ class _WKPageState extends State<WKPage> {
                                     SizedBox(
                                       width: Get.width / 3.9,
                                       child: Text(
-                                        "${createTeamController.wkList[index].name}",
+                                        "${createTeamController.wkList[index].firstName} ${createTeamController.wkList[index].lastName}",
                                         maxLines: 1,
                                         style: const TextStyle(
                                             overflow: TextOverflow.ellipsis,

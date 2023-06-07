@@ -119,7 +119,14 @@ class _ARPageState extends State<ARPage> {
                                     imageUrl: createTeamController.arList[index].imageUrl,
                                     selected: createTeamController.arList[index].selected! ? false : true,
                                     teamName: createTeamController.arList[index].teamName,
-                                    name: createTeamController.arList[index].name,
+                                    firstName: createTeamController.arList[index].firstName,
+                                    lastName: createTeamController.arList[index].lastName,
+                                    point: createTeamController.arList[index].point,
+                                    color: createTeamController.arList[index].color,
+                                    captain: createTeamController.arList[index].captain,
+                                    visecaptain: createTeamController.arList[index].visecaptain,
+                                    capSelby: createTeamController.arList[index].capSelby,
+                                    vicecapSelby: createTeamController.arList[index].vicecapSelby,
                                   );
                                   createTeamController.PlayerCount.value=0;
                                   createTeamController.ARPCount.value = 0;
@@ -227,7 +234,14 @@ class _ARPageState extends State<ARPage> {
                                     imageUrl: createTeamController.arList[index].imageUrl,
                                     selected: false,
                                     teamName: createTeamController.arList[index].teamName,
-                                    name: createTeamController.arList[index].name,
+                                    firstName: createTeamController.arList[index].firstName,
+                                    lastName: createTeamController.arList[index].lastName,
+                                    point: createTeamController.arList[index].point,
+                                    color: createTeamController.arList[index].color,
+                                    captain: createTeamController.arList[index].captain,
+                                    visecaptain: createTeamController.arList[index].visecaptain,
+                                    capSelby: createTeamController.arList[index].capSelby,
+                                    vicecapSelby: createTeamController.arList[index].vicecapSelby,
                                   );
                                   createTeamController.PlayerCount.value=0;
                                   createTeamController.ARPCount.value = 0;
@@ -322,7 +336,14 @@ class _ARPageState extends State<ARPage> {
                                 imageUrl: createTeamController.arList[index].imageUrl,
                                 selected: false,
                                 teamName: createTeamController.arList[index].teamName,
-                                name: createTeamController.arList[index].name,
+                                firstName: createTeamController.arList[index].firstName,
+                                lastName: createTeamController.arList[index].lastName,
+                                point: createTeamController.arList[index].point,
+                                color: createTeamController.arList[index].color,
+                                captain: createTeamController.arList[index].captain,
+                                visecaptain: createTeamController.arList[index].visecaptain,
+                                capSelby: createTeamController.arList[index].capSelby,
+                                vicecapSelby: createTeamController.arList[index].vicecapSelby,
                               );
                               createTeamController.PlayerCount.value=0;
                               createTeamController.ARPCount.value = 0;
@@ -433,7 +454,7 @@ class _ARPageState extends State<ARPage> {
                                     SizedBox(
                                       width: Get.width / 3.9,
                                       child: Text(
-                                        "${createTeamController.arList[index].name}",
+                                        "${createTeamController.arList[index].firstName} ${createTeamController.arList[index].lastName}",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                         style: const TextStyle(

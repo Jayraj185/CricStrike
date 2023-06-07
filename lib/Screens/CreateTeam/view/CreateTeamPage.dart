@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:cricstreak/Screens/CreateTeam/controller/CreateTeamController.dart';
 import 'package:cricstreak/Screens/CreateTeam/model/PlayerDetailModel.dart';
+import 'package:cricstreak/Screens/CreateTeam/model/TeamModel.dart';
 import 'package:cricstreak/Utils/Shape.dart';
 import 'package:edge_alerts/edge_alerts.dart';
 import 'package:flutter/material.dart';
@@ -514,46 +515,27 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                 Expanded(
                   child: InkWell(
                     onTap: () {
-                      if (1>0) {
-                        List<PlayerDetailModel> wkList = [];
-                        List<PlayerDetailModel> batList = [];
-                        List<PlayerDetailModel> arList = [];
-                        List<PlayerDetailModel> bowlList = [];
-                        for (PlayerDetailModel x
-                        in createTeamController.wkList) {
-                          if (x.selected!) {
-                            wkList.add(x);
+                      createTeamController.FinalTeam.value = TeamModel(AR: [],Bat: [],Bowl: [],WK: []);
+                        for (PlayerDetailModel player in createTeamController.wkList) {
+                          if (player.selected!) {
+                            createTeamController.FinalTeam.value.WK!.add(player);
                           }
                         }
-                        for (PlayerDetailModel x
-                        in createTeamController.batList) {
-                          if (x.selected!) {
-                            batList.add(x);
+                        for (PlayerDetailModel player in createTeamController.batList) {
+                          if (player.selected!) {
+                            createTeamController.FinalTeam.value.Bat!.add(player);
                           }
                         }
-                        for (PlayerDetailModel x
-                        in createTeamController.arList) {
-                          if (x.selected!) {
-                            arList.add(x);
+                        for (PlayerDetailModel player in createTeamController.arList) {
+                          if (player.selected!) {
+                            createTeamController.FinalTeam.value.AR!.add(player);
                           }
                         }
-                        for (PlayerDetailModel x
-                        in createTeamController.bowlList) {
-                          if (x.selected!) {
-                            bowlList.add(x);
+                        for (PlayerDetailModel player in createTeamController.bowlList) {
+                          if (player.selected!) {
+                            createTeamController.FinalTeam.value.Bowl!.add(player);
                           }
                         }
-                        print("==================> ${wkList[1].name}");
-                        createTeamController.finalTeam.addAll({
-                          'WK': wkList,
-                          'BAT': batList,
-                          'AR': arList,
-                          'BOWL': bowlList,
-                        });
-                        print("=================> ${createTeamController.finalTeam['AR']![0].imageUrl }");
-                        /// aya sudhi Complete data ave che have khali final page ma show karavana che
-                        Get.toNamed('linup');
-                      }
                       Get.toNamed('team_Preview');
                     },
                     child: Card(
@@ -585,43 +567,27 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                     () => InkWell(
                       onTap: () {
                         if (createTeamController.PlayerCount.value == 11) {
-                          List<PlayerDetailModel> wkList = [];
-                          List<PlayerDetailModel> batList = [];
-                          List<PlayerDetailModel> arList = [];
-                          List<PlayerDetailModel> bowlList = [];
-                          for (PlayerDetailModel x
-                              in createTeamController.wkList) {
-                            if (x.selected!) {
-                              wkList.add(x);
+                          createTeamController.FinalTeam.value = TeamModel(AR: [],Bat: [],Bowl: [],WK: []);
+                          for (PlayerDetailModel player in createTeamController.wkList) {
+                            if (player.selected!) {
+                              createTeamController.FinalTeam.value.WK!.add(player);
                             }
                           }
-                          for (PlayerDetailModel x
-                              in createTeamController.batList) {
-                            if (x.selected!) {
-                              batList.add(x);
+                          for (PlayerDetailModel player in createTeamController.batList) {
+                            if (player.selected!) {
+                              createTeamController.FinalTeam.value.Bat!.add(player);
                             }
                           }
-                          for (PlayerDetailModel x
-                              in createTeamController.arList) {
-                            if (x.selected!) {
-                              arList.add(x);
+                          for (PlayerDetailModel player in createTeamController.arList) {
+                            if (player.selected!) {
+                              createTeamController.FinalTeam.value.AR!.add(player);
                             }
                           }
-                          for (PlayerDetailModel x
-                              in createTeamController.bowlList) {
-                            if (x.selected!) {
-                              bowlList.add(x);
+                          for (PlayerDetailModel player in createTeamController.bowlList) {
+                            if (player.selected!) {
+                              createTeamController.FinalTeam.value.Bowl!.add(player);
                             }
                           }
-                          print("==================> ${wkList[1].name}");
-                          createTeamController.finalTeam.addAll({
-                            'WK': wkList,
-                            'BAT': batList,
-                            'AR': arList,
-                            'BOWL': bowlList,
-                          });
-                          print("=================> ${createTeamController.finalTeam['AR']![0].imageUrl }");
-                          /// aya sudhi Complete data ave che have khali final page ma show karavana che
                           Get.toNamed('linup');
                         }
                       },
