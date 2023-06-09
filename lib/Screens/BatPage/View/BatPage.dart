@@ -124,7 +124,7 @@ class _BatPageState extends State<BatPage> {
                                     point: createTeamController.batList[index].point,
                                     color: createTeamController.batList[index].color,
                                     captain: createTeamController.batList[index].captain,
-                                    visecaptain: createTeamController.batList[index].visecaptain,
+                                    vicecaptain: createTeamController.batList[index].vicecaptain,
                                     capSelby: createTeamController.batList[index].capSelby,
                                     vicecapSelby: createTeamController.batList[index].vicecapSelby,
                                   );
@@ -239,7 +239,7 @@ class _BatPageState extends State<BatPage> {
                                     point: createTeamController.batList[index].point,
                                     color: createTeamController.batList[index].color,
                                     captain: createTeamController.batList[index].captain,
-                                    visecaptain: createTeamController.batList[index].visecaptain,
+                                    vicecaptain: createTeamController.batList[index].vicecaptain,
                                     capSelby: createTeamController.batList[index].capSelby,
                                     vicecapSelby: createTeamController.batList[index].vicecapSelby,
                                   );
@@ -342,7 +342,7 @@ class _BatPageState extends State<BatPage> {
                                 point: createTeamController.batList[index].point,
                                 color: createTeamController.batList[index].color,
                                 captain: createTeamController.batList[index].captain,
-                                visecaptain: createTeamController.batList[index].visecaptain,
+                                vicecaptain: createTeamController.batList[index].vicecaptain,
                                 capSelby: createTeamController.batList[index].capSelby,
                                 vicecapSelby: createTeamController.batList[index].vicecapSelby,
                               );

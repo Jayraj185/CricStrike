@@ -28,7 +28,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/13.png"),
     PlayerDetailModel(
@@ -44,7 +44,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/534.png"),
     PlayerDetailModel(
@@ -60,7 +60,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/595.png"),
     PlayerDetailModel(
@@ -76,7 +76,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/57.png"),
     PlayerDetailModel(
@@ -92,7 +92,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/601.png"),
   ].obs;
@@ -110,7 +110,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/2.png"),
     PlayerDetailModel(
@@ -126,7 +126,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/94.png"),
     PlayerDetailModel(
@@ -142,7 +142,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl: ""),
     PlayerDetailModel(
         firstName: "Suyash S",
@@ -157,7 +157,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/598.png"),
     PlayerDetailModel(
@@ -173,7 +173,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/102.png"),
     PlayerDetailModel(
@@ -189,7 +189,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/60.png"),
     PlayerDetailModel(
@@ -205,7 +205,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/44.png"),
     PlayerDetailModel(
@@ -221,7 +221,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/778.png"),
     PlayerDetailModel(
@@ -237,7 +237,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/971.png"),
   ].obs;
@@ -255,7 +255,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/28.png"),
     PlayerDetailModel(
@@ -271,7 +271,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/523.png"),
     PlayerDetailModel(
@@ -287,7 +287,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/184.png"),
     PlayerDetailModel(
@@ -303,7 +303,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/90.png"),
     PlayerDetailModel(
@@ -319,7 +319,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/102.png"),
     PlayerDetailModel(
@@ -335,7 +335,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/1465.png"),
     PlayerDetailModel(
@@ -351,7 +351,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl: ""),
     PlayerDetailModel(
         firstName: "Wayne",
@@ -366,7 +366,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl: ""),
     PlayerDetailModel(
         firstName: "Sonu",
@@ -381,7 +381,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/1940.png"),
     PlayerDetailModel(
@@ -397,7 +397,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/46.png"),
     PlayerDetailModel(
@@ -413,7 +413,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/177.png"),
     PlayerDetailModel(
@@ -429,7 +429,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/289.png"),
     PlayerDetailModel(
@@ -445,7 +445,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/206.png"),
     PlayerDetailModel(
@@ -461,7 +461,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/783.png"),
     PlayerDetailModel(
@@ -477,7 +477,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/791.png"),
     PlayerDetailModel(
@@ -493,7 +493,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/382.png"),
     PlayerDetailModel(
@@ -509,7 +509,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/75.png"),
     PlayerDetailModel(
@@ -525,7 +525,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/577.png"),
     PlayerDetailModel(
@@ -541,7 +541,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/1931.png"),
     PlayerDetailModel(
@@ -557,7 +557,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/211.png"),
   ].obs;
@@ -575,7 +575,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/114.png"),
     PlayerDetailModel(
@@ -591,7 +591,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/98.png"),
     PlayerDetailModel(
@@ -607,7 +607,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/63.png"),
     PlayerDetailModel(
@@ -623,7 +623,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl: ""),
     PlayerDetailModel(
         firstName: "Siddarth",
@@ -638,7 +638,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/64.png"),
     PlayerDetailModel(
@@ -654,7 +654,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/1007.png"),
     PlayerDetailModel(
@@ -670,7 +670,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/377.png"),
     PlayerDetailModel(
@@ -686,7 +686,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/574.png"),
     PlayerDetailModel(
@@ -702,7 +702,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/1939.png"),
     PlayerDetailModel(
@@ -718,7 +718,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/1568.png"),
     PlayerDetailModel(
@@ -734,7 +734,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/1503.png"),
     PlayerDetailModel(
@@ -750,7 +750,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl: ""),
     PlayerDetailModel(
         firstName: "Dipak",
@@ -765,7 +765,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/91.png"),
     PlayerDetailModel(
@@ -781,7 +781,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/629.png"),
     PlayerDetailModel(
@@ -797,7 +797,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/1014.png"),
     PlayerDetailModel(
@@ -813,7 +813,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/970.png"),
     PlayerDetailModel(
@@ -829,7 +829,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/972.png"),
     PlayerDetailModel(
@@ -845,7 +845,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/622.png"),
     PlayerDetailModel(
@@ -861,7 +861,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/539.png"),
     PlayerDetailModel(
@@ -877,7 +877,7 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/535.png"),
     PlayerDetailModel(
@@ -893,12 +893,12 @@ class CreateTeamController extends GetxController {
         capSelby: 0.0,
         vicecapSelby: 0.0,
         captain: false,
-        visecaptain: false,
+        vicecaptain: false,
         imageUrl:
             "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/745.png"),
   ].obs;
-  Rx<TeamModel> FinalTeam = TeamModel(AR: [], Bat: [], Bowl: [], WK: []).obs;
-
+  Rx<TeamModel> FinalTeam = TeamModel(AR: <PlayerDetailModel>[].obs, Bat: <PlayerDetailModel>[].obs, Bowl: <PlayerDetailModel>[].obs, WK: <PlayerDetailModel>[].obs).obs;
+  RxInt CVCSelected = 0.obs;
   RxMap<String, int> count = {
     "WK": 0,
     "BAT": 0,

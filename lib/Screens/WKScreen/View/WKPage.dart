@@ -129,7 +129,7 @@ class _WKPageState extends State<WKPage> {
                                         point: createTeamController.wkList[index].point,
                                         color: createTeamController.wkList[index].color,
                                         captain: createTeamController.wkList[index].captain,
-                                        visecaptain: createTeamController.wkList[index].visecaptain,
+                                        vicecaptain: createTeamController.wkList[index].vicecaptain,
                                         capSelby: createTeamController.wkList[index].capSelby,
                                         vicecapSelby: createTeamController.wkList[index].vicecapSelby,
                                       );
@@ -246,7 +246,7 @@ class _WKPageState extends State<WKPage> {
                                         point: createTeamController.wkList[index].point,
                                         color: createTeamController.wkList[index].color,
                                         captain: createTeamController.wkList[index].captain,
-                                        visecaptain: createTeamController.wkList[index].visecaptain,
+                                        vicecaptain: createTeamController.wkList[index].vicecaptain,
                                         capSelby: createTeamController.wkList[index].capSelby,
                                         vicecapSelby: createTeamController.wkList[index].vicecapSelby,
                                       );
@@ -345,7 +345,7 @@ class _WKPageState extends State<WKPage> {
                                     point: createTeamController.wkList[index].point,
                                     color: createTeamController.wkList[index].color,
                                     captain: createTeamController.wkList[index].captain,
-                                    visecaptain: createTeamController.wkList[index].visecaptain,
+                                    vicecaptain: createTeamController.wkList[index].vicecaptain,
                                     capSelby: createTeamController.wkList[index].capSelby,
                                     vicecapSelby: createTeamController.wkList[index].vicecapSelby,
                                   );

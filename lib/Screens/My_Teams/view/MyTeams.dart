@@ -733,7 +733,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                 capSelby: createTeamController.wkList[i].capSelby,
                 vicecapSelby: createTeamController.wkList[i].vicecapSelby,
                 captain: false,
-                visecaptain: false,
+                vicecaptain: false,
               );
             }
             for (int i = 0; i < createTeamController.batList.length; i++) {
@@ -751,7 +751,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                 capSelby: createTeamController.batList[i].capSelby,
                 vicecapSelby: createTeamController.batList[i].vicecapSelby,
                 captain: false,
-                visecaptain: false,
+                vicecaptain: false,
               );
             }
             for (int i = 0; i < createTeamController.arList.length; i++) {
@@ -769,7 +769,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                 capSelby: createTeamController.arList[i].capSelby,
                 vicecapSelby: createTeamController.arList[i].vicecapSelby,
                 captain: false,
-                visecaptain: false,
+                vicecaptain: false,
               );
             }
             for (int i = 0; i < createTeamController.bowlList.length; i++) {
@@ -787,7 +787,7 @@ class _MyTeamsPageState extends State<MyTeamsPage> {
                 capSelby: createTeamController.bowlList[i].capSelby,
                 vicecapSelby: createTeamController.bowlList[i].vicecapSelby,
                 captain: false,
-                visecaptain: false,
+                vicecaptain: false,
               );
             }
             Get.toNamed('create_Team');

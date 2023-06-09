@@ -124,7 +124,7 @@ class _ARPageState extends State<ARPage> {
                                     point: createTeamController.arList[index].point,
                                     color: createTeamController.arList[index].color,
                                     captain: createTeamController.arList[index].captain,
-                                    visecaptain: createTeamController.arList[index].visecaptain,
+                                    vicecaptain: createTeamController.arList[index].vicecaptain,
                                     capSelby: createTeamController.arList[index].capSelby,
                                     vicecapSelby: createTeamController.arList[index].vicecapSelby,
                                   );
@@ -239,7 +239,7 @@ class _ARPageState extends State<ARPage> {
                                     point: createTeamController.arList[index].point,
                                     color: createTeamController.arList[index].color,
                                     captain: createTeamController.arList[index].captain,
-                                    visecaptain: createTeamController.arList[index].visecaptain,
+                                    vicecaptain: createTeamController.arList[index].vicecaptain,
                                     capSelby: createTeamController.arList[index].capSelby,
                                     vicecapSelby: createTeamController.arList[index].vicecapSelby,
                                   );
@@ -341,7 +341,7 @@ class _ARPageState extends State<ARPage> {
                                 point: createTeamController.arList[index].point,
                                 color: createTeamController.arList[index].color,
                                 captain: createTeamController.arList[index].captain,
-                                visecaptain: createTeamController.arList[index].visecaptain,
+                                vicecaptain: createTeamController.arList[index].vicecaptain,
                                 capSelby: createTeamController.arList[index].capSelby,
                                 vicecapSelby: createTeamController.arList[index].vicecapSelby,
                               );

@@ -124,7 +124,7 @@ class _BowlPageState extends State<BowlPage> {
                                     point: createTeamController.bowlList[index].point,
                                     color: createTeamController.bowlList[index].color,
                                     captain: createTeamController.bowlList[index].captain,
-                                    visecaptain: createTeamController.bowlList[index].visecaptain,
+                                    vicecaptain: createTeamController.bowlList[index].vicecaptain,
                                     capSelby: createTeamController.bowlList[index].capSelby,
                                     vicecapSelby: createTeamController.bowlList[index].vicecapSelby,
                                   );
@@ -239,7 +239,7 @@ class _BowlPageState extends State<BowlPage> {
                                     point: createTeamController.bowlList[index].point,
                                     color: createTeamController.bowlList[index].color,
                                     captain: createTeamController.bowlList[index].captain,
-                                    visecaptain: createTeamController.bowlList[index].visecaptain,
+                                    vicecaptain: createTeamController.bowlList[index].vicecaptain,
                                     capSelby: createTeamController.bowlList[index].capSelby,
                                     vicecapSelby: createTeamController.bowlList[index].vicecapSelby,
                                   );
@@ -341,7 +341,7 @@ class _BowlPageState extends State<BowlPage> {
                                 point: createTeamController.bowlList[index].point,
                                 color: createTeamController.bowlList[index].color,
                                 captain: createTeamController.bowlList[index].captain,
-                                visecaptain: createTeamController.bowlList[index].visecaptain,
+                                vicecaptain: createTeamController.bowlList[index].vicecaptain,
                                 capSelby: createTeamController.bowlList[index].capSelby,
                                 vicecapSelby: createTeamController.bowlList[index].vicecapSelby,
                               );

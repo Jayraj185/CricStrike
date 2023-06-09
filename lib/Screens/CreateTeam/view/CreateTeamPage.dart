@@ -504,7 +504,7 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
               physics: const BouncingScrollPhysics(),
               children: createTeamController.Screens),
           bottomNavigationBar: Container(
-            height: 70,
+            height: Get.width/5.6,
             color: Colors.white,
             alignment: Alignment.center,
             padding: EdgeInsets.symmetric(horizontal: Get.width / 30),
@@ -515,7 +515,7 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                 Expanded(
                   child: InkWell(
                     onTap: () {
-                      createTeamController.FinalTeam.value = TeamModel(AR: [],Bat: [],Bowl: [],WK: []);
+                      createTeamController.FinalTeam.value = TeamModel(AR: <PlayerDetailModel>[].obs,Bat: <PlayerDetailModel>[].obs,Bowl: <PlayerDetailModel>[].obs,WK: <PlayerDetailModel>[].obs);
                         for (PlayerDetailModel player in createTeamController.wkList) {
                           if (player.selected!) {
                             createTeamController.FinalTeam.value.WK!.add(player);
@@ -542,7 +542,7 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                       color: Colors.green,
                       elevation: 3,
                       child: Container(
-                        height: 45,
+                        height: Get.width/9,
                         decoration: BoxDecoration(
                             color: Colors.white,
                             border: Border.all(color: Colors.green, width: 1.5),
@@ -567,7 +567,7 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                     () => InkWell(
                       onTap: () {
                         if (createTeamController.PlayerCount.value == 11) {
-                          createTeamController.FinalTeam.value = TeamModel(AR: [],Bat: [],Bowl: [],WK: []);
+                          createTeamController.FinalTeam.value = TeamModel(AR: <PlayerDetailModel>[].obs,Bat: <PlayerDetailModel>[].obs,Bowl: <PlayerDetailModel>[].obs,WK: <PlayerDetailModel>[].obs);
                           for (PlayerDetailModel player in createTeamController.wkList) {
                             if (player.selected!) {
                               createTeamController.FinalTeam.value.WK!.add(player);
@@ -597,7 +597,7 @@ class _CreateTeamPageState extends State<CreateTeamPage> {
                             : Colors.grey.shade300,
                         elevation: 3,
                         child: Container(
-                          height: 45,
+                          height: Get.width/9,
                           decoration: BoxDecoration(
                             color: createTeamController.PlayerCount.value == 11
                                 ? Colors.green

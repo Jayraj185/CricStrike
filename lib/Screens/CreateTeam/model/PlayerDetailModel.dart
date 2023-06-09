@@ -8,7 +8,7 @@
 /// point : 0.0
 /// color : "0xff"
 /// captain : false
-/// visecaptain : false
+/// vicecaptain : false
 /// capSelby : 0.0
 /// vicecapSelby : 0.0
 /// imageUrl : "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/2.png"
@@ -25,7 +25,7 @@ class PlayerDetailModel {
     num? point,
     String? color,
     bool? captain,
-    bool? visecaptain,
+    bool? vicecaptain,
     num? capSelby,
     num? vicecapSelby,
     String? imageUrl,}){
@@ -39,7 +39,7 @@ class PlayerDetailModel {
     _point = point;
     _color = color;
     _captain = captain;
-    _visecaptain = visecaptain;
+    _vicecaptain = vicecaptain;
     _capSelby = capSelby;
     _vicecapSelby = vicecapSelby;
     _imageUrl = imageUrl;
@@ -56,7 +56,7 @@ class PlayerDetailModel {
     _point = json['point'];
     _color = json['color'];
     _captain = json['captain'];
-    _visecaptain = json['visecaptain'];
+    _vicecaptain = json['vicecaptain'];
     _capSelby = json['capSelby'];
     _vicecapSelby = json['vicecapSelby'];
     _imageUrl = json['imageUrl'];
@@ -71,7 +71,7 @@ class PlayerDetailModel {
   num? _point;
   String? _color;
   bool? _captain;
-  bool? _visecaptain;
+  bool? _vicecaptain;
   num? _capSelby;
   num? _vicecapSelby;
   String? _imageUrl;
@@ -85,7 +85,7 @@ class PlayerDetailModel {
     num? point,
     String? color,
     bool? captain,
-    bool? visecaptain,
+    bool? vicecaptain,
     num? capSelby,
     num? vicecapSelby,
     String? imageUrl,
@@ -99,7 +99,7 @@ class PlayerDetailModel {
     point: point ?? _point,
     color: color ?? _color,
     captain: captain ?? _captain,
-    visecaptain: visecaptain ?? _visecaptain,
+    vicecaptain: vicecaptain ?? _vicecaptain,
     capSelby: capSelby ?? _capSelby,
     vicecapSelby: vicecapSelby ?? _vicecapSelby,
     imageUrl: imageUrl ?? _imageUrl,
@@ -114,7 +114,7 @@ class PlayerDetailModel {
   num? get point => _point;
   String? get color => _color;
   bool? get captain => _captain;
-  bool? get visecaptain => _visecaptain;
+  bool? get vicecaptain => _vicecaptain;
   num? get capSelby => _capSelby;
   num? get vicecapSelby => _vicecapSelby;
   String? get imageUrl => _imageUrl;
@@ -131,7 +131,7 @@ class PlayerDetailModel {
     map['point'] = _point;
     map['color'] = _color;
     map['captain'] = _captain;
-    map['visecaptain'] = _visecaptain;
+    map['vicecaptain'] = _vicecaptain;
     map['capSelby'] = _capSelby;
     map['vicecapSelby'] = _vicecapSelby;
     map['imageUrl'] = _imageUrl;
