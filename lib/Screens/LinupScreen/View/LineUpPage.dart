@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cricstreak/Screens/CreateTeam/controller/CreateTeamController.dart';
 import 'package:cricstreak/Screens/CreateTeam/model/PlayerDetailModel.dart';
+import 'package:cricstreak/Screens/CreateTeam/model/TeamModel.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -283,6 +284,10 @@ class _LineUpPageState extends State<LineUpPage> {
                                               vicecapSelby: createTeamController.FinalTeam.value.WK![i].vicecapSelby,
                                             );
                                           }
+                                          if(createTeamController.FinalTeam.value.WK![i].vicecaptain!)
+                                          {
+                                            createTeamController.CVCSelected.value++;
+                                          }
                                           // createTeamController.FinalTeam.value.WK![i] = createTeamController.FinalTeam.value.WK![i];
                                         }
                                         for(int i=0; i<createTeamController.FinalTeam.value.Bat!.length; i++)
@@ -445,6 +450,10 @@ class _LineUpPageState extends State<LineUpPage> {
                                               vicecaptain: false,
                                               vicecapSelby: createTeamController.FinalTeam.value.WK![i].vicecapSelby,
                                             );
+                                            if(createTeamController.FinalTeam.value.WK![i].captain!)
+                                            {
+                                              createTeamController.CVCSelected.value++;
+                                            }
                                           }
                                         }
                                         for(int i=0; i<createTeamController.FinalTeam.value.Bat!.length; i++)
@@ -710,6 +719,10 @@ class _LineUpPageState extends State<LineUpPage> {
                                               vicecaptain: createTeamController.FinalTeam.value.Bat![i].vicecaptain,
                                               vicecapSelby: createTeamController.FinalTeam.value.Bat![i].vicecapSelby,
                                             );
+                                            if(createTeamController.FinalTeam.value.Bat![i].vicecaptain!)
+                                            {
+                                              createTeamController.CVCSelected.value++;
+                                            }
                                           }
                                         }
                                         for(int i=0; i<createTeamController.FinalTeam.value.WK!.length; i++)
@@ -872,6 +885,10 @@ class _LineUpPageState extends State<LineUpPage> {
                                               vicecaptain: false,
                                               vicecapSelby: createTeamController.FinalTeam.value.Bat![i].vicecapSelby,
                                             );
+                                            if(createTeamController.FinalTeam.value.Bat![i].captain!)
+                                            {
+                                              createTeamController.CVCSelected.value++;
+                                            }
                                           }
                                         }
                                         for(int i=0; i<createTeamController.FinalTeam.value.WK!.length; i++)
@@ -1139,6 +1156,10 @@ class _LineUpPageState extends State<LineUpPage> {
                                               vicecaptain: createTeamController.FinalTeam.value.AR![i].vicecaptain,
                                               vicecapSelby: createTeamController.FinalTeam.value.AR![i].vicecapSelby,
                                             );
+                                            if(createTeamController.FinalTeam.value.AR![i].vicecaptain!)
+                                            {
+                                              createTeamController.CVCSelected.value++;
+                                            }
                                           }
                                         }
                                         for(int i=0; i<createTeamController.FinalTeam.value.WK!.length; i++)
@@ -1301,6 +1322,10 @@ class _LineUpPageState extends State<LineUpPage> {
                                               vicecaptain: false,
                                               vicecapSelby: createTeamController.FinalTeam.value.AR![i].vicecapSelby,
                                             );
+                                            if(createTeamController.FinalTeam.value.AR![i].captain!)
+                                            {
+                                              createTeamController.CVCSelected.value++;
+                                            }
                                           }
                                         }
                                         for(int i=0; i<createTeamController.FinalTeam.value.WK!.length; i++)
@@ -1568,6 +1593,10 @@ class _LineUpPageState extends State<LineUpPage> {
                                               vicecaptain: createTeamController.FinalTeam.value.Bowl![i].vicecaptain,
                                               vicecapSelby: createTeamController.FinalTeam.value.Bowl![i].vicecapSelby,
                                             );
+                                            if(createTeamController.FinalTeam.value.Bowl![i].vicecaptain!)
+                                            {
+                                              createTeamController.CVCSelected.value++;
+                                            }
                                           }
                                         }
                                         for(int i=0; i<createTeamController.FinalTeam.value.WK!.length; i++)
@@ -1729,6 +1758,10 @@ class _LineUpPageState extends State<LineUpPage> {
                                               vicecaptain: false,
                                               vicecapSelby: createTeamController.FinalTeam.value.Bowl![i].vicecapSelby,
                                             );
+                                            if(createTeamController.FinalTeam.value.Bowl![i].captain!)
+                                            {
+                                              createTeamController.CVCSelected.value++;
+                                            }
                                           }
                                         }
                                         for(int i=0; i<createTeamController.FinalTeam.value.WK!.length; i++)
@@ -1873,19 +1906,24 @@ class _LineUpPageState extends State<LineUpPage> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Row(
-                        children: [
-                          Icon(Icons.visibility_outlined,color: Colors.green,size: Get.width/20,),
-                          SizedBox(width: Get.width/90,),
-                          Text(
-                            "PREVIEW".toUpperCase(),
-                            style: TextStyle(
-                              color: Colors.green,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16
-                            ),
-                          )
-                        ],
+                      InkWell(
+                        onTap: () {
+                          Get.toNamed('team_Preview');
+                        },
+                        child: Row(
+                          children: [
+                            Icon(Icons.visibility_outlined,color: Colors.green,size: Get.width/20,),
+                            SizedBox(width: Get.width/90,),
+                            Text(
+                              "PREVIEW".toUpperCase(),
+                              style: const TextStyle(
+                                color: Colors.green,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                       Text(
                         "/",
@@ -1912,20 +1950,30 @@ class _LineUpPageState extends State<LineUpPage> {
                   ),
                 ),
                 SizedBox(width: Get.width/30,),
-                Container(
-                  height: Get.width/9,
-                  width: Get.width/5,
-                  decoration: BoxDecoration(
-                    color: createTeamController.CVCSelected.value == 2 ? Colors.green : Colors.grey.shade400,
-                    borderRadius: BorderRadius.circular(6)
-                  ),
-                  alignment: Alignment.center,
-                  child: Text(
-                    "SAVE".toUpperCase(),
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold
+                InkWell(
+                  onTap: () {
+                    if(createTeamController.CVCSelected.value == 2)
+                      {
+                        createTeamController.MyTeamList.add(createTeamController.FinalTeam.value);
+                        Get.back();
+                        Get.back();
+                      }
+                  },
+                  child: Container(
+                    height: Get.width/9,
+                    width: Get.width/5,
+                    decoration: BoxDecoration(
+                      color: createTeamController.CVCSelected.value == 2 ? Colors.green : Colors.grey.shade400,
+                      borderRadius: BorderRadius.circular(6)
+                    ),
+                    alignment: Alignment.center,
+                    child: Text(
+                      "SAVE".toUpperCase(),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold
+                      ),
                     ),
                   ),
                 )

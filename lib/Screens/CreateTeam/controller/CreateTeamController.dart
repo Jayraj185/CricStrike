@@ -913,4 +913,5 @@ class CreateTeamController extends GetxController {
   RxInt RCBPCount = 0.obs;
   RxInt CSKPCount = 0.obs;
   RxDouble CreditLeftCount = 100.0.obs;
+  RxList<TeamModel> MyTeamList = <TeamModel>[].obs;
 }

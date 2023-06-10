@@ -272,57 +272,83 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                     : 4)),
                         child: Column(
                           children: [
-                            SizedBox(
-                              height: Get.height/12,
-                              // color: Colors.red,
-                              child: Stack(
-                                alignment: Alignment.center,
-                                children: [
-                                  Align(
-                                    alignment: Alignment.topCenter,
-                                    child: CachedNetworkImage(
-                                        fadeInDuration:
-                                        const Duration(seconds: 0),
-                                        fit: BoxFit.fill,
-                                        imageUrl:
-                                        "${createTeamController.FinalTeam.value.WK![index].imageUrl}",
-                                        progressIndicatorBuilder: (context,
-                                            url, downloadProgress) =>
-                                            Container(),
-                                        errorWidget:
-                                            (context, url, error) => Padding(padding: EdgeInsets.only(bottom: Get.width/18),child: Image.asset("assets/image/person.png"),)
-                                    ),
+                            Stack(
+                              children: [
+                                SizedBox(
+                                  height: Get.height/12,
+                                   // color: Colors.red,
+                                  child: Stack(
+                                    alignment: Alignment.center,
+                                    children: [
+                                      Align(
+                                        alignment: Alignment.topCenter,
+                                        child: CachedNetworkImage(
+                                            fadeInDuration:
+                                            const Duration(seconds: 0),
+                                            fit: BoxFit.fill,
+                                            imageUrl:
+                                            "${createTeamController.FinalTeam.value.WK![index].imageUrl}",
+                                            progressIndicatorBuilder: (context,
+                                                url, downloadProgress) =>
+                                                Container(),
+                                            errorWidget:
+                                                (context, url, error) => Padding(padding: EdgeInsets.only(bottom: Get.width/18),child: Image.asset("assets/image/person.png"),)
+                                        ),
+                                      ),
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                          height: 23,
+                                          decoration: BoxDecoration(
+                                              color: createTeamController.FinalTeam.value.WK![index].color!.toLowerCase() !=
+                                                  "0xffffffff".toLowerCase()
+                                                  ? const Color(0xffffffff)
+                                                  : const Color(0xff021852),
+                                              borderRadius:
+                                              BorderRadius.circular(4)),
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 10),
+                                          alignment: Alignment.center,
+                                          child: Text(
+                                            "${createTeamController.FinalTeam.value.WK![index].firstName![0].toUpperCase()}. ${createTeamController.FinalTeam.value.WK![index].lastName}",
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
+                                            style: TextStyle(
+                                                color: createTeamController.FinalTeam.value.WK![index].color!.toLowerCase() !=
+                                                    "0xffffffff".toLowerCase()
+                                                    ? const Color(0xff021852)
+                                                    : const Color(0xffffffff),
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 12),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Container(
-                                      height: 23,
-                                      decoration: BoxDecoration(
-                                          color: createTeamController.FinalTeam.value.WK![index].color!.toLowerCase() !=
-                                              "0xffffffff".toLowerCase()
-                                              ? const Color(0xffffffff)
-                                              : const Color(0xff021852),
-                                          borderRadius:
-                                          BorderRadius.circular(4)),
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 10),
-                                      alignment: Alignment.center,
-                                      child: Text(
-                                        "${createTeamController.FinalTeam.value.WK![index].firstName![0].toUpperCase()}. ${createTeamController.FinalTeam.value.WK![index].lastName}",
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                            color: createTeamController.FinalTeam.value.WK![index].color!.toLowerCase() !=
-                                                "0xffffffff".toLowerCase()
-                                                ? const Color(0xff021852)
-                                                : const Color(0xffffffff),
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 12),
+                                ),
+                                createTeamController.FinalTeam.value.WK![index].captain! || createTeamController.FinalTeam.value.WK![index].vicecaptain! ? Align(
+                                  alignment: Alignment.topLeft,
+                                  child: Container(
+                                    height: Get.width/25,
+                                    width: Get.width/25,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: createTeamController.FinalTeam.value.WK![index].captain! ? const  Color(0xff021852) : Colors.white,
+                                        border: Border.all(color: createTeamController.FinalTeam.value.WK![index].captain! ? Colors.white : const  Color(0xff021852))
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      "${createTeamController.FinalTeam.value.WK![index].captain! ? "C" : "VC"}".toUpperCase(),
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: createTeamController.FinalTeam.value.WK![index].captain! ? Colors.white : const  Color(0xff021852),
+                                        fontSize: 8,
+                                          fontWeight: FontWeight.bold
                                       ),
                                     ),
-                                  )
-                                ],
-                              ),
+                                  ),
+                                ) : const SizedBox(height: 0,width: 0,)
+                              ],
                             ),
                             Padding(
                               padding: const EdgeInsets.only(top: 6),
@@ -351,7 +377,6 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                   ),
                   SizedBox(
                     height: Get.height/8,
-
                     child: ListView.builder(
                       physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (context, index) => Container(
@@ -369,57 +394,82 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                     : 4)),
                         child: Column(
                           children: [
-                            SizedBox(
-                              height: Get.height/12,
-
-                              // color: Colors.red,
-                              child: Stack(
-                                alignment: Alignment.center,
-                                children: [
-                                  Align(
-                                    alignment: Alignment.topCenter,
-                                    child: CachedNetworkImage(
-                                        fadeInDuration:
-                                        const Duration(seconds: 0),
-                                        fit: BoxFit.fill,
-                                        imageUrl:
-                                        "${createTeamController.FinalTeam.value.Bat![index].imageUrl}",
-                                        progressIndicatorBuilder: (context,
-                                            url, downloadProgress) =>
-                                            Container(),
-                                        errorWidget:
-                                            (context, url, error) => Padding(padding: EdgeInsets.only(bottom: Get.width/18),child: Image.asset("assets/image/person.png"),)
-                                    ),),
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Container(
-                                      height: 23,
-                                      decoration: BoxDecoration(
-                                          color: createTeamController.FinalTeam.value.Bat![index].color!.toLowerCase() !=
-                                              "0xffffffff".toLowerCase()
-                                              ? const Color(0xffffffff)
-                                              : const Color(0xff021852),
-                                          borderRadius:
-                                          BorderRadius.circular(4)),
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 10),
-                                      alignment: Alignment.center,
-                                      child: Text(
-                                        "${createTeamController.FinalTeam.value.Bat![index].firstName![0].toUpperCase()}. ${createTeamController.FinalTeam.value.Bat![index].lastName}",
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                            color: createTeamController.FinalTeam.value.Bat![index].color!.toLowerCase() !=
-                                                "0xffffffff".toLowerCase()
-                                                ? const Color(0xff021852)
-                                                : const Color(0xffffffff),
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 12),
+                            Stack(
+                              children: [
+                                SizedBox(
+                                  height: Get.height/12,
+                                  // color: Colors.red,
+                                  child: Stack(
+                                    alignment: Alignment.center,
+                                    children: [
+                                      Align(
+                                        alignment: Alignment.topCenter,
+                                        child: CachedNetworkImage(
+                                            fadeInDuration:
+                                            const Duration(seconds: 0),
+                                            fit: BoxFit.fill,
+                                            imageUrl:
+                                            "${createTeamController.FinalTeam.value.Bat![index].imageUrl}",
+                                            progressIndicatorBuilder: (context,
+                                                url, downloadProgress) =>
+                                                Container(),
+                                            errorWidget:
+                                                (context, url, error) => Padding(padding: EdgeInsets.only(bottom: Get.width/18),child: Image.asset("assets/image/person.png"),)
+                                        ),),
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                          height: 23,
+                                          decoration: BoxDecoration(
+                                              color: createTeamController.FinalTeam.value.Bat![index].color!.toLowerCase() !=
+                                                  "0xffffffff".toLowerCase()
+                                                  ? const Color(0xffffffff)
+                                                  : const Color(0xff021852),
+                                              borderRadius:
+                                              BorderRadius.circular(4)),
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 10),
+                                          alignment: Alignment.center,
+                                          child: Text(
+                                            "${createTeamController.FinalTeam.value.Bat![index].firstName![0].toUpperCase()}. ${createTeamController.FinalTeam.value.Bat![index].lastName}",
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
+                                            style: TextStyle(
+                                                color: createTeamController.FinalTeam.value.Bat![index].color!.toLowerCase() !=
+                                                    "0xffffffff".toLowerCase()
+                                                    ? const Color(0xff021852)
+                                                    : const Color(0xffffffff),
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 12),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                createTeamController.FinalTeam.value.Bat![index].captain! || createTeamController.FinalTeam.value.Bat![index].vicecaptain! ? Align(
+                                  alignment: Alignment.topLeft,
+                                  child: Container(
+                                    height: Get.width/25,
+                                    width: Get.width/25,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: createTeamController.FinalTeam.value.Bat![index].captain! ? const  Color(0xff021852) : Colors.white,
+                                        border: Border.all(color: createTeamController.FinalTeam.value.Bat![index].captain! ? Colors.white : const  Color(0xff021852))
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      "${createTeamController.FinalTeam.value.Bat![index].captain! ? "C" : "VC"}".toUpperCase(),
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          color: createTeamController.FinalTeam.value.Bat![index].captain! ? Colors.white : const  Color(0xff021852),
+                                          fontSize: 8,
+                                          fontWeight: FontWeight.bold
                                       ),
                                     ),
-                                  )
-                                ],
-                              ),
+                                  ),
+                                ) : const SizedBox(height: 0,width: 0,)
+                              ],
                             ),
                             Padding(
                               padding: const EdgeInsets.only(top: 6),
@@ -465,58 +515,84 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                     : 4)),
                         child: Column(
                           children: [
-                            SizedBox(
-                              height: Get.height/12,
+                            Stack(
+                              children: [
+                                SizedBox(
+                                  height: Get.height/12,
 
-                              // color: Colors.red,
-                              child: Stack(
-                                alignment: Alignment.center,
-                                children: [
-                                  Align(
-                                    alignment: Alignment.topCenter,
-                                    child: CachedNetworkImage(
-                                        fadeInDuration:
-                                        const Duration(seconds: 0),
-                                        fit: BoxFit.fill,
-                                        imageUrl:
-                                        "${createTeamController.FinalTeam.value.AR![index].imageUrl}",
-                                        progressIndicatorBuilder: (context,
-                                            url, downloadProgress) =>
-                                            Container(),
-                                        errorWidget:
-                                            (context, url, error) => Padding(padding: EdgeInsets.only(bottom: Get.width/18),child: Image.asset("assets/image/person.png"),)
-                                    ),
+                                  // color: Colors.red,
+                                  child: Stack(
+                                    alignment: Alignment.center,
+                                    children: [
+                                      Align(
+                                        alignment: Alignment.topCenter,
+                                        child: CachedNetworkImage(
+                                            fadeInDuration:
+                                            const Duration(seconds: 0),
+                                            fit: BoxFit.fill,
+                                            imageUrl:
+                                            "${createTeamController.FinalTeam.value.AR![index].imageUrl}",
+                                            progressIndicatorBuilder: (context,
+                                                url, downloadProgress) =>
+                                                Container(),
+                                            errorWidget:
+                                                (context, url, error) => Padding(padding: EdgeInsets.only(bottom: Get.width/18),child: Image.asset("assets/image/person.png"),)
+                                        ),
+                                      ),
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                          height: 23,
+                                          decoration: BoxDecoration(
+                                              color:createTeamController.FinalTeam.value.AR![index].color!.toLowerCase() !=
+                                                  "0xffffffff".toLowerCase()
+                                                  ? const Color(0xffffffff)
+                                                  : const Color(0xff021852),
+                                              borderRadius:
+                                              BorderRadius.circular(4)),
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 10),
+                                          alignment: Alignment.center,
+                                          child: Text(
+                                            "${createTeamController.FinalTeam.value.AR![index].firstName![0].toUpperCase()}. ${createTeamController.FinalTeam.value.AR![index].lastName}",
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
+                                            style: TextStyle(
+                                                color: createTeamController.FinalTeam.value.AR![index].color!.toLowerCase() !=
+                                                    "0xffffffff".toLowerCase()
+                                                    ? const Color(0xff021852)
+                                                    : const Color(0xffffffff),
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 12),
+                                          ),
+                                        ),
+                                      )
+                                    ],
                                   ),
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Container(
-                                      height: 23,
-                                      decoration: BoxDecoration(
-                                          color:createTeamController.FinalTeam.value.AR![index].color!.toLowerCase() !=
-                                              "0xffffffff".toLowerCase()
-                                              ? const Color(0xffffffff)
-                                              : const Color(0xff021852),
-                                          borderRadius:
-                                          BorderRadius.circular(4)),
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 10),
-                                      alignment: Alignment.center,
-                                      child: Text(
-                                        "${createTeamController.FinalTeam.value.AR![index].firstName![0].toUpperCase()}. ${createTeamController.FinalTeam.value.AR![index].lastName}",
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                            color: createTeamController.FinalTeam.value.AR![index].color!.toLowerCase() !=
-                                                "0xffffffff".toLowerCase()
-                                                ? const Color(0xff021852)
-                                                : const Color(0xffffffff),
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 12),
+                                ),
+                                createTeamController.FinalTeam.value.AR![index].captain! || createTeamController.FinalTeam.value.AR![index].vicecaptain! ? Align(
+                                  alignment: Alignment.topLeft,
+                                  child: Container(
+                                    height: Get.width/25,
+                                    width: Get.width/25,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: createTeamController.FinalTeam.value.AR![index].captain! ? const  Color(0xff021852) : Colors.white,
+                                        border: Border.all(color: createTeamController.FinalTeam.value.AR![index].captain! ? Colors.white : const  Color(0xff021852))
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      "${createTeamController.FinalTeam.value.AR![index].captain! ? "C" : "VC"}".toUpperCase(),
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          color: createTeamController.FinalTeam.value.AR![index].captain! ? Colors.white : const  Color(0xff021852),
+                                          fontSize: 8,
+                                          fontWeight: FontWeight.bold
                                       ),
                                     ),
-                                  )
-                                ],
-                              ),
+                                  ),
+                                ) : const SizedBox(height: 0,width: 0,)
+                              ],
                             ),
                             Padding(
                               padding: const EdgeInsets.only(top: 6),
@@ -564,56 +640,82 @@ class _TeamPreviewPageState extends State<TeamPreviewPage> {
                                     : 4)),
                         child: Column(
                           children: [
-                            Container(
-                              height: Get.height/12,
-                              alignment: Alignment.center,
-                              // color: Colors.red,
-                              child: Stack(
-                                alignment: Alignment.center,
-                                children: [
-                                  Align(
-                                    alignment: Alignment.topCenter,
-                                    child: CachedNetworkImage(
-                                        fadeInDuration:
-                                        const Duration(seconds: 0),
-                                        fit: BoxFit.fill,
-                                        imageUrl:
-                                        "${createTeamController.FinalTeam.value.Bowl![index].imageUrl}",
-                                        progressIndicatorBuilder: (context,
-                                            url, downloadProgress) =>
-                                            Container(),
-                                        errorWidget:
-                                            (context, url, error) => Padding(padding: EdgeInsets.only(bottom: Get.width/18),child: Image.asset("assets/image/person.png"),)
-                                    ),
+                            Stack(
+                              children: [
+                                SizedBox(
+                                  height: Get.height/12,
+                                  // alignment: Alignment.center,
+                                  // color: Colors.red,
+                                  child: Stack(
+                                    alignment: Alignment.center,
+                                    children: [
+                                      Align(
+                                        alignment: Alignment.topCenter,
+                                        child: CachedNetworkImage(
+                                            fadeInDuration:
+                                            const Duration(seconds: 0),
+                                            fit: BoxFit.fill,
+                                            imageUrl:
+                                            "${createTeamController.FinalTeam.value.Bowl![index].imageUrl}",
+                                            progressIndicatorBuilder: (context,
+                                                url, downloadProgress) =>
+                                                Container(),
+                                            errorWidget:
+                                                (context, url, error) => Padding(padding: EdgeInsets.only(bottom: Get.width/18),child: Image.asset("assets/image/person.png"),)
+                                        ),
+                                      ),
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                          height: 23,
+                                          decoration: BoxDecoration(
+                                              color: createTeamController.FinalTeam.value.Bowl![index].color!.toLowerCase() !=
+                                                  "0xffffffff".toLowerCase()
+                                                  ? const Color(0xffffffff)
+                                                  : const Color(0xff021852),
+                                              borderRadius:
+                                              BorderRadius.circular(4)),
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 10),
+                                          alignment: Alignment.center,
+                                          child: Text(
+                                            "${createTeamController.FinalTeam.value.Bowl![index].firstName![0].toUpperCase()}. ${createTeamController.FinalTeam.value.Bowl![index].lastName}",
+                                            style: TextStyle(
+                                                color:createTeamController.FinalTeam.value.Bowl![index].color!.toLowerCase() !=
+                                                    "0xffffffff".toLowerCase()
+                                                    ? const Color(0xff021852)
+                                                    : const Color(0xffffffff),
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 12),
+                                          ),
+                                        ),
+                                      )
+                                    ],
                                   ),
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Container(
-                                      height: 23,
-                                      decoration: BoxDecoration(
-                                          color: createTeamController.FinalTeam.value.Bowl![index].color!.toLowerCase() !=
-                                              "0xffffffff".toLowerCase()
-                                              ? const Color(0xffffffff)
-                                              : const Color(0xff021852),
-                                          borderRadius:
-                                          BorderRadius.circular(4)),
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 10),
-                                      alignment: Alignment.center,
-                                      child: Text(
-                                        "${createTeamController.FinalTeam.value.Bowl![index].firstName![0].toUpperCase()}. ${createTeamController.FinalTeam.value.Bowl![index].lastName}",
-                                        style: TextStyle(
-                                            color:createTeamController.FinalTeam.value.Bowl![index].color!.toLowerCase() !=
-                                                "0xffffffff".toLowerCase()
-                                                ? const Color(0xff021852)
-                                                : const Color(0xffffffff),
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 12),
+                                ),
+                                createTeamController.FinalTeam.value.Bowl![index].captain! || createTeamController.FinalTeam.value.Bowl![index].vicecaptain! ? Align(
+                                  alignment: Alignment.topLeft,
+                                  child: Container(
+                                    height: Get.width/25,
+                                    width: Get.width/25,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: createTeamController.FinalTeam.value.Bowl![index].captain! ? const  Color(0xff021852) : Colors.white,
+                                        border: Border.all(color: createTeamController.FinalTeam.value.Bowl![index].captain! ? Colors.white : const  Color(0xff021852))
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      "${createTeamController.FinalTeam.value.Bowl![index].captain! ? "C" : "VC"}".toUpperCase(),
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          color: createTeamController.FinalTeam.value.Bowl![index].captain! ? Colors.white : const  Color(0xff021852),
+                                          fontSize: 8,
+                                          fontWeight: FontWeight.bold
                                       ),
                                     ),
-                                  )
-                                ],
-                              ),
+                                  ),
+                                ) : const SizedBox(height: 0,width: 0,)
+                              ],
                             ),
                             Padding(
                               padding: const EdgeInsets.only(top: 6),
