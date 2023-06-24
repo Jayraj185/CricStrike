@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../news/controller/newsController.dart';
@@ -112,7 +113,8 @@ class _NewsDetailPageState extends State<NewsDetailPage> {
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Container(
                   child: Text(
-                    "${newsController.n1.value.author == null ? "00-00-0000" : newsController.n1.value.publishedAt}",
+                    newsController.n1.value.author == null ? DateFormat('dd, MMM yyyy').format(DateTime.now()
+                    ) : DateFormat('dd, MMM yyyy').format(DateTime.parse(newsController.n1.value.publishedAt!)),
                     style: GoogleFonts.bitter(fontWeight: FontWeight.w500, fontSize: 16),
                   ),
                 ),
